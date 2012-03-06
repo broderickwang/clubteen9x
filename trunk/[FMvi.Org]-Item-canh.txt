@@ -1,2 +1,0 @@
-<li>&nbsp;<img alt="Item" src="http://farm01.gox.vn/avatar/store/avatar_part_item/47/11460.gif"></li>
-<li>&nbsp;<img alt="Item" src="http://farm01.gox.vn/avatar/store/avatar_part_item/47/11462.gif"></li>
