@@ -1,0 +1,241 @@
+﻿<style>
+.fmviMenu div{background-color:#FFF;border:none;font-size:.9em;margin:0;padding:4px;text-align:left}.fmviMenu div>span{display: block!important; line-height:20px!important; padding: 2px 5px!important;}.fmviMenu div>span:hover{border:1px dashed #ccc!important;}.fmviMenu>div>span img{background-color: #FFF!important; border: 0px!important; border-radius: 0px!important; padding: 2px 3px!important;}
+</style>
+
+<script type="text/javascript">
+$(function() {
+   $(".fmviShowP5 .bvavatar a").mouseover(function(){
+      var hbv = $(this).parent().height() - 2;
+      var x = $(this).position().left - 12;
+      var y = $(this).position().top - hbv;
+      var userlink = $(this).attr("href").slice(2);
+      $(".fmviMenu").remove();
+      $(this).after('<div class="fmviMenu" style="width: auto; left: ' + x + 'px; top: ' + y + 'px; padding: 5px; position: absolute; background-color: #FFFFFF; border: 1px solid #BCBCBC; overflow: hidden; z-index: 999;float:left;  margin: auto;"><div style="float:left; margin: 2px 5px;">' + $(this).html() + '</div><div style="float:left; width: 150px; margin: 2px 5px;"><span id="showTtin" style="background-color: #2078b3; color: #fff; border: 1px solid #0f4e78;border-radius: 2px"><img src="http://i44.servimg.com/u/f44/14/64/86/06/profil10.gif"> </span><span><a target="_blank" href="/u' + userlink + 'wall"><img src="http://i44.servimg.com/u/f44/14/64/86/06/wall1010.png"> Wall</a></span><span><a target="_blank" href="/u' + userlink + 'stats"><img src="http://i44.servimg.com/u/f44/14/64/86/06/icon_s10.png"> Statistics</a></span><span><a target="_blank" href="/u' + userlink + 'friends"><img src="http://i44.servimg.com/u/f44/14/64/86/06/fri1010.jpg"> Friends</a></span><span><a target="_blank" href="/postp/' + userlink + '"><img src="http://i44.servimg.com/u/f44/14/64/86/06/write-10.gif"> Message</a></span></div><div style="display:none; float:left; width: 180px; margin: 2px 5px;"><span id="uPost"><img src="http://i44.servimg.com/u/f44/14/64/86/06/veryho10.png"></span><span id="uPoint"><img src="http://i44.servimg.com/u/f44/14/64/86/06/money10.png"></span><span id="uThank"><img src="http://i44.servimg.com/u/f44/14/64/86/06/post_t10.png"></span><span id="uVisit"><img src="http://i44.servimg.com/u/f44/14/64/86/06/visit_10.jpg"></span><span id="uOther"><img src="http://i44.servimg.com/u/f44/14/64/86/06/other_10.png">       </span></div><div>');
+      $(this).parent().parent().find("span.name").clone().appendTo("#showTtin");
+      $(this).parent().parent().find("span.pro5list:eq(3)").clone().appendTo("#uPost");
+      $(this).parent().parent().find("span.pro5list:eq(4)").clone().appendTo("#uPoint");
+      $(this).parent().parent().find("span.pro5list:eq(5)").clone().appendTo("#uThank");
+      $(this).parent().parent().find("span.pro5list:eq(6)").clone().appendTo("#uVisit");
+      $(this).parent().parent().find("span.pro5list:eq(0)").clone().appendTo("#uOther");
+      $(this).parent().parent().find("span.pro5list:eq(1)").clone().appendTo("#uOther");
+      $(this).parent().parent().find("span.pro5list:eq(2)").clone().appendTo("#uOther");
+      $(".fmviMenu").mouseleave(function() {
+         $(this).remove();
+      });
+      $("#showTtin").mouseleave(function() {
+         $(this).parent().next().hide();
+      });
+      $("#showTtin").mouseover(function() {
+         $(this).parent().next().show();
+      });
+   });
+});
+</script>
+
+<table align="center" cellspacing="0" cellpadding="0" border="0" style="width:auto">
+    <tbody>
+        <tr>
+            <td style="padding: 0px">
+                <img src="http://i913.photobucket.com/albums/ac332/battuvuong/baivong/bgavat10.png">
+            </td>
+            <td style="padding: 0px" background="http://i913.photobucket.com/albums/ac332/battuvuong/baivong/bgavat11.png">
+            </td>
+            <td style="padding: 0px">
+                <img src="http://i913.photobucket.com/albums/ac332/battuvuong/baivong/bgavat12.png">
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" style="padding: 0px" background="http://i913.photobucket.com/albums/ac332/battuvuong/baivong/bgavat13.png">
+            </td>
+            <td class="fmviShowP5" style="background: #FFF; height: auto;width: auto;border: 0px;"
+            align="center">
+                <div class="userData" style="display: none;">
+                    <span class="name">
+                        <strong>
+                            <a href="/u1"><span style="color:#17BD30"><strong>baivong</strong></span></a>
+                        </strong>
+                    </span>
+                    <span class="pro5list">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                            </span>
+                        </span>
+                        <img src="http://hitskin.com/themes/15/29/22/i_icon_gender_male.gif" alt="Male"
+                        title="Male">
+                    </span>
+                    <span class="pro5list">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                            </span>
+                        </span>
+                        <img src="http://illiweb.com/fa/subsilver/icon_zodiac_leo_1.gif" alt="Leo" title="Leo">
+                    </span>
+                    <span class="pro5list">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                            </span>
+                        </span>
+                        <img src="http://illiweb.com/fa/subsilver/icon_chinese_horse_1.gif" alt="Horse" title="Horse">
+                    </span>
+                    <span class="pro5list">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                                Posts
+                            </span>
+                            :
+                        </span>
+                        402
+                        <br>
+                    </span>
+                    <span class="pro5list">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                                Points
+                            </span>
+                            :
+                        </span>
+                        224965
+                        <br>
+                    </span>
+                    <span class="pro5list">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                                Thanks
+                            </span>
+                            :
+                        </span>
+                        223
+                        <br>
+                    </span>
+                    <span class="pro5list">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#c7c3c3;">
+                                Join date
+                            </span>
+                            :
+                        </span>
+                        2011-06-17
+                        <br>
+                    </span>
+                    <span class="pro5list">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#c7c3c3;">
+                                Age
+                            </span>
+                            :
+                        </span>
+                        21
+                        <br>
+                    </span>
+                    <span class="pro5list">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                                Humor
+                            </span>
+                            :
+                        </span>
+                        Có tiền là có tất cả
+                        <br>
+                    </span>
+                </div>
+                <div id="baivongshop817" class="bvavatar" style="display:none">
+                    <span class="fmviShopauto">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                            </span>
+                        </span>
+                        <img src="http://hitskin.com/themes/15/29/22/i_icon_gender_male.gif" alt="Male"
+                        title="Male">
+                    </span>
+                    <span class="fmviShopauto">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                            </span>
+                        </span>
+                        <img src="http://illiweb.com/fa/subsilver/icon_zodiac_leo_1.gif" alt="Leo"
+                        title="Leo">
+                    </span>
+                    <span class="fmviShopauto">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                            </span>
+                        </span>
+                        <img src="http://illiweb.com/fa/subsilver/icon_chinese_horse_1.gif" alt="Horse"
+                        title="Horse">
+                    </span>
+                    <span class="fmviShopauto">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                                Posts
+                            </span>
+                            :
+                        </span>
+                        402
+                    </span>
+                    <span class="fmviShopauto">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                                Points
+                            </span>
+                            :
+                        </span>
+                        224965
+                    </span>
+                    <span class="fmviShopauto">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                                Thanks
+                            </span>
+                            :
+                        </span>
+                        223
+                    </span>
+                    <span class="fmviShopauto">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#c7c3c3;">
+                                Join date
+                            </span>
+                            :
+                        </span>
+                        2011-06-17
+                    </span>
+                    <span class="fmviShopauto">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#c7c3c3;">
+                                Age
+                            </span>
+                            :
+                        </span>
+                        21
+                    </span>
+                    <span class="fmviShopauto">
+                        <span style="white-space:nowrap;">
+                            <span style="color:#C7C3C3;">
+                                Humor
+                            </span>
+                            :
+                        </span>
+                        Có tiền là có tất cả
+                    </span>
+                </div>
+<!-- BEGIN-----AVATAR -->
+                <div class="bvavatar">
+                    <a href="/u1"><img src="http://r12.imgfast.net/users/1215/11/75/00/avatars/1-88.png" alt=""></a>
+                </div>
+<!-- END-----AVATAR -->
+            </td>
+            <td style="padding: 0px" background="http://i913.photobucket.com/albums/ac332/battuvuong/baivong/bgavat14.png">
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 0px">
+                <img src="http://i913.photobucket.com/albums/ac332/battuvuong/baivong/bgavat15.png">
+            </td>
+            <td style="padding: 0px" background="http://i913.photobucket.com/albums/ac332/battuvuong/baivong/bgavat16.png">
+            </td>
+            <td style="padding: 0px">
+                <img src="http://i913.photobucket.com/albums/ac332/battuvuong/baivong/bgavat17.png">
+            </td>
+        </tr>
+    </tbody>
+</table>
