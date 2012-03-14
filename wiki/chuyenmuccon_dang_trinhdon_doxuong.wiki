@@ -1,0 +1,48 @@
+Tạo chuyên mục con dạng trình đơn đổ xuống
+
+
+http://i48.servimg.com/u/f48/16/58/89/73/subfor10.jpg
+
+Hướng dẫn:
+
+Bước 1: ACP >> Display >> Homepage >> Structure and hierarchy:
+Sub-level links on index : Có
+
+Bước 2: ACP >> Display >> Templates >> Ganeral >> Index_box:
+Tìm:
+
+<code>
+    {catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
+</code>
+
+và thay bằng
+
+<code>
+    <select style="display:none" onchange="location = this.options[this.selectedIndex].value;">
+       <option value="{catrow.forumrow.U_VIEWFORUM}">Các Diễn Đàn Con</option>
+    </select>
+    <span style="display:none" class="subforumFMvi">{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}</span>
+
+</code>
+
+Bước 3: Thêm vào cuối Index_box:
+
+<code>
+    <script type="text/javascript">
+    $(".subforumFMvi a").each(function () {
+       $(this).replaceWith('<option value="' + $(this).attr("href") + '">|-- ' + $(this).text() + '</option>');
+    });
+    $(".subforumFMvi option").each(function () {
+       $(this).appendTo($(this).parent().prev())
+    });
+    $(".subforumFMvi").each(function () {
+       if ($(this).text() == "") {
+          $(this).prev().remove();
+          $(this).remove();
+       } else {
+          $(this).prev().show()
+       }
+    });
+    </script>
+
+</code>
