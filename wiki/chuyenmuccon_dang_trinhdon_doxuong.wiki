@@ -1,4 +1,4 @@
-Tạo chuyên mục con dạng trình đơn đổ xuống
+            Tạo chuyên mục con dạng trình đơn đổ xuống
 
 
 http://i48.servimg.com/u/f48/16/58/89/73/subfor10.jpg
@@ -46,3 +46,13 @@ Bước 3: Thêm vào cuối Index_box:
     </script>
 
 </code>
+
+có một số người còn có cả link bài viết mới ở trên mấy cái box con nữa có thể thay thế
+
+<code>
+    $(".subforumFMvi a").each(function () {
+
+</code>
+thành
+
+  <code> $(".subforumFMvi a:odd").each(function () {</code>
