@@ -15,7 +15,7 @@ padding: 2px 1px;
 
 
 </code>
-http://i43.servimg.com/u/f43/16/03/04/56/bg_pos10.gif
+
 http://i44.servimg.com/u/f44/13/54/69/46/banner13.gif
 http://i44.servimg.com/u/f44/13/54/69/46/banner15.gif
 http://i44.servimg.com/u/f44/13/54/69/46/banner14.gif
