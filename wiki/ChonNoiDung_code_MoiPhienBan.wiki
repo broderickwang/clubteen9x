@@ -2,7 +2,8 @@
 
 Hướng dẫn:
 Display - Templates - Quản lý tổng thể - Overall_Header
-Thêm vào trước thẻ </head>
+Thêm vào trước thẻ 
+<code></head></code>
 Code sau:
 1 - Nếu forum bạn đang dùng là phpbb3, punbb và invision thì thay bằng code:
 
