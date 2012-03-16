@@ -1,11 +1,13 @@
-demo :
+
 
 
 http://a.imageshack.us/img684/3434/demo1pf.jpg
 
 
-Cách làm :
+
 Bước 1 : Vào Forum widgets management đặt widget theo hình sau :
+
+
 http://a.imageshack.us/img233/305/demo2uz.jpg
 
 
