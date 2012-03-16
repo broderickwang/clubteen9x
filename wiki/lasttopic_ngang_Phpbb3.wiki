@@ -1,4 +1,6 @@
 demo :
+
+
 http://a.imageshack.us/img684/3434/demo1pf.jpg
 
 
@@ -46,4 +48,3 @@ Tùy chỉnh: với CSS
 ◘ 10px là là khoảng cách giữa khung Top posters và khung Latest topics
 ◘ Trang trí cho tiêu đề bài viết bằng cách thay các thuộc tính css cho đoạn /*style cho tiêu đề bài viết*/
 ◘ Tương tự cho tên người gửi ~ /*style cho tên người gửi*/
-
