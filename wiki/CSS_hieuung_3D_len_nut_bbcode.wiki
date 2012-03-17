@@ -1,0 +1,12 @@
+       http://i68.servimg.com/u/f68/15/98/86/77/prev10.png
+Cho đoạn sau vào Css:
+<code>
+    input.button1, input.button2, button.button2, #main-content a.cgu-buttons {
+    border: 1px solid #afafaf;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+      -moz-box-shadow: 1px 3px 0px #afafaf;
+      -webkit-box-shadow: 1px 3px 0px #afafaf;
+    }</code>
+Chú ý : có thể dùng code trên áp dụng lên Punbb và Phpbb2
+
