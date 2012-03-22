@@ -1,0 +1,170 @@
+Bước 1: Thêm vào CSS
+
+<code>
+    /* Text button */
+    .large_textbutton{background:url(http://i48.servimg.com/u/f48/16/58/89/73/newbtn10.png) repeat-x scroll left top #006BB7;border:0 none;border-radius:10px 10px 10px 10px;box-shadow:0 3px 8px #DDD;clear:left;color:#FFF!important;display:block;float:right;font:14px Arial,sans-serif;margin-left:10px;margin-top:-2px;position:relative;padding:4px 15px}
+    .small_textbutton{background-color:#006BB7;border:0 none;border-radius:3px 3px 3px 3px;box-shadow:1px 1px 1px #DDD;clear:left;color:#FFF!important;display:block;float:right;font:11px Arial,sans-serif;position:relative;margin:2px!important;padding:2px 4px}
+    .large_textbutton span{display:inline;font-size:15px;font-weight:700}
+    .small_textbutton:hover,.large_textbutton:hover{background-color:#037730;text-shadow:1px 1px 1px #000}
+    .small_textbutton:active,.large_textbutton:active{background-color:#000}
+</code>
+
+Bước 2: Sửa Templates
+
+    viewcomments_body:
+    Tìm:
+
+<code>
+        <a href="{U_POST_NEW_TOPIC}" rel="nofollow"><img src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /></a>
+</code>
+
+    Thay bằng:
+
+<code>
+        <a class="large_textbutton" href="{U_POST_NEW_TOPIC}" rel="nofollow"><span>+</span> Viết chủ đề mới</a>
+
+</code>
+    Tìm:
+
+<code>
+        <a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}" class="i_reply" alt="{L_POST_REPLY_TOPIC}" /></a>
+</code>
+
+    Thay bằng:
+
+<code>
+        <a class="large_textbutton" href="{U_POST_REPLY_TOPIC}"><span>+</span> Trả lời chủ đề</a>
+</code>
+
+    Tìm:
+
+<code>
+        {comment.displayed.THANK_IMG}{comment.displayed.MULTIQUOTE_IMG}{comment.displayed.QUOTE_IMG}{comment.displayed.EDIT_IMG}{comment.displayed.DELETE_IMG}{comment.displayed.IP_IMG}{comment.displayed.REPORT_IMG}
+
+
+    Thay bằng:
+
+    Code:
+        <span class="options-button">{comment.displayed.THANK_IMG}{comment.displayed.MULTIQUOTE_IMG}{comment.displayed.QUOTE_IMG}{comment.displayed.EDIT_IMG}{comment.displayed.DELETE_IMG}{comment.displayed.IP_IMG}{comment.displayed.REPORT_IMG}</span>
+</code>
+
+    Thêm vào cuối:
+
+<code>
+        <script type="text/javascript">
+           $(".options-button a").addClass("small_textbutton");
+           $(".options-button a[href*='?thank=']").text("Cảm ơn");
+           $(".options-button a[href^='/post?p='][href*='&mode=quote']").text("Trích dẫn");
+           $(".options-button a[href^='/post?p='][href*='&mode=editpost']").text("Sửa");
+           $(".options-button a[href^='/post?p='][href*='&mode=delete']").text("Xóa");
+           $(".options-button a[href^='/modcp?mode=ip']").text("Xem Ip");
+           $(".options-button a[href^='/report?mode=report']").text("Báo cáo");
+           $(".options-button a[href^='/report?mode=unlock']").text("Mở báo cáo");
+           $(".options-button a[href^='/report?mode=lock']").text("Chặn báo cáo");
+        </script></code>
+
+
+    viewforum_body:
+    Tìm:
+
+<code>
+        <a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow"><img src="{POST_IMG}" class="{POST_IMG_ID}" alt="{L_POST_NEW_TOPIC}" /></a>
+</code>
+
+    Thay bằng:
+
+<code>
+        <a class="large_textbutton" href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow"><span>+</span> Viết chủ đề mới</a>
+
+</code>
+    viewtopic_body: tương tự viewcomments_body
+    Tìm:
+
+<code>
+        {postrow.displayed.THANK_IMG}{postrow.displayed.MULTIQUOTE_IMG} {postrow.displayed.QUOTE_IMG}{postrow.displayed.EDIT_IMG} {postrow.displayed.DELETE_IMG} {postrow.displayed.IP_IMG}{postrow.displayed.REPORT_IMG}
+</code>
+
+    Thay bằng:
+
+<code>
+        <span class="options-button">{postrow.displayed.THANK_IMG}{postrow.displayed.MULTIQUOTE_IMG} {postrow.displayed.QUOTE_IMG}{postrow.displayed.EDIT_IMG} {postrow.displayed.DELETE_IMG} {postrow.displayed.IP_IMG}{postrow.displayed.REPORT_IMG}</span>
+</code>
+
+    privmsgs_body:
+    Tìm:
+
+<code>
+        {POST_PM_IMG}
+</code>
+
+    Thay bằng:
+
+<code>
+        <a class="large_textbutton" href="/privmsg?mode=post"><span>+</span> Soạn thư</a>
+</code>
+
+    privmsgs_read_body:
+    Tìm:
+
+<code>
+        <div class="post-options">
+
+</code>
+    Thay bằng:
+
+<code>
+        <div class="post-options options-button">
+</code>
+
+    Thêm vào cuối:
+
+<code>
+        <script type="text/javascript">
+           $(".repPM a[href^='/privmsg?mode=reply']").addClass("large_textbutton").html("<span>+</span> Trả lời thư");
+           $(".options-button a").addClass("small_textbutton");
+           $(".options-button a[href^='/privmsg?mode=quote']").text("Trích dẫn");
+           $(".options-button a[href^='/privmsg?mode=editpost']").text("Sửa");
+        </script></code>
+
+
+    overall_footer_end:
+    Thêm vào cuối:
+
+<code>
+        <script type="text/javascript">
+              $("#new-message-link a[href^='/privmsg?mode=post_profile']").addClass("large_textbutton").html("<span>+</span> Viết lên tường");
+        </script>
+
+</code>
+Bước 3: Xóa các ảnh button liên quan trong Pics management >> Buttons
+               Post new topic
+
+               Reply to topic
+
+               New posts [ Locked ]
+
+               Reply with quote
+
+               Multi-quote unselected
+
+                Multi-quote selected
+
+               "Thanks" button
+
+               Topic already thanked
+
+                Edit post
+
+               Delete this post
+
+               View IP address of poster
+
+              Send a post report
+
+                 Post report sent
+
+                Post report locked
+
+                Lock the post report
+
+               Unlock the post report 
