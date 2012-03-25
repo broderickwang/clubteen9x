@@ -1,0 +1,10 @@
+<code>
+    <script type="text/javascript">$(function(){$("input#username_reg").attr("maxlength","15");})</script>
+
+</code>
+
+
+ACP> Display> Templates> QLTT> Over_footer
+- copy và dán codes trên vô dưới footer
+- muốn giới hạn bao nhiêu ký tự thì thay vô số 15
+- bấm save rùi
