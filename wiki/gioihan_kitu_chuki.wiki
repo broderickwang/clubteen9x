@@ -1,0 +1,8 @@
+Display Templates Profiles profile_edit_signature Cho code này vào cuối
+
+<code>
+    <script type="text/javascript">$(function(){$("textarea#text_editor_textarea").attr("maxlength","100");})</script>
+
+</code>
+
+Đổi số 100 thành ký tự muốn giới hạn
