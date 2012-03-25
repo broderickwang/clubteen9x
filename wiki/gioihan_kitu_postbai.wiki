@@ -1,0 +1,38 @@
+Đây là đoạn Jquery + Html .... 8->
+
+<code>
+    <p class="testlength" style="display:none;"></p>
+    <script type="text/javascript">$(function(){if($("textarea#text_editor_textarea").is(':visible')){$("textarea#text_editor_textarea").keyup(function () {var value = $(this).val();$("p.testlength").text(value);});$("input.mainoption").click(function(){var num =10 - $("p.testlength").text().length; if (num > 0) {alert("Bài viết quá ngắn - Bạn đang thiếu "+num+" ký tự nữa để có thể gửi bài");return false;}});}});</script>
+</code>
+
+
+Đối với postbody:
+ACP>>Display>>template>>post & tin nhắn>>postbody
+dán đoạn code bên trên đầu kia phía trên :
+
+<code>
+    <!-- BEGIN switch_roll_dice -->
+
+</code>
+
+Đối với quick reply
+
+ACP>>Display>>Template>>quản lý tt>>viewtopic
+
+dán đoạn code bên trên đầu kia phía dưới :
+
+<code>
+    <!-- BEGIN switch_user_logged_in -->
+             <a name="quickreply"></a>
+             {QUICK_REPLY_FORM}
+
+             <!-- END switch_user_logged_in -->
+
+</code>
+demo
+
+Code:
+    http://www.tinhgia3sv.tk/forum
+
+
+Nguồn : CP
