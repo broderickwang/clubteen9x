@@ -1,0 +1,7 @@
+CSS:
+<code>
+    .fancyimg-fmvi {
+        cursor: -moz-zoom-in;
+    }
+
+</code>
