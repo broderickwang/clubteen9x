@@ -1,0 +1,107 @@
+            <code>    <style type="text/css">
+
+            body {
+
+             
+
+             }
+
+            </style>
+
+             
+
+            <script type="text/javascript">
+
+             
+
+              var num;
+
+              var temp=0;
+
+              var speed=5000; /* Thời gian thay đổi ảnh nền (Đang set là 5s) */
+
+              var preloads=[];
+
+             
+
+            /* Bạn có thể thêm một số hình ảnh khác làm ảnh nền vào dưới */
+
+             
+
+            preload(
+
+                    'http://i50.servimg.com/u/f50/12/70/14/53/2710.gif',
+
+                    'http://i50.servimg.com/u/f50/12/70/14/53/3610.gif',
+
+                    'http://i50.servimg.com/u/f50/12/70/14/53/5310.gif',
+
+                    'http://i50.servimg.com/u/f50/12/70/14/53/3310.gif',
+
+                    'http://img194.imageshack.us/img194/903/kenom.jpg',
+
+                    'http://img.youtube.com/vi/Jal-vzO8bVE/1.jpg'
+
+                  );
+
+             
+
+            function preload(){
+
+             
+
+            for(var c=0;c<arguments.length;c++) {
+
+              preloads[preloads.length]=new Image();
+
+              preloads[preloads.length-1].src=arguments[c];
+
+              }
+
+             }
+
+             
+
+            function rotateImages() {
+
+              num=Math.floor(Math.random()*preloads.length);
+
+            if(num==temp){
+
+              rotateImages();
+
+             }
+
+            else {
+
+              document.body.style.backgroundImage='url('+preloads[num].src+')';
+
+              temp=num;
+
+             
+
+            setTimeout(function(){rotateImages()},speed);
+
+              }
+
+             }
+
+             
+
+            if(window.addEventListener){
+
+              window.addEventListener('load',rotateImages,false);
+
+             }
+
+            else { 
+
+            if(window.attachEvent){
+
+              window.attachEvent('onload',rotateImages);
+
+              }
+
+             }
+
+            </script></code>
