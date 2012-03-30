@@ -1,0 +1,21 @@
+đây là codes nì:
+
+
+<code>
+ 
+<div class="normal" style="float:right">
+<a href="{postrow.displayed.POST_URL}"><b>#{postrow.displayed.COUNT_POSTS}</b>
+</a></div>
+
+</code>
+
+:c: chèn trong viewtopic_body
+muốn chèn chỗ mô thì vô tư. hehe
+như 4ALL thì chèn cùng hàng với thời gian á.
+
+
+<code>
+<span align="right" style="float: right;">
+<a name="{postrow.displayed.U_POST_ID}"></a>
+<a href="{postrow.displayed.POST_URL}">#{postrow.displayed.COUNT_POSTS}</a>
+</span></code>
