@@ -1,0 +1,39 @@
+		
+	cái này thì có nhưng sợ last bạn xài ko phù hợp với code nút reload
+vì chỉ có 1 số last tương thích thui
+
+
+Đầu tiên bạn nhét code này vào recent topic
+<code>
+<script>jQuery("#ca3chatbox").click(function(){jQuery("#ca3rules").toggle("slow");});function reloadlast() {jQuery(document).ready(function(){jQuery("#loadoday").empty();jQuery('<span class="abcd" />').load('/forum #loadoday', function() {jQuery(this).appendTo('#loadoday');});}</script><script>
+function reloadlast() {
+jQuery(document).ready(function(){
+jQuery("#loadoday").empty();
+jQuery('<span class="abcd" />').load('/forum #loadoday', function() {
+jQuery(this).appendTo('#loadoday');
+jQuery(".c3zonee:contains('»')").remove();});});}
+</script>
+</code>
+tìm trong recent
+<code>
+<!-- BEGIN recent_topic_row --><table class="c3zonee" width="100%" border="0" cellspacing="0" cellpadding="0" style="height:20px">
+</code>
+hoặc code tựa tựa như nó
+Thêm vào trước nó
+<code>
+<div class="test" id="loadoday">
+</code>
+tìm
+<code>
+</table><!-- END classical_row -->
+</code>
+thêm vào sau nó
+<code>
+</div>
+</code>
+việc cuối cùng chèn
+<code>
+<input type="submit" onmouseover="showtip('Click Để Reload Topic.')" onmouseout="hidetip()" value="Reload" onclick="reloadlast();" />
+</code>
+vào chỗ nào bạn cần hiện nút reload
+Nguồn:MTMY by Notme 
