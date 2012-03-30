@@ -1,0 +1,66 @@
+:c: cái ni vlt qua bên CP chôm về nì.
+của bác baivong.
+codes thì dài lê thê, rê con chuột để copy được hết đống codes
+...cũng mỏi hết cái tay.
+nhưng nếu có cái ni thì khỏe lắm.
+bấm vô chỗ "chọn tòan bộ" - chọn nội dung
+rứa là nguyên phần codes sẽ được đánh dấu
+mình chỉ cần copy thui. hehe
+
+ demo:          http://i28.servimg.com/u/f28/16/48/23/13/chonco10.png
+
+
+
+:c: nếu và phpbb3, punnbb, invision thì dùng cái ni:
+<code>
+<script type="text/javascript" src="http://scriptfm.googlecode.com/files/select.js"></script>
+</code>
+
+
+:c: còn phpbb2 thì codes ni:
+
+<code>
+<script src="http://link.08sh.tk/select" type="text/javascript"></script></code>
+
+>>> cái ni thời gian qua có lúc nó die. hehe
+
+
+
+:c: hướng dẫn:
+
+- ACP> Display> Templates> Overall_header
+- copy và dán đọan codes trên trước thẻ
+<code>
+</head></code>
+
+- bấm save và
+
+:c: theo gợi ý của bác Hùng thì nên up lại cái
+http://link.08sh.tk/select (trong codes dùng cho phpbb2)
+để dùng cho ổn định.
+nghĩa là,
+- click vô link đó
+- copy tòan bộ codes
+- tạo 1 trang HTML với codes đó
+- rùi lấy link HTML mới tạo thay vô.
+
+http://r22.imgfast.net/users/2213/24/46/69/smiles/2324072929.gif   xem version2 mới hơn nì:
+
+
+Chức năng:  http://i28.servimg.com/u/f28/16/58/89/73/select10.png
+
+Khung code cố định giữa bài viết, rộng 500px.
+Click chọn toàn bộ code.
+Ẩn/hiện khung code (mặc định là ẩn).
+Style chuyên nghiệp.
+
+Hướng dẫn: Display - Templates - General - Overall_header
+Tìm đoạn này:
+<code>
+<script src="{JQUERY_PATH}" type="text/javascript"></script>
+</code>
+... và chèn vào bên dưới bằng code sau:
+<code>
+<script src="http://fmvi-group.googlecode.com/files/Fmvi-Group-select-code-phpBB2.js" type="text/javascript"></script></code>
+
+Viết bởi baivong - www.FMvi.tk 
