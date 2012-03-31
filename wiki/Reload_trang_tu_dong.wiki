@@ -1,0 +1,13 @@
+         tự động load tải rang sau một thời gian nhất định thì đoạn script sau sẽ giúp bạn:
+<code>
+    <script type="text/javascript">
+
+    function reFresh() {
+
+    window.open(location.reload(true))
+
+    }
+
+    window.setInterval("reFresh()",60000);
+
+    </script></code>
