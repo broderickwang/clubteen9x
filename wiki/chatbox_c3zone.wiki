@@ -1,5 +1,4 @@
-Author
-demo : http://nachopro.forumvi.com/h4-page-chatbox
+http://i43.servimg.com/u/f43/15/93/33/76/untitl23.jpg
 
 
 Mới rip được nhưng c3zone mã hóa ông thầy nên ông thầy ko sử dụng được 
@@ -320,9 +319,9 @@ Bước 2 : vào index_body cho đoạn code này lên đầu
 
     <script type="text/javascript">
     jQuery(document).ready(function(){my_setcookie('mytid',jQuery("#logout").attr("href"),1,0);});
-    </script></code>
+    </script>
     <iframe src="http://nachopro.forumvi.com/h4-page-chatbox" scrolling="no" width="100%" height="340" style="border-width:0" marginwidth="0" marginheight="0"></iframe>
-
+</code>
 
 Chú ý thay link : http://nachopro.forumvi.com/h4-page-chatbox = link chat box bạn vừa tạo ở bước 1
 
