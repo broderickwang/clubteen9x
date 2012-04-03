@@ -2638,7 +2638,7 @@ function ajax_connect(params, mode){if ( params == '' || params == undefined ){p
 <div style=""></div><script>$("input#message").keyup(function () {var valuet = $(this).val();$("p#chatboxt").text(valuet);});$("#submit_butt").click( function() {var conf = {frequency: 5000,duration: 600};$("div.buzza1").vibrate(conf);});</script></body></html>
 </code>
 
-</code>
+
 
 Bước 2 : vào index_body cho đoạn code này lên đầu
 
