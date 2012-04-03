@@ -1,0 +1,211 @@
+function changeImg(){
+x = document.getElementsByTagName('span')
+for(i=0;i<x.length;i++){
+if(window.onload != 'resize_images()'){
+if ((x[i].style.color=="rgb(250, 0, 0)")||(x[i].style.color=="#fa0000")) {newHTML = "<img src=\"/users/2811/12/71/98/album/admin11.gif\">" + "</img>" + x[i].innerHTML}
+
+else if((x[i].style.color=="rgb(255, 102, 0)")||(x[i].style.color=="#ff6600")) {newHTML = "<img src=\"/users/2811/12/71/98/album/smod10.gif\">" + "</img>" + x[i].innerHTML}
+
+else if((x[i].style.color=="rgb(0, 191, 0)")||(x[i].style.color=="#00bf00")) {newHTML = "<img src=\"/users/2811/12/71/98/album/mod11.gif\">" + "</img>" + x[i].innerHTML}
+
+else if((x[i].style.color=="rgb(191, 0, 255)")||(x[i].style.color=="#bf00ff")) {newHTML = "<img src=\"http://i977.photobucket.com/albums/ae260/bjusuc/vipbolac.gif\">" + "</img>" + x[i].innerHTML}
+
+else if((x[i].style.color=="rgb(0, 4, 255)")||(x[i].style.color=="#0004ff")) {newHTML = "<img src=\"/users/2811/12/71/98/album/member10.gif\">" + "</img>" + x[i].innerHTML}
+
+
+
+else {newHTML= x[i].innerHTML}
+}
+x[i].innerHTML = newHTML;
+}
+}
+
+
+
+function init(){
+dir="http://i292.photobucket.com/albums/mm30/huylordno1/pet/" 
+var avatarname="<br>"
+var title1="Level"
+var title2="<img src='http://i25.servimg.com/u/f25/14/75/71/76/str-110.jpg' alt='strenght'>";
+var title3="<img src='http://i25.servimg.com/u/f25/14/75/71/76/def-110.jpg' alt='defense'>";
+var title4="<img src='http://i25.servimg.com/u/f25/14/75/71/76/exp-110.jpg'>";
+var xperpost="2"
+var xperexp="100"
+var xperreptt="60"
+var xpneeded="100000"
+var aqname="<img src='http://i25.servimg.com/u/f25/14/75/71/76/int-110.jpg' alt='Intelligent'>";
+var aqsign=" <img src='http://i25.servimg.com/u/f25/14/75/71/76/point-10.jpg' alt='point'>";
+var aq=[];
+var display=[];
+var level=[];
+var posts=[];
+var repts=[];
+var cts=[];
+var firstchar=[];
+var petvn = new Array() 
+petvn[0]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_110.png); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[1]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_210.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[2]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_310.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[3]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_410.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[4]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_510.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[5]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_610.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[6]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_710.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[7]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_810.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[8]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_910.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[9]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1010.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[20]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1110.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[21]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1210.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[22]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1310.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[23]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1410.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[24]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1510.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[25]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1610.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[26]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1710.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[27]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1810.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[28]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1910.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[29]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_2010.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+
+petvn[10]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_111.png); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[11]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_211.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[12]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_311.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[13]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_411.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[14]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_511.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[15]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_611.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[16]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_711.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[17]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_811.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[18]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_911.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[19]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1011.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[30]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1111.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[31]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1211.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[32]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1311.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[33]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1411.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[34]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1511.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[35]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1611.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[36]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1711.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[37]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1811.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[38]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_1911.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+petvn[39]="<div class='memchar' style='height: 130px; width: 126px; background-image: url(/users/2811/12/71/98/album/ava_2011.gif); background-position: 50% 100%; background-repeat: no-repeat no-repeat; '></div>";
+aqperpost="7" 
+
+x = document.getElementsByTagName('div')
+for(y=0;y<x.length;y++)
+{
+if(x[y].className == "postprofile"){
+nick= x[y].parentNode.parentNode.parentNode.getElementsByTagName("A")[0].innerHTML;
+posts[nick]=parseInt(x[y].innerHTML.toLowerCase().split("posts</span>: </span>")[1]);
+
+nic= x[y].parentNode.parentNode.parentNode.getElementsByTagName("A")[0].innerHTML;
+repts[nic]=parseInt(x[y].innerHTML.toLowerCase().split("coins</span>: </span>")[1]);
+
+nict= x[y].parentNode.parentNode.parentNode.getElementsByTagName("A")[0].innerHTML;
+cts[nict]=parseInt(x[y].innerHTML.toLowerCase().split("gender</span>: </span>")[1]);
+
+var levell=[];
+var xp=[];
+var firstchar=[];
+xp[nick]=posts[nick]*xperpost+repts[nic]*xperreptt
+level[nick]=(xp[nick]/xpneeded)
+var exp = Math.floor((level[nick]-Math.floor(level[nick]))*xperexp)
+var phansonguyen = Math.floor(level[nick]+parseInt(1));
+var xptogo = Math.floor(level[nick]+parseInt(1))*xpneeded
+firstchar[nick]=nick.charAt(0);
+
+aq[nick]="Yêu cầu vào lý lịch để cập nhật Pet cho mình"
+aq[nick]=(aqperpost*posts[nick])
+
+
+var avatar=[];
+      if (cts[nict] == 1) {
+if (phansonguyen==1)
+{avatar[nick]=petvn[0]}
+if (phansonguyen==2)
+{avatar[nick]=petvn[1]}
+if (phansonguyen==3)
+{avatar[nick]=petvn[2]}
+if (phansonguyen==4)
+{avatar[nick]=petvn[3]}
+if (phansonguyen==5)
+{avatar[nick]=petvn[4]}
+if (phansonguyen==6)
+{avatar[nick]=petvn[5]}
+if (phansonguyen==7)
+{avatar[nick]=petvn[6]}
+if (phansonguyen==8)
+{avatar[nick]=petvn[7]}
+if (phansonguyen==9)
+{avatar[nick]=petvn[8]}
+
+if (phansonguyen==10)
+{avatar[nick]=petvn[9]}
+if (phansonguyen==11)
+{avatar[nick]=petvn[20]}
+if (phansonguyen==12)
+{avatar[nick]=petvn[21]}
+if (phansonguyen==13)
+{avatar[nick]=petvn[22]}
+if (phansonguyen==14)
+{avatar[nick]=petvn[23]}
+if (phansonguyen==15)
+{avatar[nick]=petvn[26]}
+if (phansonguyen==16)
+{avatar[nick]=petvn[27]}
+if (phansonguyen==17)
+{avatar[nick]=petvn[28]}
+if (phansonguyen>=18)
+{avatar[nick]=petvn[29]}
+      }  else  {
+          if (cts[nict] == 2) {
+if (phansonguyen==1)
+{avatar[nick]=petvn[10]}
+if (phansonguyen==2)
+{avatar[nick]=petvn[11]}
+if (phansonguyen==3)
+{avatar[nick]=petvn[12]}
+if (phansonguyen==4)
+{avatar[nick]=petvn[13]}
+if (phansonguyen==5)
+{avatar[nick]=petvn[14]}
+if (phansonguyen==6)
+{avatar[nick]=petvn[15]}
+if (phansonguyen==7)
+{avatar[nick]=petvn[16]}
+if (phansonguyen==8)
+{avatar[nick]=petvn[17]}
+if (phansonguyen==9)
+{avatar[nick]=petvn[18]}
+
+if (phansonguyen==10)
+{avatar[nick]=petvn[19]}
+if (phansonguyen==11)
+{avatar[nick]=petvn[30]}
+if (phansonguyen==12)
+{avatar[nick]=petvn[31]}
+if (phansonguyen==13)
+{avatar[nick]=petvn[32]}
+if (phansonguyen==14)
+{avatar[nick]=petvn[33]}
+if (phansonguyen==15)
+{avatar[nick]=petvn[34]}
+if (phansonguyen==16)
+{avatar[nick]=petvn[35]}
+if (phansonguyen==17)
+{avatar[nick]=petvn[36]}
+if (phansonguyen==18)
+{avatar[nick]=petvn[37]}
+if (phansonguyen>=19)
+{avatar[nick]=petvn[39]}
+                            }
+                }
+
+exppet="<img src='/users/2611/10/63/87/album/lv10.gif' width='"+exp+"%' height='9px' style='border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; '>";
+exppet2="<img src='/users/2611/10/63/87/album/lv210.gif' width='2px' height='9px' style='border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; '>";
+expss= "<fieldset class='c3zchar0' style='border-top-left-radius: 6px 6px; border-top-right-radius: 6px 6px; border-bottom-right-radius: 6px 6px; border-bottom-left-radius: 6px 6px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(173, 216, 230); border-right-color: rgb(173, 216, 230); border-bottom-color: rgb(173, 216, 230); border-left-color: rgb(173, 216, 230); padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; text-align: left; white-space: nowrap; '>"+exppet+""+exppet2+"</fieldset>";
+
+stats=""+avatarname+""+avatar[nick]+"<div align='center' style='width: 120px; '><font class='Apple-style-span' color='black'><b>"+title1+": "+ phansonguyen +" (+"+exp+"%)</b></font></center>"+expss+""
+
+
+if(x[y].innerHTML.match(/Choice/i)){
+x[y].innerHTML +="<span class='gensmall'><fieldset>You do not have pets<fieldset>";}
+else{x[y].innerHTML +="<fieldset align='center' class='c3level' style='border-top-left-radius: 6px 6px; border-top-right-radius: 6px 6px; border-bottom-right-radius: 6px 6px; border-bottom-left-radius: 6px 6px; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-style: dotted; border-right-style: dotted; border-bottom-style: dotted; border-left-style: dotted; border-top-color: rgb(102, 102, 102); border-right-color: rgb(102, 102, 102); border-bottom-color: rgb(102, 102, 102); border-left-color: rgb(102, 102, 102); padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; font-size: 9px; font-weight: 700; margin-right: 20px; '>" + stats+"</div></fieldset>";}
+}}
+}
+function start() {changeImg(); init();} window.onload = start();
