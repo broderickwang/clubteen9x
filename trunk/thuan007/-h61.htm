@@ -1,0 +1,19 @@
+$(function(){
+$("a[rel='example1']").colorbox();        
+$(".lttluvmes").colorbox({width:"50%", inline:true, href:"#c3_luvmes"});
+$(".login_ca3").colorbox({width:"50%", inline:true, href:"#login_ca3"});
+$(".bbcode").colorbox({width:"50%", inline:true, href:"#ca3_bbcode"});
+$(".c3_reply").colorbox({width:"50%", inline:true, href:"#ca3_reply"});
+$(".example6").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+$(".example7").colorbox({width:"80%", height:"80%", iframe:true});
+
+        $.get('/profile.forum?mode=editprofile&page_profil=friendsfoes', function(data) {
+        c3moi= $('.forumline:eq(2) .row2', data).html();c3ban= $('.forumline:eq(0) .row2', data).html();
+        $('#c3zfriend').html(c3moi);$('#c3zfriends').html(c3ban);
+        var i = 0, ii = 0;
+        $('.forumline:eq(2) .row2 .friends-foes-list',data).each(function(index){i++;});
+        $('#c3dem').text($('#c3dem').text()+i+" ");
+        $('.forumline:eq(0) .row2 .friends-foes-list',data).each(function(index){ii++;});
+        $('#nban').text($('#nban').text()+ii+" ");
+});
+    })
