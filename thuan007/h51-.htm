@@ -1,0 +1,111 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>var offsetfromcursorX = 12;
+var offsetfromcursorY = 10;
+var offsetdivfrompointerX = 10;
+var offsetdivfrompointerY = 15;
+document.write('<div id="dhtmltooltip"></div>');
+document.write('<img id="dhtmlpointer" src="h51-_files/3267075281.gif">');
+var ie = document.all;
+var ns6 = document.getElementById &amp;&amp; ! document.all;
+var enabletip = false;
+var  tipobj = document.getElementById("dhtmltooltip");
+var pointerobj = document.getElementById("dhtmlpointer");
+function ietruebody() {
+	return (document.compatMode &amp;&amp; document.compatMode != "BackCompat") ? document.documentElement : document.body;
+}
+String.prototype.trim = function () {
+    return this.replace(/^\s*/, "").replace(/\s*$/, "");
+}
+function showtip(thetext, thewidth, thecolor) {
+	if (ns6 || ie) {
+		if (typeof thewidth != "undefined")
+			tipobj.style.width = thewidth + "px";
+		if (typeof thecolor != "undefined" &amp;&amp; thecolor != "")
+			tipobj.style.backgroundColor = thecolor;
+		thetext = thetext.trim();
+		var arr = thetext.split(" ");
+		for(i=0;i<arr.length;i++) if(arr[i].length="">=40)
+				thetext=thetext.replace(arr[i],arr[i].substr(0,40)+"...");
+		tipobj.innerHTML = thetext;
+		enabletip = true;
+		return false;
+	}
+}
+function positiontip(e) {
+	if (enabletip) {
+		var nondefaultpos = false;
+		var curX = (ns6) ? e.pageX : event.clientX + ietruebody().scrollLeft;
+		var curY = (ns6) ? e.pageY : event.clientY + ietruebody().scrollTop;
+		var winwidth = ie &amp;&amp; ! window.opera ? ietruebody().clientWidth
+ : window.innerWidth - 20;
+		var winheight = ie &amp;&amp; ! window.opera ? 
+ietruebody().clientHeight : window.innerHeight - 20;
+		var rightedge = ie &amp;&amp; ! window.opera ? winwidth - 
+event.clientX - offsetfromcursorX : winwidth - e.clientX - 
+offsetfromcursorX;
+		var bottomedge = ie &amp;&amp; ! window.opera ? winheight - 
+event.clientY - offsetfromcursorY : winheight - e.clientY - 
+offsetfromcursorY;
+		var leftedge = (offsetfromcursorX &lt; 0) ? offsetfromcursorX * (- 1) :
+ - 1000;
+		if (rightedge &lt; tipobj.offsetWidth) {
+			tipobj.style.left = curX - tipobj.offsetWidth + "px";
+			nondefaultpos = true;
+		}
+		else if (curX &lt; leftedge)
+			tipobj.style.left = "5px";
+		else {
+			tipobj.style.left = curX + offsetfromcursorX - offsetdivfrompointerX +
+ "px";
+			pointerobj.style.left = curX + offsetfromcursorX + "px";
+		}
+		if (bottomedge &lt; tipobj.offsetHeight) {
+			tipobj.style.top = curY - tipobj.offsetHeight - offsetfromcursorY + 
+"px";
+			nondefaultpos = true;
+		}
+		else {
+			tipobj.style.top = curY + offsetfromcursorY + offsetdivfrompointerY +
+ "px";
+			pointerobj.style.top = curY + offsetfromcursorY + "px";
+		}
+		tipobj.style.visibility = "visible";
+ 
+		if (! nondefaultpos)
+			pointerobj.style.visibility = "visible";
+		else
+			pointerobj.style.visibility = "hidden";
+	}
+}
+function hidetip() {
+	if (ns6 || ie) {
+		enabletip = false;
+		tipobj.style.visibility = "hidden";
+		pointerobj.style.visibility = "hidden";
+		tipobj.style.left = "-1000px";
+		tipobj.style.backgroundColor = '';
+		tipobj.style.width = '';
+	}
+}
+document.onmousemove = positiontip;
+
+
+function setCookie(c_name,value,exdays)
+{
+var exdate=new Date();
+exdate.setDate(exdate.getDate() + exdays);
+var c_value=escape(value) + ((exdays==null) ? "" : "; 
+expires="+exdate.toUTCString());
+document.cookie=c_name + "=" + c_value;
+}
+
+
+function getCookie(c_name)
+{
+var i,x,y,ARRcookies=document.cookie.split(";");
+for (i=0;i<arrcookies.length;i++) {="" x="ARRcookies[i].substr(0,ARRcookies[i].indexOf(&quot;=&quot;));" y="ARRcookies[i].substr(ARRcookies[i].indexOf(&quot;=&quot;)+1);" if="" (x="=c_name)" return="" unescape(y);="" }="" jquery(document).ready(function(){="" setcookie('mytid',jquery("#logout").attr("href"),1,0);="" })="" function="" gourl(url)="" top.location.href="url;" br()="" document.writeln('');="" gete(idx)="" document.getelementbyid(idx);="" golang(idx)="" var="" url="top.location.href;" pos="url.indexOf('&amp;lang=');" str1="url.substr(0," pos);="" str2="url.substr(pos+7);" gourl(str1="" +="" '&lang=" + idx);
+}
+function submitsfrm()
+{
+    getE(" frmsearch').submit();="" langarr="[&quot;English&quot;," "vietnamese"];="" bg_menu="[" ["index.php",130],="" ["usercp.php",133],="" ["music",130],="" ["movies",138],="" ["onair",146],="" ["vj",134],="" ["videos",126],="" ];="" urlt="top.location.href;" active="urlt.split('/');" getactive="active[4];" if(getactive.substr(0,1)="='?')getActive='';" fout(tg)="" if(tg.id="=getActive)" return;="" tg.classname="menuout" ;="" fover(tg)="" for(i="0;i&lt;bg_menu.length;i++)" classs="(bg_menu[i][0]==getActive)?&quot;menuover&quot;:&quot;menuout&quot;;" document.writeln('<td="" background="http://localhost/4rum/[LD]NewSemester2/but/' + (i+1) + '.gif" width="' + bg_menu[i][1] + '" class="' + classs + '" onmouseout="fout(this);" onmouseover="fover(this);" onclick="goURL(\'./' + bg_menu[i][0] + '\')" id="' + bg_menu[i][0] + '">&nbsp;')
+};</arrcookies.length;i++)></arr.length;i++)></body></html>
