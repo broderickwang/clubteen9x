@@ -1,0 +1,93 @@
+.header {
+	font-family: tahoma;
+	font-size: 12px;
+	color: #CCCCCC;
+	text-decoration: none;
+	background-image: url(http://i22.servimg.com/u/f22/14/82/40/20/bg10.jpg);
+	background-repeat: no-repeat;
+	height: 391px;
+	width: 1000px;
+}
+.main {
+	font-family: tahoma;
+	font-size: 12px;
+	color: #999999;
+	text-decoration: none;
+	background-image: url(http://i22.servimg.com/u/f22/14/82/40/20/bg_foo10.jpg);
+	background-repeat: repeat-y;
+}
+.font2 {
+	font-family: tahoma;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.footer {
+	background-image: url(http://i22.servimg.com/u/f22/14/82/40/20/bg_foo11.jpg);
+	background-repeat: no-repeat;
+}
+.footer2 {
+	font-family: tahoma;
+	font-size: 13px;
+	color: #CCCCCC;
+	text-decoration: none;
+	background-image: url(http://i22.servimg.com/u/f22/14/82/40/20/bg_wra10.jpg);
+	background-repeat: repeat;
+}
+.footer3 {
+	background-image: url(http://i22.servimg.com/u/f22/14/82/40/20/bg_b1210.jpg);
+	background-repeat: no-repeat;
+}
+.font_header {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.font1 {
+	font-family: tahoma;
+	font-size: 11px;
+	color: #CC00FF;
+	text-decoration: none;
+	font-weight: bold;
+	margin-left: 15px;
+	padding-left: 15px;
+}
+
+.font_header a{
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.font4 {
+	font-family: tahoma;
+	font-size: 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.font_header a:hover{
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FF00FF;
+	text-decoration: none;
+}.boder_duoi {
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+.gioithieu {
+	background-image: url(http://i22.servimg.com/u/f22/14/82/40/20/bg_gt110.png);
+	background-repeat: no-repeat;
+	margin-left: 25px;
+	padding-left: 25px;
+	margin-top: 4px;
+	padding-top: 4px;
+	margin-right: 2px;
+	padding-right: 2px;
+}
