@@ -1,0 +1,2593 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+{\*\generator Msftedit 5.41.15.1507;}\viewkind4\uc1\pard\f0\fs20 /* Chatbox */\par
+#frame_chatbox \{\par
+\tab border: none !important;\par
+\tab\}\par
+body.chatbox \{\par
+\tab min-width: 550px !important;\par
+\tab background-image: none;\par
+\tab padding: 0;\par
+\tab margin: 0;\par
+\tab\}\par
+#chatbox_members \{\par
+\tab background: white url(http://a1tinhgia3.co.cc/users/2211/12/43/96/album/row310.gif);\par
+bottom: 52px;\par
+overflow: auto;\par
+padding: 3px 2px;\par
+position: absolute;\par
+top: 54px;\par
+width: 163px;\par
+\tab\}\par
+#chatbox \{\par
+\tab background: white url(http://a1tinhgia3.co.cc/users/2211/12/43/96/album/row310.gif);\par
+bottom: 52px;\par
+left: 165px;\par
+line-height: 10px;\par
+overflow: auto;\par
+position: absolute;\par
+right: 0px;\par
+top: 54px;\par
+\tab\}\par
+.chatbox_row_1,.chatbox_row_2,.chatbox_row_3 \{\par
+\tab font-size: 11px;padding: 0px 5px;\par
+\tab\}\par
+.chatbox-options \{\par
+\tab text-align:right;\par
+\tab\}\par
+#chatbox_messenger_form .gen,#chatbox_messenger_form .text-field,#chatbox_messenger_form \{\par
+\tab white-space : nowrap;\par
+\tab\}\par
+#chatbox_footer \{\par
+\tab position: absolute;\par
+\tab bottom: 0;\par
+\tab left: 0;\par
+\tab right: 0;\par
+\tab height: 53px;display: inline!important;\par
+\tab\}\par
+#chatbox_footer table.text-styles \{\par
+\tab float: none;\par
+\tab\}\par
+#chatbox_footer .text-field \{\par
+\tab float: left;\par
+\tab\}\par
+#chatbox_header \{\par
+\tab height: 53px;\par
+\tab background-color: #e5e5e5;\par
+\tab\}\par
+#chatbox p \{\par
+\tab line-height: 1.2em;\par
+\tab\}\par
+.memberlist_row_1 \{\par
+\tab padding: 2px 2px 2px 10px;\par
+\tab\}\par
+#chatbox_members .member-title \{\par
+\tab text-align: center;\par
+\tab padding: 0.5em 0.25em;\par
+\tab background-image: none;\par
+\tab font-size: 12px;\par
+\tab font-family: Verdana,Arial,Helvetica,sans-serif;\par
+\tab\}\par
+#chatbox_members ul \{\par
+\tab list-style: none;\par
+\tab margin: 0 0 0 10px;font-size: 11px;\par
+\tab\}\par
+#chatbox_members ul li \{\par
+\tab margin: 2px 2px 2px 0;\par
+\tab\}\par
+#message,#submit_button\{\par
+\tab border-width: 1px;\par
+\tab\}\par
+.fontbutton\{\par
+\tab cursor: pointer;\par
+\tab text-align: left;\par
+border: 1px solid #A9B8C2 !important;\par
+-moz-border-radius: 3px; border-radius: 3px;font-size: 11px;\par
+\tab  font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif;background: #F4F5F4 url(http://a1tinhgia3.co.cc/users/2211/12/43/96/album/tabbg110.png);\par
+\tab\}\par
+.fontbutton_normal \{\par
+\tab background: #F4F5F4 url(http://a1tinhgia3.co.cc/users/2211/12/43/96/album/tabbg110.png);\par
+\tab\}\par
+.fontbutton_selected \{\par
+\tab border: 1px solid #00C6D4 !important;\par
+color: #00C6D4;background: #fff url(http://a1tinhgia3.co.cc/users/2211/12/43/96/album/tile_b11.gif);\par
+\tab\}\par
+.fontbutton_clicked \{\par
+\tab background: #959595;\par
+\tab border: 1px solid #22229C;\par
+\tab\}\par
+#chatbox .user \{\par
+\tab font-weight: bold;\par
+\tab\}\par
+div#chatbox \{\par
+\tab color: #ffb75c;\par
+\tab\}\par
+#chatbox_contextmenu \{\par
+\tab background-color: white;\par
+border: 1px dashed #AAA;\par
+padding: 4px;\par
+\tab\}\par
+#chatbox_contextmenu p \{\par
+\tab border-top: 1px dashed #AAA;\par
+font-family: verdana, arial, sans-serif;\par
+margin: 0px;\par
+padding: 1px 4px;\par
+\tab  \}\par
+#chatbox_contextmenu p.hover \{\par
+\tab border: 1px dashed #00C6D4;\par
+\tab  \}\par
+#chatbox_contextmenu p.close \{\par
+border: none;\par
+color: blue;\par
+font-size: 70%;\par
+font-weight: bold;\par
+padding: 1px;\par
+\tab  \}\par
+#chatbox_contextmenu p.close img \{\par
+\tab  vertical-align: middle;\par
+\tab  padding-left: 25px;\par
+\tab\}\par
+#chatbox_contextmenu a \{\par
+\tab  color: #;\par
+\tab  text-decoration: none;\par
+\tab  font-size: 70%;\par
+\tab\}\par
+#chatbox_contextmenu a:hover \{\par
+\tab  color: #;\par
+\tab  \}\par
+.fontbutton\{\par
+\tab border:0;\par
+\tab\}\par
+* html #chatbox-members \{\par
+\tab  \par
+/* IE expressions helping IE work in Standards mode */\par
+height: expression(( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight) - ( (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 3) + (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 2) + (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 2 * 0) ) + "px");\par
+\tab\}\par
+* html #chatbox \{\par
+\tab  \par
+/* IE expressions helping IE work in Standards mode */\par
+height: expression(( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight) - ( (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 3) + (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 2) + (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 2 * 0) ) + "px");\par
+\tab width: expression(( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth) - ( (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 10) + (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 1) + (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 2 * 1.3) ) + "px");\par
+\tab\}\par
+* html #chatbox-footer \{\par
+\tab\par
+/* IE expressions helping IE work in Standards mode */\par
+width: expression(( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth) - ( (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 0) + (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 0) + (parseInt(document.body.currentStyle.fontSize) * 1.3333333 * 2 * 0) ) + "px");\par
+\tab\}\par
+.date-and-time\{font-size: 10px; color: gray;\}\par
+span[style="color: rgb(191, 0, 255);"],span[style="color:#BF00FF"],span[style="color: rgb(255, 102, 0);"],span[style="color:#FF6600"],span[style="color: rgb(0, 191, 0);"],span[style="color:#00BF00"],span[style="color: rgb(250, 0, 0);"],span[style="color:#FA0000"],span[style="color: rgb(89, 89, 89);"],span[style="color:#595959"]\{color:#fff;text-shadow: 0 0 .2em black, 0 0 .2em black, 0 0 .3em black;\}\par
+\par
+/* poll */\par
+\par
+/*post body image-------------------------------------------------------------------*/\par
+.postbody img\{max-width:600px;\}\par
+\par
+\par
+.tabs \{ margin: 0; padding: 0;\}\par
+.tabs \{ padding-bottom: 26px; margin-bottom: 15px; background: #E8F3FD; border-top: 1px solid #FFF; border-bottom: 1px solid #CAD9EA; \}\par
+.tabs li \{ list-style: none;float: left; line-height: 27px; border-right: 1px solid #CAD9EA; height: 27px; font-size: 11px; \}\par
+\par
+\par
+\par
+/* Note */\par
+.lovemes table, .lovemes div, .lovemes hr, .lovemes br, .lovemes embed\{display:none!important\}\par
+.lovemes \{font-weight:bold; font-size:11px\}\par
+.lovemes img \{vertical-align: middle; max-height:30px\}\par
+.noteclassic,.noteimportant,.notewarning,.notetip,.notehelp \{\par
+  width:80%;\par
+  border-radius:10px 10px;\par
+  -moz-border-radius:10px;\par
+  -webkit-border-radius:10px 10px;\par
+  -webkit-box-shadow:2px 2px 3px #999;\par
+  -moz-box-shadow:2px 2px 3px #999;\par
+  min-height:40px;\par
+  height:auto !important;\par
+  overflow:visible;\par
+  position:relative;\par
+  top:6px;\par
+  left:5px;\par
+  border:1px solid #999;\par
+  background-position:20px 50%;\par
+  background-repeat:no-repeat;\par
+  text-align:justify;\par
+  margin:10px 0 15px 5px;\par
+  padding:25px 20px 15px 80px\par
+\}\par
+.noteclassic \{\par
+  background-color: #EEF;\par
+  background-image: url(http://www.c3z.co.cc/users/2611/10/63/87/album/note11.png);\par
+\}\par
+.noteimportant \{\par
+  background-color: #FFC;\par
+  background-image: url(http://www.c3z.co.cc/users/2611/10/63/87/album/import10.png);\par
+\}\par
+.notewarning \{\par
+  background-color: #FDD;\par
+  background-image: url(http://www.c3z.co.cc/users/2611/10/63/87/album/warnin10.png);\par
+\}\par
+.notetip \{\par
+  background-color: #E4F6F8;\par
+  background-image: url(http://www.c3z.co.cc/users/2611/10/63/87/album/tip11.png);\par
+\}\par
+.notehelp \{\par
+  background-color: #D8F3C9;\par
+  background-image: url(http://www.c3z.co.cc/users/2611/10/63/87/album/help12.png);\par
+\}\par
+\par
+/* SLIMBOX */\par
+#lbOverlay\{position:fixed;z-index: 999;left:0;top:0;width:100%;height:100%;background-color:#000;cursor:pointer;\}\par
+#lbCenter,#lbBottomContainer\{position:absolute;z-index: 999;overflow:hidden;background-color:#fff;\}\par
+.lbLoading\{background:#fff url(http://i1211.photobucket.com/albums/cc433/baivong/cfviet/novfao10.gif) no-repeat center;\}\par
+#lbImage\{position:absolute;left:0;top:0;border:10px solid #fff;background-repeat:no-repeat;\}\par
+#lbPrevLink,#lbNextLink\{display:block;position:absolute;top:0;width:50%;outline:none;\}\par
+#lbPrevLink\{left:0;\}\par
+#lbPrevLink:hover\{background:transparent url(http://i1211.photobucket.com/albums/cc433/baivong/cfviet/11qo2n10.gif) no-repeat 0 15%;\}\par
+#lbNextLink\{right:0;\}\par
+#lbNextLink:hover\{background:transparent url(http://i1211.photobucket.com/albums/cc433/baivong/cfviet/1r7u6o10.gif) no-repeat 100% 15%;\}\par
+#lbBottom\{font-family:Verdana, Arial, Geneva, Helvetica, sans-serif;font-size:10px;color:#666;line-height:1.4em;text-align:left;border:10px solid #fff;border-top-style:none;\}\par
+#lbCloseLink\{display:block;float:right;width:66px;height:22px;background:transparent url(http://i1211.photobucket.com/albums/cc433/baivong/cfviet/1217by10-1.gif) no-repeat center;outline:none;margin:5px 0;\}\par
+#lbCaption,#lbNumber\{margin-right:71px;\}\par
+#lbCaption\{font-weight:bold;\}\par
+\par
+\par
+\par
+\par
+\par
+.quote\{\par
+    background-color: #FAFAFA;\par
+color: #444;\par
+font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;\par
+font-size: 11px;\par
+line-height: 125%;\par
+padding: 7px;\}\par
+div.postbody table\{background: #FFFBC3 none;\par
+border: 1px dashed #FF9C00;\}\par
+div.postbody table span.genmed\{color:#777777;display:block;padding: 6px 30px 13px 30px;background: #fffbc3 url(http://cdn1.iconfinder.com/data/icons/fatcow/16x16_0440/folder_add.png) no-repeat 5px 8px;font: bold 18px Courier New\}\par
+.mod-text \{\par
+\tab font-weight: bold;\par
+\tab\}\par
+img\{\par
+\tab border:0\}\par
+input,textarea,select,#text_editor_iframe,textarea.inputbox\{\par
+border: 1px solid #A9B8C2 !important;\par
+-moz-border-radius: 3px; border-radius: 3px;font-size: 11px;\par
+\tab  font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif;padding: 1px 4px;\}\par
+.button:hover, .mainoption:hover, input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover\{border: 1px solid #00C6D4 !important;\par
+color: #00C6D4;background-position: 0px 100%;\}\par
+.button, .mainoption, input[type=submit], input[type=button], input[type=reset]\{background: #F4F5F4 url(/users/2211/12/43/96/album/tabbg110.png);padding: 2px 5px;\} \par
+.post-options \{\par
+\tab text-align: right;\par
+\tab\}\par
+.post-options img \{\par
+\tab cursor: pointer;\par
+\tab vertical-align: middle;\par
+\tab\}\par
+input \{\par
+\tab  text-indent : 2px;\par
+\tab  \}\par
+input.mainoption \{\par
+\tab background-color : #fafafa;\par
+\tab font-weight : bold;\par
+\tab\}\par
+input.liteoption \{\par
+\tab background-color : #fafafa;\par
+\tab font-weight : normal;\par
+\tab\}\par
+.helpline \{\par
+\tab  background-color: #dee3e7;\par
+\tab  border-style: none;\par
+\tab  \}\par
+button.button2, input.button2 \{\par
+\tab font-size: 0.7em;\par
+\tab border: 1px solid #BCBCBC;\par
+\tab width: auto !important;\par
+\tab padding: 1px 0;\par
+\tab font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif;\par
+\tab color: #000000;\par
+\tab background-repeat: repeat-x;\par
+\tab background-color: #FAFAFA;\par
+\tab background-image: url('http://illiweb.com/fa/prosilver/bg_button.gif');\par
+\tab background-position: top;\par
+\tab overflow: visible;\par
+\tab vertical-align:middle;\par
+\tab\}\par
+button.button2:hover, input.button2:hover \{\par
+\tab border: 1px solid #dd6900;\par
+\tab color: #dd6900;\par
+\tab background-position: 0 100%;\par
+\tab\}\par
+* html button.button2, * html input.button2 \{\par
+\tab padding-bottom: 0;\par
+\tab margin-bottom: 1px;\par
+\tab height: 24px;\par
+\tab padding-right: 3px;\par
+\tab padding-left: 3px;\par
+\tab\}\par
+*+html button.button2, *+html input.button2 \{\par
+\tab height: 24px;\par
+\tab padding-right: 3px;\par
+\tab padding-left: 3px;\par
+\tab\}\par
+*+html button.button2 img \{\par
+\tab  vertical-align: middle;\par
+\tab  \}\par
+* html button.button2 img \{\par
+\tab  vertical-align: middle;\par
+\tab  \}\par
+button.bbcode \{\par
+\tab border: 1px solid #e3adad;\par
+\tab background-image: url("http://illiweb.com/fa/wysiwyg/bg_button.png");\par
+\tab\}\par
+.select \{\par
+\tab background-color: #FFF;\par
+\tab border: 1px solid #BCBCBC;\par
+\tab position: absolute;\par
+\tab z-index: 999;\par
+\tab top: 0;\par
+\tab left: 0;\par
+\tab overflow: hidden;\par
+\tab width: 0;\par
+\tab\}\par
+.select p \{\par
+\tab padding: 4px 6px;\par
+\tab font-size: 0.7em;\par
+\tab margin: 0;\par
+\tab white-space: nowrap;\par
+\tab text-align: left;\par
+\tab\}\par
+.select button \{\par
+\tab padding: 4px;\par
+\tab font-size: 0.9em;\par
+\tab margin: 0;\par
+\tab background-color: #FFF;\par
+\tab border: none;\par
+\tab text-align:left;\par
+\tab\}\par
+.select button.button2 \{\par
+\tab border:1px solid #BCBCBC;\par
+\tab padding: 0;\par
+\tab\}\par
+* html .select button.button2 \{\par
+\tab padding-right: 3px;\par
+\tab padding-left: 3px;\par
+\tab\}\par
+.select button.button2:hover \{\par
+\tab border: 1px solid #dd6900;\par
+\tab color: #dd6900;\par
+\tab background-position: 0 100%;\par
+\tab\}\par
+.select button:hover,.selectHover \{\par
+\tab cursor: pointer;\par
+\tab background-color: #EEE;\par
+\tab\}\par
+textarea#text_editor_textarea \{\par
+\tab  width: 98% !important;\par
+\tab  \}\par
+iframe#text_editor_iframe \{\par
+\tab width: 98%;\par
+\tab height: 200px;\par
+\tab\}\par
+form#quick_reply textarea#text_editor_textarea \{\par
+\tab width: 98% !important;\par
+\tab height: 100%;\par
+\tab\}\par
+form#quick_reply iframe#text_editor_iframe \{\par
+\tab  width: 100%;\par
+\tab  \}\par
+* html form#quick_reply iframe#text_editor_iframe \{\par
+\tab  width: 600px;\par
+\tab  \}\par
+*+html form#quick_reply iframe#text_editor_iframe \{\par
+\tab  width: 600px;\par
+\tab  \}\par
+#page-footer .gen strong \{\par
+\tab font-weight: normal;\par
+\tab\}\par
+\par
+/*@import url("form_ie.css");\par
+\tab */\par
+input \{\par
+\tab text-indent: 2px\}\par
+.postbody \{\par
+\tab line-height: 18px\}\par
+@media print \{\par
+\tab body \{\par
+\tab background-image: none;\par
+\tab background-color: #fff;\par
+\tab color: #000;\par
+\tab\}\par
+table.bodylinewidth span.maintitle \{\par
+\tab display: block;\par
+\tab text-align: left;\par
+\tab\}\par
+table.bodylinewidth img#i_logo,.browse-arrows,.noprint,.messaging,.post-options,.poster-profile,img.i_icon_online,table.bodylinewidth .mainmenu,table.bodylinewidth .nav,table.bodylinewidth .gensmall,span.postdetails img,table.bodylinewidth .sig,table.bodylinewidth .catbottom,#info_open \{\par
+\tab display:none;\par
+\tab\}\par
+td.catHead, .t-title \{\par
+\tab text-align: left;\par
+\tab\}\par
+table.bodylinewidth .cattitle \{\par
+\tab letter-spacing: normal;\par
+\tab  font-size: 1em;\par
+\tab\}\par
+.thLeft,.thRight \{\par
+\tab color: #000;\par
+\tab  border: none;\par
+\tab  text-align:left;\par
+\tab\}\par
+.hr hr \{\par
+\tab  visibility: hidden;\par
+\tab  \}\par
+.hr \{\par
+\tab border-top: 1px dotted #ddd !important;\par
+\tab  \}\par
+tr.post td \{\par
+\tab vertical-align: top;\par
+\tab border-bottom: 1px solid #ccc;\par
+\tab\}\par
+tr.post td td \{\par
+\tab border: none;\par
+\tab\}\par
+span.gen \{\par
+\tab display: none;\par
+\tab\}\par
+\}\par
+ul.abuse \{\par
+\tab list-style: none;\par
+\tab line-height: 1.5em;\par
+\tab font-size: 0.9em;\par
+\tab\}\par
+.rtl-spacer:before \{\par
+\tab content: " ";\par
+\tab white-space: pre;\par
+\tab\}\par
+.rtl-spacer:after \{\par
+\tab content: " ";\par
+\tab white-space: pre;\par
+\tab\}\par
+.warning \{\par
+\tab color:#ff3333;\par
+\tab\}\par
+.captcha div.captcha-img \{\par
+\tab float: left;\par
+\tab margin: 0 1em 0 0;\par
+\tab\}\par
+.captcha .inputbox \{\par
+\tab margin-top: 0.5em;\par
+\tab\}\par
+.align_gauche \{\par
+\tab text-align: left;\par
+\tab\}\par
+.center \{\par
+\tab text-align: center;\par
+\tab\}\par
+.align_droite \{\par
+\tab text-align: right;\par
+\tab\}\par
+.right \{\par
+\tab float: right;\par
+\tab\}\par
+.left \{\par
+\tab float: left;\par
+\tab\}\par
+\par
+/* TGF Clearfix */\par
+.clearfix:after \{\par
+\tab content: ".";\par
+\tab display: block;\par
+\tab height: 0;\par
+\tab clear: both;\par
+\tab visibility: hidden;\par
+\tab\}\par
+*+ html .clearfix \{\par
+\tab min-height: 1px;\par
+\tab\}\par
+* html .clearfix \{\par
+\tab position: relative;\par
+\tab  height: 1%;\par
+\tab  clear: both;\par
+\tab\}\par
+#page-footer, .clear \{\par
+\tab clear: both;\par
+\tab\}\par
+#page-footer h3 \{\par
+\tab  margin-top: 20px;\par
+\tab  \}\par
+#content-container #left \{\par
+\tab width: 0px;\par
+\tab margin-right: px;\par
+\tab\}\par
+#content-container #right \{\par
+\tab width: 0px;\par
+\tab margin-left: px;\par
+\tab\}\par
+.module-title \{\par
+\tab font-weight: bold;\par
+\tab margin: 0 auto;\par
+\tab text-align: center;\par
+\tab display: block;\par
+\tab\}\par
+\par
+\par
+/* poll */\par
+.poll-result td \{\par
+\tab padding: 2px 4px;\par
+\tab  text-align: left;\par
+\tab\}\par
+.poll-result td.poll-title,.poll-result td.poll-results \{\par
+\tab text-align: center;\par
+\tab\}\par
+.progress-bar td \{\par
+\tab padding: 0 !important;\par
+\tab\}\par
+.poll-ballot \{\par
+\tab text-align: left;\par
+\tab\}\par
+\par
+/* Advanced profile */\par
+#profile-advanced-avatar .module, #profile-advanced-points .module, #profile-advanced-reputation .module, #profile-advanced-details \{\par
+\tab margin-right: 3px;\par
+\tab\}\par
+#profile-advanced-avatar .module, #profile-advanced-points .module, #profile-advanced-reputation .module, #profile-advanced-right .module \{\par
+\tab margin-bottom: 3px;\par
+\tab\}\par
+#profile-advanced-button \{\par
+\tab padding: 1px;vertical-align: bottom;\par
+\tab\}\par
+#profile-advanced-details \{\par
+\tab overflow: hidden;\par
+\tab\}\par
+#profile-advanced-details ol \{\par
+\tab margin: 0;\par
+\tab padding: 0;\par
+\tab list-style: none;\par
+\tab\}\par
+#profile-advanced-details ol li \{\par
+\tab display: block;\par
+\tab margin-bottom: 4px;\par
+\tab\}\par
+#profile-advanced-details .avatar \{\par
+\tab float: left;\par
+\tab\}\par
+.avatar \{\par
+\tab width: 50px;\par
+\tab border: 1px solid #006699;\par
+\tab background-color: #fff;\par
+\tab\}\par
+.avatar img \{\par
+\tab width: 50px;\par
+\tab\}\par
+.friend-block .avatar \{\par
+\tab margin: 0 auto;\par
+\tab cursor:pointer;\par
+\tab\}\par
+.avatar.mini, .avatar.mini img \{\par
+\tab width: 38px;\par
+\tab height: 38px;\par
+\tab\}\par
+.friend-block \{\par
+\tab float: left;\par
+\tab width: 70px;\par
+\tab margin: 1px;\par
+\tab text-align: center;\par
+\tab overflow: hidden;\par
+\tab\}\par
+.friend_list_online_status \{\par
+\tab line-height: 11px;\par
+\tab font-size: .9em;\par
+\tab\}\par
+.friend_list_online_status img \{\par
+\tab vertical-align: middle;\par
+\tab\}\par
+.friends-foes-list \{\par
+\tab float: left;\par
+\tab width: 200px;\par
+\tab height: 2em;\par
+\tab\}\par
+#profile-advanced-details .message-block \{\par
+\tab margin-left: 57px;\par
+\tab\}\par
+#profile-advanced-details .message-header \{\par
+\tab border: 1px dotted #e7e7e7;\par
+\tab  background: #fff url(/users/2211/12/43/96/album/row310.gif);\par
+\tab padding: 4px;\par
+\tab margin-bottom: 4px;\par
+\tab\}\par
+#profile-advanced-details .message-date \{\par
+\tab float: right;\par
+\tab\}\par
+#profile-advanced-details .message-body \{\par
+\tab margin-bottom: 4px;\par
+\tab\}\par
+#profile-advanced-details .message-footer \{\par
+\tab text-align: right;\par
+\tab\}\par
+#profile-advanced-details .message-footer li \{\par
+\tab display: inline;\par
+\tab margin: 0 0.25em;\par
+\tab  \par
+/* Spacing between generation dot */\par
+\}\par
+#profile-advanced-details .message-footer li:after \{\par
+\tab content: ' .';\par
+\tab  \par
+/* Beware of character: can create a whitepage in IE6 if char does not exist in lang. */\par
+\}\par
+#profile-advanced-details .message-footer li a \{\par
+\tab margin-right: 0.25em;\par
+\tab  \par
+/* Spacing between generation dot */\par
+text-decoration: underline;\par
+\tab\}\par
+#profile-advanced-details .message-footer li.last:after \{\par
+\tab content: normal;\par
+\tab\}\par
+#profile-advanced-add \{\par
+\tab margin-right: 4px;\par
+\tab padding: 8px 0;\par
+\tab text-align: right;\par
+\tab\}\par
+#profile-advanced-details .stats-field \{\par
+\tab margin: 4px 0 10px 4px;\par
+\tab padding: 0 10px 6px;\par
+\tab\}\par
+#profile-advanced-details .stats-field legend \{\par
+\tab font-weight: bold;\par
+\tab\}\par
+#profile-advanced-details .stats-field ul \{\par
+\tab list-style-type:none;\par
+\tab text-indent: 10px;\par
+\tab padding: 0;\par
+\tab\}\par
+#profile-advanced-details .stats-field li \{\par
+\tab margin: 4px 0;\par
+\tab\}\par
+#login_popup \{\par
+\tab position: absolute;\par
+\tab z-index: 999;\par
+\tab display: none;\par
+\tab\}\par
+#login_popup_buttons \{\par
+\tab position: absolute;\par
+\tab height:19px;\par
+\tab bottom: 6px;\par
+\tab right: 6px;\par
+\tab\}\par
+#login_popup_buttons input \{\par
+\tab margin-left: 6px;\par
+\tab\}\par
+ul.profile_field_list \{\par
+\tab padding:0;\par
+\tab margin:0\}\par
+html ul.profile_field_list li \{\par
+\tab list-style-type: none;\par
+\tab\}\par
+ul.profile_field_list > li \{\par
+\tab list-style-type: none;\par
+\tab\}\par
+.inputURL \{\par
+\tab font-size:10px;\par
+\tab font-family:"Courier New", "Times New roman";\par
+\tab letter-spacing:-1px;\par
+\tab\}\par
+.middleline \{\par
+\tab line-height:2em;\par
+\tab\}\par
+.invisible\{\par
+\tab display:none;\par
+\tab visibility:hidden;\par
+\tab\}\par
+.visible\{\par
+\tab display:block;\par
+\tab visibility:visible;\par
+\tab\}\par
+\par
+/* ajax profil */\par
+.ajax-profil_hover\{\par
+\tab background:transparent\}\par
+.ajax-profil_parent\{\par
+\tab position:relative;\par
+\tab zoom:1;\par
+\tab\}\par
+.ajax-profil_edit\{\par
+\tab cursor:pointer;\par
+\tab position:absolute;\par
+\tab top:0;\par
+\tab left:-18px\}\par
+.ajax-profil_edit img\{\par
+\tab margin-left:4px\}\par
+.ajax-profil_valid\{\par
+\tab cursor:pointer;\par
+\tab margin-left:4px;\par
+\tab vertical-align:middle\}\par
+#profile-advanced-details dl\{\par
+\tab padding:8px 10 8px 0;\par
+\tab width:98%;\par
+\tab margin:10px 0 0;\par
+\tab\}\par
+#profile-advanced-details dl dt\{\par
+\tab float:left;\par
+\tab display:block;\par
+\tab width:10em;\par
+\tab\}\par
+#profile-advanced-details dl dd\{\par
+\tab margin-left:10em;\par
+\tab padding-left:12px;\par
+\tab\}\par
+#profile-advanced-details div.separator\{\par
+\tab clear:both;\par
+\tab font-size:1px;\par
+\tab line-height:1px;\par
+\tab border-bottom:1px solid #dcdcdc;\par
+\tab padding-top:10px;\par
+\tab\}\par
+#profile-advanced-details .ajax-profil_edit\{\par
+\tab left:-4px;\par
+\tab\}\par
+\par
+/* jqModal */\par
+.jqmWindow \{\par
+\tab display: none;\par
+\tab position: fixed;\par
+\tab left: 50%;\par
+\tab width: 450px;\par
+\tab margin-left: -225px;\par
+\tab top: 50%;\par
+\tab margin-top: -125px;\par
+\tab background-color: #e5e5e5;\par
+\tab border: 1px solid #006699;\par
+\tab\}\par
+.jqmOverlay \{\par
+\tab background-color: #000;\par
+\tab\}\par
+.jqDrag \{\par
+\tab cursor: move;\par
+\tab\}\par
+\par
+/* Blog */\par
+.blog_cal-border \{\par
+\tab display: inline;\par
+\tab float: left;\par
+\tab border: 1px solid #006699;\par
+\tab background: #efefef;\par
+\tab padding: 1px;\par
+\tab font-size: 0.9em;\par
+\tab margin-right: 10px;\par
+\tab\}\par
+.blog_cal-content \{\par
+\tab width: 2.9em;\par
+\tab background: #006699;\par
+\tab padding: 1px;\par
+\tab line-height: 1.4em;\par
+\tab text-align: center;\par
+\tab font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Sans-Serif;\par
+\tab color: #ffffff;\par
+\tab\}\par
+.blog_cal-content span \{\par
+\tab display: block;\par
+\tab\}\par
+.blog_cal-day \{\par
+\tab padding-left: 0.2em;\par
+\tab font-size: 1.6em;\par
+\tab letter-spacing: 0.2em;\par
+\tab\}\par
+.blog_cal-month \{\par
+\tab line-height: 0.7em;\par
+\tab font-size: 2em;\par
+\tab font-weight: bold;\par
+\tab\}\par
+.blog_cal-year \{\par
+\tab line-height: 1.2em;\par
+\tab font-size: 0.8em;\par
+\tab\}\par
+.blog_title \{\par
+\tab padding-top: 5px;\par
+\tab font-size: 16px;\par
+\tab\}\par
+.blog_title img \{\par
+\tab vertical-align: middle;\par
+\tab\}\par
+.blog_title .topictitle \{\par
+\tab font-size: 16px;\par
+\tab\}\par
+.blog_message \{\par
+\tab margin-top: 12px;\par
+\tab font-size: 12px;\par
+\tab\}\par
+.blog_comments \{\par
+\tab margin-bottom: 2px;\par
+\tab text-align: right;\par
+\tab\}\par
+.blog_comments img \{\par
+\tab vertical-align: middle;\par
+\tab\}\par
+#blog_comments \{\par
+\tab width: 90%;\par
+\tab margin: 0 auto;\par
+\tab\}\par
+#blog_comments .postbody \{\par
+\tab width: 96%;\par
+\tab\}\par
+.blog_comment-avatar \{\par
+\tab float: left;\par
+\tab\}\par
+.blog_comment-avatar img \{\par
+\tab background-color: #fff;\par
+\tab border: 1px solid #006699;\par
+\tab vertical-align: middle;\par
+\tab width: 38px;\par
+\tab margin: 5px 5px 0 0;\par
+\tab\}\par
+#blog_comments table \{\par
+\tab margin-bottom: 2px;\par
+\tab\}\par
+#blog_comments .h3 \{\par
+\tab overflow: hidden;\par
+\tab margin-top: 0;\par
+\tab margin-left: 45px;\par
+\tab padding: 0;\par
+\tab min-height: 22px;\par
+\tab\}\par
+.blog_comment-title \{\par
+\tab float: left;\par
+\tab min-height: 12px;\par
+\tab margin-top: 7px;\par
+\tab\}\par
+.blog_comment-title a \{\par
+\tab text-decoration: none;\par
+\tab\}\par
+#blog_comments .profile-icons \{\par
+\tab float: right;\par
+\tab margin-bottom: 5px;\par
+\tab\}\par
+\par
+/* Social bookmarking */\par
+#bookmarks \{\par
+\tab float: right;\par
+\tab\}\par
+#bookmarks a img \{\par
+\tab width: 20px;\par
+\tab height: 20px;\par
+\tab background: url(http://illiweb.com/fa/social_bookmarking/social_bookmarking.png) no-repeat scroll;\par
+\tab vertical-align: middle;\par
+\tab\}\par
+#bookmarks a img.twitter \{\par
+\tab width: 16px;\par
+\tab height: 16px;\par
+\tab margin: 2px;\par
+\tab background: url(http://illiweb.com/fa/social_bookmarking/twitter.png) no-repeat scroll;\par
+\tab\}\par
+#bookmarks img.delicious \{\par
+\tab background-position: -10px -10px;\par
+\tab\}\par
+#bookmarks img.digg \{\par
+\tab background-position: -10px -50px;\par
+\tab\}\par
+#bookmarks img.excite \{\par
+\tab background-position: -9px -90px;\par
+\tab\}\par
+#bookmarks img.facebook \{\par
+\tab background-position: -9px -128px;\par
+\tab\}\par
+#bookmarks img.furl \{\par
+\tab background-position: -10px -166px;\par
+\tab\}\par
+#bookmarks img.google \{\par
+\tab background-position: -10px -206px;\par
+\tab\}\par
+#bookmarks img.live \{\par
+\tab background-position: -9px -246px;\par
+\tab\}\par
+#bookmarks img.netscape \{\par
+\tab background-position: -9px -284px;\par
+\tab\}\par
+#bookmarks img.newsvine \{\par
+\tab background-position: -9px -322px;\par
+\tab\}\par
+#bookmarks img.reddit \{\par
+\tab background-position: -10px -360px;\par
+\tab\}\par
+#bookmarks img.slashdot \{\par
+\tab background-position: -10px -400px;\par
+\tab\}\par
+#bookmarks img.smarking \{\par
+\tab background-position: -9px -440px;\par
+\tab\}\par
+#bookmarks img.stumbleupon \{\par
+\tab background-position: -10px -478px;\par
+\tab\}\par
+#bookmarks img.technorati \{\par
+\tab background-position: -10px -518px;\par
+\tab\}\par
+#bookmarks img.yahoo \{\par
+\tab background-position: -10px -558px;\par
+\tab\}\par
+\par
+/* wysiwyg */\par
+.mceContentBody\{\par
+\tab background: #dee3e7;\par
+\tab color: #000000;\par
+\tab\}\par
+.align_right\{\par
+\tab text-align: right;\par
+\tab\}\par
+\par
+/* resize image */\par
+.resize_process .resizebox \{\par
+\tab display: none;\par
+\tab\}\par
+.resize_process img.resize_img \{\par
+\tab display: none;\par
+\tab\}\par
+.resizebox a.enlarge, .resizebox.showfull a.fullsize, .resizebox.enlarged a.resize \{\par
+\tab display: inline-block;\par
+\tab zoom: 1;\par
+\tab *display: inline;\par
+\tab\}\par
+.resizebox.enlarged a.enlarge, .resizebox a.fullsize, .resizebox a.resize \{\par
+\tab display: none;\par
+\tab\}\par
+.resizebox \{\par
+\tab background-color: #fafafa;\par
+\tab max-width: 100%;\par
+\tab line-height: 1.1em;\par
+\tab cursor: default;\par
+\tab font-weight: normal;\par
+\tab font-style: normal;\par
+\tab margin: 0;\par
+\tab text-align: left;\par
+\tab display: inline-block;\par
+\tab\}\par
+.resizebox div \{\par
+\tab font-weight: normal;\par
+\tab font-style: normal;\par
+\tab margin: 0;\par
+\tab\}\par
+.resizebox .resize_border \{\par
+\tab border: 1px solid #d1d7dc;\par
+\tab display: block;\par
+\tab\}\par
+.resizebox .resize_content \{\par
+\tab padding: 5px 10px;\par
+\tab display: inline-block;\par
+\tab zoom: 1;\par
+\tab *display: inline;\par
+\tab\}\par
+.resizebox .resize_filler \{\par
+\tab border: none;\par
+\tab padding: 0;\par
+\tab width: 40px;\par
+\tab display: inline-block;\par
+\tab zoom: 1;\par
+\tab *display: inline;\par
+\tab\}\par
+.attachbox \{\par
+\tab background-color:#fafafa;\par
+\tab border:1px dashed #d1d7dc;\par
+\tab clear:left;\par
+\tab float:left;\par
+\tab margin:5px 5px 5px 0;\par
+\tab padding:6px;\par
+\tab width:auto;\par
+\tab color:#000000;\par
+\tab\}\par
+.attachbox dt \{\par
+\tab font-family:Arial,Helvetica,sans-serif;\par
+\tab text-transform:uppercase;\par
+\tab\}\par
+.attachbox dd \{\par
+\tab border-top:1px solid #d1d7dc;\par
+\tab clear:left;\par
+\tab font-size:0.9em;\par
+\tab margin-left:10px;\par
+\tab padding:0;\par
+\tab\}\par
+dl.file \{\par
+\tab display:block;\par
+\tab font-family:Tahoma,Verdana,Arial,Helvetica,sans-serif;\par
+\tab margin-bottom:10px;\par
+\tab\}\par
+dl.file dt \{\par
+\tab font-family:Tahoma,Verdana,Arial,Helvetica,sans-serif;\par
+\tab font-weight:bold;\par
+\tab margin:0;\par
+\tab padding:0;\par
+\tab text-transform:none;\par
+\tab\}\par
+dl.file dt img \{\par
+\tab vertical-align:middle\}\par
+.info \{\par
+\tab font-size:10px;\par
+\tab font-style:italic;\par
+\tab\}\par
+\par
+/* Spoiler */\par
+.spoiler_closed \{\par
+\tab display:block;\par
+\tab font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif;\par
+\tab font-size: 11px;\par
+\tab color: #444444;\par
+\tab line-height: 125%;\par
+\tab background-color: #fafafa;\par
+\tab\}\par
+.spoiler_closed.hidden \{\par
+\tab display:none;\par
+\tab\}\par
+.spoiler_content \{\par
+\tab display:block;\par
+\tab font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif;\par
+\tab font-size: 11px;\par
+\tab color: #444444;\par
+\tab line-height: 125%;\par
+\tab background-color: #fafafa;\par
+\tab\}\par
+.spoiler_content.hidden \{\par
+\tab display:none;\par
+\tab\}\par
+\par
+/* Styles Facebook */\par
+.user_login_form \{\par
+\tab margin-bottom:5px;\par
+\tab\}\par
+.fb_or \{\par
+\tab background-color:#d1d7dc;\par
+\tab border:2px solid #006699;\par
+\tab font-weight:bold;\par
+\tab padding:5px;\par
+\tab color:#444444;\par
+\tab height : 16px;\par
+\tab line-height : 16px;\par
+\tab width  : 26px;\par
+\tab display  : block;\par
+\tab\}\par
+#cont_pwd \{\par
+\tab width:150px;\par
+\tab height:21px;\par
+\tab float:left;\par
+\tab padding:0 0 0 20px;\par
+\tab\}\par
+.pwd_img \{\par
+\tab padding : 4px 0 3px 0;\par
+\tab width : 150px;\par
+\tab height : 14px;\par
+\tab line-height : 14px;\par
+\tab font-size : 11px;\par
+\tab font-weight : bold;\par
+\tab text-align : center;\par
+\tab color : #000000;\par
+\tab display : none;\par
+\tab\}\par
+#pwd_good \{\par
+\tab background:url('http://illiweb.com/fa/p_strength/pwd_good.png');\par
+\tab\}\par
+#pwd_middle \{\par
+\tab background:url('http://illiweb.com/fa/p_strength/pwd_middle.png');\par
+\tab\}\par
+#pwd_bad \{\par
+\tab background:url('http://illiweb.com/fa/p_strength/pwd_bad.png');\par
+\tab\}\par
+#fb_explain td \{\par
+\tab padding : 5px 0 5px 0;\par
+\tab vertical-align : top;\par
+\tab\}\par
+.row1.fb \{\par
+\tab padding: 5px 2px 4px 2px;\par
+\tab\}\par
+.row2.fb \{\par
+\tab padding: 2px 3px 2px 8px;\par
+\tab\}\par
+#cont_fb_invit iframe \{\par
+\tab width: 760px !important;\par
+\tab\}\par
+\par
+/**** Module social_bookmarking ****/\par
+.mod_bookmarks a img \{\par
+\tab width: 20px;\par
+\tab height: 20px;\par
+\tab background: url(http://illiweb.com/fa/social_bookmarking/social_bookmarking_fa.png) no-repeat scroll;\par
+\tab vertical-align: middle;\par
+\tab\}\par
+.mod_bookmarks img.digg \{\par
+\tab background-position:-10px -47px;\par
+\tab\}\par
+.mod_bookmarks img.delicious \{\par
+\tab background-position:-10px -8px;\par
+\tab\}\par
+.mod_bookmarks img.reddit \{\par
+\tab background-position:-10px -359px;\par
+\tab\}\par
+.mod_bookmarks img.slashdot \{\par
+\tab background-position:-10px -398px;\par
+\tab\}\par
+.mod_bookmarks img.stumbleupon \{\par
+\tab background-position:-10px -476px;\par
+\tab\}\par
+.mod_bookmarks img.furl \{\par
+\tab background-position:-10px -163px;\par
+\tab\}\par
+.mod_bookmarks img.yahoo \{\par
+\tab background-position:-10px -554px;\par
+\tab\}\par
+.mod_bookmarks img.google \{\par
+\tab background-position:-10px -204px;\par
+\tab\}\par
+.mod_bookmarks img.blinklist \{\par
+\tab background-position:-10px -665px;\par
+\tab\}\par
+.mod_bookmarks img.blogmarks \{\par
+\tab background-position:-10px -630px;\par
+\tab\}\par
+.mod_bookmarks img.technorati \{\par
+\tab background-position:-10px -516px;\par
+\tab\}\par
+\par
+/**** Module rss_feeds ****/\par
+.mod_rss_feeds a img \{\par
+\tab width: 91px;\par
+\tab height: 17px;\par
+\tab background: url(http://illiweb.com/fa/rss_mod/sprite_rss_feeds.png) no-repeat scroll;\par
+\tab vertical-align: middle;\par
+\tab padding-bottom:2px;\par
+\tab\}\par
+.mod_rss_feeds img.yahoo \{\par
+\tab background-position:0 0;\par
+\tab\}\par
+.mod_rss_feeds img.google-reader \{\par
+\tab background-position:-100px 0;\par
+\tab\}\par
+.mod_rss_feeds img.msn \{\par
+\tab background-position:-199px 0;\par
+\tab\}\par
+.mod_rss_feeds img.aol \{\par
+\tab background-position:-299px 0;\par
+\tab\}\par
+.mod_rss_feeds img.newsgator \{\par
+\tab background-position:-399px 0;\par
+\tab\}\par
+.mod_rss_feeds img.rojo \{\par
+\tab background-position:-498px 0;\par
+\tab\}\par
+.mod_rss_feeds img.bloglines \{\par
+\tab background-position:-598px 0;\par
+\tab\}\par
+\par
+/**** Sprite CSS ****/\par
+.sprite-arrow_prosilver_down\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:0 0;\par
+\tab width:6px;\par
+\tab height:6px;\par
+\tab\}\par
+.sprite-arrow_prosilver_left\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-56px 0;\par
+\tab width:4px;\par
+\tab height:6px;\par
+\tab\}\par
+.sprite-arrow_prosilver_right\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-110px 0;\par
+\tab width:4px;\par
+\tab height:6px;\par
+\tab\}\par
+.sprite-arrow_prosilver_up\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-164px 0;\par
+\tab width:6px;\par
+\tab height:6px;\par
+\tab\}\par
+.sprite-arrow_subsilver_down\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-220px 0;\par
+\tab width:9px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-arrow_subsilver_left\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-279px 0;\par
+\tab width:9px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-arrow_subsilver_right\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-338px 0;\par
+\tab width:9px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-arrow_subsilver_up\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-397px 0;\par
+\tab width:9px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-icon_minipost\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-456px 0;\par
+\tab width:12px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-icon_minipost_new\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-518px 0;\par
+\tab width:12px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-icon_minipost_participate\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-580px 0;\par
+\tab width:12px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-icon_miniposted\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-642px 0;\par
+\tab width:12px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-icon_pages\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-704px 0;\par
+\tab width:11px;\par
+\tab height:12px;\par
+\tab\}\par
+.sprite-icon_post_target\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-765px 0;\par
+\tab width:11px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-icon_post_target_unread\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-826px 0;\par
+\tab width:11px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-icon_reply\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-887px 0;\par
+\tab width:18px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-icon_reply_new\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-955px 0;\par
+\tab width:18px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-icon_tiny_topic\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-1023px 0;\par
+\tab width:10px;\par
+\tab height:11px;\par
+\tab\}\par
+.sprite-icon_topic_latest\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-1083px 0;\par
+\tab width:11px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-icon_topic_newest\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-1144px 0;\par
+\tab width:11px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-subforum_read\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-1205px 0;\par
+\tab width:11px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-subforum_unread\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-1266px 0;\par
+\tab width:11px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-tabs_less\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-1327px 0;\par
+\tab width:9px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-tabs_more\{\par
+\tab background:url("http://illiweb.com/fa/sprite_icons.png") no-repeat top left;\par
+\tab background-position:-1386px 0;\par
+\tab width:9px;\par
+\tab height:9px;\par
+\tab\}\par
+.sprite-icon_calendar\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 0;\par
+\tab width:14px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_faq\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -63px;\par
+\tab width:16px;\par
+\tab height:14px;\par
+\tab\}\par
+.sprite-icon_gallery\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -127px;\par
+\tab width:14px;\par
+\tab height:14px;\par
+\tab\}\par
+.sprite-icon_groups\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -191px;\par
+\tab width:16px;\par
+\tab height:14px;\par
+\tab\}\par
+.sprite-icon_home\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -255px;\par
+\tab width:13px;\par
+\tab height:12px;\par
+\tab\}\par
+.sprite-icon_logout\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -317px;\par
+\tab width:16px;\par
+\tab height:14px;\par
+\tab\}\par
+.sprite-icon_members\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -381px;\par
+\tab width:16px;\par
+\tab height:14px;\par
+\tab\}\par
+.sprite-icon_message\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -445px;\par
+\tab width:16px;\par
+\tab height:14px;\par
+\tab\}\par
+.sprite-icon_portal\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -509px;\par
+\tab width:14px;\par
+\tab height:14px;\par
+\tab\}\par
+.sprite-icon_register\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -573px;\par
+\tab width:16px;\par
+\tab height:14px;\par
+\tab\}\par
+.sprite-icon_search\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -637px;\par
+\tab width:16px;\par
+\tab height:14px;\par
+\tab\}\par
+.sprite-icon_textbox_search\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -701px;\par
+\tab width:16px;\par
+\tab height:14px;\par
+\tab\}\par
+.sprite-icon_ucp\{\par
+\tab background:url("http://illiweb.com/fa/sprite_prosilver_navbar.png") no-repeat top left;\par
+\tab background-position:0 -765px;\par
+\tab width:16px;\par
+\tab height:14px;\par
+\tab\}\par
+.sprite-icon_mini_calendar\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:0 0;\par
+\tab width:12px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_mini_faq\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-62px 0;\par
+\tab width:12px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_mini_gallery\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-124px 0;\par
+\tab width:12px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_mini_groups\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-186px 0;\par
+\tab width:12px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_mini_index\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-248px 0;\par
+\tab width:13px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_mini_login\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-311px 0;\par
+\tab width:12px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_mini_members\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-373px 0;\par
+\tab width:12px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_mini_message\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-435px 0;\par
+\tab width:12px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_mini_portal\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-497px 0;\par
+\tab width:13px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_mini_profile\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-560px 0;\par
+\tab width:12px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_mini_register\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-622px 0;\par
+\tab width:12px;\par
+\tab height:13px;\par
+\tab\}\par
+.sprite-icon_mini_search\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-684px 0;\par
+\tab width:12px;\par
+\tab height:13px;\par
+\tab\}\par
+#search_menu a img\{\par
+\tab background:url("http://illiweb.com/fa/sprite_subsilver_menu.png") no-repeat top left;\par
+\tab background-position:-684px 0;\par
+\tab width:12px;\par
+\tab height:13px;\par
+\tab\}\par
+\par
+/**** Addthis ****/\par
+#at16lb\{\par
+\tab display:none;\par
+\tab position:absolute;\par
+\tab top:0%;\par
+\tab left:0%;\par
+\tab width:100%;\par
+\tab height:100%;\par
+\tab z-index: 999;\par
+\tab background-color:black;\par
+\tab opacity:0.001;\par
+\tab\}\par
+#at20mc, #at_email, #at16pib, #at16pc, #at16pi, #at_share, #at_complete, #at_success, #at_error \{\par
+\tab position:static!important;\par
+\tab\}\par
+#at20mc \{\par
+\tab position:absolute;\par
+\tab left:0px;\par
+\tab top:0px;\par
+\tab\}\par
+#at20mc a \{\par
+\tab color:#3366BB;\par
+\tab\}\par
+.at15a\{\par
+\tab border:0px;\par
+\tab height:0px;\par
+\tab margin:0px;\par
+\tab padding:0px;\par
+\tab width:100%;\par
+\tab width:230px\}\par
+.atnt \{\par
+\tab text-align:center!important;\par
+\tab padding:6px 0px 0px 0px!important;\par
+\tab height:24px!important\}\par
+.atnt a \{\par
+\tab text-decoration:none;\par
+\tab color:#3366bb\}\par
+.atnt a:hover \{\par
+\tab text-decoration:underline\}\par
+#at_msg,#at16p label,#at16nms,#at_share .at_item,#at16p,#at15s,#at16p form input,#at16p form textarea \{\par
+\tab font-family:arial,helvetica,tahoma,verdana,sans-serif!important;\par
+\tab font-size:12px!important;\par
+\tab outline-style:none;\par
+\tab outline-width:0px;\par
+\tab line-height:1em\}\par
+* html #at15s.mmborder \{\par
+\tab position:absolute!important\}\par
+#at15s.mmborder \{\par
+\tab border:10px solid #7f7f7f!important;\par
+\tab position:fixed!important\}\par
+#at15s.mmborder \{\par
+\tab width:240px!important\}\par
+#at15s\{\par
+\tab background-color:#fff;\par
+\tab border:1px solid #ccc;\par
+\tab color:#4c4c4c!important;\par
+\tab float:none!important;\par
+\tab line-height:1em!important;\par
+\tab margin:0px!important;\par
+\tab overflow:visible!important;\par
+\tab padding:1px!important;\par
+\tab text-align:left!important;\par
+\tab width:230px!important;\par
+\tab position:absolute!important\}\par
+#at15s_head\{\par
+\tab position:relative;\par
+\tab background:#f2f2f2;\par
+\tab padding:4px;\par
+\tab cursor:default;\par
+\tab border-bottom:1px solid #e5e5e5\}\par
+#at15s_brand,#at16_brand\{\par
+\tab position:absolute\}\par
+#at15s_brand \{\par
+\tab top:4px;\par
+\tab right:4px\}\par
+#at16_brand\{\par
+\tab top:5px;\par
+\tab right:30px;\par
+\tab cursor:default\}\par
+#at_hover\{\par
+\tab padding:4px\}\par
+#at_hover .at_item, #at_share .at_item\{\par
+\tab background:#fff!important;\par
+\tab float:left!important;\par
+\tab color:#4c4c4c !important\}\par
+#at16nms \{\par
+\tab padding:4px 5px\}\par
+#at_hover .at_item\{\par
+\tab width:102px!important;\par
+\tab padding:2px 3px!important;\par
+\tab margin:1px\}\par
+#at_hover .at_item.atiemode2 \{\par
+\tab width:104px!important\}\par
+#at_hover .at_item:hover,#at_hover .at_item.athov \{\par
+\tab margin:0px!important\}\par
+#at_hover .at_item:hover,#at_hover .at_item.athov,#at_share .at_item:hover,#at_share .at_item.athov\{\par
+\tab background:#f2f2f2!important;\par
+\tab border:1px solid #e5e5e5;\par
+\tab color:#000!important\}\par
+* html #at_hover .at_item \{\par
+\tab border:1px solid #fff\}\par
+* html #at_hover .at_item.athov \{\par
+\tab border:1px solid #e5e5e5!important;\par
+\tab margin:1px!important\}\par
+#at_email15\{\par
+\tab padding-top:5px\}\par
+.at15e_row\{\par
+\tab height:28px\}\par
+.at15e_row label,.at15e_row span\{\par
+\tab padding-left:10px!important;\par
+\tab display:block!important;\par
+\tab width:60px!important;\par
+\tab float:left!important\}\par
+.at15e_row input,.at15e_row textarea\{\par
+\tab display:block!important;\par
+\tab width:150px!important;\par
+\tab float:left!important;\par
+\tab background:#fff!important;\par
+\tab border:1px solid #ccc!important;\par
+\tab color:#333!important;\par
+\tab font-size:11px!important;\par
+\tab font-weight:normal!important;\par
+\tab padding:0pt!important\}\par
+#at_email label,#at_email input,#at_email textarea \{\par
+\tab font-size:11px!important\}\par
+.at15t\{\par
+\tab display:block!important;\par
+\tab height:16px!important;\par
+\tab line-height:16px!important;\par
+\tab padding-left:20px!important;\par
+\tab background:url(http://illiweb.com/fa/addthis/widget04.png) no-repeat left;\par
+\tab cursor:pointer\}\par
+.addthis_button \{\par
+\tab cursor:pointer\}\par
+.addthis_toolbox.addthis_default_style span \{\par
+\tab line-height:16px\}\par
+.addthis_default_style .addthis_separator \{\par
+\tab margin:0px 5px;\par
+\tab display:inline\}\par
+div.atclear \{\par
+\tab clear:both\}\par
+.addthis_default_style .addthis_separator,.addthis_default_style .at300b,.addthis_default_style .at300m,.addthis_default_style .at300bs \{\par
+\tab float: left\}\par
+.at300b img \{\par
+\tab border:0\}\par
+.addthis_default_style .at300b,.addthis_default_style .at300m \{\par
+\tab padding:0px 2px\}\par
+.at300b,.at300m,.at300bs \{\par
+\tab cursor:pointer\}\par
+.at300bs \{\par
+\tab background:url(http://illiweb.com/fa/addthis/widget04.png) no-repeat left;\par
+\tab overflow:hidden;\par
+\tab display:block;\par
+\tab height:16px;\par
+\tab width:16px;\par
+\tab line-height:16px!important\}\par
+.at300bs.at15t_expanded,.at300bs.at15t_compact \{\par
+\tab background:url(http://illiweb.com/fa/addthis/logo1414.gif) no-repeat left;\par
+\tab margin-right:4px\}\par
+.at15t_more\{\par
+\tab background:url(http://illiweb.com/fa/addthis/logo1414.gif) no-repeat left !important\}\par
+.at15t_000\{\par
+\tab background-position:0px -0px\}\par
+.at15t_aim\{\par
+\tab background-position:0px -16px!important\}\par
+.at15t_amazonwishlist\{\par
+\tab background-position:0px -32px!important\}\par
+.at15t_ask\{\par
+\tab background-position:0px -48px!important\}\par
+.at15t_backflip\{\par
+\tab background-position:0px -64px!important\}\par
+.at15t_ballhype\{\par
+\tab background-position:0px -80px!important\}\par
+.at15t_bebo\{\par
+\tab background-position:0px -96px!important\}\par
+.at15t_blogger\{\par
+\tab background-position:0px -112px!important\}\par
+.at15t_blogmarks\{\par
+\tab background-position:0px -128px!important\}\par
+.at15t_buzz\{\par
+\tab background-position:0px -144px!important\}\par
+.at15t_delicious\{\par
+\tab background-position:0px -160px!important\}\par
+.at15t_digg\{\par
+\tab background-position:0px -176px!important\}\par
+.at15t_diigo\{\par
+\tab background-position:0px -192px!important\}\par
+.at15t_email\{\par
+\tab background-position:0px -208px!important\}\par
+.at15t_facebook\{\par
+\tab background-position:0px -224px!important\}\par
+.at15t_fark\{\par
+\tab background-position:0px -240px!important\}\par
+.at15t_faves\{\par
+\tab background-position:0px -256px!important\}\par
+.at15t_favorites\{\par
+\tab background-position:0px -272px!important\}\par
+.at15t_friendfeed\{\par
+\tab background-position:0px -288px!important\}\par
+.at15t_friendster\{\par
+\tab background-position:0px -304px!important\}\par
+.at15t_google\{\par
+\tab background-position:0px -320px!important\}\par
+.at15t_hatena\{\par
+\tab background-position:0px -336px!important\}\par
+.at15t_hi5\{\par
+\tab background-position:0px -352px!important\}\par
+.at15t_kaboodle\{\par
+\tab background-position:0px -368px!important\}\par
+.at15t_kirtsy\{\par
+\tab background-position:0px -384px!important\}\par
+.at15t_linkagogo\{\par
+\tab background-position:0px -400px!important\}\par
+.at15t_linkedin\{\par
+\tab background-position:0px -416px!important\}\par
+.at15t_live\{\par
+\tab background-position:0px -432px!important\}\par
+.at15t_meneame\{\par
+\tab background-position:0px -448px!important\}\par
+.at15t_misterwong\{\par
+\tab background-position:0px -464px!important\}\par
+.at15t_mixx\{\par
+\tab background-position:0px -480px!important\}\par
+.at15t_multiply\{\par
+\tab background-position:0px -496px!important\}\par
+.at15t_myaol\{\par
+\tab background-position:0px -512px!important\}\par
+.at15t_myspace\{\par
+\tab background-position:0px -528px!important\}\par
+.at15t_netvibes\{\par
+\tab background-position:0px -544px!important\}\par
+.at15t_netvouz\{\par
+\tab background-position:0px -560px!important\}\par
+.at15t_newsvine\{\par
+\tab background-position:0px -576px!important\}\par
+.at15t_nujij\{\par
+\tab background-position:0px -592px!important\}\par
+.at15t_orkut\{\par
+\tab background-position:0px -608px!important\}\par
+.at15t_plaxo\{\par
+\tab background-position:0px -624px!important\}\par
+.at15t_print\{\par
+\tab background-position:0px -640px!important\}\par
+.at15t_propeller\{\par
+\tab background-position:0px -656px!important\}\par
+.at15t_reddit\{\par
+\tab background-position:0px -672px!important\}\par
+.at15t_segnalo\{\par
+\tab background-position:0px -688px!important\}\par
+.at15t_simpy\{\par
+\tab background-position:0px -704px!important\}\par
+.at15t_slashdot\{\par
+\tab background-position:0px -720px!important\}\par
+.at15t_spurl\{\par
+\tab background-position:0px -736px!important\}\par
+.at15t_stumbleupon\{\par
+\tab background-position:0px -752px!important\}\par
+.at15t_stylehive\{\par
+\tab background-position:0px -768px!important\}\par
+.at15t_tailrank\{\par
+\tab background-position:0px -784px!important\}\par
+.at15t_technorati\{\par
+\tab background-position:0px -800px!important\}\par
+.at15t_thisnext\{\par
+\tab background-position:0px -816px!important\}\par
+.at15t_tipd\{\par
+\tab background-position:0px -832px!important\}\par
+.at15t_tumblr\{\par
+\tab background-position:0px -848px!important\}\par
+.at15t_twitter\{\par
+\tab background-position:0px -864px!important\}\par
+.at15t_typepad\{\par
+\tab background-position:0px -880px!important\}\par
+.at15t_wordpress\{\par
+\tab background-position:0px -896px!important\}\par
+.at15t_yahoobkm\{\par
+\tab background-position:0px -912px!important\}\par
+.at15t_yardbarker\{\par
+\tab background-position:0px -928px!important\}\par
+.at15t_netscape\{\par
+\tab background-position:0px -656px!important\}\par
+#at16clb \{\par
+\tab font-size:16pt;\par
+\tab font-family:"verdana bold", verdana, arial, sans-serif\}\par
+#at_share .at_item \{\par
+\tab width:123px !important;\par
+\tab padding:4px;\par
+\tab margin-right:2px;\par
+\tab border:1px solid #ffffff\}\par
+#at16pm \{\par
+\tab background:#fff;\par
+\tab width:298px;\par
+\tab height:360px;\par
+\tab text-align:left;\par
+\tab border-right:1px solid #ccc;\par
+\tab position:static\}\par
+#at16pcc \{\par
+\tab position:fixed;\par
+\tab top:0px;\par
+\tab left:0px;\par
+\tab width:100%;\par
+\tab margin:0 auto;\par
+\tab font-size:10px!important;\par
+\tab color:#4c4c4c;\par
+\tab padding:0px;\par
+\tab z-index: 999;\par
+\tab overflow:visible\}\par
+* html #at16pcc \{\par
+\tab position:absolute\}\par
+#at16abifc \{\par
+\tab overflow:hidden;\par
+\tab margin:0;\par
+\tab top:10px;\par
+\tab left:10px;\par
+\tab height:335px;\par
+\tab width:492px;\par
+\tab position:absolute;\par
+\tab border:0\}\par
+#at16abifc iframe \{\par
+\tab border:0;\par
+\tab position:absolute;\par
+\tab height:360px;\par
+\tab width:516px;\par
+\tab top:-10px;\par
+\tab left:-10px\}\par
+* html div#at16abifc.atiemode2 \{\par
+\tab height:354px;\par
+\tab width:482px\}\par
+* html #at16abifc iframe \{\par
+\tab height:348px;\par
+\tab left:-10px;\par
+\tab top:-10px;\par
+\tab overflow:hidden\}\par
+#at16p \{\par
+\tab background:url(http://illiweb.com/fa/addthis/atbkg.png)\}\par
+#at16p, #atie6ifh \{\par
+\tab position:absolute;\par
+\tab top:50%;\par
+\tab left:50%;\par
+\tab width:300px;\par
+\tab padding:10px;\par
+\tab margin:0 auto;\par
+\tab margin-top:-185px;\par
+\tab margin-left:-155px;\par
+\tab font-family:arial,helvetica,tahoma,verdana,sans-serif;\par
+\tab font-size:12px;\par
+\tab color:#5e5e5e;\par
+\tab z-index:10000001\}\par
+#atie6ifh \{\par
+\tab width:322px;\par
+\tab padding:0px;\par
+\tab height:381px;\par
+\tab margin-left:-165px\}\par
+#at_share \{\par
+\tab margin:0;\par
+\tab padding:0\}\par
+#at16ps \{\par
+\tab overflow-y:scroll;\par
+\tab height:284px;\par
+\tab padding:5px\}\par
+a#at16pit \{\par
+\tab position:absolute;\par
+\tab top:37px;\par
+\tab right:10px;\par
+\tab display:block;\par
+\tab background:url(http://illiweb.com/fa/addthis/tab00.gif) no-repeat;\par
+\tab width:16px;\par
+\tab height:20px;\par
+\tab line-height:19px;\par
+\tab margin-right:-17px;\par
+\tab text-align:center;\par
+\tab overflow:hidden;\par
+\tab color:#3366bb;\par
+\tab\}\par
+#at16pi \{\par
+\tab background:#e5e5e5;\par
+\tab text-align:left;\par
+\tab border:1px solid #ccc;\par
+\tab border-bottom:0\}\par
+#at16pi a \{\par
+\tab text-decoration:none;\par
+\tab color:#3366bb\}\par
+#at16pi a:hover \{\par
+\tab text-decoration:underline\}\par
+#at16pt \{\par
+\tab position:relative;\par
+\tab background:#f2f2f2;\par
+\tab height:13px;\par
+\tab padding:5px 10px\}\par
+#at16pt h4, #at16pt a\{\par
+\tab font-weight:bold\}\par
+#at16pt h4 \{\par
+\tab display:inline;\par
+\tab margin:0;\par
+\tab padding:0;\par
+\tab font-size:12px;\par
+\tab color:#4c4c4c;\par
+\tab cursor:default\}\par
+#at16pt a \{\par
+\tab position:absolute;\par
+\tab top:5px;\par
+\tab right:10px;\par
+\tab color:#4c4c4c;\par
+\tab text-decoration:none\}\par
+#at16pc form\{\par
+\tab margin:0\}\par
+#at16pc form label \{\par
+\tab display:block;\par
+\tab font-size:11px;\par
+\tab font-weight:bold;\par
+\tab padding-bottom:4px;\par
+\tab float:none;\par
+\tab text-align:left\}\par
+#at16pc form label span \{\par
+\tab font-weight:normal;\par
+\tab color:#4c4c4c;\par
+\tab display:inline\}\par
+#at_email form .abif \{\par
+\tab width:272px !important\}\par
+#at_email textarea\{\par
+\tab height:55px !important;\par
+\tab word-wrap:break-word\}\par
+* html #at_email textarea \{\par
+\tab height:42px !important\}\par
+*:first-child+html #at_email textarea \{\par
+\tab height:42px !important\}\par
+#at_email form input,#at_email form textarea \{\par
+\tab background:#fff;\par
+\tab border:1px solid #bbb;\par
+\tab width:272px;\par
+\tab margin:0px;\par
+\tab margin-bottom:8px;\par
+\tab font-weight:normal;\par
+\tab padding:3px;\par
+\tab font-family:arial,helvetica,tahoma,verdana,sans-serif;\par
+\tab font-size:11px;\par
+\tab line-height:1.4em;\par
+\tab color:#333\}\par
+#at_email form .atfxmode2 \{\par
+\tab width:279px\}\par
+#at16pc form .at_ent \{\par
+\tab color:#333!important\}\par
+#at16pc form textarea \{\par
+\tab height:48px\}\par
+#at16pc form input:focus,#at16pc form textarea:focus \{\par
+\tab background:#fffff0;\par
+\tab color:#333\}\par
+#at16p .atbtn \{\par
+\tab background:#fff;\par
+\tab border:1px solid #b5b5b5;\par
+\tab width:60px;\par
+\tab padding:2px 4px;\par
+\tab margin:0 2px !important;\par
+\tab font-size:11px !important;\par
+\tab font-weight:bold;\par
+\tab color:#333;\par
+\tab cursor:pointer\}\par
+#at16p .atbtn:hover \{\par
+\tab border-color:#444;\par
+\tab color:#06c\}\par
+#at_email #ateml \{\par
+\tab text-align:right;\par
+\tab font-size:10px;\par
+\tab color:#999\}\par
+#at16pc \{\par
+\tab height:323px;\par
+\tab font-size:11px;\par
+\tab text-align:left;\par
+\tab color:#4c4c4c\}\par
+#at_email \{\par
+\tab padding:5px 10px\}\par
+#at16pc .tmsg \{\par
+\tab padding:4px 2px;\par
+\tab text-align:right\}\par
+#at16psf \{\par
+\tab position:relative;\par
+\tab background:#f2f2f2 url(http://illiweb.com/fa/addthis/atf02.png) no-repeat center center;\par
+\tab border-bottom:1px solid #ccc;\par
+\tab height:20px;\par
+\tab padding:4px 10px;\par
+\tab text-align:center\}\par
+* html #at16psf input \{\par
+\tab padding:0\}\par
+#at16psf input \{\par
+\tab background:#fff;\par
+\tab border:none;\par
+\tab width:220px;\par
+\tab margin:2px 0 0;\par
+\tab color:#666;\par
+\tab outline-style:none;\par
+\tab outline-width:0px;\par
+\tab padding:2px 0 0;\par
+\tab font-family:arial,helvetica,tahoma,verdana,sans-serif;\par
+\tab font-size:12px\}\par
+#at16pcc .at_error \{\par
+\tab background:#f26d7d;\par
+\tab border-bottom:1px solid #df5666;\par
+\tab padding:5px 10px;\par
+\tab color:#fff\}\par
+#at16pcc #at_success \{\par
+\tab background:#d0fbda;\par
+\tab border-bottom:1px solid #a8e7b7;\par
+\tab padding:5px 10px;\par
+\tab color:#4c4c4c\}\par
+#at16pf \{\par
+\tab position:relative;\par
+\tab background:#f2f2f2;\par
+\tab ht:12px;\par
+\tab border-top:1px solid #e5e5e5\}\par
+#at16pf a \{\par
+\tab position:absolute;\par
+\tab outline:none;\par
+\tab padding:0;\par
+\tab margin:0;\par
+\tab overflow:hidden;\par
+\tab font-size:10px;\par
+\tab color:#4c4c4c;\par
+\tab font-family:Arial, Helvetica, Sans-Serif;\par
+\tab text-decoration:none\}\par
+#at16pf a:hover \{\par
+\tab text-decoration:underline\}\par
+#at16pf a#at-whatsthis \{\par
+\tab width:60px;\par
+\tab left:10px\}\par
+#at16pf a#at-privacy \{\par
+\tab width:39px;\par
+\tab left:90px\}\par
+#at_complete \{\par
+\tab font-size:13pt;\par
+\tab color:#47731d;\par
+\tab text-align:center;\par
+\tab padding-top:130px;\par
+\tab height:208px!important;\par
+\tab width:472px\}\par
+#at_s_msg \{\par
+\tab margin-bottom:10px\}\par
+#at16pf a#at-logo \{\par
+\tab background:url(http://illiweb.com/fa/addthis/logo88.gif) no-repeat left;\par
+\tab padding-left:10px;\par
+\tab right:10px\}\par
+.at_baa \{\par
+\tab display:block;\par
+\tab overflow:hidden;\par
+\tab outline:none\}\par
+#at15s #at16pf a \{\par
+\tab top:1px\}\par
+#at16pc form #at_send \{\par
+\tab width:80px !important;\par
+\tab\}\par
+#at_feed \{\par
+\tab display:none;\par
+\tab padding:10px;\par
+\tab height:300px\}\par
+#at_feed span \{\par
+\tab margin-bottom:10px;\par
+\tab font-size:12px\}\par
+#at_feed div \{\par
+\tab width:102px!important;\par
+\tab height:26px!important;\par
+\tab line-height:26px!important;\par
+\tab float:left!important;\par
+\tab margin-right:68px\}\par
+#at_feed div.at_litem \{\par
+\tab margin-right:0px\}\par
+#at_feed a \{\par
+\tab margin:10px 0px;\par
+\tab height:17px;\par
+\tab line-height:17px\}\par
+.fbtn\{\par
+\tab background:url(http://illiweb.com/fa/addthis/feed00.png) no-repeat;\par
+\tab float:left;\par
+\tab width:102px;\par
+\tab cursor:pointer;\par
+\tab text-indent:-9000px\}\par
+.fbtn.bloglines\{\par
+\tab background-position:0 0;\par
+\tab width:94px;\par
+\tab height:20px !important;\par
+\tab line-height:20px !important;\par
+\tab margin-top:8px !important\}\par
+.fbtn.yahoo\{\par
+\tab background-position:0 -20px\}\par
+.fbtn.newsgator,.fbtn.newsgator-on\{\par
+\tab background-position:0 -37px\}\par
+.fbtn.technorati\{\par
+\tab background-position:0 -71px\}\par
+.fbtn.netvibes\{\par
+\tab background-position:0 -88px\}\par
+.fbtn.pageflakes\{\par
+\tab background-position:0 -141px\}\par
+.fbtn.feedreader\{\par
+\tab background-position:0 -172px\}\par
+.fbtn.newsisfree\{\par
+\tab background-position:0 -207px\}\par
+.fbtn.google\{\par
+\tab background-position:0 -54px;\par
+\tab width:104px\}\par
+.fbtn.winlive\{\par
+\tab background-position:0 -105px;\par
+\tab width:100px;\par
+\tab height:19px !important;\par
+\tab line-height:19px;\par
+\tab margin-top:9px !important\}\par
+.fbtn.mymsn\{\par
+\tab background-position:0 -158px;\par
+\tab width:71px;\par
+\tab height:14px !important;\par
+\tab line-height:14px !important;\par
+\tab margin-top:12px !important\}\par
+.fbtn.aol \{\par
+\tab background-position:0 -189px;\par
+\tab width:92px;\par
+\tab height:18px !important;\par
+\tab line-height:18px !important\}\par
+#at16pp \{\par
+\tab color:#4c4c4c;\par
+\tab position:absolute;\par
+\tab top:12px;\par
+\tab right:12px;\par
+\tab font-size:11px\}\par
+#at16pp label \{\par
+\tab font-size:11px !important\}\par
+#at16ppc \{\par
+\tab padding:10px;\par
+\tab width:179px;\par
+\tab\}\par
+#at16pph \{\par
+\tab padding:5px 0 10px 0\}\par
+#at16pph select \{\par
+\tab margin:5px 0 8px 0\}\par
+#at16pp .atinp \{\par
+\tab width:156px;\par
+\tab\}\par
+html>body #at16pp .atinp \{\par
+\tab width:176px;\par
+\tab\}\par
+#at16ppb \{\par
+\tab background:#fff;\par
+\tab border:1px solid #ccc;\par
+\tab height:274px\}\par
+#at16ep \{\par
+\tab height:16px;\par
+\tab padding:8px\}\par
+#at16ep a \{\par
+\tab display:block;\par
+\tab height:16px;\par
+\tab line-height:16px;\par
+\tab padding-left:22px;\par
+\tab margin-bottom:8px;\par
+\tab font-size:12px\}\par
+#at16ep a.at_gmail \{\par
+\tab background:url(http://illiweb.com/fa/addthis/gmail.gif) no-repeat left\}\par
+#at16ep a.at_hotmail \{\par
+\tab background:url(http://illiweb.com/fa/addthis/hotmail.gif) no-repeat left\}\par
+#at16ep a.at_yahoo \{\par
+\tab background:url(http://illiweb.com/fa/addthis/yahoo.gif) no-repeat left\}\par
+#at16ppf p#atsb \{\par
+\tab padding-top:20px;\par
+\tab font-size:10px\}\par
+#at16abr \{\par
+\tab margin-top:10px\}\par
+#at16abr input \{\par
+\tab padding:0;\par
+\tab margin:0;\par
+\tab margin-right:5px\}\par
+#at16ppso \{\par
+\tab display:none;\par
+\tab text-align:right;\par
+\tab margin-top:2px\}\par
+#at16ppa \{\par
+\tab background:#fff;\par
+\tab border:1px solid #ccc;\par
+\tab height:228px;\par
+\tab width:178px;\par
+\tab overflow:auto\}\par
+#at16ppa a \{\par
+\tab display:block;\par
+\tab white-space:nowrap;\par
+\tab padding:4px 8px;\par
+\tab font-size:12px!important\}\par
+#at16eatdr \{\par
+\tab position:absolute;\par
+\tab background: #fff;\par
+\tab border-top:0px;\par
+\tab max-height:110px;\par
+\tab overflow: auto;\par
+\tab z-index: 999;\par
+\tab top:129px;\par
+\tab left:21px;\par
+\tab width:277px\}\par
+* html #at_email #at16eatdr \{\par
+\tab top:115px!important;\par
+\tab width:272px!important\}\par
+*:first-child+html #at_email #at16eatdr \{\par
+\tab top:115px!important;\par
+\tab width:272px!important\}\par
+html>body #at_email form #at16eatdr.abif \{\par
+\tab top:137px;\par
+\tab width:278px!important\}\par
+#at16eatdr a \{\par
+\tab display: block;\par
+\tab overflow: hidden;\par
+\tab border-bottom: 1px dotted #eee;\par
+\tab padding: 4px 8px\}\par
+#at16eatdr a:hover, #at16eatdr a.hover \{\par
+\tab background: #e0eefa;\par
+\tab text-decoration: none;\par
+\tab color: #333\}\par
+#at_promo \{\par
+\tab font-size:12px;\par
+\tab display:none\}\par
+#at_promo button \{\par
+\tab background:#ee6a44;\par
+\tab border-top:1px solid #ffa389;\par
+\tab border-left:1px solid #ffa389;\par
+\tab border-right:1px solid #d4522c;\par
+\tab border-bottom:1px solid #d4522c;\par
+\tab color:#fff\}\par
+#at_promo .at-promo-content \{\par
+\tab margin-top:12px\}\par
+#at_promo .at-promo-btn \{\par
+\tab padding-top:10px\}\par
+#at_promo .at-promo-top \{\par
+\tab background:url(http://illiweb.com/fa/addthis/60x60_atn_logo.jpg) no-repeat 0 0;\par
+\tab padding:10px 0 5px 70px\}\par
+#at_promo h4 \{\par
+\tab font-size:14px;\par
+\tab font-weight:bold;\par
+\tab margin:0 0 4px\}\par
+#at_promo h4 sup \{\par
+\tab font-size:11px;\par
+\tab color:#ee6a44\}\par
+#at_promo span \{\par
+\tab display:block\}\par
+#at_promo .at-promo-btm-ffx \{\par
+\tab background:url(http://illiweb.com/fa/addthis/60x60_at_firefox_toolbar.jpg) no-repeat 0 0;\par
+\tab padding:6px 0 0 70px\}\par
+#at_promo .at-promo-btm-ie \{\par
+\tab background:url(http://illiweb.com/fa/addthis/60x60_at_ie_toolbar.png) no-repeat 0 0;\par
+\tab padding:6px 0 0 70px\}\par
+\par
+body\par
+\{\par
+\tab background: #520505 url('http://www.thuduc4teen.net/f@rum/[LD]Xmas/bg.jpg');\par
+\tab color: #000000;\par
+\tab font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\tab margin: 55px 10px 30px 10px;\par
+\tab padding: 0px;\par
+\}\par
+a:link, body_alink\par
+\{\par
+\tab color: #CC0000;\par
+\tab text-decoration: none;\par
+\}\par
+a:visited, body_avisited\par
+\{\par
+\tab color: #CC0000;\par
+\tab text-decoration: none;\par
+\}\par
+a:hover\{\par
+\tab  text-decoration: none!important;\par
+\tab  color : yellow;text-shadow:0 0 .2em black, 0 0 .2em black, 0 0 .2em black;\par
+\tab  \}\par
+\par
+\par
+.page\par
+\{\par
+\tab background: #FFFFFF;\par
+\tab color: #000000;\par
+\}\par
+td, th, p, li\par
+\{\par
+\tab font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\}\par
+.tborder\par
+\{\par
+\tab background: #FFFFFF;\par
+\tab color: #000000;\par
+\tab border: 1px solid #d7d7d7;\par
+\}\par
+.tcat\par
+\{\par
+\tab background: #ffffff url('http://i863.photobucket.com/albums/ab192/nhoxkulz1203/LDXmas/tcat.gif') repeat-x top left;\par
+\tab color: #FFFFFF;\par
+\tab font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\tab padding : 46px 10px 27px 20px;\par
+\}\par
+.tcat a:link, .tcat_alink\par
+\{\par
+\tab color: #ffffff;\par
+\tab text-decoration: none;\par
+\}\par
+.tcat a:visited, .tcat_avisited\par
+\{\par
+\tab color: #ffffff;\par
+\tab text-decoration: none;\par
+\}\par
+.tcat a:hover, .tcat a:active, .tcat_ahover\par
+\{\par
+\tab color: #FF6600;\par
+\tab text-decoration: underline;\par
+\}\par
+.thead\par
+\{\par
+\tab background: #dbdbdb;\par
+\tab color: #333333;\par
+\tab font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\}\par
+.thead a:link, .thead_alink\par
+\{\par
+\tab color: #333333;\par
+\}\par
+.thead a:visited, .thead_avisited\par
+\{\par
+\tab color: #333333;\par
+\}\par
+.thead a:hover, .thead a:active, .thead_ahover\par
+\{\par
+\tab color: #CC0000;\par
+\}\par
+.tfoot\par
+\{\par
+\tab background: #FFFFFF;\par
+\tab color: #333333;\par
+\}\par
+.tfoot a:link, .tfoot_alink\par
+\{\par
+\tab color: #333333;\par
+\}\par
+.tfoot a:visited, .tfoot_avisited\par
+\{\par
+\tab color: #333333;\par
+\}\par
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover\par
+\{\par
+\tab color: #FF3300;\par
+\}\par
+.alt1, .alt1Active\par
+\{\par
+\tab background: #FFFFFF;\par
+\tab color: #000000;\par
+\}\par
+.alt2, .alt2Active\par
+\{\par
+\tab background: #f6f6f6;\par
+\tab color: #000000;\par
+\tab border: 1px dotted #CFD3D5;\par
+\}\par
+.inlinemod\par
+\{\par
+\tab background: #FFFFCC;\par
+\tab color: #000000;\par
+\}\par
+.wysiwyg\par
+\{\par
+\tab background: #F5F5FF;\par
+\tab color: #000000;\par
+\tab font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\tab margin: 5px 10px 10px 10px;\par
+\tab padding: 0px;\par
+\}\par
+.wysiwyg a:link, .wysiwyg_alink\par
+\{\par
+\tab color: #FF0000;\par
+\}\par
+.wysiwyg a:visited, .wysiwyg_avisited\par
+\{\par
+\tab color: #FF0000;\par
+\}\par
+.wysiwyg a:hover, .wysiwyg a:active, .wysiwyg_ahover\par
+\{\par
+\tab color: #99CC00;\par
+\}\par
+textarea, .bginput\par
+\{\par
+\tab font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\}\par
+.bginput option, .bginput optgroup\par
+\{\par
+\tab font-size: 10pt;\par
+\tab font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\}\par
+.button\par
+\{\par
+\tab font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\}\par
+select\par
+\{\par
+\tab font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\}\par
+option, optgroup\par
+\{\par
+\tab font-size: 11px;\par
+\tab font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\}\par
+.smallfont\par
+\{\par
+\tab color: #333333;\par
+\tab font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\}\par
+.time\par
+\{\par
+\tab color: #666686;\par
+\}\par
+.navbar\par
+\{\par
+\tab font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\}\par
+.highlight\par
+\{\par
+\tab color: #FF0000;\par
+\tab font-weight: bold;\par
+\}\par
+.fjsel\par
+\{\par
+\tab background: #FFFFFF;\par
+\tab color: #FF3300;\par
+\}\par
+.fjdpth0\par
+\{\par
+\tab background: #F7F7F7;\par
+\tab color: #000000;\par
+\}\par
+.panel\par
+\{\par
+\tab background: #f3f3f3;\par
+\tab color: #000000;\par
+\tab padding: 10px;\par
+\tab border: 2px outset;\par
+\}\par
+.panelsurround\par
+\{\par
+\tab background: #DCDCDC;\par
+\tab color: #000000;\par
+\}\par
+legend\par
+\{\par
+\tab color: #22229C;\par
+\tab font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\}\par
+.vbmenu_control\par
+\{\par
+\tab background: #ffffff url('http://www.thuduc4teen.net/f@rum/[LD]Xmas/tcat.gif') repeat-x top center;\par
+\tab color: #FFFFFF;\par
+\tab font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\tab padding : 46px 10px 27px 20px;\par
+\tab white-space: nowrap;\par
+\}\par
+.vbmenu_control a:link, .vbmenu_control_alink\par
+\{\par
+\tab color: #FFFFFF;\par
+\tab text-decoration: none;\par
+\}\par
+.vbmenu_control a:visited, .vbmenu_control_avisited\par
+\{\par
+\tab color: #FFFFFF;\par
+\tab text-decoration: none;\par
+\}\par
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover\par
+\{\par
+\tab color: #FF9900;\par
+\tab text-decoration: none;\par
+\}\par
+.vbmenu_popup\par
+\{\par
+\tab background: #FFFFFF;\par
+\tab color: #000000;\par
+\tab border: 1px solid #dbdbdb;\par
+\}\par
+.vbmenu_option\par
+\{\par
+\tab background: #f4f4f4;\par
+\tab color: #000000;\par
+\tab font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\tab white-space: nowrap;\par
+\tab cursor: pointer;\par
+\}\par
+.vbmenu_option a:link, .vbmenu_option_alink\par
+\{\par
+\tab color: #22229C;\par
+\tab text-decoration: none;\par
+\}\par
+.vbmenu_option a:visited, .vbmenu_option_avisited\par
+\{\par
+\tab color: #22229C;\par
+\tab text-decoration: none;\par
+\}\par
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover\par
+\{\par
+\tab color: #FFFFFF;\par
+\tab text-decoration: none;\par
+\}\par
+.vbmenu_hilite\par
+\{\par
+\tab background: #FF6600;\par
+\tab color: #FFFFFF;\par
+\tab font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\tab white-space: nowrap;\par
+\tab cursor: pointer;\par
+\}\par
+.vbmenu_hilite a:link, .vbmenu_hilite_alink\par
+\{\par
+\tab color: #FFFFFF;\par
+\tab text-decoration: none;\par
+\}\par
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited\par
+\{\par
+\tab color: #FFFFFF;\par
+\tab text-decoration: none;\par
+\}\par
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover\par
+\{\par
+\tab color: #FFFFFF;\par
+\tab text-decoration: none;\par
+\}\par
+/* ***** styling for 'big' usernames on postbit etc. ***** */\par
+.bigusername \{ font-size: 14pt; \}\par
+\par
+/* ***** small padding on 'thead' elements ***** */\par
+td.thead, th.thead, div.thead \{ padding: 4px; \}\par
+\par
+/* ***** basic styles for multi-page nav elements */\par
+.pagenav a \{ text-decoration: none; \}\par
+.pagenav td \{ padding: 2px 4px 2px 4px; \}\par
+\par
+/* ***** de-emphasized text */\par
+.shade, a.shade:link, a.shade:visited \{ color: #777777; text-decoration: none; \}\par
+a.shade:active, a.shade:hover \{ color: #FF4400; text-decoration: underline; \}\par
+.tcat .shade, .thead .shade, .tfoot .shade \{ color: #DDDDDD; \}\par
+\par
+/* ***** define margin and font-size for elements inside panels ***** */\par
+.fieldset \{ margin-bottom: 6px; \}\par
+.fieldset, .fieldset td, .fieldset p, .fieldset li \{ font-size: 11px; \}\par
+.vbmenu_control2\par
+\{\par
+\tab background: transparent;\par
+\tab color: #FFFFFF;\par
+\tab font: bold 16px Tahoma, Geneva, sans-serif;;\par
+\tab padding: 6px 6px 6px 6px;\par
+\tab white-space: nowrap;\par
+\}\par
+.vbmenu_control2 a:link\par
+\{\par
+\tab color: #ffffff;\par
+\tab text-decoration: none;\par
+\}\par
+.vbmenu_control2 a:visited\par
+\{\par
+\tab color: #ffffff;\par
+\tab text-decoration: none;\par
+\}\par
+.vbmenu_control2 a:hover, .vbmenu_control2 a:active\par
+\{\par
+\tab color: #902300;\par
+\tab text-decoration: none;\par
+\}\par
+\par
+.smallfont2\par
+\{\par
+\tab font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial,  helvetica, sans-serif;\par
+\tab color: #000;\par
+\}\par
+.smallfont2 a:link\par
+\{\par
+\tab color: #000;\par
+\tab text-decoration: none;\par
+\}\par
+.smallfont2 a:visited\par
+\{\par
+\tab color: #000;\par
+\tab text-decoration: none;\par
+\}\par
+.smallfont2 a:hover, .smallfont2 a:active\par
+\{\par
+\tab color: #ffffff;\par
+\tab text-decoration: none;\par
+\}\par
+fieldset \{\par
+\tab border: 1px solid #DCDCDC;\par
+\tab padding: 10px 10px 10px 10px;\par
+\}\par
+legend \{\par
+\tab border: 1px solid #DCDCDC;\par
+\tab background: #f5f5f5;\par
+\tab color: #404040;\par
+\tab padding: 5px 25px 5px 25px;\par
+\tab margin-bottom: 0px;\par
+\}\par
+input.form \{\par
+\tab font-family: Arial, Verdana, sans-serif;\par
+\tab font-size: 13px;\par
+\tab background: #F9F9F9;\par
+\tab border: 1px solid #DCDCDC;\par
+\tab color: #404040;\par
+\tab margin: 3px 0px;\par
+\tab padding: 4px;\par
+\}\par
+textarea.form \{\par
+\tab font-family: Arial, Verdana, sans-serif;\par
+\tab font-size: 13px;\par
+\tab background: #F9F9F9;\par
+\tab border: 1px solid #DCDCDC;\par
+\tab color: #404040;\par
+\tab margin: 3px 0px;\par
+\tab padding: 4px;\par
+\}\par
+select.form \{\par
+\tab font-family: Arial, Verdana, sans-serif;\par
+\tab font-size: 13px;\par
+\tab background: #F9F9F9;\par
+\tab border: 1px solid #DCDCDC;\par
+\tab color: #404040;\par
+\tab margin: 3px 0px;\par
+\tab padding: 3px;\par
+\}\par
+.button a:link , .button a:visited\par
+\{\par
+\tab border: 1px solid #dcdcdc;\par
+\tab background: #ffc800;\par
+\tab color: #404040;\par
+\tab padding: 5px 25px 5px 25px;\par
+\tab margin-bottom: 10px;\par
+        font-weight: bold;\par
+\}\par
+.button a:hover, .button a:active\par
+\{\par
+\tab color: #fff;\par
+\tab text-decoration: none;\par
+\}\par
+.toppostbit\par
+\{\par
+\tab background: #dbdbdb;\par
+\tab color: #FFFFFF;\par
+\tab font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;\par
+\tab padding: 1px 6px 7px 6px;\par
+\tab white-space: nowrap;\par
+\}\par
+}
+ 
