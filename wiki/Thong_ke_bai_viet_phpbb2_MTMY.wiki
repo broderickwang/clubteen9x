@@ -1,0 +1,297 @@
+Ghi chú: Đây là phiên bản dành cho phpBB2, chuyển đổi bởi notme từ code Thống kê bài viết mới đa chức năng cho punBB của baivong
+
+Chức năng:
+
+    Hoạt động trên hầu hết các trình duyệt.
+    Tooltip hiển thị thông tin chi tiết của chủ đề:
+        Tiêu đề
+        Người tạo chủ đề
+        Người gửi cuối
+        Thời gian gửi
+        Tên chuyên mục
+        Lượt xem
+        Lượt trả lời
+
+
+
+Demo: http://www.maitruongmenyeu.org/
+
+Hướng dẫn:
+
+Script tooltip chèn trên của header
+
+<code>
+    <script src="http://illiweb.com/rsc/24/frm/admin/admin.js" type="text/javascript"></script>
+</code>
+
+Sửa search_results_topics mặc định thành
+
+<code>
+    <!-- BEGIN switch_menu -->
+    {UCP_TABS}
+    <!-- END switch_menu -->
+    <!-- BEGIN navmenu -->
+    <table width="100%" border="0" cellspacing="2" cellpadding="0" align="center">
+       <tr>
+          <td class="nav" valign="middle" width="100%"><span class="nav"><a class="nav" href="{U_INDEX}">{L_INDEX}</a> :: {L_SEARCH_TITLE}</span></td>
+       </tr>
+    </table>
+    <!-- END navmenu -->
+    <table class="forumline" width="100%" border="0" cellspacing="1" cellpadding="4" align="center">
+       <tr>
+          <td align="center" class="catHead" colspan="8" height="28"><h1 class="cattitle">{L_SEARCH_MATCHES}</h1></td>
+       </tr>
+       <tr>
+          <th class="thCornerL" nowrap="nowrap" width="4%" height="25"> </th>
+          <th class="thTop" nowrap="nowrap"> {L_TOPICS} </th>
+          <th class="thTop" nowrap="nowrap"> {L_FORUM} </th>
+          <th class="thTop" nowrap="nowrap"> {L_REPLIES} </th>
+          <th class="thTop" nowrap="nowrap"> {L_AUTHOR} </th>
+          <th class="thTop" nowrap="nowrap"> {L_VIEWS} </th>
+          <th class="thTop" nowrap="nowrap"> {L_LASTPOST} </th>
+          <!-- BEGIN watchsearch1 -->
+          <th class="thCornerR" nowrap="nowrap"> X </th>
+          <!-- END watchsearch1 -->
+       </tr>
+       <form action="{S_ACTION}" method="post" name="post" onsubmit="return verify_select();">
+       <!-- BEGIN searchresults -->
+       <tr class="layemno">
+          <td class="row1" align="center" valign="middle"><img title="{searchresults.L_TOPIC_FOLDER_ALT}" src="{searchresults.TOPIC_FOLDER_IMG}" alt="{searchresults.L_TOPIC_FOLDER_ALT}"></td>
+          <td class="row1" onmouseover='this.className="row2"' onmouseout='this.className="row1"'><h2 class="topic-title">{searchresults.NEWEST_POST_IMG}{searchresults.TOPIC_TYPE}<a class="topictitle" href="{searchresults.U_VIEW_TOPIC}">{searchresults.TOPIC_TITLE}</a></h2><br />
+          <span class="gensmall">{searchresults.GOTO_PAGE}</span></td>
+          <td class="row3" align="center"><span class="postdetails"><a class="postdetails" href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_NAME}</a></span></td>
+          <td class="row2" align="center" valign="middle"><span class="postdetails">{searchresults.REPLIES}</span></td>
+          <td class="row3" id="tacgiamt" align="center" valign="middle"><span class="name">{searchresults.TOPIC_AUTHOR}</span></td>
+          <td class="row2" align="center" valign="middle"><span class="postdetails">{searchresults.VIEWS}</span></td>
+          <td class="row3" align="center" valign="middle" nowrap="nowrap" onmouseover='this.className="row2"' onmouseout='this.className="row3"'><span class="postdetails">{searchresults.LAST_POST_TIME}<br />{searchresults.LAST_POST_AUTHOR} {searchresults.LAST_POST_IMG}</span></td>
+          <!-- BEGIN watchsearch -->
+          <td class="row1" align="center" valign="middle" nowrap="nowrap"><input type="checkbox" name="mark[]2" value="{searchresults.TOPIC_ID}" /></td>
+          <!-- END watchsearch -->
+       </tr>
+       <!-- END searchresults -->
+       <!-- BEGIN watchsearch1 -->
+       <tr>
+          <td class="catBottom" colspan="8" valign="middle" height="28" align="right"> <input type="submit" name="valid" value="{L_STOP_WATCH}" class="liteoption" /></td>
+       </tr>
+       <!-- END watchsearch1 -->
+       <tr>
+          <td class="catBottom" colspan="8" valign="middle" align="right"><a href="#top">{L_BACK_TO_TOP}</a></td>
+       </tr>
+       </form>
+    </table>
+    <table width="100%" border="0" cellspacing="2" cellpadding="0" align="center">
+       <tr>
+          <td valign="top"><span class="nav">{PAGE_NUMBER}</span></td>
+          <td align="right" valign="top" nowrap="nowrap"><span class="nav">{PAGINATION}</span><br />
+          <span class="gensmall">{S_TIMEZONE}</span></td>
+          <!-- BEGIN watchsearch1 -->
+          <td align="right" valign="top" nowrap="nowrap">
+          <b><span class="gensmall"><a class="gensmall" href="javascript:select_switch_search(true);">{L_MARK_ALL}</a> :: <a class="gensmall" href="javascript:select_switch_search(false);">{L_UNMARK_ALL}</a></span></b><br />
+          <!-- END watchsearch1 -->
+       </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="2" align="center">
+       <tr>
+          <td align="right" valign="top">{JUMPBOX}</td>
+       </tr>
+    </table>
+<code>
+
+Full last
+mod_top_posters
+
+<code>
+    <table width="100%" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; height: 236px; display: block;overflow-x: hidden; overflow-y: hidden; " id="mtlast" class="juna">
+
+    <tr><td class="alt7" style="white-space: nowrap; width:197px!important; overflow:hidden; padding:0px; margin:0px" valign="top">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr><td class="lastmtmy1" style="height:32px!important"></td>
+    <td class="lastmtmy3" style="height:32px!important">
+
+    <script type="text/javascript">function showstuff(value){document.getElementById("sell1").style.display = (value == "sell1") ? "block" : "none";document.getElementById("sell2").style.display = (value == "sell2") ? "block" : "none";document.getElementById("sell3").style.display = (value == "sell3") ? "block" : "none";document.getElementById("sell4").style.display = (value == "sell4") ? "block" : "none";document.getElementById("sell5").style.display = (value == "sell5") ? "block" : "none";document.getElementById("sell6").style.display = (value == "sell6") ? "block" : "none";}</script>
+
+      <select name="type" style="width:142px" onchange="showstuff(this.value);"><option value="sell1" selected="selected">Top Posters</option><option value="sell2">Top Starters</option></select></td>
+    </tr>
+
+    <tr>
+    <td style="border-top: 0px none;border-left:1px solid #B4D0F3;padding: 0px; background: transparent url(/users/2611/10/63/87/album/list13.gif) no-repeat scroll center top; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="24"><img src="http://illiweb.com/fa/subsilver/empty.gif" width="24" /></td>
+    <td nowrap="nowrap" style="border-top: 0px none;border-right:1px solid #B4D0F3;padding: 0px; line-height: 20px; background: transparent url(http://i337.photobucket.com/albums/n395/kalenv1/4r/ads/listbg.gif) repeat">
+
+    <div style="display: block;" id="sell1">
+     <!-- BEGIN POSTER -->
+    <div style="display:block; height:20px; overflow:hidden; line-height:18px;" onmouseover="show_tooltip(this,this.getElementsByTagName('div')[0].innerHTML,'Thông Tin Thành Viên');" onmouseout="hidetip();" class="smallfont">
+          <div style="display:none">Tên: {POSTER.NAME}<br>Số Bài Post :{POSTER.NB_POSTS}</div><div class="mtmymenu"> <div class="mtmymenuu">{POSTER.NAME}</div></div>       
+    </div>
+    <!-- END POSTER -->
+    </div>
+    </div>
+    <!--</td>
+    </tr>
+
+</code>
+mod_recent_topics
+
+<code>
+
+    </table>--><td width="680px" valign="top" class="alt7" style="padding:0">
+    <!-- BEGIN classical_row --><div id="vnlast" class="vn40"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr><td width="20" class="lastmtmy1" style="height:32px!important;" align="center"><span class="taidulieu" style="display:none;"><img src="http://i43.servimg.com/u/f43/16/03/04/56/13x13p10.gif"/></span>
+      </td>
+
+    <td width="80%" class="lastmtmy2" style="height:32px!important;font-size:10pt;"> <b>Các bài gửi mới nhất <b>
+      <span>
+        
+     
+     
+      </td><td style="text-align:center;padding-right:5px;height:32px!important;font-size:10pt;" width="20%" class="lastmtmy3"><span id="FMviloadimg" style="cursor:pointer;" onmouseover="showtip('Click Để Reload Topic.')" onmouseout="hidetip()" id="FMviloadimg"><b>Reload</b></span> </td></tr>
+
+    <tr class="baiguicuoi"><td style="background: transparent url(/users/2611/10/63/87/album/list13.gif) no-repeat;border-left:1px solid #B4D0F3" width="23"><img src="http://illiweb.com/fa/empty.gif" width="24" height="1" /></td>
+    <td style="line-height:18px; background: transparent url(http://i45.servimg.com/u/f45/16/75/78/56/listbg10.gif) repeat" width="80%" valign="top" colspan="2" >
+     <div  id="loadoday">
+     <!-- BEGIN recent_topic_row -->
+     
+    <div class="newltopic">
+    <table class="c3zonee" width="100%" border="0" cellspacing="0" cellpadding="0" style="height:20px">
+    <tr>
+    <td width="76%" nowrap="none"><div onmouseover="show_tooltip(this,this.getElementsByTagName('div')[0].innerHTML,'Thông Tin Bài Viết');" onmouseout="hidetip();"><span class="ltitletopic" style="font-size:11px;font-weight:bold"><a href="{classical_row.recent_topic_row.U_TITLE}">{classical_row.recent_topic_row.L_TITLE}
+    </a></span><div class="tooltipFMvi"><img src="http://i48.servimg.com/u/f48/16/58/89/73/loadin10.gif" /> Đang tải dữ Liệu</div></div>
+    </td><td width="20%" align="center" nowrap="none" style="border-right:1px solid #B4D0F3">
+
+    <!-- BEGIN switch_poster -->
+      <div class="mtmymenu"> <div class="mtmymenuu"> <a onmouseover="show_tooltip(this,'<b>Click để xem profile của thành viên này !</b>','Thông Tin-mtmy');" onmouseout="hidetip();" href="{classical_row.recent_topic_row.switch_poster.U_POSTER}"><span class="lpostertopic" style="font-size:11px;font-weight:bold">{classical_row.recent_topic_row.switch_poster.S_POSTER}</span></a></div></div>
+            <!-- END switch_poster --><!-- BEGIN switch_poster_guest -->
+            {classical_row.recent_topic_row.switch_poster_guest.S_POSTER}
+            <!-- END switch_poster_guest --></td><span class="ltimetopic" style="display:none">{classical_row.recent_topic_row.S_POSTTIME}</span></tr></table></div>
+    <!-- END recent_topic_row -->
+      </td></tr></tbody></table><!-- END classical_row -->
+     
+    </td></tr></table></div>
+
+    </center>
+    <div style="height:1px"></div> <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td  align="left">
+    <style>#FMviloadimg{color:red;}#FMviloadimg:hover{color:blue}</style>
+    <script>
+      jQuery(".c3zonee:contains('»')").remove();
+      $("#FMviloadimg").click(function(){
+    $(".taidulieu").show();
+        $("#loadoday").fadeOut();
+          $.ajax({
+            url:"/forum",
+            success:function(a){$("#loadoday").html($(a).find("#loadoday").html()).fadeIn(1000);$(function () {
+        $(".newltopic").each(function (a) {
+            $(this);
+            $(this).attr("id", "newlast" + a);
+            a = $(this).attr("id");
+            $(this).find(".ltitletopic").next().attr("alt", a);
+            $(this).find(".ltitletopic").attr("alt", a);
+            $(this).find(".lpostertopic").attr("alt", a);
+            $(this).find(".ltimetopic").attr("alt", a);
+            var b = $(this).find(".ltitletopic[alt='" + a + "']").text(),
+                tieude = $(this).find(".ltitletopic[alt='" + a + "']").text(),
+                d = $(this).find(".ltimetopic[alt='" + a + "']").text(),
+                thoigian = $(this).find(".ltimetopic[alt='" + a + "']").text(),
+                e = b.replace(/ /gi, "+"),
+                f = $(this).find(".ltitletopic[alt='" + a + "']").next();
+            f.load("/search?mode=searchbox&search_keywords=" + e + '&show_results=topics tr.layemno:contains("' + b + '"):contains("' + d + '")', function () {
+                var d = $(this).find("#tacgiamt a[href^='/u']").text(),
+                    e = $(this).find(".row3:first").text(),
+                    f = $(this).find(".row2:first").text(),
+                    g = $(this).find(".row2:last").text(),
+                    j = $(".lpostertopic[alt='" + a + "']").text();
+                $(this).html('<b><span class="tiplFMvi">Tiêu đề:</span> ' + tieude + '</b><hr><span class="tiplFMvi">Tạo chủ đề:</span> ' + d + '<br><span class="tiplFMvi">Gửi cuối:</span> ' + j + '<br><span class="tiplFMvi">Vào lúc:</span> ' + thoigian + '<hr><span class="tiplFMvi">Thuộc chuyên mục:</span> ' + e + '<br><span class="tiplFMvi">Lượt xem:</span> ' + g + '<br><span class="tiplFMvi">Trả lời:</span> ' + f + "<br>");
+            })
+        })
+    });$(".taidulieu").hide();},
+            error:function(){$("#loadoday").html('<p><font face="Courier New"><font color="red">C\u00f3 l\u1ed7i x\u1ea3y ra trong qu\u00e1 tr\u00ecnh t\u1ea3i d\u1eef li\u1ec7u.</font></font></p>')}
+         })
+         
+      });
+
+    </script>
+    <script type="text/javascript">$(function () {
+        $(".newltopic").each(function (a) {
+            $(this);
+            $(this).attr("id", "newlast" + a);
+            a = $(this).attr("id");
+            $(this).find(".ltitletopic").next().attr("alt", a);
+            $(this).find(".ltitletopic").attr("alt", a);
+            $(this).find(".lpostertopic").attr("alt", a);
+            $(this).find(".ltimetopic").attr("alt", a);
+            var b = $(this).find(".ltitletopic[alt='" + a + "']").text(),
+                tieude = $(this).find(".ltitletopic[alt='" + a + "']").text(),
+                d = $(this).find(".ltimetopic[alt='" + a + "']").text(),
+                thoigian = $(this).find(".ltimetopic[alt='" + a + "']").text(),
+                e = b.replace(/ /gi, "+"),
+                f = $(this).find(".ltitletopic[alt='" + a + "']").next();
+            f.load("/search?mode=searchbox&search_keywords=" + e + '&show_results=topics tr.layemno:contains("' + b + '"):contains("' + d + '")', function () {
+                var d = $(this).find("#tacgiamt a[href^='/u']").text(),
+                    e = $(this).find(".row3:first").text(),
+                    f = $(this).find(".row2:first").text(),
+                    g = $(this).find(".row2:last").text(),
+                    j = $(".lpostertopic[alt='" + a + "']").text();
+                $(this).html('<b><span class="tiplFMvi">Tiêu đề:</span> ' + tieude + '</b><hr><span class="tiplFMvi">Tạo chủ đề:</span> ' + d + '<br><span class="tiplFMvi">Gửi cuối:</span> ' + j + '<br><span class="tiplFMvi">Vào lúc:</span> ' + thoigian + '<hr><span class="tiplFMvi">Thuộc chuyên mục:</span> ' + e + '<br><span class="tiplFMvi">Lượt xem:</span> ' + g + '<br><span class="tiplFMvi">Trả lời:</span> ' + f + "<br>");
+            })
+        })
+    });
+    </script>
+
+    </td></tr></table>
+</code>
+
+mod_most_active_starters
+
+<code>
+    -->
+    <div  style="display: none;" id="sell2">
+    <!-- BEGIN POSTER -->
+    <div style="display:block; height:20px; overflow:hidden; line-height:18px;" onmouseover="show_tooltip(this,this.getElementsByTagName('div')[0].innerHTML,'Thông Tin Thành Viên');" onmouseout="hidetip();" class="smallfont">
+          <div style="display:none">Tên: {POSTER.NAME}<br>Số Bài Post :{POSTER.NB_TOPICS}</div><div class="mtmymenu"> <div class="mtmymenuu">{POSTER.NAME}  </div></div>       
+    </div>
+    <!-- END POSTER -->
+    </div>
+    <!--</td>
+    </tr></table>
+    </div>
+    </td>
+
+</code>
+Mod_active_topics
+
+<code>
+    -->
+
+    <div  style="display: none;" id="sell6">
+    <!-- BEGIN TOPIC -->
+    <div style="display:block; height:20px; overflow:hidden; line-height:18px;" onmouseover="showtip(this.getElementsByTagName('div')[0].innerHTML);" onmouseout="hidetip();" class="smallfont">
+          <div style="display:none">
+    {TOPIC.NAME}
+          </div><div style="width:100px;"><a href="{TOPIC.LINK}" title="{TOPIC.TITLE}"><b>{TOPIC.NAME}</b></a> </div>
+    </div>
+    <!-- END TOPIC -->   
+    </div>
+    </td>
+    </tr>
+
+
+    </table>
+    </div>
+    </td>
+    <!-- <div>
+</code>
+
+CSS
+
+<code>
+
+    .tooltipFMvi{display:none;z-index:999}#tooltip{padding:0;max-width:50% !important;color:#000;border:1px solid #000;background-color:#f6f6f6;font-size:0.8em}* html #tooltip{width:30%}#tooltip *{margin:2px 5px 2px 8px}#tooltip ul{padding:0 0 0 20px}#tooltip dl{clear:both;position:relative;margin-bottom:10px}#tooltip dt{float:left;border:medium none;padding-top:3px;width:50%}#tooltip dd{margin-left:50%;padding-left:5px;vertical-align:top}#tooltip p.header{margin:0;font-size:12px;font-weight:bold;color:#fff;padding:1px 5px;background:#000 repeat;font-weight:bold;border:1px solid #000}.tiplFMvi{color:red}#tooltip p{padding:0 5px 0 0;color:#696969;font-size:12px;font-weight:bold}.lastmtmy1{background:#E5EFFE;border-top:1px solid #B4D0F3;border-bottom:1px solid #B4D0F3;border-left:1px solid #B4D0F3}.lastmtmy2{background:#E5EFFE;border-top:1px solid #B4D0F3;border-bottom:1px solid #B4D0F3}.lastmtmy3{background:#E5EFFE;border-top:1px solid #B4D0F3;border-bottom:1px solid #B4D0F3;border-right:1px solid #B4D0F3}
+
+</code>
+Sắp xếp widgets
+
+http://img808.imageshack.us/img808/6614/84277319.jpg
+
+Chú ý: Bạn có thể thay CSS tooltip theo ý thích của mình.
+
+[+] Nếu bạn muốn sao chép hướng dẫn này đi nơi khác vui lòng không thay đổi bất kỳ thành phần nào trong code và phải ghi bản quyền thuộc www.FMvi.org
+
+Viết bởi notme - www.maitruongmenyeu.org/
