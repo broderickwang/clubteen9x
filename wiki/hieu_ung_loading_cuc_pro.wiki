@@ -40,6 +40,32 @@ Chú ý : Enable Javascript code management : phải được kick hoạt là C�
 
 http://i43.servimg.com/u/f43/15/93/33/76/117.png
 
+
+
+Update thêm hiệu ứng load nữa
+http://www.fullyillustrated.com/wp-content/themes/fullyIllustrated/_include/img/fullyillustrated-loader.gif
+Cho vào css
+
+<code>
+    #loadlig{background:#000;background-color:rgba(0,0,0,0.5);color:#fff;filter:Alpha(opacity=80);float:left;font-size:22px;height:100%;left:0;position:fixed;text-align:center;text-shadow:0 1px 0 #000;top:0;width:100%;z-index:999}.load1{margin-top:300px}
+</code>
+
+
+Cho vào đâu tùy ý :
+
+<code>
+    <div id=loadlig><div class=load1><img src=http://www.fullyillustrated.com/wp-content/themes/fullyIllustrated/_include/img/fullyillustrated-loader.gif style=></div>Loading...</div>
+</code>
+
+Javascript Codes :
+tích hết các ô trừ : In all the pages
+
+<code>
+
+    $(document).ready(function(){$(window).load(function(){$('#loadlig').fadeOut(2000,function(){$(this).remove})})});
+
+
+</code>
+
 Hết
-Thấy hay thì Thank nhá cười nhăn răng
-Nguồn : skin4fm.com
+Thấy hay thì Thank nhá Very Happy
