@@ -1,0 +1,32 @@
+
+Nơi quậy phá: Templates>>Post&tin nhắn>>posting_body
+Tìm:
+<code>
+<!-- BEGIN switch_subject -->
+</code>
+Chèn vào sau nó :
+<code>
+<dl>
+<dt><label>Chọn tiếp đầu ngữ</label></dt>
+<dd>
+<input type="button" value="[Thắc mắc]" onclick="set_solved(this.form.elements['subject'],'[Thắc mắc]')" style="display:none" id="button_ask" />
+<script type="text/javascript">document.getElementById('button_ask').style.display = 'inline';</script></dd></dl>
+</code>
+Để thêm nút với tiếp đầu ngữ khác thay
+<code>
+1. value="[Thắc mắc]" --> value="[xxx]"
+2. '[Thắc mắc]' --> '[xxx]'
+3. id="button_ask"-->id="yyy"
+</code>
+Thay cái gì thì tùy bạn.
+Chỗ
+Code:chọn nội dung
+<script type="text/javascript">document.getElementById('button_ask').style.display = 'inline';</script>
+thêm 1 đoạn code nữa:
+<code>
+document.getElementById('yyy').style.display = 'inline';
+</code>
+Save lại là xong.
+
+Mình chưa học javascript nên không rõ chỗ thêm đoạn code khúc cuối có cần thiết ko hay có thể chèn thêm id vào là được, ai biết mong chỉ giúp.
+Đối với phpBB2, chắc tương tự thôi.
