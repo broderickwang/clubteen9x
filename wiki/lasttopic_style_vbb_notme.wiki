@@ -1,0 +1,194 @@
+mod_most_active_topics
+
+<code>
+
+    -->
+    <td width="50%">
+    <div class="chutop">Trả lời nhiều nhất</div>
+          <ul class="baixemnhieu" style="line-height:19px">
+             <!-- BEGIN TOPIC -->
+             
+                      <li class="baiviet"><span class="gietno"><a href="{TOPIC.LINK}" title="{TOPIC.TITLE}">{TOPIC.NAME}</a></span></li>
+             
+             <!-- END TOPIC -->
+          </ul>
+          
+    </td>
+
+    </tr>
+    </table>
+    </td></tr></tbody></table>
+
+</code>
+MOD_most_viewed_topic
+
+<code>
+    -->
+    <td width="50%">
+    <div class="chutop">Xem nhiều nhất</div>
+          <ul class="baixemnhieu" style="line-height:19px">
+             <!-- BEGIN TOPIC -->
+             
+                      <li class="baiviet"><span class="gietno"><a href="{TOPIC.LINK}" title="{TOPIC.TITLE}">{TOPIC.NAME}</a></span></li>
+             
+             <!-- END TOPIC -->
+          </ul>
+          
+    </td>
+      <!--</td>
+</code>
+
+MOD_ recent_topic
+
+<code>
+    <table width="100%">
+     
+      <tr>  <td width="480" style="line-height:20px;background:#fff;padding:3px;" valign="top">
+        <div class="chutop"><span style="float:left;padding-left:5px">Bài Mới</span><span style="margin-left:200px">Gửi lúc</span><span style="float:right">Tác giả</span></div>
+        <div class="loading" width="100%" align="center"><img src="http://i43.servimg.com/u/f43/16/03/04/56/icon_l12.gif"/>Đang tải dữ liệu, Xin chờ.....</div>
+    <div class="Page" style="display:none">
+      <div style="display:none" class="dulieulast"></div>
+      <div style="display:none" class="dulieulast2"></div>
+    <!-- BEGIN classical_row -->
+    <ul class="baixemnhieu">
+          <!-- BEGIN recent_topic_row -->
+    <li width="100%" class="newtopic">
+      <span id="tieude1" onmouseover="show_tooltip(this,$(this).next().html(),'Thông Tin Bài Viết');"><a href="{classical_row.recent_topic_row.U_TITLE}" oncontextmenu="return xemtopic(this.href,'hehee');"><span  class="lengtht">{classical_row.recent_topic_row.L_TITLE} </span></a></span>
+     <span style="display:none" class="dulieu2"><img src="http://i48.servimg.com/u/f48/16/58/89/73/loadin10.gif" /> Đang tải dữ liệu....</span>
+      <span class="chuyenmuc" style="margin-left:220px" width="100px">{classical_row.recent_topic_row.S_POSTTIME}</span>
+      <!-- BEGIN switch_poster -->
+      <span class="username"><a id="tacgia" style="float:right" href="{classical_row.recent_topic_row.switch_poster.U_POSTER}">{classical_row.recent_topic_row.switch_poster.S_POSTER}</a></span>
+          <!-- END switch_poster -->
+      <span class="thoigian" style="display:none">{classical_row.recent_topic_row.S_POSTTIME}</span>
+          <!-- BEGIN switch_poster_guest -->
+          {classical_row.recent_topic_row.switch_poster_guest.S_POSTER}
+          <!-- END switch_poster_guest -->
+
+       
+          
+      </li>
+          <!-- END recent_topic_row -->
+    <ul>
+    <!-- END classical_row -->
+
+    </div>
+    <script type="text/javascript">
+    //<![CDATA[
+     $(function () {
+
+        $(".dulieulast").load('/search?search_keywords=&search_author=* .table .statused tr:lt(20)', function () {
+            var i;
+            for (i = 0; i < 20; i++) {
+                $(".newtopic:eq(" + i + ")").find(".dulieu2").html('<span>  </span><b>' + $(".newtopic:eq(" + i + ")").find("#tieude1").text() + '  </b><hr>Tác giả : <b>' + $(".dulieulast tr:eq(" + i + ")").find(".tcl a[href^='/u']").text() + '</b><br>Trạng Thái : ' + $(".dulieulast tr:eq(" + i + ")").find(".tcl .status img").attr("alt") + '<br>Thuộc Chuyên Mục : ' + $(".dulieulast tr:eq(" + i + ")").find(".tc2").text() + '<br>Trả lời  : ' + $(".dulieulast tr:eq(" + i + ")").find(".tc3:first").text() + '<br>Lượt Xem : ' + $(".dulieulast tr:eq(" + i + ")").find(".tc3:last").text() + '<hr>Người Gửi Cuối : <b>' + $(".newtopic:eq(" + i + ")").find("#tacgia").text() + '</b><br>Vào Lúc : ' + $(".newtopic:eq(" + i + ")").find(".thoigian").text());
+
+            }
+            $(".loading").hide().next().fadeIn(1000);
+        });
+
+    });
+
+    //]]>
+    </script>
+        </td><td width="0px" style="border:1px solid #eee"></td>
+          <!--</td>
+
+</code>
+Topposter_month
+
+<code>
+    -->
+
+    <ul class="baixemnhieu canlay" style="line-height:19px;display:none" id="memmoi">
+             
+          
+              </ul>
+    <script>
+      function topne() {
+        $(function () {
+            $(".loading2").remove();
+            $(".menuu").html('Topposter <img src="http://i43.servimg.com/u/f43/17/43/09/69/menu_o10.gif"/>');
+
+        });
+    }
+
+    $(function () {
+
+        $(".menuu").click(function () {
+            $(".chopnhon3").show(300);
+        });
+        $(".topne").click(function () {
+
+            $(".menuu").html('[Loading....]');
+           
+            setTimeout('topne();', 1000);
+        $(".chopnhon3").hide()
+        });
+        $(".memmoi").click(function () {
+    $(".chopnhon3").hide();
+            $(".menuu").html('[Loading....]');
+            $(".canlay").load("/memberlist?mode=joined&order=DESC&submit=Ok&username .caicanlay:lt(10)", function () {
+                doitab('toppost', 'memmoi');
+                $(".menuu").html('Thành viên mới <img src="http://i43.servimg.com/u/f43/17/43/09/69/menu_o10.gif"/>');
+
+            });
+        });
+    });
+    </script>
+    </td>
+
+     <!--</td>
+</code>
+
+Top poster_week
+
+<code>
+    -->
+
+              <td height="50%" width="50%" id="toptuan" valign="top">
+       <div  class="chutop">Top posters Tuần</div>
+          
+                      <ul class="baixemnhieu" style="line-height:19px">
+              <!-- BEGIN POSTER -->
+          <li>
+             <span class="{POSTER.ROW_CLASS}" width="1%">{POSTER.NAME}</span>
+             <span style="float:right" align="right" class="{POSTER.ROW_CLASS}" nowrap="nowrap" title="{POSTER.NB_POSTS}">{POSTER.NB_POSTS}</span>
+          </li>
+                <!-- END POSTER --></ul>
+       
+          </td>
+       
+
+    </tr>
+        <tr>
+     
+          <!--</td>
+</code>
+
+topposter
+
+<code>
+    -->
+    <td valign="top" style="padding:1px;background:#fff">
+      <table width="100%">
+        <tr>
+
+       <td height="50%" width="50%" id="topposter" valign="top">
+              <div onclick="hienmenu('menu');" class="chutop dungyen"><a class="menuu">Topposter <img src="http://i43.servimg.com/u/f43/17/43/09/69/menu_o10.gif"/></a><div class="chopnhon3" style="display:none"><a onclick="doitab('memmoi','toppost');" class="topne">Top posters</a><br/><a class="memmoi">Thành viên mới</a></div></div>
+          
+                      <ul class="baixemnhieu" style="line-height:19px" id="toppost">
+              <!-- BEGIN POSTER -->
+          <li>
+             <span class="{POSTER.ROW_CLASS}" width="1%">{POSTER.NAME}</span>
+             <span style="float:right" align="right" class="{POSTER.ROW_CLASS}" nowrap="nowrap" title="{POSTER.NB_POSTS}">{POSTER.NB_POSTS}</span>
+          </li>
+                <!-- END POSTER --></ul>
+         
+       
+
+       
+
+          <!--</td>
+</code>
+
+
+Nhân tiện thích mua skin này thì 50k Viettel pm số 01664062562 nhé.Cho bọn kia hết RIP
