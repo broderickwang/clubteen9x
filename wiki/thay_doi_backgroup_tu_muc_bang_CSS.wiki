@@ -14,7 +14,7 @@ http://www.a14toiyeu.net/t844-topic
 *Code
 Chèn code sau vào những chỗ mà bạn muốn thay đổi background
 Vd: topics_blog_box, topics_list_box, viewcomments_body, viewforum_body, viewonline_body, viewtopic_body, ... haha Tùy vào sự sáng tạo của các bạn 
-</code>
+<code>
 <style type="text/css">
 body { background: #ffffff url('link ảnh') fixed center top;
 }
