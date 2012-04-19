@@ -1,3 +1,40 @@
+vô header xóa đoạn
+
+Code:
+
+    <div id="{ID_LEFT}">
+                                        <!-- BEGIN giefmod_index1 -->
+                                        {giefmod_index1.MODVAR}
+                                        <!-- BEGIN saut -->
+                                        <div style="height:{SPACE_ROW}px"></div>
+                                        <!-- END saut -->
+                                        <!-- END giefmod_index1 -->
+                                     </div>
+
+
+xóa rồi thì thôi
+vào index_box
+chèn sau {JAVASCRIPT}
+
+<code>
+
+    <!-- BEGIN giefmod_index1 -->
+    {giefmod_index1.MODVAR}
+    <!-- END giefmod_index1 -->
+
+
+</code>
+CSS:
+<code>
+    .baixemnhieu{list-style:decimal-leading-zero outside none;text-align:left;margin:0!important;padding:0 1px 0 30px}
+    .gietno{overflow:hidden;position:absolute;text-overflow:ellipsis;white-space:nowrap;width:180px}
+    .lengtht{overflow:hidden;position:absolute;text-overflow:ellipsis;white-space:nowrap;width:200px}
+    .chutop{background-color: #F2F2F2;color:#666;font:bold 12px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;border-bottom: 1px solid #D9D9D9;
+    border-top: 1px solid #E5E5E5;
+    margin-bottom: 0px;
+    padding: 3px 6px;}
+
+</code>
 mod_most_active_topics
 
 <code>
@@ -36,8 +73,8 @@ MOD_most_viewed_topic
           
     </td>
       <!--</td>
-</code>
 
+</code>
 MOD_ recent_topic
 
 <code>
@@ -137,8 +174,8 @@ Topposter_month
     </td>
 
      <!--</td>
-</code>
 
+</code>
 Top poster_week
 
 <code>
@@ -162,8 +199,8 @@ Top poster_week
         <tr>
      
           <!--</td>
-</code>
 
+</code>
 topposter
 
 <code>
@@ -188,8 +225,7 @@ topposter
        
 
           <!--</td>
-</code>
 
-http://i43.servimg.com/u/f43/17/43/09/69/last10.jpg
+</code>
 
 Nhân tiện thích mua skin này thì 50k Viettel pm số 01664062562 nhé.Cho bọn kia hết RIP
