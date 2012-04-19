@@ -1,6 +1,6 @@
 vô header xóa đoạn
 
-Code:
+<code>
 
     <div id="{ID_LEFT}">
                                         <!-- BEGIN giefmod_index1 -->
@@ -11,7 +11,7 @@ Code:
                                         <!-- END giefmod_index1 -->
                                      </div>
 
-
+</code>
 xóa rồi thì thôi
 vào index_box
 chèn sau {JAVASCRIPT}
