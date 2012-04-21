@@ -1,0 +1,24 @@
+Hướng dẫn khác với làm dùm nhé @@~
+Cách 1: Đặt code này ở nơi muốn hiện số ngày:
+
+<code>
+    <script type="text/javascript">
+    document.write(((new Date()).getDate())+"/"+((new Date()).getMonth()+1)+"/"+((new Date()).getUTCFullYear()))
+    </script>
+</code>
+
+Code này hiện theo số ngày trên máy tính, nên nếu máy tính nào sai giờ thì bó tay, trên zing thì chắc lấy thời gian từ sever của zingme.
+
+Cách 2: Cách này lấy thời gian từ sever của forumotion:
+
+<code>
+    <div style="display:none" id="timefmvi"></div>
+    <script type="text/javascript">
+       $("#timefmvi").load("/profile?mode=editprofile&page_profil=preferences select[name='dateformat'] option[value='j/n/Y, H:i']", function () {
+          var timefmvi = $("#timefmvi").text().split(",")[0];
+          alert(timefmvi)
+       })
+    </script>
+</code>
+
+Dùng timefmvi để đặt vào vị trí cần thay thời gian, phải đặt js của bạn thay cho vị trí của alert(timefmvi) thì nó mới hoạt động.
