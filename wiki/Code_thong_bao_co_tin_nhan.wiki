@@ -1,0 +1,13 @@
+   <code>  <script type="text/javascript">
+        $(function(){
+        if (Number($("a.mainmenu[href^='/privmsg'] strong").text()) > 0){
+        var a = $("a.mainmenu[href^='/privmsg'] strong").text();
+        var b = confirm("Bạn có "+a+" tin nhắn mới.Bạn có muốn đến hộp thư.");
+        if( b == true){location.href = '/privmsg?folder=inbox'};
+        };
+        });
+      </script></code>
+
+
+* Demo : Khi có tin nhắn mới code này sẽ làm hiện 1 hộp thoại rắc rối. Ấn ôk để vô xem thư ko có nó sẽ ko tha bạn đâu
+* Demoonline: Khamphait.vn
