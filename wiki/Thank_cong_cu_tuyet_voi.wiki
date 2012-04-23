@@ -1,4 +1,3 @@
-
  
 demo:http://i45.servimg.com/u/f45/17/45/78/42/311.png
 
@@ -8,7 +7,7 @@ Hướng dẫn :
 
 Bước 1 : Thêm đoạn sau vào cuối Footer begin :
 
-Cod: Chọn code
+<code>
 
 
     <div id="myfooter" style="height: 40px;  position: fixed;
@@ -27,11 +26,11 @@ Cod: Chọn code
          
       </p></form></p></div>
 
-
+</code>
 
 Bước 2 : Thêm đoạn code sau vào Css
 
-Cod: Chọn code
+<code>
 
 
     #myfooter{
@@ -44,7 +43,7 @@ Cod: Chọn code
     padding-right: 20px;
     }
 
-
+</code>
 
 chú ý : các bạn có thể thay thế thanh menu = các link ảnh sau
 http://i81.servimg.com/u/f81/11/91/65/81/mac_ba10.png
