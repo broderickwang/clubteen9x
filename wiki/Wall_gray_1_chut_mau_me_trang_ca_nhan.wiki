@@ -35,7 +35,7 @@ Bước 1: ACP >> Display >> Pictures and Colors >> Colors >> CSS stylesheet: Th
         #profile-advanced-details .message-footer li.last{background:url(http://i48.servimg.com/u/f48/16/58/89/73/remove10.png) no-repeat scroll 2px center #FFEDED;border:1px solid #DDD;padding:2px 3px 2px 20px}
 </code>
 
-Bước 2: ACP >> Display >> Templates >> QLTT >> overall_footer_end: Thêm vào cuối, trước </body>
+Bước 2: ACP >> Display >> Templates >> QLTT >> overall_footer_end: Thêm vào cuối, trước <code></body></code>
 
 <code>
 
