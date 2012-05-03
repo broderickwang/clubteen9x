@@ -1,0 +1,136 @@
+<code><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- MENIU --><div class="meniul" align=center><a href="http://chiaseonline.us.to/forum">Forum</a><a href="http://chiaseonline.us.to/register">Đăng kí</a><a href="http://chiaseonline.us.to/login">Đăng nhập</a></div><!-- SFARSIT-MENIU -->
+    <br>
+    <br>
+   <!-- MESAJ HEADER --><div style="font-size: 110px; font-family: fixedsys; font-weight: bold; color: white;text-align: center; opacity: 0.1;filter:alpha(opacity=10); text-shadow: #000000 0px 0px 15px;">ChiaSeOnline</div>
+<br><!-- SFARSIT-MESAJ HEADER -->
+
+    <br>
+
+    <!-- TABEL PRINCIPAL --><table class="font_la_tabel" align="center" cellspacing=0 cellpadding=0>
+    <tr><td style="background:url(http://i16.servimg.com/u/f16/11/96/49/61/thead10.png) center no-repeat; width:718px; height:23px;"></td></tr>
+    <tr><td style="background:url(http://i16.servimg.com/u/f16/11/96/49/61/tbody10.png) center repeat-y; width:718px; margin-right: 30px; padding-left: 30px;">
+
+    <div style="text-align: center;"><span class="Apple-style-span" style="font-size: 19px; "><span style="font-weight: bold; font-family: Arial; "><span color: rgb(112, 128, 144); font-family: Arial; ">Chào Mừng Các Bạn Đến Với ChiaSeOnline</font></span></span></div>
+      <div><font class="Apple-style-span" face="Arial"><span class="Apple-style-span;"><b><u><br />
+                </u></b></span></font>
+        <li><span color: rgb(112, 128, 144); font-family: Arial; ">ChiaSeOnline ra đời với mong muốn sẽ là nơi để mọi người quy tụ.</span></li>
+        <li><span color: rgb(112, 128, 144); font-family: Arial; ">Cùng nhau học hỏi, thư giãn và chia sẻ mọi nỗi buồn vui trong cuộc sống.</span></li>
+        <li><span color: rgb(112, 128, 144); font-family: Arial; ">Là nơi tình bạn được vinh danh, đẳng cấp là mãi mãi.</span></li>      
+        <li><span color: rgb(112, 128, 144); font-family: Arial; ">Chúc các bạn luôn hạnh phúc và thành công trong cuộc sống.</font></span></li></div>
+
+    </td></tr>
+    <tr><td style="background:url(http://i16.servimg.com/u/f16/11/96/49/61/tfoot10.png) center no-repeat;width:718px; height:23px;"></td></tr>
+    </table><!-- SFARSIT TABEL PRINCIPAL -->
+
+
+
+
+    <table  align="center" width="718px"><td align=left class="conectare">
+
+    <!-- CASUTA DE CONECTARE --><form action="login.forum?connexion" method="post"> <table class="font_la_tabel" width="35%" border="0"><tr><td><p>Tài Khoản:  </p></td><td><input name="username" size="15" maxlength="40" type="text"></input></td></tr><tr><td width="21%"><span>Mật khẩu:  </span></td><td width="79%"><input name="password" size="15" maxlength="32" type="password"></input></td></tr><br /> <tr align="center"><td colspan="2" ><input style="margin-top: 5px; margin-right: 0px; cursor: pointer;" class="mainoption" name="login" value="Đăng nhập" type="submit"></input>    </td></tr></table></form><!-- SFARSIT-CASUTA DE CONECTARE -->
+
+    </td>
+
+
+    <td align=right>
+
+    <!-- TABEL SECUNDAR --><table class="font_la_tabel" align="center" cellspacing=0 cellpadding=0>
+<tr><td style="background:url(http://i16.servimg.com/u/f16/11/96/49/61/thead210.png) center no-repeat; width:490px; height:23px;"></td></tr>
+<tr><td style="background:url(http://i16.servimg.com/u/f16/11/96/49/61/tbody210.png) center repeat-y; width:490px; margin-right: 25px; padding-left: 25px;">
+
+<center><br>ChiaSeOnline.Us.To<br>
+Welcome to Forum ChiaSeOnline<br>
+Forum was built by all the members ChiaSeOnline. Wish you visit fun!<br></center>
+
+</td></tr>
+<tr><td style="background:url(http://i16.servimg.com/u/f16/11/96/49/61/tfoot210.png) center no-repeat;width:490px; height:23px;"></td></tr>
+</table><!-- SFARSIT-TABEL SECUNDAR -->
+
+    </td></table>
+
+
+    <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- COPYRIGHT SI FEEDBACK-NU STERGETI!!! --><table align="center" width="718px" style="font-size: 11px; font-family: Verdana,Arial,Helvetica,sans-serif;"><td align=left>ChiaSeOnline.Us.To</td>
+<td align=right>Admin : <a href="http://chiaseonline.us.to/privmsg?mode=post&u=44">—CuBimtQ™</a><br>Admin : <a href="http://chiaseonline.us.to/privmsg?mode=post&u=1">Trà My</a></td></table>
+    <!-- SFARSIT-COPYRIGHT SI FEEDBACK -->
+
+    <!-- CSS-UL STABILITA TEMPLATE-ULUI -->
+    <style>
+    a{text-decoration: none;
+    color: #6aa7c4;}
+
+    a:hover{color: #4b8dab;}
+
+    img{border: none;}
+
+    body{
+    background: black url(http://i16.servimg.com/u/f16/11/96/49/61/woodbg10.jpg) fixed;
+    color: white;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    margin-top: 0px;}
+
+    .font_la_tabel{
+    font-size: 12px;
+    font-family: Verdana,Arial,Helvetica,sans-serif;}
+
+    .meniul{margin-right: 200px;}
+
+    .meniul a{
+    color: white;
+    background: url(http://i16.servimg.com/u/f16/11/96/49/61/button11.png) no-repeat center;
+    text-align: center;
+    margin-right: 0px;
+    font-family: Haettenschweiler;
+    font-size: 20px;
+    padding-right:50px;
+    padding-left:50px;
+    padding-bottom:16px;}
+
+    .meniul a:hover{
+    color: #99bfd2;
+    background: url(http://i16.servimg.com/u/f16/11/96/49/61/bhover10.png) no-repeat center;}
+
+    .conectare{
+    opacity: 0.4;
+    filter:alpha(opacity=40);}
+
+    .conectare:hover{opacity: 1;
+    filter:alpha(opacity=100);}
+
+    input{border: 1px solid darkgrey;
+    background: url(http://i16.servimg.com/u/f16/11/96/49/61/inputb10.png);
+    color: white;}
+
+    .mainoption{float: center;}
+
+    </style>
+    <!-- SFARSIT-CSS-UL STABILITA TEMPLATE-ULUI -->
+
+
+
+    <hr width="80%" />
+    
+      <div align="center" class="c3zzz"><span style="font-weight: bold; "><font class="Apple-style-span" color="#2f4f4f">Lưu ý : Diễn đàn hiển thị tốt nhất trên <a href="http://www.mozilla.com/en-US/products/download.html?product=firefox-3.0.10&os=win&lang=en-US" onmouseover="showtip('Tải Firefox ..!');" onmouseout="hidetip();" target="_blank">
+              <img src="http://www.c3zone.net/users/2611/10/63/87/album/ff10.png" /></a> và <a href="http://www.google.com/chrome?hl=vi" onmouseover="showtip('Tải Google Chrome ..!');" onmouseout="hidetip();" target="_blank">
+              <img src="http://www.c3zone.net/users/2611/10/63/87/album/gc10.png" /></a> với độ phân giải 1024x768 trở lên. <br />
+            </font></span></div>
+<a href="http://www.forumvi.com" target="_blank"></a> </div>
+<a href="http://www.forumvi.com" target="_blank" style="display:none">forumvi.com</a></code>
