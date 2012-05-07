@@ -1,0 +1,19 @@
+﻿function changeImg(){
+x = document.getElementsByTagName('span')
+for(i=0;i<x.length;i++){
+if(window.onload != 'resize_images()'){
+if ((x[i].style.color=="rgb(255, 0, 0)")||(x[i].style.color=="#ff0000")) {newHTML = "<img src=\"http://newlifevn.com/vnnl/images/icons/admin.gif\">" + "</img>" + x[i].innerHTML}
+
+else if((x[i].style.color=="rgb(16, 103, 209)")||(x[i].style.color=="#1067d1")) {newHTML = "<img src=\"http://ca8.upanh.com/16.547.20881441.Hd80/smod.gif\">" + "</img>" + x[i].innerHTML}
+
+else if((x[i].style.color=="rgb(0, 204, 255)")||(x[i].style.color=="#00ccff")) {newHTML = "<img src=\"http://ca7.upanh.com/16.547.20881440.mby0/mod.gif\">" + "</img>" + x[i].innerHTML}
+
+else if((x[i].style.color=="rgb(64, 255, 0)")||(x[i].style.color=="#40ff00")) {newHTML = "<img src=\"http://traitim62.net/4rum/images/group/svip.gif\">" + "</img>" + x[i].innerHTML}
+
+else if((x[i].style.color=="rgb(255, 170, 0)")||(x[i].style.color=="#ffaa00")) {newHTML = "<img src=\"http://i24.servimg.com/u/f24/15/54/64/05/boy14.gif\">" + "</img>" + x[i].innerHTML}
+
+else {newHTML= x[i].innerHTML}}
+x[i].innerHTML = newHTML;
+}
+}
+window.onload = changeImg();

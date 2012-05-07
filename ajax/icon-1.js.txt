@@ -1,0 +1,12 @@
+function Rankicon(){
+x = document.getElementsByTagName('span')
+for(y=0;y<x.length;y++){
+var oldHTML = x[y].innerHTML;
+if ((x[y].style.color=="rgb(250, 0, 0)")||(x[y].style.color=="#fa0000")) {icon = "<img src='http://i65.servimg.com/u/f65/15/75/59/85/admin110.gif'>";x[y].innerHTML = icon + oldHTML;}
+if ((x[y].style.color=="rgb(0, 0, 153)")||(x[y].style.color=="#000099")) {icon = "<img src='http://i931.photobucket.com/albums/ad152/likilook/mod-2.gif'>";x[y].innerHTML = icon + oldHTML;}
+if ((x[y].style.color=="rgb(25, 122, 10)")||(x[y].style.color=="#197a0a")) {icon = "<img src='http://i931.photobucket.com/albums/ad152/likilook/smod-1.gif'>";x[y].innerHTML = icon + oldHTML;}
+if ((x[y].style.color=="rgb(2, 56, 2)")||(x[y].style.color=="#023802")) {icon = "<img src='http://i26.servimg.com/u/f26/14/76/87/20/mem10.gif'>";x[y].innerHTML = icon + oldHTML;}
+if ((x[y].style.color=="rgb(169, 227, 61)")||(x[y].style.color=="#a9e33d")) {icon = "<img src='http://i931.photobucket.com/albums/ad152/likilook/vip1510.gif'>";x[y].innerHTML = icon + oldHTML;}
+}
+}
+Rankicon();
