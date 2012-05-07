@@ -1,0 +1,288 @@
+
+BODY 
+ { cursor: url(bvl.cur);}
+{
+	background: #C2DD7E;
+	color: #000000;
+	font: 8pt tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+TABLE, TR, TD { font-family:Tahoma; font-size: 12px; color: #000000; }
+a:link
+{
+	color: #347202;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #347202;
+	text-decoration: none;
+}
+a:hover, a:active
+{
+	color: #FDAD00;
+	text-decoration: none;
+}
+.page
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+td, th, p, li
+{
+	font: 8pt tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background: #C2DD7E;
+	color: #000000;
+	border: 1px solid #83C809;
+}
+.tcat
+{
+	background: #F7FCF2 url('menu_bg.gif') repeat-x top left;
+	color: #000000;
+	font-style:normal; font-variant:normal; font-weight:bold; font-size:8pt; font-family:tahoma, verdana, geneva, lucida, lucida grande, arial, helvetica, sans-serif
+}
+.tcat a:link
+{
+	color: #FFF000;
+	text-decoration: none;
+}
+.tcat a:visited
+{
+	color: #FFF000;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active
+{
+	color: #FDAD00;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #E7FAD5;
+	color: #52931C;
+	font: bold 8pt tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link
+{
+	color: #52931C;
+}
+.thead a:visited
+{
+	color: #52931C;
+}
+.thead a:hover, .thead a:active
+{
+	color: #000000;
+}
+.tfoot
+{
+	background: #E7FAD5;
+	color: #52931C;
+}
+.tfoot a:link
+{
+	color: #52931C;
+}
+.tfoot a:visited
+{
+	color: #52931C;
+}
+.tfoot a:hover, .tfoot a:active
+{
+	color: #000000;
+}
+.alt1, .alt1Active
+{
+	background: #FFFFFF;
+	color: #333333;
+}
+.alt2, .alt2Active
+{
+	background: #FFFFFF;
+	color: #333333;
+}
+td.inlinemod
+{
+	background: #FFFFCC;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #FDFEFB;
+	color: #000000;
+	font: 9pt tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+textarea, .bginput
+{
+	font: 9pt tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	border: 1px #C2DD7E solid;
+}
+.button
+{
+	background: #FDAD00;
+	color: #FFFFFF;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	border-top: 1px #FDCA5D solid;
+	border-left: 1px #FDCA5D solid;
+	border-right: 1px #EE9305 solid;
+	border-bottom: 1px #EE9305 solid;
+}
+select
+{
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	font: 8pt tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: darkgreen;
+}
+.navbar
+{
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background: #FFFFFF;
+	color: #FF9900;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #FFFFFF;
+	color: #000000;
+	padding: 10px;
+	border: 1px outset;
+}
+.panelsurround
+{
+	background: #F7FCF2;
+	color: #000000;
+}
+legend
+{
+	color: #FF9900;
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background: #F7FCF2 url('menu_bg.gif') repeat-x top left;
+	color: #FFFF66;
+	white-space: nowrap; font-style:normal; font-variant:normal; font-weight:bold; font-size:8pt; font-family:tahoma, verdana, geneva, lucida, lucida grande, arial, helvetica, sans-serif; padding-left:6px; padding-right:6px; padding-top:3px; padding-bottom:3px
+}
+.vbmenu_control a:link
+{
+	color: #FFFF66;
+	text-decoration: none;
+}
+.vbmenu_control a:visited
+{
+	color: #FFFF66;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active
+{
+	color: #FDAD00;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #ffffff;
+}
+.vbmenu_option
+{
+	background: #E4F3D2;
+	color: #000000;
+	font: 8pt tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_option a:link
+{
+	color: darkgreen;
+	text-decoration: none;
+}
+.vbmenu_option a:visited
+{
+	color: darkgreen;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active
+{
+	color: #000000;
+	text-decoration: none;
+}
+.vbmenu_hilite
+{
+	background: #DFF6BD;
+	color: #000000;
+	font: 8pt tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_hilite a:link
+{
+	color: darkgreen;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited
+{
+	color: darkgreen;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active
+{
+	color: #000000;
+	text-decoration: none;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 14pt; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+
+/* ***** don't change the following ***** */
+form { display: inline; }
+label { cursor: default; }
+.normal { font-weight: normal; }
+.inlineimg { vertical-align: middle; }
+html, body {
+SCROLLBAR-FACE-COLOR: #FF69AC;
+    	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+    	SCROLLBAR-SHADOW-COLOR: #ffffff;
+    	SCROLLBAR-3DLIGHT-COLOR: #ffffff;
+    	SCROLLBAR-ARROW-COLOR: #ffffff;
+    	SCROLLBAR-TRACK-COLOR: #ffffff;
+    	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;}
+
