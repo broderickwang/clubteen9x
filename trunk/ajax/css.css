@@ -1,0 +1,3665 @@
+/* forum stylsheet compatibility */
+#forum-wrapper strong {font-weight:bold;}
+td[align=center] {text-align:center;}
+#forum-wrapper img {max-width:900px;}
+#forum-wrapper .contentnavigation img {max-width:670px;}
+#forum-wrapper code {max-width:786px;}
+#forum-wrapper .post_body img {max-width:900px;}
+#forum-wrapper .post_body code {max-width:776px;}
+#forum-wrapper ul {list-style-type:disc;}
+#forum-wrapper ol {list-style-type:decimal;}
+
+
+#forum-wrapper .post_body {width:900px;_width:786px; overflow:hidden;}
+#forum-wrapper .privatemessagepreview .post_body,
+#forum-wrapper .pm .post_body { width: auto; }
+/* red: 8f3435 // yellow:#fffb00 */
+
+/* GENERAL STYLES */
+
+body.report {
+	background: #000 none !important;
+	}
+body.report .magma-ad {
+	display: none;
+	}
+
+.chatappsheader {
+	background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/im_header.png) left top no-repeat !important;
+}
+body.report .nocolspan {
+	background: none;
+	border-bottom:1px solid #74583E;
+}
+
+body.report input {
+background:none repeat scroll 0 0 #FFFFFF;
+border:1px solid #000000;
+color:#000000;
+padding:1px;
+}
+
+
+#forum-wrapper H1 { font-size:18px; color: #C0B8A6; }
+#forum-wrapper H2 { font-size:16px; color: #C0B8A6; }
+#forum-wrapper H3 { font-size:14px; color: #C0B8A6; }
+#forum-wrapper H4, #forum-wrapper H5, #forum-wrapper H6 { font-size:12px; }
+
+#forum-wrapper {
+	color: #000;
+	font: 11px "Trebuchet MS", sans-serif;
+	width: 935px;
+	margin: 0 0 0 42px;
+	/*text-align: center; /* IE 5 fix */
+	/*line-height: 1.4;*/
+}
+
+a:link, a:visited, a:active, a:hover {
+	color:#C0B8A6;
+	text-decoration: none;
+}
+
+a:hover {
+	color:#FFF;
+	text-decoration: underline;
+}
+
+img {
+border:0;
+}
+
+#forum-wrapper UL {
+list-style-position:inside;
+}
+
+.clear {
+	clear: both;
+}
+
+.hidden {
+	display: none;
+	float: none;
+	width: 1%;
+}
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+#forum-wrapper FIELDSET {
+background-color:#E4D6BF;
+padding:10px;
+border:1px solid #635131;
+}
+
+#forum-wrapper LEGEND {
+*position:absolute;
+*top:-10px;
+*left:20px;
+*color:#000000;
+}
+
+/* END GENERAL STYLES */
+
+/* @group Header images */
+
+#forum-wrapper .tcat img {
+	vertical-align: middle;
+	padding-bottom: 4px;
+}
+
+/* @end */
+
+#content {
+	/*width: 820px;*/
+	margin:0 auto;
+	position: relative;
+}
+
+/* WELCOME CONTAINER */
+.welcomecontainertop, .welcomecontainerbot {
+/*width:820px;*/
+height:14px;
+margin:0 auto;
+background-color:#336600;
+clear:both;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/welcome-bg-top.png) left top no-repeat;
+}
+
+.welcomecontainerbot {
+margin-top:0;
+height:5px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/welcome-bg-bot.png) left bottom no-repeat;
+}
+
+.welcomecontainer {
+clear:both;
+margin:0 auto;
+padding: 0;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/welcome-bg-mid.png) left top repeat-y;
+color:#C0B8A6;
+font-family: 
+}
+
+.navigation {
+padding:0 0 0 10px;
+}
+
+.navigation .breadcrumb {
+width:780px;
+font-family: "Times New Roman", Times, serif;
+text-transform: uppercase;
+font-size: 18px;
+font-weight: normal;
+}
+
+.menu {
+padding:0;
+float:right;
+margin-right:12px;
+font-size:11px;
+
+}
+
+.menu ul {
+	text-align: right;
+	padding: 4px;
+	margin:0;
+	display:inline;
+	list-style: none;
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu img {
+	display: none;
+}
+
+.menu ul a:link, .menu ul a:visited, .menu ul a:hover, .menu ul a:active {
+	text-decoration: none;
+}
+
+#panel {
+	margin:0;
+	padding:2px 10px 5px;
+	font-size: 11px;
+	width:520px;
+	float:left;
+}
+/* END WELCOME CONTAINER */
+
+/* GENERAL TABLES */
+table {
+	width:100%;
+}
+
+.thead {	
+	background:transparent url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg2.png) no-repeat scroll left top;
+	height:41px;
+	color:#FFFFFF;
+}
+
+.thead.collapsed {
+ height: 41px !important;
+}
+
+.thead a:link, .thead a:visited, .thead a:active, 
+.tcat a:link, .tcat a:visited, .tcat a:active {
+	color: #C0B8A6;
+}
+
+.thead a:hover, .tcat a:hover {
+	color: #FFFFFF;
+}
+
+.thead .smalltext {
+	padding:0 0 5px 10px ;
+}
+
+/* variable height headers */
+.forums .thead {
+background:none;
+height:auto;	
+}
+
+.forums .theadtop, 
+.showpoll .theadtop {
+height:14px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/welcome-bg-top.png) left top no-repeat;
+}
+
+.forums .theadbot,
+.showpoll .theadbot {
+height:5px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/welcome-bg-bot.png) left bottom no-repeat;
+}
+
+.forums .thead.collapsed .theadbot {
+height:5px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/welcome-bg-bot.png) left bottom no-repeat;
+}
+
+.forums .thead .forumhead,
+.showpoll .forumhead {
+height:auto;
+background:#FFF url(http://www.lordofultima.com/en/modules/forum/images/bfh/welcome-bg-mid.png) left top repeat-y;
+color:#C0B8A6;
+}
+
+.granadeicon{
+display: none;
+background:transparent url(http://www.lordofultima.com/en/modules/forum/images/bfh/granade.gif) no-repeat scroll left top;
+height:36px;
+margin-left:10px;
+margin-top:-8px;
+position:absolute;
+width:26px;
+}
+
+A.headerbutton {
+    float: right;
+}
+
+A.headerbutton2 {
+display:block;
+float:right;
+background:url(http://www.lordofultima.com/en/modules/forum/images/lou/buttons/redbutton2.png) left top no-repeat;
+width:133px;
+height:25px;
+line-height:22px;
+font-size:11px;
+font-weight:bold;
+text-indent:36px;
+}
+
+SPAN.headerrightlinks {
+padding-left:265px;
+}
+
+SPAN.headertitlerightlinks {
+display:block;
+float:right;
+margin:5px 10px 0 0;
+}
+
+.headerbutton:link, .headerbutton:visited, .headerbutton:active, .headerbutton:hover {
+    color: #C0B8A6;
+}
+
+.bottommenu .headerbutton {
+margin: 0;
+}
+
+.newreplyheaderbutton{
+margin:5px 10px 0 0;
+padding:0;
+float:right;
+position:relative;
+bottom:4px;
+height:25px;
+}
+
+.newreplyheaderbutton.posts{
+ width:400px;
+}
+
+.newreplyheaderbutton form {
+float:right;
+}
+
+.aligntop TD {
+vertical-align:top;
+}
+
+.tfoot.viewmore {
+	background:#A79983 url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg_rep-y.png) repeat-y scroll -1px top;
+	border-left:1px solid #74583E;
+	border-right:1px solid #74583E;
+	border-bottom:1px solid #000;
+	padding: 4px 10px;
+}
+
+/* end variable height headers */
+/* END THEAD */
+
+/* TBODY */
+.catheader {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/subcategory-header-bg.png) left top no-repeat;
+height:25px;
+}
+
+.catheader td {
+vertical-align: middle;
+}
+
+.tcat {
+	height:25px;
+	color:#988469;
+	background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/subheader-bg.png) top repeat-x;
+	padding-left:10px;
+
+    position: relative;
+}
+
+.tcat.separator {
+width:1px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/subheader-separator.png) left top no-repeat;
+padding:0;
+}
+
+.tcat.firsttd {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/subheader-bg-left.png) left top no-repeat;
+}
+
+.tcat.lasttd {
+padding-right:10px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/subheader-bg-right.png) right top no-repeat;
+}
+
+.tcat.fullbg {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/subcategory-header-bg.png) left top no-repeat;
+padding-left:10px;
+}
+
+.tcat.fullbg620{
+background:transparent url(http://www.lordofultima.com/en/modules/forum/images/bfh/subcategory-header700-bg.gif) no-repeat scroll left top;
+padding-left:10px;
+}
+
+.stats .tcat.fullbg {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/grey-subheader-bg-double.gif) left top no-repeat;
+height:30px;
+}
+
+.tcat.alignleft {
+text-align:left;
+padding-left:20px;
+}
+
+.trseparator {
+background-color:#000;
+border-left:1px solid #74583E;
+border-right:1px solid #74583E;
+height: 0px !important;
+}
+
+/* ROWS */
+
+
+.trow1 A:link, .trow1 A:visited, .trow1 A:hover, .trow1 A:active, 
+.trow2 A:link, .trow2 A:visited, .trow2 A:hover, .trow2 A:active {
+color: #635131;
+}
+
+.trow1.firsttd {
+background: #E4D6BF url(http://www.lordofultima.com/en/modules/forum/images/bfh/row-bg-left.png) -1px top repeat-y;
+padding:8px 9px 9px 12px;
+border-left: 1px solid #74583E;
+}
+.trow2.firsttd {
+background: #DECCB1 url(http://www.lordofultima.com/en/modules/forum/images/bfh/row-bg-left.png) -1px top repeat-y;
+padding:8px 9px 9px 12px;
+border-left: 1px solid #74583E;
+}
+
+.help .trow1 {
+background: #E4D6BF url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg_rep-y.png) -1px top repeat-y;
+padding:8px 9px 9px 12px;
+border-left: 1px solid #74583E;
+border-right: 1px solid #74583E;
+}
+.help .trow2 {
+background: #DECCB1 url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg_rep-y.png) -1px top repeat-y;
+padding:8px 9px 9px 12px;
+border-left: 1px solid #74583E;
+border-right: 1px solid #74583E;
+}
+
+.trow1.lasttd {
+background: #E4D6BF url(http://www.lordofultima.com/en/modules/forum/images/bfh/row-bg-right.png) right top repeat-y;
+border-right: 1px solid #74583E;
+}
+.trow2.lasttd {
+background: #DECCB1 url(http://www.lordofultima.com/en/modules/forum/images/bfh/row-bg-right.png) right top repeat-y;
+border-right: 1px solid #74583E;
+}
+
+.trow1 {
+	background: #E4D6BF;
+	padding:5px 5px;
+	border-bottom: 1px solid #000;
+}
+.trow2 {
+	background:#DECCB1;
+	padding:5px 5px;
+	border-bottom: 1px solid #000;
+}
+
+input.redirect-txt { 
+	float:none !important;
+}
+
+.postbit .trow_shaded, 
+.trow_shaded {
+	background-color:#b07171 !important;
+	padding:5px 10px;
+}
+.trow_shaded.firsttd {
+border-left:2px solid #000000;
+}
+.trow_shaded.lasttd {
+border-right:2px solid #000000;
+}
+.trow_shaded.separator {
+padding:0;
+width:3px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/trow-shaded-separator-bg.gif) left top repeat-y;
+}
+
+.trow_selected .trow_shaded.separator {
+background:#FFFBD9 url(http://www.lordofultima.com/en/modules/forum/images/bfh/trow-shaded-separator-bg.png) left top repeat-y!important;
+}
+
+.trow_selected .trow2.separator, .trow_selected .trow1.separator {
+background:#FFFBD9 url(http://www.lordofultima.com/en/modules/forum/images/bfh/trow-shaded-separator-bg.png) left top repeat-y!important;
+}
+
+.trow_selected .trow_shaded A {
+color:#8f3435;
+}
+
+.trow_selected td {
+	background: #FFFBD9;
+}
+
+.trow_sep {
+	background:#000 url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg_rep-y.png) repeat-y scroll -1px top !important;
+	color: #E4D6BF;
+	font-size: 11px;
+	font-weight: bold;
+	padding:3px 5px 3px;
+	
+}
+
+.trow1.separator, .trow1.separator, .trow2.separator, .trow2.separator {
+width:1px;
+padding:0;
+}
+
+.trow_sep.calendar {
+	border-left:2px solid #000000;
+	border-right:2px solid #000000;
+}
+
+.trow1.separator, .trow1.separator {
+background:#f5f5f5 url(http://www.lordofultima.com/en/modules/forum/images/bfh/tr-separator.png) left top repeat-y!important;
+}
+
+.trow2.separator, .trow2.separator {
+background:#E0DBD3 url(http://www.lordofultima.com/en/modules/forum/images/bfh/tr-separator.png) left top repeat-y!important;
+}
+
+.lastrow {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/lastrow-bg.png) left top no-repeat;
+height:2px;
+}
+
+tr.noforums {
+
+}
+
+
+/* posts classic view 
+
+.tborder.classicview {
+margin-top:-10px;
+border-bottom:2px solid #000;
+}*/
+
+tr.tablesubheader {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/subheader-bg.png) top repeat-x;
+height:25px;
+}
+/* END GENERAL TABLES */
+
+
+
+/* BOARD STATISTICS */
+
+.boardstats .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg2.png) left top no-repeat;
+}
+
+.boardstats .thead.collapsed {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg2.png) left top no-repeat;
+}
+
+
+.boardstats .tcat.fullbg {
+text-align:left;
+}
+
+.boardstats .thead h2 {
+	margin: 0 0 0 10px;
+}
+
+.boardstats TD.trow1 {
+border-bottom:none;
+}
+
+.boardstats .tcat.smallsubhead {
+vertical-align:middle;
+margin-left:2px solid #000000;
+}
+
+.boardstats .lastrow {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-lastrow-bg.gif) left top no-repeat;
+}
+
+.boardstats .tfoot .smalltext {
+    margin: 20px 0;
+}
+
+.mostpopulartopicname {
+display:block;
+width:380px!important;
+overflow:hidden;
+}
+
+.topicmetadata {
+color:#000000!important;
+}
+/* END BOARD STATISTICS */
+
+/* WHO'S ONLINE */
+.online .tfoot {
+color: #fffb00;
+}
+/* END WHO'S ONLINE */
+
+.smalltext {
+	font-size: 11px;
+}
+
+.largetext {
+	font-size: 16px;
+	font-weight: bold;
+	position: relative;
+	padding-right: 24px;
+}
+
+input.textbox {
+	background: #ffffff;
+	color: #000000 !important;
+	border: 1px solid #000;
+	padding: 1px;
+	float: left;
+	margin: 2px 5px 0 5px;
+}
+
+textarea {
+	background: #ffffff;
+	color: #000000 !important;
+	border: 1px solid #000;
+	padding: 2px;
+	font-family: Verdana, Arial, Sans-Serif;
+	line-height: 1.4;
+	font-size: 13px;
+}
+
+select {
+	background: #ffffff;
+	color: #000 !important;
+	border: 1px solid #000;
+	padding: 0px;
+	float: left;
+	margin: 2px 5px 0 5px;
+}
+
+.editor {
+	background: #f1f1f1;
+	border: 1px solid #ccc;
+}
+
+.editor_control_bar {
+	background: none repeat scroll 0 0 transparent;
+    border: medium none;
+	overflow: hidden;
+}
+
+.autocomplete {
+	background: #fff;
+	border: 1px solid #000;
+	color: black;
+}
+
+.autocomplete_selected {
+	background: #adcee7;
+	color: #000;
+}
+
+.popup_menu {
+	background: #ccc;
+	border: 1px solid #000;
+}
+
+.popup_menu .popup_item {
+	float:none;
+	display:block;
+	background: #fff;
+	color: #000;
+}
+
+.popup_menu .popup_item:hover {
+	background: #C7DBEE;
+	color: #000;
+}
+
+.invalid_field {
+	border: 1px solid #f30;
+	color: #f30;
+}
+
+.valid_field {
+	border: 1px solid #0c0;
+}
+
+.validation_error {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/invalid.gif) no-repeat center left;
+	color: #f30;
+	margin: 5px 0;
+	padding: 5px;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 22px;
+}
+
+.validation_success {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/valid.gif) no-repeat center left;
+	color: #00b200;
+	margin: 5px 0;
+	padding: 5px;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 22px;
+}
+
+.validation_loading {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/spinner.gif) no-repeat center left;
+	color: #555;
+	margin: 5px 0;
+	padding: 5px;
+	font-weight: bold;
+	font-size: 11px;
+	padding-left: 22px;
+}
+
+/* ADDITIONAL GENERAL STYLES */
+
+#panel .links {
+	margin: 0;
+	float: right;
+}
+
+.expcolimage {
+	float: right;
+}
+
+
+.forumhead .expcolimage, .grouphead .expcolimage, .help .expcolimage, .boardstats .expcolimage  {
+	margin:4px 10px 0 0;
+}
+
+
+img.attachment {
+	border: 1px solid #E9E5D7;
+	padding: 2px;
+}
+
+hr {
+	background-color: #000000;
+	color: #000000;
+	height: 1px;
+	border: 0px;
+}
+
+blockquote {
+	border: 1px solid #ccc;
+	margin: 0;
+	background: #fff;
+	padding: 4px;
+}
+
+blockquote cite {
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+	font-style: normal;
+	display: block;
+	margin: 4px 0;
+}
+
+blockquote cite span {
+	float: right;
+	font-weight: normal;
+}
+
+.codeblock {
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 4px;
+}
+
+.codeblock .title {
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	margin: 4px 0;
+}
+
+.codeblock code {
+	overflow: auto;
+	height: auto;
+	max-height: 200px;
+	display: block;
+	font-family: Monaco, Consolas, Courier, monospace;
+	font-size: 13px;
+}
+
+.subforumicon {
+	border: 0;
+	vertical-align: middle;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+.popup_menu .popup_item_container {
+	margin: 1px;
+	text-align: left;
+}
+
+.popup_menu .popup_item {
+	display: block;
+	padding: 3px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.popup_menu a.popup_item:hover {
+	text-decoration: none;
+}
+
+.autocomplete {
+	text-align: left;
+}
+
+.subject_new {
+	font-weight: bold;
+}
+
+.highlight {
+	background: #FFFFCC;
+	padding: 3px;
+}
+
+.online {
+	color: #15A018;
+}
+
+.offline {
+	color: #C7C7C7;
+}
+
+/* ADDITIONAL GENERAL STYLES */
+
+/* ALERTS */
+.pm_alert {
+	background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/yellow-bg-940x36.gif) left top no-repeat;
+	font-size: 11px;
+	margin-top:10px;
+	text-align: center;
+	height:36px;
+	line-height:36px;
+}
+
+.pm_alert A {
+color:#fffb00;
+}
+
+.pm_alert .dismissnoticebutton {
+float:right;
+margin:10px 10px 0 0;
+}
+
+.red_alert {
+	background: #FBE3E4;
+	border: 1px solid #A5161A;
+	color: #A5161A;
+	text-align: center;
+	padding: 5px 20px;
+	font-size: 11px;
+}
+
+.high_warning {
+	color:#fffb00;
+}
+
+.moderate_warning {
+	color:#fffb00;
+}
+
+.low_warning {
+	color:#fffb00;
+}
+
+div.error {
+	font-size: 12px;
+}
+
+div.error p {
+	margin: 0;
+	color: #000;
+	font-weight: normal;
+}
+
+div.error p em {
+	font-style: normal;
+	font-weight: bold;
+	padding-left: 24px;
+	display: block;
+	color: #F2633f;
+	background: url(http://www.lordofultima.com/en/modules/forum/images/error.gif) no-repeat 0;
+}
+
+div.error ul {
+	list-style: none !important;
+	margin-left: 24px;
+	font-size: 11px;
+}
+
+.success_message {
+	color: #00b200;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+	margin-left:10px;
+}
+
+.error_message {
+	color: #C00;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+/* END ALERTS */
+
+/* PAGINATION */
+.pagination {
+	font-size: 11px;
+	color:#C0B8A6;
+	font-weight:bold;
+	height:36px;
+	padding-top:11px;
+	/*width:820px;*/
+}
+
+.pagination A {
+color:#C0B8A6;
+}
+
+.cptd .pagination {
+background:transparent url(http://www.lordofultima.com/en/modules/forum/images/bfh/brown-tfoot-bg-700.gif) no-repeat scroll left top;
+/*width:620px;*/
+}
+
+.paginationcontent {
+margin:0 5px;
+*margin-top:-4px;
+}
+
+.pagination .pages {
+	font-weight: bold;
+	margin-right:5px;
+}
+
+.pagination .pagination_current, .inboxactions .pagination_next, .pagination a {
+	padding: 2px 4px;
+	color:#C0B8A6;
+}
+
+.pagination .pagination_current {
+	font-weight: bold;
+	background-color:#C0B8A6;
+	color: #333;
+}
+
+.pagination a:hover {
+	text-decoration: underline;
+	color:#ffffff;
+}
+
+.pagination .pagination_next, .pagination .pagination_previous {
+	display: inline-block;
+	padding:2px;
+	height: 22px;
+	*line-height:22px;
+	text-align: center;
+}
+.pagination .pagination_next {
+	margin-left: 5px;
+}
+.pagination .pagination_previous {
+	margin-right: 5px;
+}
+
+/* paginator in table */
+
+.paginatorintable {
+border-left:2px solid #000000;
+border-right:2px solid #000000;
+background-color:#c5bba7;
+height:30px;
+padding-top:2px;
+*padding-top:5px;
+}
+
+.paginatorintable .pagination {
+background:none;
+height:auto;
+margin-top:0;
+padding-top:0;
+width:auto;
+margin-left:20px;
+
+}
+
+.inboxactions .pagination {
+background:none;
+width:auto;
+float:left;
+margin-top:0;
+*margin-top:3px;
+padding-top:0;
+}
+
+/* END PAGINATION */
+
+/* FORUM LEGEND */
+
+.brownboxmain .leftblock .thread_legend {
+float:left;
+margin-right:20px;
+}
+
+.thread_legend dd {
+	padding-bottom: 8px;
+}
+
+.thread_legend img {
+	margin-right: 4px;
+	vertical-align: bottom;
+}
+
+.forum_legend {
+background:#DECCB1 none repeat scroll 0 0;
+border:1px solid #74583E;
+padding:4px;
+overflow: auto;
+}
+
+.forum_legend dt {
+	margin:6px 10px 2px 20px;
+	float: left;
+}
+
+.forum_legend dd {
+	float: left;
+	margin:13px 0 0 0;
+}
+/* END FORUM LEGEND */
+
+
+
+.post_body {
+	padding: 0;
+}
+
+.post_content {
+    overflow: hidden;
+}
+
+.quick_jump {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/jump.gif) no-repeat 0;
+	width: 13px;
+	height: 13px;
+	padding-left: 13px; /* amount of padding needed for image to fully show */
+	vertical-align: middle;
+	border: none;
+}
+
+
+/* THREAD LIST */
+
+.forumheaderrightlinks {
+width:200px;
+float:right;
+margin-right:10px;
+}
+
+.forumheaderrightlinks span.smalltext {
+display:block;
+float:right;
+margin-top:5px;
+}
+
+.bottommenu form {
+padding: 0;
+float:right;
+}
+
+/* BOTTOM BROWN BOX */
+
+.brownboxheader {
+/*width:820px;*/
+height:0px;
+/* background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/brownbox-header.gif) left top no-repeat; */
+}
+
+.brownboxfooter {
+/*width:820px;*/
+height:0px;
+/* background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/brownbox-footer.gif) left bottom no-repeat; */
+}
+
+.brownboxmain {
+/*width:820px;*/
+/* background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/brownbox-main.gif) left top repeat-y; */
+color: #7a7569;
+}
+
+.brownboxmain .leftblock {
+float:left;
+padding-left:5px;
+}
+
+.brownboxmain .threadbulkactions {
+float:right;
+margin-right:0px;
+text-align:right;
+}
+
+.brownboxmain .threadbulkactions .smalltext {
+float:left;
+margin-top:3px;
+}
+
+
+.brownboxmain .pagination {
+background:none;
+width:auto;
+height:auto;
+margin-top:0;
+padding-top:0;
+}
+
+.brownboxmain .pagination .pagination_next, .brownboxmain .pagination .pagination_previous, .brownboxmain .pagination .pagination_page {
+color:#FFFFFF;
+}
+
+.brownboxmain A:link, .brownboxmain A:visited, .brownboxmain A:active {
+color:#7a7569;
+}
+.brownboxmain A:hover {
+color:#C0B8A6;
+}
+
+/* END BOTTOM BROWN BOX */
+
+.threadedbit {
+border-bottom:1px solid #CCC;
+margin:3px 10px 3px 20px;
+}
+
+.threadedbit.active {
+margin-left:10px;
+}
+
+/* END THREAD LIST */
+
+/* NEW THREAD / POST */
+
+.newpostthread TEXTAREA, .newpostreply TEXTAREA {
+width:710px;
+padding:0;
+height:400px;
+}
+
+.newpostreply label {
+	color: #333;
+}
+
+/*.tborder.attachments TD.trow2 {
+border-top:1px solid #000;
+}*/
+
+.nocolspan {
+background: #E4D6BF url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg_rep-y.png) repeat-y scroll -1px top;
+border-left:1px solid #74583E;
+border-right:1px solid #74583E;
+}
+
+.post_buttons {
+height:35px;
+padding-bottom:0;
+}
+
+.post_buttons .author_buttons {
+margin-bottom:5px;
+height:22px;
+}
+
+.smilies {
+margin:auto; 
+margin-top: 10px;
+}
+
+.smilies .smalltext {
+font-size:13px;
+color:#8f3435;
+font-weight:bold;
+}
+
+.smilies TABLE {
+margin-top:5px;
+border:1px solid #CCC;
+background-color:#FFF;
+padding:5px;
+}
+
+.newthreadactions, .newpostactions {
+text-align:center;
+height:36px;
+}
+
+
+/* END NEW THREAD / POST */
+
+
+/* VIEW POST */
+.postbitdata {
+float:right;
+margin:3px 10px 0 0;
+*margin-top: -2px;
+}
+
+.messageeditedby {
+float:right;
+}
+
+.warninglevel {
+color:#fffb00;
+margin-left:5px;
+font-size:12px;
+}
+
+.tcat .warninglevel A {
+color:#fffb00;
+}
+
+
+
+.bottommenu .newreplybutton {
+float:right;
+}
+
+
+.bottommenu .newthreadbutton {
+float:right;
+}
+
+
+.bottommenu .headerbutton2.closed {
+margin:0 10px 0 0;
+}
+
+.bottommenu .closed:link, .bottommenu .closed:visited, .bottommenu .closed:hover, .bottommenu .closed:active {
+color:#C0B8A6;
+}
+
+.postbit {
+	margin-top: 0px !important;
+}
+
+.postbit .trow1 {
+background: #E4D6BF url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg_rep-y.png) -1px top repeat-y;
+border-left: 1px solid #74583E;
+border-right: 1px solid #74583E;
+}
+.postbit .trow2 {
+background: #DECCB1 url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg_rep-y.png) -1px top repeat-y;
+border-left: 1px solid #74583E;
+border-right: 1px solid #74583E;
+}
+
+.searchthread {
+float:right;
+width:320px;
+}
+
+.oldestnewest {
+float:left;
+width:280px;
+margin: 0 0 0 5px;
+}
+
+#posts {
+}
+
+#posts .tcat.fullbg {
+padding-left:10px;
+padding-top: 0px;
+*padding-top: 6px;
+*height:24px;
+}
+
+#forum-wrapper .tcat .onoffstatus {
+display:block;
+float:left;
+height:1px;
+margin-top: 2px;
+margin-left:-4px;
+position:relative;
+width:20px;
+}
+
+#forum-wrapper .tcat .onoffstatus img {
+padding-bottom:0;
+vertical-align:inherit;
+position:absolute;
+left:0;
+top:1px;
+}
+
+
+/* Adding styling for highlighting a post for review */
+#posts .review-post {margin:0 -20px 0 20px;}
+
+/* RATING -
+.ratethread {
+float:left;
+width:210px;
+}
+
+STRONG.topicrating {
+float: left; 
+padding:0 10px;
+}
+
+.succesrating {
+padding-top: 2px; 
+margin-left: 20px;
+}
+
+.inline_rating {
+margin-top:1px;
+}
+
+.star_rating_success, .success_message {
+margin-left:10px;
+}
+
+.onoffstatus IMG {
+vertical-align:middle;
+margin-bottom:3px;
+}*/
+
+/* END VIEW POST */
+
+/* POST REPLY */
+
+.tcat.nobg {
+color:#000000;
+}
+
+.tcat.nobg .smalltext {
+display:block;
+}
+
+.tborder.quickreply .tfoot, .transition .tfoot {
+background:transparent url(http://www.lordofultima.com/en/modules/forum/images/bfh/lastrow-bg.png) no-repeat left top;
+height:36px;
+}
+
+.tborder.quickreply .trow1 {
+border-bottom: 1px solid #000;
+}
+
+.quickreply .thead {
+	height: 40px;
+}
+ 
+.quickreply #message {
+	text-align: left;
+}
+
+.quickreply label {
+	color: #333;
+} 
+ 
+/* END POST REPLY */
+
+
+/* MESSAGES */
+.message .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg.gif) left top no-repeat;
+}
+
+.message H2, .forumteam H2 {
+margin-left:50px;
+}
+
+OL {
+margin:10px 0 10px 20px;
+}
+OL LI {
+margin:5px 0 0 0;
+}
+/* END MESSAGES */
+
+/* TRANSITION PAGE */
+.transition {
+	margin: 0 auto;
+	padding: 200px 0;
+	/*width:820px;*/
+	text-align:center;
+}
+
+.transition .thead {
+	// text-align:left;
+	padding-left: 10px;
+}
+
+.transition .trow1 {
+	border-bottom:none;
+}
+
+.transition P, .transition .tfoot {
+	text-align:center;
+}
+
+.transition A .smalltext {
+	padding:0 10px;
+}
+
+.transition .tfoot A {
+	color:#fffb00;
+}
+
+/* END TRANSITION PAGE */
+
+/* FORUM TEAM */
+.forumteam .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg2.gif) left top no-repeat;
+}
+
+.forumteam .lasttd {
+text-align:center;
+}
+/* END FORUM TEAM */
+
+/* PROFILE */
+.mainprofile {
+background: url(http://www.lordofultima.com/en/modules/forum/images/bfh/profile-mainheader-bg.gif) left top no-repeat;
+height:136px;
+}
+
+.mainprofile TABLE {
+padding:0 20px;
+}
+
+.mainprofile TD {
+background:none;
+color:#FFFFFF;
+border-bottom:none;
+}
+
+.mainprofile .trow1 {
+padding-left:30px;
+}
+
+.profileinfo {
+width:75%;
+}
+
+.profileinfo .profilemetadata {
+float:left;
+margin:0 40px 0 10px;
+
+}
+
+.profileavatar {
+width:25%;
+text-align:right;
+vertical-align:middle;
+*padding-right:20px;
+}
+
+.profilecontents .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/profilecontents-header-bg-sm.gif) left top no-repeat;
+height:36px;
+padding-left:10px;
+}
+
+.profilecontents .trow1.fullbg, .profilecontents .trow2.fullbg {
+border-left:2px solid #000;
+border-right:2px solid #000;
+}
+
+.profilecontents .lastrow {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue-lastrow-bg-sm.gif) left top no-repeat;
+}
+
+.profilecontents UL {
+padding:0;
+list-style:none;
+list-style-position:inside;
+}
+
+/* END PROFILE */
+
+
+/* USER CONTROL PANEL */
+.usercpmenu .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/green_bar_220.png) left top no-repeat;
+height:41px;
+}
+
+.usercpmenu .tcat {
+background:#433629 url(http://www.lordofultima.com/en/modules/forum/images/bg_rep-y_220.png) repeat-y scroll -1px top;
+border-left:1px solid #74583E;
+border-right:1px solid #74583E;
+}
+
+.usercpmenu .trow1 {
+background:#E4D6BF url(http://www.lordofultima.com/en/modules/forum/images/bg_rep-y_220.png) repeat-y scroll -1px top;
+border-left:1px solid #74583E;
+border-right:1px solid #74583E;
+}
+.usercpmenu .trow2 {
+background:#DECCB1 url(http://www.lordofultima.com/en/modules/forum/images/bg_rep-y_220.png) repeat-y scroll -1px top;
+border-left:1px solid #74583E;
+border-right:1px solid #74583E;
+}
+
+
+.usercpmenu .lastrow {
+background:url(http://www.lordofultima.com/en/modules/forum/images/green_bar_lastrow_220.png) left bottom no-repeat;
+height: 3px;
+}
+
+.contentnavigation {
+/*width:620px;*/
+width:700px;
+}
+
+.contentnavigation .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/green_bar_700.png) left top no-repeat;
+height:39px;
+}
+
+.contentnavigation .thead.secondhead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/green_bar_700.png) left top no-repeat;
+height: 39px;
+}
+
+.contentnavigation .lastrow {
+background:url(http://www.lordofultima.com/en/modules/forum/images/green_bar_lastrow_700.png) left bottom no-repeat;
+height: 3px;
+}
+
+/* END USER CONTROL PANEL */
+
+/* SEARCH */
+.search .thead, .memberlist .thead {
+	padding-left: 10px;
+}
+
+.search .tcat.fullbg {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/grey-subheader-bg-small-right.gif) right top no-repeat;
+height:29px;
+}
+
+
+
+.tborder.search TABLE .trow1, .tborder.search TABLE .trow2 {
+border-bottom:none;
+vertical-align:top;
+}
+
+.search.bottommenu {
+margin-top:10px;
+text-align:right;
+height:36px;
+}
+
+.search.bottommenu INPUT {
+margin-top:,0px;
+}
+
+.search .tcat.separator2 {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/grey-subheader-bg-separator2.gif) left top no-repeat;
+width:3px;
+padding:0;
+height:27px;
+}
+
+.searchquery .trow1, .searchquery .trow2 {
+border-bottom:none;
+}
+.searchquery .trow1 .smalltext, .searchquery .trow2 .smalltext {
+	clear:both;
+	display:block;
+	margin: 2px 5px 0;
+}
+
+.searchresultpostcontent {
+/*overflow: hidden; 
+width: 190px; 
+display:block;*/
+}
+
+.searchIntable TD {
+padding:5px 10px;
+}
+
+.searchquery .searchlistselect SELECT {
+width:300px;
+}
+
+/* END SEARCH */
+
+
+
+/* MEMBERLIST 
+
+.advancedsearchlink {
+float:right;
+margin:13px 10px 0 0;
+}
+
+.memberlist .advancedsearchlink A {
+font-weight:bold;
+font-size:11px;
+}
+
+ END MEMBERLIST */
+
+/* RSS */
+
+.rssinfo {
+/*width:820px;*/
+color:#FFFFFF;
+padding: 0px;
+}
+
+.rssinfo P {
+padding:5px 10px;
+}
+
+.tborder.rss .thead {
+padding-left: 10px;
+}
+
+.rss.bottommenu {
+text-align:right;
+margin-top: 5px;
+height:36px;
+}
+.rss.bottommenu INPUT {
+margin-top:6px;
+}
+
+.rss .lastrow {
+}
+
+.rss.generatedurl.bottommenu {
+margin-top:0;
+padding-top:10px;
+}
+
+.rss.bottommenu STRONG {
+margin-right:5px;
+
+}
+/* END RSS */
+
+/* REPUTATION REPORT 
+.reputation .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue-header-bg-940.gif) left top no-repeat;
+height:41px;
+padding-left:20px;
+}
+
+.reputation .thead H2 {
+margin-top:5px;
+}
+
+.reputation .forumheaderrightlinks {
+margin-top:2px;
+
+}
+.reputation .tcat.double {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/grey-subheader-bg-double.gif) left top no-repeat;
+height:30px;
+}
+
+.reputation .trow1, .reputation .trow2 {
+border-bottom:none;
+}
+
+.reputation .tfoot {
+	background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue-tfoot-bg.gif) left top no-repeat;
+	height:36px;
+	color: #ffffff;
+	padding-right:10px;
+
+}
+
+.reputationsumary {
+width:300px;
+}
+
+.reputationsumary TABLE TD {
+text-align:center;
+}
+
+.rateuserbutton {
+float:right;
+}	
+
+.rateuserbutton A {
+display:block;
+float:right;
+width:133px;
+height:25px;
+line-height:25px;
+font-size:11px;
+font-weight:bold;
+margin:6px 0 0 0;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/bluebutton.gif) left top no-repeat;
+text-indent:50px;
+}
+
+.trow_reputation_positive {
+	background-color: #ccffcc;
+}
+
+.trow_reputation_negative {
+	background-color: #ffcccc;
+}
+
+.reputation_positive {
+	color: green;
+}
+
+.reputation_neutral {
+	color: #444;
+}
+
+.reputation_negative {
+	color: red;
+}
+
+.addreputation {
+width:90%;
+margin:10px auto;
+text-align:center;
+}
+
+.addreputationcontent {
+width:360px;
+height:192px;
+margin:10 auto;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/addreputationbox-bg.gif) left top no-repeat;
+color:#FFFFFF;
+padding-top:10px;
+}
+
+.addreputationcontent P {
+margin:0 20px;
+}
+
+
+ END REPUTATION REPORT */
+
+/* WHO POSTED */
+.whoposted .thead .smalltext {
+float:right;
+margin:13px 20px 0 0;
+}
+
+.whoposted .tcat.lasttd {
+padding-left:10px;
+}
+/* END WHO POSTED */
+
+/* BUDDY LIST 
+
+.buddylist {
+text-align:center;
+width:900px;
+}
+
+.buddylisttable {
+width:820px;
+margin:20px auto;
+}
+
+.buddylist .thead .smalltext {
+float:right;
+margin-right:10px;
+}
+
+.buddylistconteiner {
+overflow: auto; 
+height: 300px;
+text-align:left;
+}
+
+.buddy_avatar {
+	height: 50px;
+	width: 50px;
+	background: #fff;
+	border: 1px solid #ccc;
+	float: left;
+	clear: left;
+	margin-right: 5px;
+	text-align: center;
+}
+
+.buddy_details img {
+	vertical-align: middle;
+}
+
+.buddy_action {
+	margin-left: 80px;
+}
+ END BUDDYLIST */
+
+/* PRIVATE MESSAGE */
+
+.privatemessage {
+/*width:620px;*/
+}
+
+.privatemessage .thead {
+height:39px;
+}
+
+.privatemessage .lastrow {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue-lastrow-bg-700.gif) left top no-repeat;
+}
+
+.privatemessage .nocolspan {
+background:#E4D6BF url(http://www.lordofultima.com/en/modules/forum/images/bg_rep-y_700.png) repeat-y scroll -1px top;
+border-left:1px solid #74583E;
+border-right:1px solid #74583E;
+}
+
+.privatemessage .tfoot, .contentnavigation .tfoot {
+background:url(http://www.lordofultima.com/en/modules/forum/images/green_bar_lastrow_700.png) left top no-repeat;
+height:36px;
+color: #C0B8A6;
+padding-top: 3px;
+}
+
+.inboxactions {
+background:url(http://www.lordofultima.com/en/modules/forum/images/green_bar_700.png) left top no-repeat;
+height: 39px;
+line-height:40px;
+}
+
+.inboxactions .smalltext {
+margin-left:10px;
+margin-right:10px;
+}
+
+.inboxactions .smalltext A {
+color:#E4D6BF;
+font-weight:bold;
+}
+
+.messagefolderactions {
+/*width:620px;*/
+height:36px;
+text-align:center;
+}
+
+.pmspace {
+float:right;
+}
+
+.pmspacetable {
+width:230px;
+margin-right:10px;
+}
+
+.pmspace TABLE {
+height:16px;
+line-height:16px;
+margin-top:12px;
+}
+
+.pmspace .smalltext{
+margin-left:10px;
+}
+
+.pmspace .text {
+margin-left:10px;
+font-size:11px;
+font-weight:bold;
+color: #E4D6BF;
+}
+
+.red {
+background-color:#666;
+border:1px solid #000;
+border-right:none;
+color:#FFFFFF;
+}
+.green {
+background-color:#333;
+border:1px solid #000;
+border-left:none;
+color:#FFFFFF;
+}
+
+/* END PRIVATE MESSAGE */
+
+/* HELP */
+.help .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg2.png) left top no-repeat;
+padding-left: 10px;
+}
+
+.help .collapsed {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg2.png) left top no-repeat;
+padding-left: 10px;
+}
+
+/*
+.help .lastrow {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/green-header-bg2.png) left bottom no-repeat;
+height: 5px;
+}
+*/
+
+/* END HELP */
+
+/*.search TABLE.searchreplycontent TD SPAN {
+width:194px!important;
+}*/
+
+
+/* SEND EMAIL */
+.emailuser .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue-header-bg-940.gif) left top no-repeat;
+}
+
+.emailactions {
+/*width:820px;*/
+height:36px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue-linksbox.gif) left top no-repeat;
+text-align:center;
+padding-top:7px;
+}
+
+/* select from buddy list 
+.buddyTop{
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/buddylist_header.gif) left top no-repeat;
+}
+.buddyFooter{
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/buddylist_footer.gif) left top no-repeat;
+width:300px;
+height:36px;
+}*/
+
+/* END SEND EMAIL */
+
+/* GENERAL / USERCP ERROR MESSAGES  */
+.errorcontainertop, .errorcontainerbot {
+/*width:820px;*/
+height:8px;
+margin:auto 0;
+clear:both;
+
+}
+
+.errorcontainerbot {
+margin-top:0;
+
+/*width:820px;*/
+}
+
+.errorcontainer {
+clear:both;
+/*width:820px;*/
+
+color:#FFFFFF;
+}
+
+.content620 .errorcontainertop, .content620 .errorcontainerbot {
+width:620px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/yellowBG700-top.gif) left top repeat-y;
+height:8px;
+}
+.content620 .errorcontainerbot {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/yellowBG700-bot.gif) left bottom no-repeat;
+width:620px;
+height:8px;
+}
+.content620 .errorcontainer {
+width:620px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/yellowBG700-mid.gif) left top repeat-y;
+}
+
+.content620 label {
+	color: #333;
+}
+
+.attachments .nocolspan, .saveddrafts .nocolspan, .contentnavigation .nocolspan {
+background:#E4D6BF url(http://www.lordofultima.com/en/modules/forum/images/bg_rep-y_700.png) repeat-y scroll -1px top;
+border-left:1px solid #74583E;
+border-right:1px solid #74583E;
+}
+
+/* END GENERAL / USERCP ERROR MESSAGES  */
+
+/* TEXT AREA EDITOR */
+.messageEditor TEXTAREA{
+height:96%;
+}
+
+.contentnavigation .messageEditor TEXTAREA{
+height:86%;
+}
+
+.personalPad {
+height:300px;
+width:99%;
+}
+
+/* END TEXT AREA EDITOR */
+
+/* USER CP ***************************************************************************************************************************************************/
+/* PRIVATE MESSAGE */
+
+
+.pm .postbit .tcat.fullbg {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/subcategory-header700-bg.png) left top no-repeat;
+}
+
+.pm .postbit .lastrow, .privatemessagepreview .postbit .lastrow {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/lastrow-bg-700.gif) left top no-repeat;
+}
+
+.privatemessagepreview .previewpost .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue-header-bg2-700.gif) left top no-repeat;
+}
+
+/* END PRIVATE MESSAGE */
+
+/* FORMS GENERAL */
+
+INPUT.radio, INPUT.checkbox {
+vertical-align:middle;
+}
+
+LABEL {
+padding:5px 3px;
+}
+
+LABEL STRONG {
+margin-left:4px;
+}
+
+/* END FORMS GENERAL */
+
+/* CHANGE AVATAR */
+
+.avatargalleryselect {
+display:inline;
+padding-left:10px;
+}
+
+/* END CHANGE AVATAR */
+
+
+/* EDIT PROFILE AWAY DATE */
+SELECT.awaymonth {
+width:75px;
+}
+
+INPUT.textbox.year {
+width:35px;
+}
+
+.awayreason {
+max-width:760px;
+float:left;
+}
+/* END EDIT PROFILE AWAY DATE */
+
+/* ATTACHMENTS MANAGER */
+
+.attachname, .attachpost {
+width:150px;
+}
+
+/* END ATTACHMENTS MANAGER */
+
+/* SAVED DRAFTS */
+.saveddrafts .draftname STRONG {
+width:300px;
+overflow:hidden;
+display:block;
+}
+
+.lastdrafttcattd {
+width:20px!important;
+text-align:center;
+padding:0;
+}
+
+/* END SAVED DRAFTS */
+
+/* TOPIC / FORUM SUBSCRIPTION */
+
+.subscribetotopic INPUT.radio {
+margin-top:2px;
+}
+
+.subscriptions .tfoot .float_right {
+margin-right:10px;
+}
+
+.removesubscriptions {
+font-weight:bold;
+padding:2px 0 0 10px;
+}
+
+/* END TOPIC / FORUM SUBSCRIPTION */
+
+
+/* MOD CD ********************************************************************************************************************************************************/
+
+/* ANNOUNCEMENTS */
+.forumannouncementname {
+width:280px;
+overflow:hidden;
+display:block;
+}
+/* END ANNOUNCEMENTS */
+
+.reportreason {
+width:200px;
+overflow:hidden;
+display:block;
+}
+
+/*bann a user */
+.banauser {
+float:right;
+margin:10px 10px 0 0;
+font-weight:bold;
+}
+
+.liftban {
+/*float:right;*/
+font-weight:bold;
+}
+
+
+/* END MOD CD ****************************************************************************************************************************************************/
+
+
+
+
+
+/* GROUPS */
+.createdgroupname, .createdgroupdescription {
+width:120px;
+}
+
+.searchgroupinput {
+padding-bottom:1px;
+}
+
+.requests .tfoot .float_right {
+margin-right:20px;
+}
+/* END GROUPS */
+
+
+
+.privatemessage .trow1 IMG {
+vertical-align:middle;
+}
+
+/* CALENDAR */
+/*.calendarmini{
+	line-height: 1.2!important;
+}
+.tcat.firsttdCal {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/grey-subheader-bg-left-norowsCal.gif) left top no-repeat;
+}
+
+.tcat.lasttdCal {
+padding-right:10px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/grey-subheader-bg-rightCal.gif) right top no-repeat;
+}
+
+.calheader820{	
+	background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/calendar-header820.gif) left top no-repeat;
+	height:41px;
+}
+
+.calheader520{	
+	background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/calendar-header520.gif) left top no-repeat;
+	height:41px;
+}
+.calheader255{	
+	background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/calendar-graybg255.gif) left top no-repeat;
+	height:26px;
+}
+.calheader520noTop{	
+	background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/calendar-graybg520-notop.gif) left top no-repeat;
+	height:26px;
+	color:#FFFFFF;
+	padding-left:10px;
+}
+.cal520bg{
+	background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/lastrow-bg520.gif) left top no-repeat;
+	width:520px;
+	height:11px;
+}
+.lastrow269{
+	background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/lastrow-bg269.gif) left top no-repeat;
+	width:269px;
+	height:11px;
+}
+
+.PrevNexCalLinks{
+font-weight:bold; 
+font-size:11px;
+padding:14px 12px 0 0;
+float:right;
+
+}
+
+.calheader820_top{
+    background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/calendar-event-header-top.gif) left top no-repeat;
+    height:8px;
+}
+.calheader820_main{
+    background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/calendar-event-header-main.gif) left top repeat-y;
+}
+.calheader820_bott{
+    background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/calendar-event-header-bott.gif) left top no-repeat;
+    height:8px;
+}
+.calendarTab{
+    background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/tabcalendar.gif) left top no-repeat;
+    height:104px;
+	width:20px;
+	padding-right:3px;
+}
+.calendarTablast{
+    background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/tabcalendar-last.gif) left top no-repeat;
+    height:104px;
+	width:20px;
+}
+.calendarTabMini{
+    background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/tabcalendar-mini.gif) left top no-repeat;
+    height:30px;
+	width:20px;
+}
+
+.calendarbottomactions {
+text-align:center;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/brown-linksbox.gif) left top no-repeat;
+height:36px;
+}
+
+.calendarbottomactions .button {
+margin-top:7px;
+}
+
+.private_event A, .trow_sep A {
+color:#8F3435;
+}
+
+.minicalHeader {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/miniCalHeader.gif) left top no-repeat;
+height:41px;
+color:#FFFFFF;
+}*/
+
+/* END CALENDAR */
+
+
+/* GROUPS */
+.groupnamedescription STRONG, .groupnamedescription DIV {
+display:block;
+width:250px;
+overflow:hidden;
+}
+.groupsearchbutton{
+float: right; 
+margin:2px 5px 0 0;
+}
+
+.groupjoinrequest .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue-header-bg-940.gif) left top no-repeat;
+}
+
+/* END GROUPS */
+
+/* MSN YAHOO AIM ETC */
+.chatapps {
+text-align:center;
+width:448px;
+}
+
+.chatappstable {
+    width:428px;
+    margin:20px auto;
+}
+.chatappsheader{
+    background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/im_header.gif) left top no-repeat;
+}
+.chatappstable .lastrow {
+    background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/lastrow-bg428.gif) left top no-repeat;
+}
+/* END MSN YAHOO AIM ETC */
+
+/* SUBSCRIBE TO TOPIC */
+
+
+
+.addSubscription_main H2.usercp-title {
+margin-top:0;
+}
+
+/* END SUBSCRIBE TO TOPIC */
+
+/*.requestToJoin_top{
+    background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue_820_top_bg.gif) left bottom no-repeat;
+    height:11px;
+}
+.requestToJoin_main{
+    background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue_820_main_bg.gif) left top repeat-y;
+}
+.requestToJoin_bott{
+    background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue_820_bot_bg.gif) left top no-repeat;
+    height:7px;
+}*/
+
+
+/* WARNINGS */
+
+.expired {
+padding:12px 12px 0 0;
+float:right;
+}
+
+.warnings .thead {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue-header-bg-940.gif) left top no-repeat;
+height:41px;
+}
+
+.warnings.bottommenu {
+padding-top:7px;
+text-align:center;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue-linksbox.gif) left top no-repeat;
+height:36px;
+}
+/* END WARNINGS */
+
+
+/* GENERAL FIXES FOR LONG NAMES */
+.longname {
+display:block;
+overflow:hidden;
+}
+
+
+.longname.threadtitle {width:380px;*width:370px;}
+
+.privatemessage .longname {width:220px;}
+
+.tracking .longname {width:220px;}
+
+.folders {width:150px;}
+
+.subscriptiontopic {width:180px;}
+
+.signature {width:380px; overflow:auto;}
+
+.announcementglobal {width:400px;}
+
+.forumannouncement {width:230px;}
+
+.reportedpostname, .reportreason {width:100px;}
+
+.banuserreason {width:200px;}
+
+.warninglogtitle {width:120px;}
+
+.warning_recived {width:218px;}
+
+.longoption {
+display:block;
+overflow:hidden;
+width:100px;
+}
+
+.requestforgroup {width:260px;}
+
+.showteamforum {width:200px;}
+
+.weekviewdayevent {width:450px;}
+
+.eventbit {width:85px;}
+
+TD.report-name {padding:0;}
+
+TD.report-name SPAN {width:110px;}
+
+/*.search-result-topictitle {width:200px;}*/
+
+.search-result-topictitle A,
+.search-result-topictitle EM {
+display:block;
+overflow:hidden;
+width:280px;
+}
+
+/* END GENERAL FIXES FOR LONG NAMES */
+
+/* POLLS */
+
+.pollactions {
+height:36px;
+color:#FFFFFF;
+margin-top:10px;
+}
+
+.pollactions TD {
+text-align:center;
+}
+
+.pollactions .showresults {
+float:right;
+margin:2px 10px 0 0;
+}
+
+.alreadyvoted {
+float:right;
+padding:7px 20px 0 0;
+}
+
+.thead .alreadyvoted A {
+color:#fffb00;
+}
+
+
+/* END POLLS */
+
+.newpostreply .messageEditor TEXTAREA, .newpostthread .messageEditor TEXTAREA {
+*height:230px;
+}
+
+.bottommenu {
+	height:36px;
+	color:#FFFFFF;
+	margin: 0 10px 0 0;
+}
+.bottommenu a {
+    margin: 0 5px;
+}
+
+/* MISC WHO POSTED */
+
+.bodybg {
+	background-image: url('http://www.lordofultima.com/en/images/bodybg.jpg');
+}
+
+.bodybg table {
+	 width: 940px;
+	 margin: 50px auto;
+}
+
+.bodybg table H2.topic-title {
+margin-top:6px;
+}
+
+/* END MISC WHO POSTED */
+
+
+/* START ARCHIVE */
+
+.archivecontainertop {
+/*width:820px;*/
+}
+
+.archivecontainerfoot {
+/*width:820px;*/
+}
+
+#archivecontainer {
+/*width:820px;*/
+background-color:#E4D6BF;
+border:1px solid #74583E;
+padding: 15px 0;
+}
+
+#archivecontainer .navigation {
+padding:0;
+font-weight:bold;
+}
+
+#archivecontainer #fullversion {
+margin-top:10px;
+}
+
+#archivecontainer #infobox {
+font-size:11px;
+}
+
+#archivecontainer #content {
+width:100%;
+margin:20px 0;
+}
+
+#archivecontainer UL {
+padding-left:10px;
+}
+
+#archivecontainer A {
+color:#8f3435;
+}
+
+#archivecontainer .post, #archivecontainer .listing, #archivecontainer .forumlist{
+padding:10px;
+border:1px solid #333;
+margin-bottom:5px;
+}
+
+#archivecontainer div.header {
+	height: auto;
+}
+
+#archivecontainer .dateline {
+	padding: 0 0 10px 0;
+}
+
+#archivecontainer h2, #archivecontainer h3 {
+	color: #333;
+}
+
+#archivecontainer .multipage {
+margin-bottom:5px;
+}
+
+.brownboxmain #printinfo {
+padding:0 20px;
+}
+
+/* END ARCHIVE */
+
+
+/* PLAIN TEXT TITLES */
+
+H2.topic-title {
+margin: 0 0 0 10px;
+width: 520px;
+overflow:hidden;
+}
+
+H2.long-topic-title {
+margin: 0 0 0 10px;
+padding-bottom: 5px;
+width: 750px;
+}
+
+
+H2.usercp-title-menu {
+margin: 0 0 0 10px;
+}
+
+H2.usercp-title {
+margin: 0 0 0 10px;
+color:#FFFFFF;
+}
+
+H3.usercp-title-nomargin {
+margin: 0 0 0 10px;
+}
+
+.showpoll H2.topic-title {
+width: 740px;
+}
+
+H2.modcp-title-menu {
+margin: 0 0 0 10px;
+}
+
+H2.modcp-title {
+margin: 12px 0 0 10px;
+}
+
+
+IMG.cp-image-separator {
+	width: 12px;
+*width:12px;
+}
+
+/* @group Buddy icons */
+
+.player-name {
+	position: relative;
+}
+	.largetext .player-name { padding-right: 22px; }
+
+.largetext .friendlink { top: 3px; }
+.author .friendlink { top: 2px; }
+
+/* @end */
+
+/* @group Jump links */
+
+.jumplink {
+    background: url(http://www.lordofultima.com/en/modules/forum/images/jumplink.png) no-repeat;
+    
+    text-indent: -9000px;
+    height: 35px;
+    width: 23px;
+    position: absolute;
+    left: -23px;
+    *left: -33px;
+}
+
+/* @end */
+
+/* New buttons with text */
+
+.green_btn { 		background:url(http://www.lordofultima.com/en/modules/forum/images/button_bg_green.png) no-repeat transparent; }
+.green_btn span{ 	background:url(http://www.lordofultima.com/en/modules/forum/images/button_bg_green.png) no-repeat transparent; }
+
+.brown_btn { 		background:url(http://www.lordofultima.com/en/modules/forum/images/button_bg_brown.png) no-repeat transparent; }
+.brown_btn span{ 	background:url(http://www.lordofultima.com/en/modules/forum/images/button_bg_brown.png) no-repeat transparent; }
+
+.postbit_btn {
+	background-position: left top;
+	display:inline-block;
+	text-decoration: none !important;
+	color: #E4D6BF;
+	margin: 0 5px;
+}
+a.postbit_btn:hover {
+	text-decoration: none !important;
+	color:#000;
+}
+.postbit_btn span{
+	background-position: right bottom;
+	display:block;
+	font-size:10px;
+	text-transform:uppercase;
+	font-weight:bold;
+	line-height:24px;
+	height:24px;
+	padding: 0 10px;
+	margin-right: -5px;
+	color: #E4D6BF;
+}
+.messagefolderactions .postbit_btn span{
+	line-height: normal;
+}
+.postbit_btn .icon { 	
+	display: none;
+	position: relative;
+	right: auto;
+	top: auto;
+	float: left; 
+	width:16px !important; 
+	height:16px !important; 
+	padding:0; 
+	margin:4px 3px 0 -5px; 
+	background: url(http://www.lordofultima.com/en/modules/forum/images/icons.png) no-repeat transparent;
+}
+
+a.www .icon { 					display: block; background-position: 0 -48px; }
+a.find .icon { 					display: block; background-position: 0 -80px; margin:4px 2px 0 -5px; }
+a.quote .icon { 				display: block; background-position: 0 -112px; margin:4px 2px 0 -5px; }
+a.edit .icon { 					display: block; background-position: 0 0; margin:4px 2px 0 -5px; }
+a.email .icon { 				display: block; background-position: 0 -224px; margin:5px 2px 0 -5px; }
+a.report .icon { 				display: block; background-position: 0 -16px; margin:4px 2px 0 -5px; }
+a.new_replay .icon { 			display: block; background-position: 0 -32px; margin:5px 2px 0 -4px; }
+a.new_replay_closed .icon { 	display: block; background-position: 0 -96px; margin:5px 2px 0 -4px; }
+a.ban .icon { 					display: block; background-position: 0 -144px; margin:5px 2px 0 -5px; }
+a.warn .icon { 					display: block; background-position: 0 -160px; margin:4px 2px 0 -5px; }
+a.pm_del .icon {		 		display: block; background-position: 0 -208px; margin:5px 2px 0 -5px; }
+a.pm_re .icon {		 			display: block; background-position: 0 -192px; margin:5px 2px 0 -5px; }
+a.pm_forward .icon {	 		display: block; background-position: 0 -176px; margin:5px 2px 0 -5px; }
+a.del .icon { 					display: block; background-position: 0 -96px; margin:5px 2px 0 -4px; }
+a.pm .icon {			 		display: block; background-position: 0 -64px; margin:5px 2px 0 -5px; }
+
+input.button {
+	background-color: transparent;
+	font-size:10px;
+	text-transform:uppercase;
+	font-weight:bold;
+	line-height:22px;
+	height:22px;
+	color: #E4D6BF;
+	padding: 0;
+	float: right;
+}
+
+a.multiquote_btn, a.quick_delete {
+	display:inline-block;
+	margin-top: 1px;
+}
+a.multiquote_btn img, a.quick_delete img {
+	margin:0 0 0 5px;
+	padding:0;
+	line-height: normal;
+	height: auto;
+}
+.post_management_buttons a {
+	float:left;
+	}.modcp_nav_item {
+	display: block;
+	padding: 1px 0 1px 23px;
+}
+
+.modcp_nav_home {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/modcp/home.gif) no-repeat left center;
+}
+
+.modcp_nav_announcements {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/modcp/announcements.gif) no-repeat left center;
+}
+
+.modcp_nav_reports {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/modcp/reports.gif) no-repeat left center;
+}
+
+.modcp_nav_modqueue {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/modcp/modqueue.gif) no-repeat left center;
+}
+
+.modcp_nav_modlogs {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/modcp/modlogs.gif) no-repeat left center;
+}
+
+.modcp_nav_editprofile {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/modcp/editprofile.gif) no-repeat left center;
+}
+
+.modcp_nav_banning {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/modcp/banning.gif) no-repeat left center;
+}
+
+.modcp_nav_warninglogs {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/modcp/warninglogs.gif) no-repeat left center;
+}
+
+.modcp_nav_ipsearch {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/modcp/ipsearch.gif) no-repeat left center;
+}
+
+.modqueue_message {
+	overflow: auto;
+	max-height: 250px;
+}
+
+.modqueue_controls {
+	width: 270px;
+	float: right;
+	text-align: center;
+	border: 1px solid #ccc;
+	background: #fff;
+	padding: 6px;
+	font-weight: bold;
+}
+
+.modqueue_controls label {
+	margin-right: 8px;
+}
+
+.label_radio_ignore, .label_radio_delete, .label_radio_approve {
+	font-weight: bold;
+}
+
+.modqueue_meta {
+	color: #444;
+	font-size: 95%;
+	margin-bottom: 8px;
+}
+
+#forum-wrapper .modqueue_mass {
+background:transparent url(http://www.lordofultima.com/en/modules/forum/images/bfh/blue-tfoot-bg-700.gif) no-repeat scroll left top;
+display:block;
+height:36px;
+list-style:none;
+line-height:36px;
+text-align:center;
+font-weight:bold;
+}
+
+.modqueue_mass li {
+	display:inline;
+	margin:0 20px;
+}
+
+.modqueue_mass li a:hover {
+	text-decoration: underline;
+}
+
+.pagination-small .pagination {
+	background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/paginator-bg-700.gif) no-repeat scroll center top;
+}ul.thread_tools, ul.thread_tools li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.thread_tools li {
+	padding-left: 26px;
+	padding-bottom: 4px;
+	margin-bottom: 3px;
+	font-size: 11px;
+}
+
+ul.thread_tools li.printable {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/printable.png) no-repeat 0px 0px;
+}
+
+ul.thread_tools li.sendthread {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/send.png) no-repeat 0px 0px;
+}
+
+ul.thread_tools li.subscription_add, ul.thread_tools li.subscription_do_add {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/subscribe.png) no-repeat 0px 0px;
+}
+
+ul.thread_tools li.subscription_remove {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/unsubscribe.gif) no-repeat 0px 0px;
+}
+
+/* Blue */
+table.postbit.highlight_blue .trow1,
+table.postbit.highlight_blue .trow2 { background-color: #d3dbe0; }
+table.highlight_blue .tcat {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/bfh/posts-highlights.png) no-repeat 0px 0px !important;
+	color: white;
+}
+table.highlight_blue .tcat a { color: white; }
+#forum-wrapper table.highlight_blue fieldset { background-color: transparent; }
+
+/* Moderator */
+table.postbit.highlight_green .trow1,
+table.postbit.highlight_green .trow2 { background-color: #d7e0d3; }
+table.highlight_green .tcat { 
+	background: url(http://www.lordofultima.com/en/modules/forum/images/bfh/posts-highlights.png) no-repeat 0px -35px !important; 
+	color: white;
+}
+#forum-wrapper table.highlight_green fieldset { background-color: transparent; }
+tr.tablerowcontents.highlight span { position: relative; }
+tr.tablerowcontents.highlight .bluepost { position: absolute; top: 0; right: -6px; }
+.star_rating,
+.star_rating li a:hover,
+.star_rating .current_rating {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/star_rating.png) left -1000px repeat-x;
+	vertical-align: middle;
+}
+
+.star_rating {
+	position: relative;
+	width:80px;
+	height:16px;
+	overflow: hidden;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-position: left top;
+}
+
+td .star_rating {
+	margin: auto;
+}
+
+.star_rating li {
+	display: inline;
+}
+
+.star_rating li a,
+.star_rating .current_rating {
+	position: absolute;
+	text-indent: -1000px;
+	height: 16px;
+	line-height: 16px;
+	outline: none;
+	overflow: hidden;
+	border: none;
+	top:0;
+	left:0;
+}
+
+.star_rating_notrated li a:hover {
+	background-position: left bottom;
+}
+
+.star_rating li a.one_star {
+	width:20%;
+	z-index:6;
+}
+
+.star_rating li a.two_stars {
+	width:40%;
+	z-index:5;
+}
+
+.star_rating li a.three_stars {
+	width:60%;
+	z-index:4;
+}
+
+.star_rating li a.four_stars {
+	width:80%;
+	z-index:3;
+}
+
+.star_rating li a.five_stars {
+	width:100%;
+	z-index:2;
+}
+
+.star_rating .current_rating {
+	z-index:1;
+	background-position: left center;
+}
+
+.star_rating_success, .success_message {
+	color: #00b200;
+	font-weight: bold;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+
+.inline_rating {
+	float: left;
+	vertical-align: middle;
+	padding-right: 5px;
+}/* NEW MODCP */
+
+.modcp #container {
+	width: 100%;
+	background:none;
+	margin: 0 auto;
+	padding:0;
+	text-align: left; /* IE 5 fix */
+	min-height:100%;
+}
+
+
+.modcp #header {
+margin:auto;
+}
+
+.modcp #content {
+	margin:0 auto;
+}
+
+.modcp .bottommenu {
+margin:10px auto;
+}
+
+
+.modcp .pm_alert {
+	margin:10px auto;
+}
+
+/*.modcp .contentnavigation {
+width:100%;
+}*/
+
+
+/* TABLES STRUCTURE AND SKIN */
+.modcp .tcat.fullbg {
+background:none;
+background-color:#4b4b4b;
+border:3px solid #000;
+border-top:none;
+}
+
+.modcp .tcat.separator {!important
+background-color:none;
+border-bottom:none;
+width:3px;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/grey-subheader-bg-separator.gif) center top no-repeat;
+padding:0;
+}
+
+.expander {
+	margin:3px 5px 0 0;
+}	
+}
+
+/* headers */
+.theadleft {
+/*background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/modcp-head-bg-left.gif) left top no-repeat;*/
+height:41px;
+float:left;
+width:0px;
+}
+
+.theadright {
+/*background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/modcp-head-bg-right.gif) right top no-repeat;*/
+height:39px;
+}
+
+.theadright H3, .theadright H2 {
+float:left;
+}
+
+.modcp .theadright H3.flashtitle_mods, .modcp .contentnavigation h3.flashtitle_mods2 {
+margin:9px 0 0 5px;
+}
+
+.modcp .theadright .banauser {
+margin-top:14px;
+}
+
+/* end headers */
+
+/* last row */
+.modcp .contentnavigation .lastrow, .modcp .contentnavigation .lastrow TD {
+background:none;
+}
+
+.modcp .lastrowright {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/modcp-lastrow-bg-right.gif) right top no-repeat;
+height:11px;
+width:100%;
+}
+
+.modcp .lastrowleft {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/modcp-lastrow-bg-left.gif) left top no-repeat;
+height:11px;
+width:100%;
+}
+/* end last row */
+
+
+/* tfoot */
+.modcp .contentnavigation .tfoot {
+height:36px;
+padding:0;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/modcp-tfoot-bg-right.gif) right top no-repeat;
+}
+
+.modcp .contentnavigation .tfootin {
+height:36px;
+padding:0;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/modcp-tfoot-bg-left.gif) left top no-repeat;
+line-height:36px;
+padding:0 10px;
+}
+
+.modcp .contentnavigation .tfoot.secondfoot {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/modcp-tfoot2-bg-right.gif) right top no-repeat;
+}
+
+.modcp .contentnavigation .tfoot.secondfoot .tfootin {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/modcp-tfoot2-bg-left.gif) left top no-repeat;
+}
+/* end tfoot */
+
+
+.modcp .cptd .pagination {
+height:36px;
+width:100%;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/modcp-pagin-bg-left.gif) left top no-repeat;
+}
+
+
+.modcp .cptd .modcppagination {
+height:36px;
+width:100%;
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/modcp-pagin-bg-right.gif) right top no-repeat;
+*margin-top:10px;
+}
+
+.modcp .cptd .pagination {
+*margin:0;
+}
+
+
+.modcp .filter-warning-logs INPUT, .modcp .filter-warning-logs SELECT,
+.modcp .find-users INPUT, .modcp .find-users SELECT,
+.modcp .filter-modlogs INPUT, .modcp .filter-modlogs SELECT
+{
+width:200px;
+}
+
+.modcp .filter-modlogs TD.longselect SELECT {
+width:auto;
+}
+
+.usercp_nav_item {
+	display: block;
+	padding: 1px 0 1px 23px;
+}
+.usercp_nav_composepm {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/composepm.gif) no-repeat left center;
+}
+
+.usercp_nav_pmfolder {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/pmfolder.gif) no-repeat left center;
+}
+
+.usercp_nav_sub_pmfolder {
+	padding-left: 40px;
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/sub_pmfolder.gif) no-repeat left center;
+}
+
+.usercp_nav_trash_pmfolder {
+	padding-left: 40px;
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/trash_pmfolder.gif) no-repeat left center;
+}
+
+.usercp_nav_pmtracking {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/pmtracking.gif) no-repeat left center;
+}
+
+.usercp_nav_pmfolders {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/editfolders.gif) no-repeat left center;
+}
+
+.usercp_nav_profile {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/profile.gif) no-repeat left center;
+}
+
+.usercp_nav_email {
+	padding-left: 40px;
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/email.gif) no-repeat left center;
+}
+
+.usercp_nav_password {
+	padding-left: 40px;
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/password.gif) no-repeat left center;
+}
+
+.usercp_nav_username {
+	padding-left: 40px;
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/username.gif) no-repeat left center;
+}
+
+.usercp_nav_editsig {
+	padding-left: 40px;
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/editsig.gif) no-repeat left center;
+}
+
+.usercp_nav_avatar {
+	padding-left: 40px;
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/avatar.gif) no-repeat left center;
+}
+
+.usercp_nav_options {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/options.gif) no-repeat left center;
+}
+
+.usercp_nav_usergroups {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/usergroups.gif) no-repeat left center;
+}
+
+.usercp_nav_editlists {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/editlists.gif) no-repeat left center;
+}
+
+.usercp_nav_attachments {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/attachments.gif) no-repeat left center;
+}
+
+.usercp_nav_drafts {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/drafts.gif) no-repeat left center;
+}
+
+.usercp_nav_subscriptions {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/subscriptions.gif) no-repeat left center;
+}
+
+.usercp_nav_fsubscriptions {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/fsubscriptions.gif) no-repeat left center;
+}
+
+.usercp_nav_notepad {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/notepad.gif) no-repeat left center;
+}
+
+.usercp_nav_viewprofile {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/viewprofile.gif) no-repeat left center;
+}
+
+.usercp_nav_home {
+	background: url(http://www.lordofultima.com/en/modules/forum/images/usercp/home.gif) no-repeat left center;
+}.messageEditor {
+	background: #f5f5f5;
+	border: 1px solid #aaa;
+	padding: 3px;
+}
+
+.messageEditor .toolbar_container {
+	height: 28px;
+	padding: 2px;
+}
+
+.toolbar {
+	height: 28px;
+}
+
+.messageEditor .toolbar_dropdown {
+	margin-top: 3px;
+	margin-right: 4px;
+}
+
+.messageEditor .toolbar_button {
+	margin: 2px;
+	height: 22px;
+	width: 23px;
+	float: left;
+	display: block;
+	z-index: 1;
+}
+
+.messageEditor .toolbar_button img, .messageEditor .toolbar_button span {
+	width: 23px;
+	height: 22px;
+	float: left;
+}
+
+.messageEditor .toolbar_sprite {
+	display: block;
+	background: url('http://www.lordofultima.com/en/modules/forum/editor_themes/default/images/toolbar.gif') no-repeat;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_italic {
+	background-position: -46px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_underline {
+	background-position: -23px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_align_left {
+	background-position: -69px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_align_center {
+	background-position: -92px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_align_right {
+	background-position: -115px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_align_justify {
+	background-position: -138px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_list_num {
+	background-position: -161px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_list_bullet {
+	background-position: -184px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_image {
+	background-position: -207px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_link {
+	background-position: -230px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_email {
+	background-position: -253px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_quote {
+	background-position: -276px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_code {
+	background-position: -299px 0;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_php {
+	background-position: -322px 0;
+}
+
+.messageEditor .toolbar_button_close_tags {
+	width: 90px;
+}
+
+.messageEditor .toolbar_button .toolbar_sprite_close_tags {
+	width: 87px;
+	background-position: -345px 0;
+}
+
+.messageEditor .toolbar_normal {
+	background: #f5f5f5;
+	border: 1px solid #f5f5f5;
+}
+
+.messageEditor .toolbar_hover {
+	background: #c1d2ee;
+	border: 1px solid #5296f7;
+}
+
+.messageEditor .toolbar_clicked {
+	background: #e1F2fe;
+	border: 1px solid #5296f7;
+}
+
+.messageEditor .toolbar_sep {
+	background: url('http://www.lordofultima.com/en/modules/forum/editor_themes/default/images/separator.gif');
+	width: 4px;
+	height: 23px;
+	margin: 2px;
+	margin-top: 4px;
+	float: left;
+}
+
+.messageEditor .toolbar_dropdown, .messageEditor .toolbar_dropdown_image {
+	font-size: 11px;
+	display: block;
+	float: left;
+	position: relative;
+	z-index: 100;
+	cursor: default;
+}
+
+.messageEditor .toolbar_dropdown {
+	min-width: 130px;
+}
+
+/* IE 6 */
+.messageEditor .toolbar_dropdown {
+	width: 130px;
+}
+
+.messageEditor .toolbar_dropdown .editor_dropdown_label, .messageEditor .toolbar_dropdown_image .editor_dropdown_label {
+	display: block;
+}
+
+.messageEditor .toolbar_dropdown .editor_dropdown_label {
+	min-width: 120px;
+	background: #fff;
+	padding: 3px 4px;
+	margin-right: 14px;
+	border: 1px solid #aaa;
+	border-right: 0;
+	height: 14px;
+	overflow: hidden;
+}
+
+.messageEditor .toolbar_dropdown .editor_dropdown_arrow, .messageEditor .toolbar_dropdown_image .editor_dropdown_arrow {
+	top: 0;
+	position: absolute;
+	right: 0;
+	float: left;
+	display: block;
+	height: 20px;
+	border: 1px solid #aaa;
+	background: #efefef url(http://www.lordofultima.com/en/modules/forum/editor_themes/default/images/dropdown.gif) no-repeat center center;
+	width: 12px;
+}
+
+.messageEditor .toolbar_dropdown_over .editor_dropdown_label, .messageEditor .editor_dropdown_menu_open .editor_dropdown_label {
+	border-color: #5296f7;
+	color: navy;
+}
+
+.messageEditor .toolbar_dropdown_over .editor_dropdown_arrow {
+	background-color: #c1d2ee;
+	border-color: #5296f7;
+}
+
+.messageEditor .toolbar_dropdown_image.toolbar_dropdown_over .editor_dropdown_label,
+.messageEditor .toolbar_dropdown_image.toolbar_dropdown_over .editor_dropdown_arrow {
+	background-color: #fff;
+}
+
+.messageEditor .editor_dropdown_menu_open .editor_dropdown_arrow {
+	background-color: #c1d2ee;
+	border-color: #5296f7;
+}
+
+.messageEditor .editor_dropdown_menu {
+	margin: 0;
+	padding: 0;
+	margin-top: -3px;
+	padding-bottom: 1px;
+	top: 24px;
+	left: 0;
+	border: 1px solid #5296f7;
+	position: absolute;
+	width: 160px;
+	background: #fff;
+	z-index: 10000;
+	max-height: 200px;
+	overflow: auto;
+	-moz-border-radius: 2px;
+}
+
+.messageEditor .toolbar_dropdown_image .editor_dropdown_menu {
+	margin-top: -1px;
+}
+
+.messageEditor .editor_dropdown_menu li {
+	list-style: none;
+	padding: 3px 3px 3px 12px;
+	margin: 0;
+	position: relative;
+	cursor: pointer;
+}
+
+.messageEditor .editor_dropdown_menu li.editor_dropdown_menu_item_active {
+	background-image: url(http://www.lordofultima.com/en/modules/forum/editor_themes/default/images/dropdown2.gif);
+	background-repeat: no-repeat;
+	background-position: 2px center;	
+}
+
+.messageEditor .editor_dropdown_menu_title {
+	background: #efefef;
+	padding-left: 3px;
+	border-bottom: 1px solid #aaa;
+	color: #999;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.messageEditor .editor_dropdown_menu li.editor_dropdown_menu_item_over {
+	background-color: #f5f5f5;
+	cursor: pointer;
+}
+
+.messageEditor .toolbar_button_color .editor_dropdown_menu {
+	width: 153px;
+	height: 98px;	
+	padding: 1px;
+	background: #EFEFEF;
+	margin-left: -1px;
+}
+
+.messageEditor .toolbar_button_color li.editor_dropdown_color_item {
+	float: left;
+	padding: 3px;
+	margin: 1px;
+	width: 11px;
+	height: 11px;
+}
+
+.messageEditor .toolbar_button_color a {
+	width: 9px;
+	height: 9px;
+	display: block;
+	border: 1px solid #FFF;
+}
+
+.messageEditor .toolbar_button_color li.editor_dropdown_menu_item_active {
+	background: #81A2C4;
+}
+
+.messageEditor .toolbar_button_color {
+	position: relative;
+}
+
+.messageEditor .editor_button_color_selected {
+	position: absolute;
+	z-index: 100;
+	width: 16px;
+	height: 4px;
+	top: 15px;
+	left: 3px;
+	display: block;
+	background: transparent;
+}
+
+.messageEditor .toolbar_button_color li.editor_dropdown_menu_item_over {
+	border: 1px solid #5296f7;
+	background: transparent;
+	margin: 0px;	
+}
+
+.messageEditor .toolbar_button_with_arrow {
+	width: 34px;
+}
+
+.messageEditor .toolbar_button_arrow {
+	top: 0px;
+	float: left;
+	display: block;
+	width: 8px;
+	background: url(http://www.lordofultima.com/en/modules/forum/editor_themes/default/images/dropdown.gif) no-repeat center center;
+	height: 20px;
+	border: 1px solid transparent;
+}
+
+.messageEditor .toolbar_hover .toolbar_button_arrow, .messageEditor .toolbar_clicked .toolbar_button_arrow {
+	border-left-color: #5296f7;
+}@CHARSET "UTF-8";
+body.forum.misc.imcenter, body.forum.report {
+	background-image: none;
+	padding: 0px;
+	width: 450px;
+	margin: 0px;
+}
+
+body.forum.misc.imcenter #header, body.forum.report #header{
+	display: none;
+}
+
+body.forum.misc.imcenter #footer, body.forum.report #footer{
+    display: none;
+}
+
+body.forum.misc.imcenter #page-wrap, body.forum.report #page-wrap{
+	padding: 0px;
+	margin: 0px;
+	width: 450px;
+}
+
+body.forum.misc.imcenter #page, body.forum.report #page{
+    padding: 0px;
+    margin: 0px;
+    width: 450px;
+}
+
+body.forum.misc.imcenter #content, body.forum.report #content{
+    padding: 0px;
+    margin: 0px;
+    width: 450px;
+}
+
+body.forum.misc.imcenter #forum-wrapper, body.forum.report #forum-wrapper{
+	padding: 0px;
+    margin: 0px;
+    width: 450px;
+}
+/*!
+ * file: forum/sprited-titles.css
+ *
+ * styling all forum titles with image replacements
+ */
+
+.textimglink, h2.textimg {margin:0 0 0 10px;}
+.textimg {padding:0 0 5px 0 ;}
+.textimg {
+}
+.textimglink,
+.textimglink a {
+color: #c0b8a6;
+}
+
+.textimg-posting {
+	margin:0 0 0 10px;
+}
+
+/*
+.textimg,
+.textimglink,
+.textimglink a {background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/sprite-forumtitles.png) no-repeat 0px 1000px;}
+
+.heroes-dossiers, .heroes-dossiers a {background-position:0px -5px;text-indent:-999em;}
+.heroes-dossiers a:hover {background-position:-402px -5px;}
+.forum-guidelines {background-position:0px -52px;text-indent:-999em;}
+.official-announcements {background-position:0px -102px;text-indent:-999em;}
+.homepage-news {background-position:0px -152px;text-indent:-999em;}
+.store-updates {background-position:0px -202px;text-indent:-999em;}
+.game-updates {background-position:0px -252px;text-indent:-999em;}
+.emergency-templates {background-position:0px -302px;text-indent:-999em;}
+.feedback, .feedback a {background-position:0px -355px;text-indent:-999em;}
+.feedback a:hover {background-position:-402px -355px;}
+H2.polls {background-position:0px -402px;text-indent:-999em;}/* need to extend the class because class .polls is for a body tag*/
+/*
+.current-beta-feedback {background-position:0px -452px;text-indent:-999em;}
+.suggestions {background-position:0px -502px;text-indent:-999em;}
+.classes {background-position:0px -552px;text-indent:-999em;}
+.factions {background-position:0px -602px;text-indent:-999em;}
+.weapons {background-position:0px -652px;text-indent:-999em;}
+.maps {background-position:0px -702px;text-indent:-999em;}
+.items-amp-clothing {background-position:0px -752px;text-indent:-999em;}
+.vehicles {background-position:0px -802px;text-indent:-999em;}
+.missions {background-position:0px -852px;text-indent:-999em;}
+.qa-amp-bug-reporting, .qa-amp-bug-reporting a {background-position:0px -905px;text-indent:-999em;}
+.qa-amp-bug-reporting a:hover {background-position:-402px -905px;}
+.read-me-before-submitting-a-bug {background-position:0px -952px;text-indent:-999em;}
+.class-bugs {background-position:0px -1002px;text-indent:-999em;}
+.vehicle-bugs {background-position:0px -1052px;text-indent:-999em;}
+.weapon-bugs {background-position:0px -1102px;text-indent:-999em;}
+.map-bugs {background-position:0px -1152px;text-indent:-999em;}
+.game-graphics-bugs {background-position:0px -1202px;text-indent:-999em;}
+.sound-bugs {background-position:0px -1252px;text-indent:-999em;}
+.exploits {background-position:0px -1302px;text-indent:-999em;}
+.websiteforum-bugs {background-position:0px -1352px;text-indent:-999em;}
+.store-bugs {background-position:0px -1402px;text-indent:-999em;}
+.game-client-launcher-installer-bugs {background-position:0px -1452px;text-indent:-999em;}
+.server-provider-testing {background-position:0px -1502px;text-indent:-999em;}
+.general, .general a {background-position:0px -1552px;text-indent:-999em;}
+.general a:hover {background-position:-402px -1552px;}
+.community-moderators {background-position:0px -1602px;text-indent:-999em;}
+.newcomers {background-position:0px -1652px;text-indent:-999em;}
+.general-chat {background-position:0px -1702px;text-indent:-999em;}
+.players-helping-players {background-position:0px -1752px;text-indent:-999em;}
+.war-stories {background-position:0px -1802px;text-indent:-999em;}
+.report-bad-user-names {background-position:0px -1852px;text-indent:-999em;}
+.nationals {background-position:0px -1952px;text-indent:-999em;}
+.royals {background-position:0px -2002px;text-indent:-999em;}
+.role-playing {background-position:0px -2052px;text-indent:-999em;}
+.events {background-position:0px -2102px;text-indent:-999em;}
+.tactics-amp-strategy {background-position:0px -2152px;text-indent:-999em;}
+.clans {background-position:0px -2202px;text-indent:-999em;}
+.general-clan-discussion {background-position:0px -2252px;text-indent:-999em;}
+.clans-looking-for-players {background-position:0px -2302px;text-indent:-999em;}
+.players-looking-for-clan {background-position:0px -2352px;text-indent:-999em;}
+.media {background-position:0px -2402px;text-indent:-999em;}
+.off-topic {background-position:0px -2452px;text-indent:-999em;}
+.support, .support a {background-position:0px -2505px;text-indent:-999em;}
+.support a:hover {background-position:-402px -2505px;}
+.general-support {background-position:0px -2552px;text-indent:-999em;}
+.technical-support {background-position:0px -2602px;text-indent:-999em;}
+.support-articles {background-position:0px -2702px;text-indent:-999em;}
+.forum-rules-amp-guidelines, .forum-rules-amp-guidelines a {background-position:0px -2755px;text-indent:-999em;}
+.forum-rules-amp-guidelines a:hover {background-position:-402px -2755px;}
+.support-forums, .support-forums a {background-position:0px -2805px;text-indent:-999em;}
+.support-forums a:hover {background-position:-402px -2805px;}
+.store-support {background-position:0px -2855px; text-indent:-999em;}
+.all-support-articles {background-position:0px -2905px; text-indent:-999em;}
+
+.bugs { background-position: 0 -2955px; text-indent: -999em; }
+.test-environment-forums { background-position: 0 -3005px; text-indent: -999em; }
+.other { background-position: 0 -3055px; text-indent: -999em; }
+
+h2.textimg-secpages {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/sprite-secondarytitles.png) no-repeat 0px 1000px;
+margin:2px 0 0 40px;
+padding:8px 0 2px;
+height:26px;
+width:250px;
+}
+h2.user-maintenance {background-position:0px -294px;text-indent:-999em;}
+h2.user-registration {background-position:0px -345px;text-indent:-999em;}
+h2.updating-profile {background-position:0px -395px;text-indent:-999em;}
+h2.use-of-cookies-on-mybb {background-position:0px -445px;text-indent:-999em;}
+h2.logging-in-and-out {background-position:0px -495px;text-indent:-999em;}
+h2.posting {background-position:0px -545px;text-indent:-999em;}
+h2.posting-a-new-topic {background-position:0px -595px;text-indent:-999em;}
+h2.posting-a-reply {background-position:0px -645px;text-indent:-999em;}
+h2.mycode {background-position:0px -695px;text-indent:-999em;}
+ syndication 
+h2.syndication {background-position:0px -745px;text-indent:-999em;}
+ search 
+h2.search {background-position:20px -795px;text-indent:-999em;}
+h2.search-results {background-position:20px -845px;text-indent:-999em;}
+ transition page 
+h2.battlefield-heroes {background-position:0px -897px;text-indent:-999em;}
+ board statistics 
+h2.board-statistics {background-position:0px 5px;text-indent:-999em;}
+h2.whos-online {background-position:0px -45px;text-indent:-999em;}
+h2.whos-online-today {background-position:0px -95px;text-indent:-999em;}
+h2.most-popular {background-position:0px -245px;text-indent:-999em;}
+ forum team 
+h2.administrators {background-position:0px -145px;text-indent:-999em;}
+h2.moderators {background-position:0px -195px;text-indent:-999em;}
+
+ posting pages titles 
+h2.textimg-posting {
+background:url(http://www.lordofultima.com/en/modules/forum/images/bfh/sprite-postingtitles.png) no-repeat 0px 1000px;
+margin:3px 0 0 40px;
+padding:7px 0 4px 3px;
+height:23px;
+width:250px;
+}
+h2.post-a-new-topic {background-position:0px 5px;text-indent:-999em;}
+h2.attachments {background-position:0px -45px;text-indent:-999em;}
+h2.preview {background-position:0px -245px;text-indent:-999em;}
+h2.quick-reply {background-position:0px -96px;text-indent:-999em;}
+h2.post-a-new-reply {background-position:0px -145px;text-indent:-999em;}
+h2.topic-review {background-position:0px -195px;text-indent:-999em;}
+h2.delete-post {background-position:0px -345px;text-indent:-999em;}
+h2.edit-this-post {background-position:0px -395px;text-indent:-999em;}
+h2.report-to-moderator {background-position:20px -296px;text-indent:-999em;width:270px;}
+h2.post-new-poll {background-position:0px -445px;text-indent:-999em;}
+h2.thank-you {background-position:20px -546px;text-indent:-999em;width:270px;}
+h2.error {background-position:20px -497px;text-indent:-999em;width:270px;}
+h2.move--copy-topic {background-position:0px -596px;text-indent:-999em;width:270px;}
+h2.delete-topic {background-position:0px -646px;text-indent:-999em;width:270px;}
+h2.delete-poll {background-position:0px -695px;text-indent:-999em;width:270px;}
+h2.edit-poll {background-position:0px -745px;text-indent:-999em;width:270px;}
+
+*/
+.forum-header-ad {margin-bottom:20px;}

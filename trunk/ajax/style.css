@@ -1,0 +1,46 @@
+*{	padding:0; 	margin:0;}  
+body { font-size:12px; color:#000; line-height:16px; font-family:Arial; background:url("http://i34.servimg.com/u/f34/15/44/78/93/bg10.jpg") center top #FFF;}
+img{ border:0;}
+h1,h2,h3,h4,h5,h6{ font-size:100%;}
+
+a:focus{outline:none;}
+a{ color:#FFFFFF; text-decoration:none;}
+a:hover{ color:yellow;	text-decoration:none;}
+
+input, select, textarea,form{	margin:0px;	padding:0px;}
+input, select, textarea{ margin:0px; padding:0px;}
+
+.clear{ clear:both;}
+#wrapper{
+	width:100%;
+	position:absolute;
+	height:575px;
+	overflow:hidden;
+	z-index:20;
+	left: 20px;
+}
+#container{ margin:0px auto; width:1000px;  position:relative;}
+
+/* ------------------------- Header --------------------------------------- */
+#header{height:455px;background:url("http://i34.servimg.com/u/f34/15/44/78/93/mainbg10.jpg") no-repeat scroll center top; overflow:hidden;}
+#topmenu{height:28px;background:url("http://i34.servimg.com/u/f34/15/44/78/93/menubg10.jpg") no-repeat scroll center top; overflow:hidden;}
+#topmenu ul{ list-style-type:none; padding:0px 0 0 165px;}
+#topmenu ul li{margin:0px; padding:0px; list-style-type:none; float:left;color:#FFFFFF; font-weight:bold;}
+#logoleft{ float:left;width:170px; height:100px; margin:100px 0 0 30px;}
+#logoleft a{ float:left;width:170px; height:100px; display:block;}
+#logoright{ float:right;width:150px; height:130px; margin:110px 30px 0 0px;}
+#logoright a{ float:right;width:150px; height:130px; display:block;}
+
+.sukien a{ display:block; width:195px;text-align:center;padding:5px 0 7px 0;background:url(sukien.jpg) no-repeat;color:#ffffff;}
+.sukien a:hover{ display:block; width:195px;background:url(sukien_over.jpg) no-repeat; color:#FF0000;}
+
+.trangchu a{ display:block; width:80px;text-align:center;padding:5px 0 7px 0;background:url(trangchu.html) no-repeat;color:#ffffff;}
+.trangchu a:hover{ display:block; width:80px;background:url(trangchu_over.jpg) no-repeat; color:#FF0000;}
+.phancach{width:125px; height:28px;}
+.diendan a{ display:block; width:78px;text-align:center;padding:5px 0 7px 0;background:url(diendan.jpg) no-repeat;color:#ffffff;}
+.diendan a:hover{ display:block; width:78px;background:url(diendan_over.jpg) no-repeat; color:#FF0000;}
+.relax a{ display:block; width:195px;text-align:center;padding:5px 0 7px 0;background:url(relax.jpg) no-repeat;color:#ffffff;}
+.relax a:hover{ display:block; width:195px;background:url(relax_over.jpg) no-repeat; color:#FF0000;}
+
+/* ------------------------- Footer --------------------------------------- */
+#footer{width:1000px; height:50px; margin:auto; padding-top:75px; color:#fff; font-size:11px; text-align:center; background:url("http://i34.servimg.com/u/f34/15/44/78/93/footer10.png") no-repeat scroll center top; overflow:hidden;}
