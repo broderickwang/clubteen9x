@@ -1,0 +1,181 @@
+body,td,th {
+	font-family:Tahoma, Arial;
+	font-size: 11px;
+	color: #000000;
+}
+	
+body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align:left;
+	text-decoration:none;
+	vertical-align: text-top;
+	/*background: #fef2ef url(http://loitraitim.com/Images/bg-main.jpg) fixed center top no-repeat;*/}
+	
+
+a {	text-decoration:none;}
+	
+/*Dinh dang cho table -----------------------------------------------------------------------------------------*/	
+table {
+	width:100%;
+	border:0;
+	padding:0;
+	text-align:left;
+	border-style: hidden;
+	border-spacing:0;}
+
+	/* table-width --*/
+		.table-w970 {width: 970px;}
+
+
+		
+
+/*Dinh dang cho td -----------------------------------------------------------------------------------------*/
+.td-center-top{text-align:center; vertical-align: top;}
+.td-center-middle{text-align:center; vertical-align:middle;}
+.td-center-bottom{vertical-align:bottom; text-align:center;}
+
+.td-right-top{text-align:right;	vertical-align: top;}
+.td-right-middle{text-align:right; vertical-align:middle;}
+.td-right-bottom{text-align:right; vertical-align:bottom;}
+
+.td-left-top{text-align:left; vertical-align:top;}
+.td-left-middle{text-align:left; vertical-align:middle;}
+.td-left-bottom{text-align:left; vertical-align:bottom;}
+	
+/*Dinh dang cho link -----------------------------------------------------------------------------------------*/
+.l_white-11b-pinkhard,.l_white-11b-pinkhard:link,.l_white-11b-pinkhard:active {
+	font-size: 11px;
+	font-weight:bold;
+	color:#FFFFFF;}
+	.l_white-11b-pinkhard:hover {
+	font-size: 11px;
+	font-weight:bold;
+	color: #FF3366;}
+	
+.l_white-11b-yellow,.l_white-11b-yellow:link,.l_white-11b-yellow:active {
+	font-size: 11px;
+	font-weight:bold;
+	color:#FFFFFF;}
+	.l_white-11b-yellow:hover {
+	font-size: 11px;
+	font-weight:bold;
+	color: #FFFF00;}
+	
+.l_hardred-11bi-orange,.l_hardred-11bi-orange:link,.l_hardred-11bi-orange:active {
+	font-size: 11px;
+	font-weight:bold;
+	font-style:italic;
+	color:#993366;}
+	.l_hardred-11bi-orange:hover {
+	font-size: 11px;
+	font-weight:bold;
+	font-style:italic;
+	color: #FF9966;}
+	
+.l_gray-11-pinkhard,.l_gray-11-pinkhard:link,.l_gray-11-pinkhard:active {
+	font-size: 11px;
+	color:#666666;}
+	.l_gray-11-pinkhard:hover {
+	font-size: 11px;
+	color: #FF3366;}
+	
+.l_black-11b-pinkhard,.l_black-11b-pinkhard:link,.l_black-11b-pinkhard:active {
+	font-size: 11px;
+	font-weight:bold;
+	color:#000000;}
+	.l_black-11b-pinkhard:hover {
+	font-size: 11px;
+	font-weight:bold;
+	color: #FF3366;}
+	
+/*Dinh dang cho line -----------------------------------------------------------------------------------------*/
+.line-dot-pink {background:url(http://loitraitim.com/Images/line-dot-pink.gif) left repeat-x; height:1px; width:194px;} 
+
+
+/*Dinh dang cho khung -----------------------------------------------------------------------------------------*/
+	/*TINNONG*/
+.tinnong {background: transparent url(http://loitraitim.com/Images/bg-hotnews.jpg) right top no-repeat; width:294px; height:305px; text-align:left;
+          overflow:hidden; position:relative
+          }
+.tinnong-text {text-align:justify; width:194px;}
+
+	/*HOTNEWS*/
+.news-head-lc {float:left; background:url(http://loitraitim.com/Images/khung/new-head-leftco.jpg) right bottom no-repeat; width:15px; height:15px;}
+.news-head-m {float:left; background:url(http://loitraitim.com/Images/khung/new-head-mid.jpg) left bottom repeat-x; height:15px; width:427px;}
+.news-head-rc {float:left; background:url(http://loitraitim.com/Images/khung/new-head-rightco.jpg) left bottom no-repeat; width:15px; height:15px;}
+.news-mid-l {float:left; background:url(http://loitraitim.com/Images/khung/new-mid-left.jpg) right top repeat-y; width:15px; height:265px}
+.news-content {float:left; background-color: #ffecf1; height:265px}
+.news-mid-r {float:left; background:url(http://loitraitim.com/Images/khung/new-mid-right.jpg) left top repeat-y; width:15px; height:265px}
+.news-foot-lc {float:left; background:url(http://loitraitim.com/Images/khung/new-foot-leftco.jpg) right top no-repeat; width:15px; height:15px;}
+.news-foot-m {float:left; background:url(http://loitraitim.com/Images/khung/new-foot-mid.jpg) left top repeat-x; height:15px; width:427px;}
+.news-foot-rc {float:left; background:url(http://loitraitim.com/Images/khung/new-foot-rightco.jpg) left top no-repeat; width:15px; height:15px;;}
+
+	/*HOTNEWS-TITLE*/
+.news-title-l {background: url(http://loitraitim.com/Images/khung/news-title-left.gif) left no-repeat; height:28px}
+.news-title-m {background:url(http://loitraitim.com/Images/khung/news-title-mid.gif) left repeat-x;width:427px; font-weight:bold;}
+.news-title-r {background:url(http://loitraitim.com/Images/khung/news-title-right.gif) right no-repeat; height:28px}
+
+	/*HOTMENU*/
+.hot1 {float:left; background: url(http://loitraitim.com/Images/khung/hot1.jpg) left top no-repeat; width:198px; height:72px; text-align:left;}
+.hot2 {float:left; background: url(http://loitraitim.com/Images/khung/hot2.jpg) left top no-repeat; width:198px; height:54px; text-align:left;}
+.hot3 {float:left; background: url(http://loitraitim.com/Images/khung/hot3.jpg) left top no-repeat; width:198px; height:43px; text-align:left;}
+.hot4 {float:left; background: url(http://loitraitim.com/Images/khung/hot4.jpg) left top no-repeat; width:198px; height:51px; text-align:left;}
+.hot5 {float:left; background: url(http://loitraitim.com/Images/khung/hot5.jpg) left bottom no-repeat; width:198px; height:76px; text-align:left;}
+
+	/*FOOTER*/
+.foot-title {background: url(http://loitraitim.com/Images/footer/title-footer.jpg) left repeat-x; height:26px; text-align:left; padding:0 10px}
+.foot-L {float:left; background:url(http://loitraitim.com/Images/footer/foot-L.png) right top no-repeat; width:10px; height:154px}
+.foot-M {float:left; background:url(http://loitraitim.com/Images/footer/foot-M.png) left repeat-x; width:950px; height:154px}
+.foot-R {float:left; background:url(http://loitraitim.com/Images/footer/foot-R.png) left top no-repeat; width:10px; height:154px}
+.foot-text {font-size:11px;	color: #993366; line-height:16px;}
+
+	/*HOTIMAGES*/
+.images-head{background: url(/http://loitraitim.com/Images/slide-head.png) center bottom no-repeat; width:810px; height:11px;}
+.images-foot{background: url(/http://loitraitim.com/Images/slide-foot.png) center top no-repeat; width:810px; height:11px;}	
+
+/*Dinh dang cho text ---------------------------------------------------------------------------------------*/
+.text-black-11 {
+	font-size: 11px;
+	color: #000000;}
+
+
+/*-------------begin hot img--------*/	
+
+#hot_img{
+	width:750px;
+	height:205px;
+	float:left;	
+	background:url(http://loitraitim.com/Images/HotLTT/bg_hot_img.gif) repeat-x;	
+	}
+	
+#pic_hot{
+	width:730px;
+	height:135px;
+	float:left;
+	margin-left:10px;
+	margin-top:5px;}
+	
+.image_{
+	width:89px;
+	height:86px;
+	margin-left:20px;
+	margin-top:-95px;}
+.khung_{
+	width:109px;
+	height:106px;
+	padding-left:10px;
+	margin-top:0px;
+	}
+
+.name_ a{
+	width:109px;
+	float:left;
+	color:#333333;
+	text-decoration:none;
+	margin-top:7px;
+	margin-left:20px;
+	}
+/*-------------end hot img--------*/		
