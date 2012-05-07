@@ -1,0 +1,146 @@
+﻿function doit(){
+if (document.forms["post"]["checkbox"].checked==true)
+{
+a= document.forms["post"]["a0vds"].value;
+x= document.forms["post"]["a1vds"].value;
+y= document.forms["post"]["a2vds"].value;
+z= document.forms["post"]["a3vds"].value;
+y= y.replace(/\n/gi," ");
+z= z.replace(/\n/gi,"&#10;");
+
+if( x.search("/FLASH")== -1 || x.indexOf("FLASH") > 5 || x.search("http://")== -1 || (x.search("mp3.zing.vn")== -1 && x.search("nhaccuatui")== -1 && x.search("nhac.vui.vn") == -1  ))
+{
+alert('Lỗi! Thẻ nhạc có lỗi hoặc không được hỗ trợ.');
+document.forms["post"]["checkbox"].checked=false;
+return false;
+}
+else if( y.length <= 25 )
+{
+alert('Lỗi! Bạn chưa điền đủ thông điệp muốn gửi. Thông điệp phải nhiều hơn 25 ký tự.');
+document.forms["post"]["checkbox"].checked=false;
+return false;
+}
+else if( a == "" )
+{
+alert('Lỗi! Bạn chưa chọn người nhận món quà này.');
+document.forms["post"]["checkbox"].checked=false;
+return false;
+}
+
+document.forms["post"]["a1vds"].disabled=true;
+document.forms["post"]["a2vds"].disabled=true;
+document.forms["post"]["a3vds"].disabled=true;
+
+document.forms["post"]["vdsnoidungqt"].value = "[table class=qtvds][tr][td class=vv][center]"+""+x+""+"[/center][/td][/tr][/table][table class=tdvds][tr][td class=b1][i][font=Verdana][b][color=#7319fa]Lời nhắn tới "+""+a+""+": [/color][/b][/font][/i][/td][td class=b2][scroll][i][font=Comic Sans Ms][color=#174f1f]"+""+y+""+"[/color][/font][/i][/scroll][/td][/tr][/table][table class=lhvds][tr][td class=lh][b][color=#ff0000]Lời ca khúc:[/color][/b][hr][i]"+""+z+""+"[/i][hr][right][b]http://www.vandonstar.com[/b][/right][/td][/tr][/table]";
+document.forms["post"]["guiqtan"].disabled=false;
+
+alert('Thành công! Dữ liệu đã được cập nhật. Vui lòng bấm GỬI để chuyển thông điệp');
+}
+else{
+document.forms["post"]["a1vds"].disabled=false;
+document.forms["post"]["a2vds"].disabled=false;
+document.forms["post"]["a3vds"].disabled=false;
+document.forms["post"]["vdsnoidungqt"].value = '';
+}
+
+}
+
+$(document).ready(function(){
+
+$(".qtvds embed").not($(".qtvds embed[src*=zing],.qtvds embed[src*=nhaccuatui],.qtvds embed[src*=vui]")).parent().addClass("loiguibai");
+$(".qtvds embed[src*=zing],.qtvds embed[src*=nhaccuatui],.qtvds embed[src*=vui]").css({'width': '300px', 'height': '50px'});
+$("table.lhvds").css('display','none');
+
+        $("td#pro_ms>div:eq(0),td#ms_pro>div:eq(0),button#music1vds").removeClass("hide_ms");
+        $("button#music1vds").click(function(){
+            $("td#pro_ms>div:eq(0),td#ms_pro>div:eq(0),button#music1vds").addClass("hide_ms");
+            $("td#pro_ms>div:eq(1),td#ms_pro>div:eq(1),button#music2vds").removeClass("hide_ms");
+        });
+        $("button#music2vds").click(function(){
+            $("td#pro_ms>div:eq(1),td#ms_pro>div:eq(1),button#music2vds").addClass("hide_ms");
+            $("td#pro_ms>div:eq(2),td#ms_pro>div:eq(2),button#music3vds").removeClass("hide_ms");
+        });
+        $("button#music3vds").click(function(){
+            $("td#pro_ms>div:eq(2),td#ms_pro>div:eq(2),button#music3vds").addClass("hide_ms");
+            $("td#pro_ms>div:eq(3),td#ms_pro>div:eq(3),button#music4vds").removeClass("hide_ms");
+        });
+        $("button#music4vds").click(function(){
+            $("td#pro_ms>div:eq(3),td#ms_pro>div:eq(3),button#music4vds").addClass("hide_ms");
+            $("td#pro_ms>div:eq(4),td#ms_pro>div:eq(4),button#music5vds").removeClass("hide_ms");
+        });
+        $("button#music5vds").click(function(){
+            $("td#pro_ms>div:eq(4),td#ms_pro>div:eq(4),button#music5vds").addClass("hide_ms");
+            $("td#pro_ms>div:eq(0),td#ms_pro>div:eq(0),button#music1vds").removeClass("hide_ms");
+        });
+});
+
+
+function openWin(pageUrl, w, h) {
+    width = w;
+    height = h;
+    top_val = (screen.height - height) / 2 - 30;
+    if (top_val < 0) { top_val = 0; }
+    left_val = (screen.width - width) / 2 + 200;
+ 
+    window.open(pageUrl, null, "toolbar=0,location=0,status=1,menubar=0,scrollbars=0,resizable=0,width=" + width + ",height=" + height + ", top=" + top_val + ",left=" + left_val);
+}
+
+$(document).ready(function(){
+      $('#a2vds').keyup(function() {
+         max_chars = 200;
+         current_value = $('#a2vds').val();
+         current_length = current_value.length;
+         remaining_chars = max_chars-current_length;
+         $('#counter_number').html(remaining_chars);
+         if(remaining_chars<=150){
+         $('#counter_number').css('color', 'green');
+         } else if(remaining_chars<=175){
+         $('#counter_number').css('color', 'yellow');
+         } else {
+         $('#counter_number').css('color', 'red');
+         }
+      });
+   });
+
+
+$(document).ready(function(){                     
+   
+   $('a.poplight[href^=#]').click(function() {
+      var popID = $(this).attr('rel');
+      var popURL = $(this).attr('href');
+            
+      //Pull Query & Variables from href URL
+      var query= popURL.split('?');
+      var dim= query[1].split('&');
+      var popWidth = dim[0].split('=')[1];
+
+      $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="http://i27.servimg.com/u/f27/14/67/90/38/close_10.png" class="btn_close" title="Close Window" alt="Close" /></a>');
+      
+   
+      var popMargTop = ($('#' + popID).height() + 80) / 2;
+      var popMargLeft = ($('#' + popID).width() + 80) / 2;
+      
+
+      $('#' + popID).css({
+         'margin-top' : -popMargTop,
+         'margin-left' : -popMargLeft
+      });
+      
+      //Fade in Background
+      $('body').append('<div id="fade"></div>');
+      $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn();
+      return false;
+   });
+   
+   
+   //Close Popups and Fade Layer
+   $('a.close, #fade').live('click', function() {
+        $('#fade , .popup_block').fadeOut(function() {
+         $('#fade, a.close').remove(); 
+   }); //fade them both out
+      
+      return false;
+   });
+
+   
+});
