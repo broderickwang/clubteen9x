@@ -1,0 +1,725 @@
+﻿
+/* reset */
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,
+pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+
+html{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#6b6b6b;
+	line-height:20px;
+	background:#e7e7e7;
+}
+body{
+}
+input, 
+textarea{
+	outline:none;/* preventing the chrome and safari nasty yellow border */
+	border:1px solid #ccc;
+	background:#FFF;
+}
+a:focus{
+	outline:none;
+}
+a, 
+a:visited, 
+a:active{
+	color:#6b6b6b;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+/* this will be added by javascript
+.corners{
+	 -moz-border-radius: 5px;
+     -webkit-border-radius: 5px;
+}
+.corners-r{
+	 -moz-border-radius-topright: 5px;
+	 -moz-border-radius-bottomright: 5px;
+     -webkit-border-top-right-radius: 5px;
+	 -webkit-border-bottom-right-radius: 5px;
+}
+*/
+div#tweets{
+	width:400px;
+	float:left;
+	background:#fff;
+	border:1px solid #eee;
+	margin:36px 0 0 30px;
+	font-size:11px;
+	padding:4px 8px 4px 8px;
+}
+div#tweets img{
+	float:left;
+	margin-top:4px;
+	width:32px;
+	height:32px;
+}
+div#tweets ul{
+	width:360px;
+	float:right;
+}
+div#tweets a{
+	font-weight:bold;
+}
+
+/*
+------------------------------------------------------------------------
+WRAPPER - Content wrap CSS style.
+------------------------------------------------------------------------
+*/
+
+div#wrapper{
+	width:620px;
+	margin:140px auto;
+	position:relative;
+}
+
+/*
+------------------------------------------------------------------------
+Card - Card content wrap CSS style.
+------------------------------------------------------------------------
+*/
+
+div#card{
+	width:560px;
+	height:265px;
+	float:left;
+	background:#fff;
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	position:relative;
+	margin-left:29px;
+	overflow:hidden;
+	z-index:2;
+}
+div#card-in{
+	width:508px;
+	height:254px;
+	background:#f8f8f8;
+	border:1px solid #e8e8e8;
+	margin:5px 10px 0px 10px;
+	padding-left:30px;
+}
+ul#menu{
+	width:20px;
+	list-style-type:none;
+	border-top:1px solid #e8e8e8;
+	border-right:1px solid #e8e8e8;
+	border-bottom:1px solid #e8e8e8;
+	position:absolute;
+	left:10px;
+	top:52px;
+	background:#fff;
+	padding:10px 8px 0 1px;
+}
+ul#menu li{
+	list-style-type:none;
+	width:18px;
+	height:18px;
+	padding-bottom:5px;
+	margin-bottom:4px;
+}
+ul#menu li.hr{
+	list-style-type:none;
+	border-bottom:1px solid #e8e8e8;
+}
+ul#menu li a img{
+	width:19px;
+	height:19px;
+	border:none;
+	background:#fff!important;/* IE fade to bug */
+}
+ul#menu li a{
+	float:left;
+	width:19px;
+	height:19px;
+}
+div#content{
+	width:508px;
+	height:254px;
+	float:left;	
+}
+div.tip-logo{
+	width:196px;
+	height:54px;
+	float:left;
+	margin:84px 0 0 140px;
+	overflow:hidden;
+	position:relative;
+}
+div.tip-logo a,
+div.tip-logo a:visited,
+div.tip-logo a:active{
+	width:196px;
+	height:54px;
+	float:left;
+}
+div.tip-logo img#logo-bg{
+	position:absolute;
+	top:-300px;
+	left:0px;
+	border:none;
+}
+div.tip-logo img#logo-frame{
+	position:absolute;
+	top:0px;
+	left:0px;
+	border:none;
+	z-index:1;
+	overflow:hidden;
+}
+
+/* boxes/pages */
+
+div.box{
+	width:478px;
+	height:232px;
+	float:left;
+	margin:10px 15px 10px 15px;
+	position:relative;
+	background:#f8f8f8;
+}
+div.box h2{
+	width:100%;
+	float:left;
+	font-size:18px;
+	font-weight:bold;
+	color:#6b6b6b;
+	margin-bottom:13px;
+}
+div.box h3{
+	width:100%;
+	float:left;
+	font-size:18px;
+	font-weight:bold;
+	color:#6b6b6b;
+	margin-bottom:13px;
+}
+div.box .avatar{
+	width:60px;
+	height:60px;
+	margin:3px 10px 10px 0;
+	float:left;
+	padding:3px;
+	border:1px solid #eee;
+	background:#FFF;
+}
+div.box p{
+	width:400px;
+	float:left;
+	text-align:justify;
+}
+div.box ul{
+	width:100%;
+	list-style-type:none;
+}
+div.box ul li{
+	float:left;
+}
+
+/* work */
+
+div.box .project{
+	width:120px;
+	height:140px;
+	margin:3px 10px 10px 0;
+	float:left;
+	border:none;
+}
+div#slider-in{
+	width:488px;
+	height:154px;
+	float:left;
+}
+div.w-box{
+	width:488px;
+	height:154px;
+	float:left;
+}
+div.w-box h2{
+	width:344px;
+	float:left;
+	margin:0 0px 5px 0;
+	padding-right:14px;
+}
+div.w-box p{
+	width:344px;
+	float:left;
+	margin:0 0px 10px 0;
+	padding-right:14px;
+}
+div#work-nav{
+	width:50px;
+	height:23px;
+	float:left;
+	background:url(http://i69.servimg.com/u/f69/15/89/85/82/nav-bg10.png) no-repeat;
+	margin:12px 0 0 211px;
+	padding:2px 3px 0 3px;
+}
+div#work-nav a#prev{
+	width:20px;
+	height:20px;
+	float:left;
+	background:url(http://i69.servimg.com/u/f69/15/89/85/82/prev-b10.png) no-repeat;
+}
+div#work-nav a#prev:hover{
+	background:url(http://tinhgia.vn/index/images/prev-btn-hover.png) no-repeat;
+}
+div#work-nav a#next{
+	width:20px;
+	height:20px;
+	float:right;
+	background:url(http://i69.servimg.com/u/f69/15/89/85/82/next-b10.png) no-repeat;
+}
+div#work-nav a#next:hover{
+	background:url(http://tinhgia.vn/index/images/next-btn-hover.png) no-repeat;
+}
+
+/* Social */
+
+a.social-box-left{
+	width:226px;
+	height:38px;
+	float:left;
+	margin:3px 20px 5px 0;
+	color:#fff;
+	border:1px solid #e5e5e5;
+	background:#fff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+a.social-box-right{
+	width:226px;
+	height:38px;
+	float:left;
+	margin:3px 0 5px 0;
+	color:#fff;
+	border:1px solid #e5e5e5;
+	background:#fff;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+a.social-box-left img,
+a.social-box-right img{
+	width:32px;
+	height:32px;
+	float:left;
+	margin:4px 10px 0px 4px;
+	border:none;
+}
+a.social-box-left strong,
+a.social-box-right strong{
+	width:170px;
+	height:17px;
+	float:left;
+	margin:0 0 0px 0;
+	color:#333;
+	font-size:14px;
+	font-weight:bold;
+}
+a.social-box-left:hover,
+a.social-box-right:hover{
+	text-decoration:none;
+	background: #eee;
+	border:1px solid #e5e5e5;
+color: #bcd64f;
+	cursor:pointer;
+}
+
+/* Contact */
+
+div#form-left{
+	width:230px;
+	height:180px;
+	float:left;
+	margin-top:3px;
+}
+div#form-left input{
+	width:224px;
+	height:20px;
+	float:left;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+	padding:2px 0 0 4px;
+	margin-bottom:6px;
+	background:#FFF;
+}
+div#form-left label{
+	width:160px;
+	height:22px;
+	float:left;
+	text-align:right;
+	font-weight:bold;
+	margin-right:14px;
+	padding-top:2px;
+}
+div#form-left input#captcha{
+	width:50px;
+	height:20px;
+	float:left;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+	padding:2px 0 0 4px;
+	margin-bottom:6px;
+	background:#FFF;
+}
+div#form-right{
+	width:230px;
+	height:180px;
+	float:left;
+	margin-left:18px;
+	margin-top:3px;
+}
+div#form-right textarea{
+	width:224px;
+	height:140px;
+	float:left;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+	padding:2px 0 0 4px;
+	margin:0 0 6px 0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+div#form-right input#submit{
+	width:60px;
+	height:24px;
+	float:right;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+	padding:0px 0 2px 0px;
+	cursor:pointer;
+	color:#666;
+}
+div#form-right input#submit:hover{
+	color:#333;
+	border:1px solid #999;
+}
+
+/* copyright */
+
+div#copyright{
+	width:200px;
+	height:21px;
+	background:#FFF;
+	border:1px solid #ccc;
+	position:absolute;
+	right:30px;
+	top:220px;
+	padding:2px 0px 0 0;
+	font-size:11px;
+}
+div#copyright p{
+	width:170px;
+	float:left;
+	margin-left:10px;
+}
+div#copyright img{
+	width:10px;
+	height:10px;
+	margin:5px 3px 0 5px;
+	float:right;
+	cursor:pointer;
+}
+
+/* background, top and bottom card */
+
+div#top{
+	width:562px;
+	height:6px;
+	background:url(http://i69.servimg.com/u/f69/15/89/85/82/card-t10.jpg) no-repeat;
+	margin:0 0 0 29px;
+	float:left;
+}
+div#bottom{
+	width:620px;
+	height:90px;
+	background:url(http://i69.servimg.com/u/f69/15/89/85/82/card-b10.jpg) no-repeat;
+	float:left;
+}
+
+/*
+------------------------------------------------------------------------
+LIVE VALIDATION - Live Validation CSS style.
+------------------------------------------------------------------------
+*/
+
+.LV_validation_message{
+    font-weight:bold;
+	float:right;
+	padding-right:130px;
+}
+.LV_valid {
+    color:#00CC00;
+}
+span.LV_invalid {
+   display:none;
+} 
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active {
+}  
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active,
+select.LV_invalid_field:active,
+select.LV_invalid_field:hover  {
+     border:1px solid #ff8b8b;
+}
+	div.pp_pic_holder a:focus { outline:none; }
+
+	div.pp_overlay {
+		background: #ccc;
+		display: none;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 9500;
+	}
+	
+	div.pp_pic_holder {
+		display: none;
+		position: absolute;
+		width: 100px;
+		z-index: 10000;
+	}
+		
+		.pp_top {
+			height: 20px;
+			position: relative;
+		}
+			* html .pp_top { padding: 0 20px; }
+		
+			.pp_top .pp_left {
+				height: 20px;
+				left: 0;
+				position: absolute;
+				width: 20px;
+			}
+			.pp_top .pp_middle {
+				height: 20px;
+				left: 20px;
+				position: absolute;
+				right: 20px;
+			}
+				* html .pp_top .pp_middle {
+					left: 0;
+					position: static;
+				}
+			
+			.pp_top .pp_right {
+				height: 20px;
+				left: auto;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 20px;
+			}
+		
+		.pp_content { height: 40px; }
+		
+		.pp_content .ppt {
+			left: auto;
+			margin-bottom: 5px;
+			position: relative;
+			top: auto;
+		}
+		
+		.pp_fade { display: none; }
+		
+		.pp_content_container {
+			position: relative;
+			text-align: left;
+			width: 100%;
+		}
+		
+			.pp_content_container .pp_left { padding-left: 20px; }
+			.pp_content_container .pp_right { padding-right: 20px; }
+		
+			.pp_content_container .pp_details {
+				margin: 10px 0 2px 0;
+			}
+				.pp_description {
+					display: none;
+					margin: 0 0 5px 0;
+				}
+				
+				.pp_nav {
+					clear: left;
+					float: left;
+					margin: 3px 0 0 0;
+				}
+				
+					.pp_nav p {
+						float: left;
+						margin: 2px 4px;
+					}
+				
+					.pp_nav a.pp_arrow_previous,
+					.pp_nav a.pp_arrow_next {
+						display: block;
+						float: left;
+						height: 15px;
+						margin-top: 3px;
+						overflow: hidden;
+						text-indent: -10000px;
+						width: 14px;
+					}
+		
+		.pp_hoverContainer {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 2000;
+		}
+		
+		a.pp_next {
+			background: url(http://tinhgia.vn/index/images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+			display: block;
+			float: right;
+			height: 100%;
+			text-indent: -10000px;
+			width: 49%;
+		}
+			
+		a.pp_previous {
+			background: url(http://tinhgia.vn/index/images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+			display: block;
+			float: left;
+			height: 100%;
+			text-indent: -10000px;
+			width: 49%;
+		}
+		
+		a.pp_expand,
+		a.pp_contract {
+			cursor: pointer;
+			display: none;
+			height: 20px;	
+			position: absolute;
+			right: 30px;
+			text-indent: -10000px;
+			top: 10px;
+			width: 20px;
+			z-index: 20000;
+		}
+			
+		a.pp_close {
+			display: block;
+			float: right;
+			text-indent: -10000px;
+		}
+		
+		.pp_bottom {
+			height: 20px;
+			position: relative;
+		}
+			* html .pp_bottom { padding: 0 20px; }
+			
+			.pp_bottom .pp_left {
+				height: 20px;
+				left: 0;
+				position: absolute;
+				width: 20px;
+			}
+			.pp_bottom .pp_middle {
+				height: 20px;
+				left: 20px;
+				position: absolute;
+				right: 20px;
+			}
+				* html .pp_bottom .pp_middle {
+					left: 0;
+					position: static;
+				}
+				
+			.pp_bottom .pp_right {
+				height: 20px;
+				left: auto;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 20px;
+			}
+		
+		.pp_loaderIcon {
+			display: block;
+			height: 24px;
+			left: 50%;
+			margin: -12px 0 0 -12px;
+			position: absolute;
+			top: 50%;
+			width: 24px;
+		}
+		
+		#pp_full_res {
+			line-height: 1 !important;
+		}
+		
+			#pp_full_res .pp_inline {
+				text-align: left;
+			}
+			
+				#pp_full_res .pp_inline p { margin: 0 0 15px 0; }
+	
+		div.ppt {
+			color: #fff;
+			display: none;
+			font-size: 17px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			z-index: 9999;
+		}
+/* ------------------------------------------------------------------------
+	Miscellaneous
+------------------------------------------------------------------------- */
+
+	.clearfix:after {
+	    content: "."; 
+	    display: block; 
+	    height: 0; 
+	    clear: both; 
+	    visibility: hidden;
+	}
+
+	.clearfix {display: inline-block;}
+
+	/* Hides from IE-mac \*/
+	* html .clearfix {height: 1%;}
+	.clearfix {display: block;}
+	/* End hide from IE-mac */
+
+/* tipsy tooltip css */
+.tipsy { 
+	padding:5px; 
+	font-size: 10px; 
+	opacity: 0.8; 
+	filter: alpha(opacity=80); 
+	background-repeat: 
+	no-repeat;  
+	background-image: url(http://tinhgia.vn/index/images/tipsy.gif); 
+}
+.tipsy-inner { 
+	padding: 4px 8px 4px 8px; 
+	background-color: #666; 
+	color: white; 
+	max-width: 200px; 
+	text-align: center; 
+}
+.tipsy-inner { 
+	-moz-border-radius:3px; 
+	-webkit-border-radius:3px; 
+}
+.tipsy-north { background-position: top center; }
+.tipsy-south { background-position: bottom center; }
+.tipsy-east { background-position: right center; }
+.tipsy-west { background-position: left center; }
