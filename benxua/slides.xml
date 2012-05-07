@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flash_parameters>
+    <preferences>
+        <global>
+            <basic_property movieWidth="400" movieHeight="350" html_title="Title" loadStyle="Pie" startAutoPlay="true" continuum="true" backgroundColor="0x0000ff" hideAdobeMenu="false" photoDynamicShow="true" enableURL="true" transitionArray=""/>
+            <title_property showTitle="false" photoTitleColor="0xff0000" backgroundColor="0xffffff" alpha="50" autoHide="true"/>
+            <music_property path="" stream="true" loop="true"/>
+            <photo_property topPadding="2" bottomPadding="40" leftPadding="2" rightPadding="2"/>
+            <properties enable="true" backgroundColor="0x000000" backgroundAlpha="40" cssText="a:link{text-decoration: underline;} a:hover{color:#ff0000; text-decoration: none;} a:active{color:#0000ff;text-decoration: none;} .blue {color:#0000ff; font-size:15px; font-style:italic; text-decoration: underline;} .body{color:#ff5500;font-size:20px;}"/>
+        </global>
+        <thumbnail>
+            <basic_property showPrview="true" buttonColor="0xffffff" borderColor="0xffffff" currentBorderColor="0xffffff"/>
+        </thumbnail>
+    </preferences>
+    <album>
+        <slide jpegURL="http://img.news.zing.vn/img/472/t472277.jpg" d_URL="http://img.news.zing.vn/img/472/t472277.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="http://www.12a3.co.cc" title="zr008"><![CDATA[<font face="Trebuchet MS" size="18" color="#00f080">Thu thuat blog Violet</font><br/><font face="Trebuchet MS" size="16" color="#0080f0">Mi?n k? ?c Forums . Mái nhà chung c?a t?p th? l?p 12a3 trý?ng THPT s? 2 Phù M? - B?nh Ð?nh.</font>]]></slide>
+        <slide jpegURL="http://img.news.zing.vn/img/472/t472278.jpg" d_URL="http://img.news.zing.vn/img/472/t472278.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr042"><![CDATA[<font face="Trebuchet MS" size="18" color="#c00000">Welcome to wWw.BenXua.Tk</font><br/><font face="Trebuchet MS" size="16" color="#0080f0">Ban se co tat ca nhung gi ban muon .Noi khang dinh ban than minh</font>]]></slide>
+        <slide jpegURL="http://img.news.zing.vn/img/472/t472268.jpg" d_URL="http://img.news.zing.vn/img/472/t472268.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr071"><![CDATA[<font face="Trebuchet MS" size="18" color="#00f080">Hay den voi chung toi</font><br/><font face="Trebuchet MS" size="16" color="#0080f0">Hay chia se voi chung toi de cung nhau tien bo</font>]]></slide>
+        <slide jpegURL="http://img.news.zing.vn/img/472/t472258.jpg" d_URL="http://img.news.zing.vn/img/472/t472258.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr719"/>
+        <slide jpegURL="http://img.news.zing.vn/img/472/t472253.jpg" d_URL="http://img.news.zing.vn/img/472/t472253.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr565"/>
+        <slide jpegURL="http://img.news.zing.vn/img/472/t472270.jpg" d_URL="http://img.news.zing.vn/img/472/t472270.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr589"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2010/12/27/10/26/1292029200DSC8096.jpg" d_URL="http://img.2sao.vietnamnet.vn/2010/12/27/10/26/1292029200DSC8096.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr605"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2010/12/27/10/26/1288692038MAU12TUOI3.jpg" d_URL="http://img.2sao.vietnamnet.vn/2010/12/27/10/26/1288692038MAU12TUOI3.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr389"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2010/12/27/10/27/1293356351201311328517366296103179810995404857138n.jpg" d_URL="http://img.2sao.vietnamnet.vn/2010/12/27/10/27/1293356351201311328517366296103179810995404857138n.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr507"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2010/12/27/10/28/1257212423LanHuong0311098.jpg" d_URL="http://img.2sao.vietnamnet.vn/2010/12/27/10/28/1257212423LanHuong0311098.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr554"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/1294041471910.jpg" d_URL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/1294041471910.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr151"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147090.jpg" d_URL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147090.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr165"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147093.jpg" d_URL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147093.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr005"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147092.jpg" d_URL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147092.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr063"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147194.jpg" d_URL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147194.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr588"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147195.jpg" d_URL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147195.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr182"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147197.jpg" d_URL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147197.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr171"/>
+        <slide jpegURL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147198.jpg" d_URL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147198.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr166"/>
+    <slide jpegURL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/1294041472911.jpg" d_URL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/1294041472911.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr166"/> 
+    <slide jpegURL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147199.jpg" d_URL="http://img.2sao.vietnamnet.vn/2011/01/03/21/27/129404147199.jpg" transition="0" panzoom="1" URLTarget="0" phototime="2" url="" title="zr166"/> </album>
+</flash_parameters>
