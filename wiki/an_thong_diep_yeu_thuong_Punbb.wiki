@@ -1,0 +1,3 @@
+        <code><script type="text/javascript">
+        jQuery("#recentnew li:contains('»')").remove(); 
+        </script></code>
