@@ -1,0 +1,41 @@
+ /*------------------------------------------------------------------------
+# Copyright (C) 2007-2009 Qrleck
+# Author: Qrleck
+# Websites:  http://www.vianh.info
+-------------------------------------------------------------------------*/
+
+/* COMMON STYLE
+--------------------------------------------------------- */
+.ja-catslwi {
+  position: relative; 
+  margin: 0; 
+  padding: 0;
+}
+
+.ja-catslwi-container {
+	width: 100%;
+	position: absolute; 
+	z-index: 1; 
+	bottom: 0; 
+	left: 0;
+}
+
+.ja-catslwi-text {
+	position:relative;
+	height: 0; 
+	overflow: hidden;
+}
+
+.ja-catslwi-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.ja-catslwi-display {
+	position: absolute; 
+	top: 0;
+	left: 10px;
+	width: 89%;
+}

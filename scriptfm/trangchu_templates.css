@@ -1,0 +1,98 @@
+/*------------------------------------------------------------------------
+# Copyright (C) 2007-2009 Qrleck
+# Author: Qrleck
+# Websites: http://hi4teen.com
+-------------------------------------------------------------------------*/
+
+/* COMMON STYLE
+--------------------------------------------------------- */
+html, body, form, fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #FFFFFF;
+	color: #000000;
+	font-family: "Segoe UI", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+}
+
+body#bd {
+	color: #666666;
+	background: url(../images/bg.jpg) no-repeat center 80px #000000;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+body.contentpane {
+	color: #000000;
+	font-size: 12px;
+	line-height: 1.3em;
+	margin: 0;
+	margin: 1em 2em;
+	width: auto; /* Printable Page */
+}
+
+body.fs1 {font-size: 10px;}
+body.fs2 {font-size: 11px;}
+body.fs3 {font-size: 12px;}
+body.fs4 {font-size: 13px;}
+body.fs5 {font-size: 14px;}
+body.fs6 {font-size: 15px;}
+
+
+/* JA Catslwi */
+#ja-topsl2 .ja-catslwi-display h3 {
+	letter-spacing: normal !important;
+	margin: 5px 0;
+	border-bottom: 1px solid #666666;
+	color: #FFFFFF !important;
+	font-size: 100%;
+	font-weight: bold;
+	text-transform: none;
+}
+
+div.ja-catslwi {
+	width: 226px;
+	float: left;
+}
+
+.ja-catslwi-first {
+	margin-right: 10px;
+}
+
+.ja-catslwi-center {
+	margin: 0 10px 0 5px;
+}
+
+.ja-catslwi-last {
+	margin-left: 5px;
+}
+
+.ja-catslwi-first .ja-catslwi-inner,
+.ja-catslwi-center .ja-catslwi-inner,
+.ja-catslwi-last .ja-catslwi-inner {
+	margin: 0;
+	position: relative;
+}
+
+.ja-catslwi-display {
+	left: 0;
+	width: 90%;
+	padding: 0 10px;
+}
+
+/* extras */
+#extras {
+	background: url('../images/bg-extras.png') repeat-x;
+}
+#extras .Centered {
+	height: 49px;
+	overflow: hidden;
+	padding-top: 10px;
+}
+#ja-topslwrap2 {
+	margin-bottom: 15px;
+}
