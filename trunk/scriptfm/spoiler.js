@@ -1,0 +1,1 @@
+$(document).ready(function(){$('.spoiler_content').parent().parent().find('td[style]:first:not([onclick]),dt[style]:first:not([onclick])').each(function(){if($(this).attr('&#111;nclick'))$(this)[0].setAttribute('onclick',$(this).attr('&#111;nclick'));});});
