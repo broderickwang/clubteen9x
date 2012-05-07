@@ -1,0 +1,149 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>var
+ timeout = 10, vtime=1800, offsetfromcursorX = 12, offsetfromcursorY = 
+10, offsetdivfrompointerX = 10, offsetdivfrompointerY = 15, c3lm='»';
+anlaotd="Nhập TÊN NGƯỜI NHẬN và LỜI NHẮN để gửi thông điệp.";
+voted="Voted - Cảm ơn bạn đã bình chọn cho bài viết ^^\"";
+voting='<img src="h3-_files/loadin12.gif" height="18"> đang thực hiện ... vui lòng đợi 1 chút ...!';
+votem="Mình thấy bài viết này chưa tốt<br><img src="h3-_files/104673.gif">";
+votep="Mình thích bài viết này<br><img src="h3-_files/90652.gif">";
+document.write('<div id="c3tooltip"></div><img id="c3pointer" src="h3-_files/pointe10.gif">');
+var ie = document.all;
+var ns6 = document.getElementById &amp;&amp; ! document.all;
+var enabletip = false;
+var  tipobj = document.getElementById("c3tooltip");
+var pointerobj = document.getElementById("c3pointer");
+function ietruebody() {
+	return (document.compatMode &amp;&amp; document.compatMode != "BackCompat") ? document.documentElement : document.body;
+}
+String.prototype.trim = function () {
+    return this.replace(/^\s*/, "").replace(/\s*$/, "");
+}
+function showtip(thetext, thewidth, thecolor) {
+	if (ns6 || ie) {
+		if (typeof thewidth != "undefined")
+			tipobj.style.width = thewidth + "px";
+		if (typeof thecolor != "undefined" &amp;&amp; thecolor != "")
+			tipobj.style.backgroundColor = thecolor;
+		thetext = thetext.trim();
+		var arr = thetext.split(" ");
+		for(i=0;i<arr.length;i++) if(arr[i].length="">=40)
+				thetext=thetext.replace(arr[i],arr[i].substr(0,40)+"...");
+		tipobj.innerHTML = thetext;		
+		enabletip = true;
+		return false;
+	}
+}
+function positiontip(e) {
+	if (enabletip) {		
+		var nondefaultpos = false;
+		var curX = (ns6) ? e.pageX : event.clientX + ietruebody().scrollLeft;
+		var curY = (ns6) ? e.pageY : event.clientY + ietruebody().scrollTop;
+		var winwidth = ie &amp;&amp; ! window.opera ? ietruebody().clientWidth
+ : window.innerWidth - 20;
+		var winheight = ie &amp;&amp; ! window.opera ? 
+ietruebody().clientHeight : window.innerHeight - 20;
+		var rightedge = ie &amp;&amp; ! window.opera ? winwidth - 
+event.clientX - offsetfromcursorX : winwidth - e.clientX - 
+offsetfromcursorX;
+		var bottomedge = ie &amp;&amp; ! window.opera ? winheight - 
+event.clientY - offsetfromcursorY : winheight - e.clientY - 
+offsetfromcursorY;
+		var leftedge = (offsetfromcursorX &lt; 0) ? offsetfromcursorX * (- 1) :
+ - 1000;
+		if (rightedge &lt; tipobj.offsetWidth) {
+			tipobj.style.left = curX - tipobj.offsetWidth + "px";
+			nondefaultpos = true;
+		}
+		else if (curX &lt; leftedge)
+			tipobj.style.left = "5px";
+		else {
+			tipobj.style.left = curX + offsetfromcursorX - offsetdivfrompointerX +
+ "px";
+			pointerobj.style.left = curX + offsetfromcursorX + "px";
+		}
+		if (bottomedge &lt; tipobj.offsetHeight) {
+			tipobj.style.top = curY - tipobj.offsetHeight - offsetfromcursorY + 
+"px";
+			nondefaultpos = true;
+		}
+		else {
+			tipobj.style.top = curY + offsetfromcursorY + offsetdivfrompointerY +
+ "px";
+			pointerobj.style.top = curY + offsetfromcursorY + "px";
+		}
+		tipobj.style.visibility = "visible";
+
+		if (! nondefaultpos)
+			pointerobj.style.visibility = "visible";
+		else
+			pointerobj.style.visibility = "hidden";
+	}
+}
+function hidetip() {
+	if (ns6 || ie) {
+		enabletip = false;
+		tipobj.style.visibility = "hidden";
+		pointerobj.style.visibility = "hidden";
+		tipobj.style.left = "-1000px";
+		tipobj.style.backgroundColor = '';
+		tipobj.style.width = '';
+	}
+}
+document.onmousemove = positiontip;
+function c3imgfix(ima) {
+if (ima.indexOf("//img")!=-1)
+	return 
+ima.substring(0,ima.indexOf("i"))+"a"+ima.substr(ima.indexOf("."));
+else
+	return ima;
+}
+function lovemess_c3z(input){
+      if(input &amp;&amp; dan){
+            var title=input.value;
+            var reg=new RegExp("\\"+c3lm,"g");
+            if (reg.test(title) == false)
+            {
+                  input.value=c3lm+title;
+            }
+
+      }
+}
+var ss = {
+  fixAllLinks: function() {
+    var allLinks = document.getElementsByTagName('a');
+    for (var i=0;i<alllinks.length;i++) {="" var="" lnk="allLinks[i];" if="" ((lnk.href="" &&="" lnk.href.indexof('#')="" !="-1)" (="" (lnk.pathname="=" location.pathname)="" ||="" ('="" '+lnk.pathname="=" )="" (lnk.search="=" location.search))="" ss.addevent(lnk,'click',ss.smoothscroll);="" }="" },="" smoothscroll:="" function(e)="" (window.event)="" target="window.event.srcElement;" else="" (e)="" return;="" (target.nodename.tolowercase()="" anchor="target.hash.substr(1);" alllinks="document.getElementsByTagName('a');" destinationlink="null;" for="" (var="" i="0;i&lt;allLinks.length;i++)" (lnk.name="" anchor))="" break;="" (!destinationlink)="" return="" true;="" destx="destinationLink.offsetLeft;" desty="destinationLink.offsetTop;" thisnode="destinationLink;" while="" (thisnode.offsetparent="" +="thisNode.offsetLeft;" clearinterval(ss.interval);="" cypos="ss.getCurrentYPos();" ss_stepsize="parseInt((desty-cypos)/ss.STEPS);" ss.interval="setInterval('ss.scrollWindow('+ss_stepsize+','+desty+',&quot;'+anchor+'&quot;)',10);" window.event.cancelbubble="true;" window.event.returnvalue="false;" (e="" e.preventdefault="" e.stoppropagation)="" e.preventdefault();="" e.stoppropagation();="" scrollwindow:="" function(scramount,dest,anchor)="" wascypos="ss.getCurrentYPos();" isabove="(wascypos" <="" dest);="" window.scrollto(0,wascypos="" scramount);="" iscypos="ss.getCurrentYPos();" isabovenow="(iscypos" ((isabove="" (wascypos="=" iscypos))="" window.scrollto(0,dest);="" location.hash="anchor;" getcurrentypos:="" function()="" (document.body="" document.body.scrolltop)="" document.body.scrolltop;="" (document.documentelement="" document.documentelement.scrolltop)="" document.documentelement.scrolltop;="" (window.pageyoffset)="" window.pageyoffset;="" 0;="" addevent:="" function(elm,="" evtype,="" fn,="" usecapture)="" (elm.addeventlistener){="" elm.addeventlistener(evtype,="" usecapture);="" (elm.attachevent){="" r="elm.attachEvent(&quot;on&quot;+evType," fn);="" r;="" alert("handler="" could="" not="" be="" removed");="" ss.steps="50;" ss.addevent(window,"load",ss.fixalllinks);="" jquery(document).ready(function(){="" $('#note').slidenote({closeimage:="" 'http:="" moreco.de="" slide-note="" demo="" images="" slidenote.close.png'});="" jquery(".vbmenu_control="" a:first-child").text("diễn="" đàn");="" a:nth-child(2)").replacewith("<a="" class="mainmenu" href="/h16-shop"><img src="h3-_files/empty.gif" border="0" height="13" hspace="2">
+ iShop");
+jQuery(c3varArr[1]).each(function(index){var 
+c3fix=$(this).attr('src');$(this).attr('src',c3imgfix(c3fix));});
+jQuery(".c3zbox a[href*=172]").parent().empty();
+jQuery(".postbody iframe").remove();
+jQuery(".c3zonee:contains('»')").remove();
+jQuery(".poster-profile span:has(:contains('atus'))").remove();
+jQuery(".c3luvmes").colorbox({title:anlaotd,width:"52%", 
+innerHeight:"175px", inline:true, href:"#c3_luvmes"});
+jQuery("#emoclik").click(function(){
+    jQuery(this).hide("slow");
+    jQuery("#c3z_lovemess").animate({
+    height:"-=50"
+    },2000);
+    jQuery.ajax({
+    type:"POST",
+    url:"/h13-",
+    success:function(emo){
+    jQuery("#emo4mes").html(emo).show("slow");}
+    });
+});
+});
+var 
+c3ztp=["\x2E\x70\x72\x6F\x6C\x69\x6E\x65\x3A\x63\x6F\x6E\x74\x61\x69\x6E\x73\x28\x75\x73\x3A\x29","\x2E\x76\x6F\x74\x65\x2D\x62\x75\x74\x74\x6F\x6E","\x2E\x63\x33\x7A\x73\x68\x61\x72\x65","\x64\x69\x76\x2E\x70\x6F\x73\x74\x62\x6F\x64\x79\x20\x69\x6D\x67","\x2E\x70\x6F\x73\x74\x62\x6F\x64\x79\x20\x61\x3A\x63\x6F\x6E\x74\x61\x69\x6E\x73\x28\x68\x74\x74\x70\x29","\x2E\x70\x6F\x73\x74\x62\x6F\x64\x79\x20\x61\x5B\x68\x72\x65\x66\x2A\x3D\x61\x64\x66\x2E\x6C\x79\x5D","\x2E\x70\x6F\x73\x74\x62\x6F\x64\x79\x20\x69\x6D\x67\x3A\x6E\x6F\x74\x28\x5B\x73\x72\x63\x2A\x3D\x73\x6D\x69\x6C\x65\x73\x5D\x2C\x5B\x73\x72\x63\x2A\x3D\x79\x6F\x75\x74\x75\x62\x65\x5D\x29","\x2E\x67\x65\x6E\x6D\x65\x64\x20\x62\x3A\x63\x6F\x6E\x74\x61\x69\x6E\x73\x28\x6F\x64\x65\x3A\x29","\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x6A\x70\x67\x5D\x2C\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x4A\x50\x47\x5D\x2C\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x6A\x70\x65\x67\x5D\x2C\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x67\x69\x66\x5D\x2C\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x47\x49\x46\x5D\x2C\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x50\x4E\x47\x5D\x2C\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x4A\x50\x45\x47\x5D\x2C\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x70\x6E\x67\x5D\x2C\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x62\x6D\x70\x5D\x2C\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x42\x4D\x50\x5D\x2C\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x54\x49\x46\x5D\x2C\x61\x5B\x68\x72\x65\x66\x24\x3D\x2E\x74\x69\x66\x5D"];
+var
+ 
+tu=["\x39\x3D\x68\x2E\x36\x2E\x74\x28\x29\x3B\x32\x3D\x28\x39\x2E\x64\x28\x27\x66\x27\x29\x21\x3D\x2D\x31\x29\x3B\x67\x20\x34\x28\x29\x7B\x35\x20\x61\x3D\x65\x28\x27\x34\x28\x29\x3B\x27\x2C\x37\x29\x3B\x38\x28\x33\x3E\x30\x26\x26\x32\x29\x33\x2D\x2D\x3B\x78\x7B\x69\x28\x61\x29\x3B\x6A\x2E\x36\x2E\x6B\x28\x29\x3B\x33\x3D\x37\x7D\x7D\x38\x28\x32\x29\x35\x20\x6C\x3D\x6D\x20\x6E\x28\x27\x2E\x6F\x2C\x20\x2E\x70\x20\x61\x2C\x20\x61\x5B\x71\x3D\x72\x5D\x27\x2C\x73\x3D\x27\x2E\x62\x20\x75\x5B\x76\x2A\x3D\x2E\x63\x5D\x27\x2C\x27\x2E\x62\x20\x61\x5B\x77\x2A\x3D\x2E\x63\x5D\x27\x29\x3B","\x7C","\x73\x70\x6C\x69\x74","\x7C\x7C\x64\x61\x6E\x7C\x74\x69\x6D\x65\x6F\x75\x74\x7C\x65\x78\x65\x63\x5F\x72\x65\x66\x72\x65\x73\x68\x7C\x76\x61\x72\x7C\x6C\x6F\x63\x61\x74\x69\x6F\x6E\x7C\x34\x30\x7C\x69\x66\x7C\x69\x64\x66\x7C\x7C\x70\x6F\x73\x74\x62\x6F\x64\x79\x7C\x69\x6D\x61\x67\x65\x73\x68\x61\x63\x6B\x7C\x69\x6E\x64\x65\x78\x4F\x66\x7C\x73\x65\x74\x54\x69\x6D\x65\x6F\x75\x74\x7C\x6E\x6C\x7C\x66\x75\x6E\x63\x74\x69\x6F\x6E\x7C\x74\x68\x69\x73\x7C\x63\x6C\x65\x61\x72\x54\x69\x6D\x65\x6F\x75\x74\x7C\x77\x69\x6E\x64\x6F\x77\x7C\x72\x65\x6C\x6F\x61\x64\x7C\x63\x33\x76\x61\x72\x41\x72\x72\x7C\x6E\x65\x77\x7C\x41\x72\x72\x61\x79\x7C\x63\x33\x6C\x69\x6E\x6B\x62\x6F\x78\x7C\x6C\x69\x6E\x6B\x62\x6F\x78\x7C\x74\x61\x72\x67\x65\x74\x7C\x5F\x75\x73\x65\x72\x77\x77\x77\x7C\x63\x33\x7A\x74\x70\x31\x30\x7C\x74\x6F\x53\x74\x72\x69\x6E\x67\x7C\x69\x6D\x67\x7C\x73\x72\x63\x7C\x68\x72\x65\x66\x7C\x65\x6C\x73\x65","\x72\x65\x70\x6C\x61\x63\x65","","\x5C\x77\x2B","\x5C\x62","\x67"];eval(function
+ (ut1,ut2,ut3,ut4,ut5,ut6){ut5=function (ut3){return ut3.toString(ut2);}
+ 
+;if(!tu[5][tu[4]](/^/,String)){while(ut3--){ut6[ut5(ut3)]=ut4[ut3]||ut5(ut3);}
+ ;ut4=[function (ut5){return ut6[ut5];} ];ut5=function (){return tu[6];}
+ ;ut3=1;} ;while(ut3--){if(ut4[ut3]){ut1=ut1[tu[4]]( new 
+RegExp(tu[7]+ut5(ut3)+tu[7],tu[8]),ut4[ut3]);} ;} ;return ut1;} 
+(tu[0],34,34,tu[3][tu[2]](tu[1]),0,{}));</alllinks.length;i++)></arr.length;i++)></body></html>
