@@ -1,0 +1,51 @@
+﻿function selectCode(a) {
+    var e = a.parentNode.parentNode.getElementsByTagName('DIV')[0];
+    if (window.getSelection)    {
+      var s = window.getSelection();
+        if (s.setBaseAndExtent)      {
+          s.setBaseAndExtent(e, 0, e, e.innerText.length - 1);
+      }     
+    else
+      {
+          var r = document.createRange();
+          r.selectNodeContents(e);
+          s.removeAllRanges();
+          s.addRange(r);
+      }
+    }
+    else if (document.getSelection)    {
+      var s = document.getSelection();
+      var r = document.createRange();
+      r.selectNodeContents(e);
+      s.removeAllRanges();
+      s.addRange(r);
+    }
+    else if (document.selection)    {
+      var r = document.body.createTextRange();
+      r.moveToElementText(e);
+      r.select();   
+}
+}
+
+jQuery(document).ready(function(){
+
+
+jQuery("td.code").parent().prev().css({'background':'#FFF','font':'bold 11px tahoma','color':'#FFF','text-align':'left', 'text-shadow':'green 0.1em 0.1em 0.2em','padding':'0px', 'align':'left','vertical-align':'middle', 'height':'16px','width':'100%'});
+
+jQuery("td.code").parent().parent().parent().css({'width':'545px','background':'#FFF','align':'justify','padding': '5px 5px 5px 5px','align':'center','border-radius': '5px 5px 5px 5px','border-color': '#000000 #ABABAB #ABABAB #000000'});
+
+jQuery("td.code").parent().prev().html('<span class="fmcode" style="float:right;"><img src="http://i28.servimg.com/u/f28/16/48/23/13/collap11.gif" alt="" border="0" /><img style="display:none;" src="http://i40.servimg.com/u/f40/15/90/59/25/collap10.gif" alt="" border="0" /></span><font color="blue"><strong>&nbsp;CODE:</strong></font><a style="float:right;" href="#" onclick="selectCode(this); return false;"><font color="green"><strong>CHỌN TOÀN BỘ&nbsp;</strong></font></a>');
+
+    $(".fmcode").click(function() {
+        $(this).children("img:eq(0)").toggle();
+        $(this).children("img:eq(1)").toggle();
+        $(this).parent().next().children().toggle();
+    });
+
+$(".code").css({'font-family': 'Courier','width' : '500px','display': 'block','font-size':'1em','color':'green','background':'url(http://i40.servimg.com/u/f40/15/90/59/25/prepb310.jpg)repeat scroll left top #FFFFFF','margin': '1em 0','overflow':'auto','text-align':'left','border':'1 solid #99cc66','padding':'0 0 0 30px','line-height':'17px','overflow': 'auto'});
+$(".code div.cont_code").css({'width' : '500px','height':'auto','overflow':'auto'});
+
+jQuery("td.code").hide();
+
+});
+notecode='Click để chọn nội dung trong CODE';
