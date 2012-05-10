@@ -13,7 +13,7 @@ skin FMvi ver.2:
 
 Tìm ở cuối, có đoạn tương tự thế này:
 
-Code: Chọn nội dung
+<code>
 
         <script type="text/javascript">
         imgauth = "http://i48.servimg.com/u/f48/16/58/89/73/writer10.png";
@@ -21,14 +21,14 @@ Code: Chọn nội dung
         imgerror = "http://i48.servimg.com/u/f48/16/58/89/73/error_10.jpg";
         </script>
         <script src="http://www.fmvi.vn/32845.js" type="text/javascript"></script>
-
+</code>
 
 Bạn thêm vào bên dưới dòng imgerror code sau:
 
-Code: Chọn nội dung
+<code>
 
         gioihanFMvi = 20;
-
+</code>
 
 và thay link javascript thành http://www.fmvi.vn/20015.js
 Trong đó, 20 là số ký tự tối thiểu để đăng bài, bạn có thể thay bằng số khác nếu muốn. Kết quả:
