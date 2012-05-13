@@ -1,0 +1,46 @@
+Vào profile_add_body tìm
+
+<code>
+
+        <!-- BEGIN switch_change_password -->
+                                        <dl>
+                                                <dt><label>{L_CHANGE_PASSWORD} : *</label></dt>
+                                                <dd><input class="mainoption" type="submit" name="change_password" value="{L_MODIFY}" /></dd>
+                                        </dl>
+                                        <!-- END switch_change_password -->
+
+</code>
+Xóa đi!
+Sau đó tìm
+
+<code>
+
+        <!-- END switch_emailchange_allowed -->
+</code>
+
+Chèn đoạn code này lên trên
+
+<code>
+
+        <dl>
+                <dt><label>{L_CURRENT_PASSWORD}&nbsp;: *</label></dt>
+                <dd><input type="password" name="cur_password" value="{CUR_PASSWORD}" class="inputbox" />
+          <div class="clear"></div><span class="italic">Bạn cần khai báo mật khẩu nếu bạn muốn thay đổi nó</span>
+          </dd>
+        </dl>                       
+        <dl>
+                <dt><label>{L_NEW_PASSWORD}&nbsp;: *</label></dt>
+                  <dd><input type="password" name="new_password" value="{NEW_PASSWORD}" class="inputbox left" />
+                    <div class="clear"></div><span class="italic">Nhập mật khẩu muốn thay đổi của bạn vào đây</span></dd>
+        </dl>
+        <dl>
+                <dt><label>{L_CONFIRM_PASSWORD}&nbsp;: *</label></dt>
+                <dd><input type="password" name="password_confirm" value="{PASSWORD_CONFIRM}" class="inputbox" />
+                <div class="clear"></div><span class="italic">Biết rồi còn hỏi =.="</span>
+          </dd>
+        </dl>
+</code>
+
+
+Demo
+http://nm0.upanh.com/b1.s26.d2/3a85d8579c87f79a59372e1e020536b5_44686180.untitled.bmp
