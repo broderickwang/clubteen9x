@@ -1,0 +1,18 @@
+   <code> <div style="background-color: #FFFFFE; border: 6px Double #FF8000;padding: 10px;">
+
+      <div id="maincont"> <div style="text-align: center;"><b><font size="5" style="font-size: 18pt; color: rgb(255, 0, 0);">THOI SU QUOC TE</font></b></div> 
+
+    <table id="kh1" border="0" width="100%"> 
+    <tbody><tr> 
+
+    <td width="33%" align="justify" valign="top"> <script type="text/javascript" src="http://hunghsmn.ucoz.com/rssi/12"></script>
+    <center><b>tuoitre.vn</b></center>
+
+    <td width="33%" align="justify" valign="top">
+
+    <script type="text/javascript" src="http://hunghsmn.ucoz.com/rssi/5"></script><br>
+    <center><b>dantri.com.vn</b></center>  </td> 
+
+     <td width="33%" align="justify" valign="top"> <script type="text/javascript" src="http://hunghsmn.ucoz.com/rssi/6"></script> <br><center><b>vnexpress.net</b></center> </td>  </tr>  </tbody></table>
+     <br>
+    </div></code>
