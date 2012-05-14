@@ -1,0 +1,24 @@
+Founder
+http://jsfiddle.net/9NnyQ/1/
+<code>        <div class="cls11111">
+        <div>
+        <table>
+        <div id="sid111">
+        {postrow.displayed.POSTER_RPG}
+        </div>
+        </table>
+        </div>
+        </div></code>
+<code>
+
+        <style type="text/css">
+           #sid111 {
+              display:none
+           }   
+        </style>
+        <div id="sid111">{postrow.displayed.POSTER_RPG}</div>
+        <script type="text/javascript">
+           $("#sid111:not(':empty')").show()
+        </script>
+
+</code>
