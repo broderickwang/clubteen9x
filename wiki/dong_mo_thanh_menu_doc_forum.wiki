@@ -59,7 +59,7 @@ vào trên
 
 CSS:
 
-</code>
+<code>
     /*side bar-------------------------------------------------------------------*/
     #hide-menu {
        display:block;margin-top:40px;float:right;margin-right:-28px;_margin:40px 0 0 0;_display:inline-block
@@ -169,7 +169,7 @@ CSS:
     }
     /*side bar-------------------------------------------------------------------*/
 
-<code>
+</code>
 
 
 Đóng mở cột bên phải cho widget
