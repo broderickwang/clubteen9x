@@ -1,7 +1,7 @@
 Demo : http://diendan.chinhphuc.info/h3-new-feeds
 Tạo một trang HTML với nội dung :
 
-Code: Chọn nội dung CODE
+<code>
     <!DOCTYPE html>
     <html>
        <head>
