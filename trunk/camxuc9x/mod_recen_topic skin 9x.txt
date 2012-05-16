@@ -1,0 +1,48 @@
+﻿-->
+ <div style="display:none" class="dulieulast"></div>
+  <div style="display:none" class="dulieulast2"></div>
+  <!-- BEGIN classical_row -->
+<div class="module main recentWidth" style="border-right: 1px solid #DDDDDD">
+  <div class="starsTitle" style="position: relative;">
+      <h3>Thống kê bài viết mới</h3>
+  </div>
+  <div id="recentnew" class="main-content" style="border-bottom:0 none;border-left:0 none;border-right:1px solid #DDD!important;border-top:0 none;min-height:363px">
+      <ul class="latest_topics" style="padding-left: 20px ! important;">
+                    <!-- BEGIN recent_topic_row -->
+<li width="100%" class="newtopic">
+  <span id="tieude1" onmouseover="show_tooltip(this,$(this).next().html(),'Thông Tin Bài Viết');"><a href="{classical_row.recent_topic_row.U_TITLE}" oncontextmenu="return xemtopic(this.href,'hehee');"><span class="leftrecent" style="font-size:11px;width:230px!important">{classical_row.recent_topic_row.L_TITLE} </span></a></span>
+ <span style="display:none" class="dulieu2"><img src="http://i48.servimg.com/u/f48/16/58/89/73/loadin10.gif" /> Đang tải dữ liệu....</span>
+  <span class="chuyenmuc" style="margin-left:260px;font-size:11px">{classical_row.recent_topic_row.S_POSTTIME}</span>
+   <span class="lastcate">
+             <!-- BEGIN switch_poster -->
+  <span class="username"><a id="tacgia" style="font-size:11px;width:155px!important" onmouseover="show_tooltip(this, ' Click xem thông tin chủ thớt ');" onMouseOut="hidetip();" href="{classical_row.recent_topic_row.switch_poster.U_POSTER}">{classical_row.recent_topic_row.switch_poster.S_POSTER}</a></span>
+      <!-- END switch_poster -->
+  <span class="thoigian" style="display:none">{classical_row.recent_topic_row.S_POSTTIME}</span>
+      <!-- BEGIN switch_poster_guest -->
+      {classical_row.recent_topic_row.switch_poster_guest.S_POSTER}
+      <!-- END switch_poster_guest -->
+            </span>
+      
+  </li>
+      <!-- END recent_topic_row -->
+      </ul>
+  </div>
+</div>
+<!-- END classical_row -->
+<script type="text/javascript">
+//<![CDATA[
+ $(function () {
+
+    $(".dulieulast").load('/search?search_keywords=&search_author=* .table .statused tr:lt(20)', function () {
+        var i;
+        for (i = 0; i < 20; i++) {
+  $(".newtopic:eq(" + i + ")").find(".dulieu2").html('<span>  </span><font color=yellow><b>' + $(".newtopic:eq(" + i + ")").find("#tieude1").text() + '  </b></font><hr>Tác giả : <font color=#ff8400><b>' + $(".dulieulast tr:eq(" + i + ")").find(".tcl a[href^='/u']").text() + '</b></font><br>Trạng Thái : <font color=#00e1ff>' + $(".dulieulast tr:eq(" + i + ")").find(".tcl .status img").attr("alt") + '</font><br>Thuộc Chuyên Mục : <font color=#aa00ff>' + $(".dulieulast tr:eq(" + i + ")").find(".tc2").text() + '</font><br>Trả lời  : <font color=#ff00cc>' + $(".dulieulast tr:eq(" + i + ")").find(".tc3:first").text() + '</font><br>Lượt Xem : <font color=#ffdd00>' + $(".dulieulast tr:eq(" + i + ")").find(".tc3:last").text() + '</font><hr>Người Gửi Cuối : <font color=#ff0000><b>' + $(".newtopic:eq(" + i + ")").find("#tacgia").text() + '</b></font><br><font color=#ffffff>Vào Lúc</font> : ' + $(".newtopic:eq(" + i + ")").find(".thoigian").text());
+        }
+        $(".loading").hide().next().fadeIn(1000);
+    });
+
+});
+
+//]]>
+</script>
+
