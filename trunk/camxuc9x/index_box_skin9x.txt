@@ -1,0 +1,96 @@
+﻿<div class="indexbox9X">
+    <!-- BEGIN catrow -->
+    <!-- BEGIN tablehead -->
+    <div class="boxFMvi">
+        <div class="main-head" style="background-color: #FC144E">
+            <div class="page-title">{catrow.tablehead.L_FORUM}</div>
+        </div>
+        <div class="main-content">
+            <table cellspacing="0" class="table">
+                <tbody class="statused">
+                    <!-- END tablehead -->
+                    <!-- BEGIN forumrow -->
+                    <tr>
+                        <td class="tcl">
+                            <span class="status">
+                                <img onmouseover="show_tooltip(this, ' {catrow.forumrow.L_FORUM_FOLDER_ALT} ');" onMouseOut="hidetip();" src="{catrow.forumrow.FORUM_FOLDER_IMG}"
+                                alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" />
+                            </span>
+                        </td>
+                        <td class="tc2">
+                            <div class="boxbody">
+                                <div>
+                                    <h{catrow.forumrow.LEVEL} class="hierarchy">
+                                      <span  onmouseover="show_tooltip(this, 'Chuyên mục: <font color=#ff8a00>{catrow.forumrow.FORUM_NAME}</font><br>Chủ đề: <font color=yellow>{catrow.forumrow.TOPICS}</font> <br>Bài gửi: <font color=red>{catrow.forumrow.POSTS}</font>');" onMouseOut="hidetip();"><a href="{catrow.forumrow.U_VIEWFORUM}" class="forumtitle">{catrow.forumrow.FORUM_NAME}</a></span>
+                                    </h{catrow.forumrow.LEVEL}>
+                                </div>
+                            </div>
+                            <div class="boxbody">
+                              <div><span class="bbody">{catrow.forumrow.FORUM_DESC}</span>                               
+                         
+                     <strong>{forumrow.L_SUBFORUM_STR}</strong> {forumrow.SUBFORUMS}</div>
+                            </div>
+                          <br />
+                          {catrow.forumrow.L_LINKS}<span class="smallrum" onmouseover="show_tooltip(this, ' Click xem chuyên mục ');" onMouseOut="hidetip();"><div class="bbody">{catrow.forumrow.LINKS}</div><br /></span>
+                          
+                             
+                        </td>                        
+                        <td class="tc3" width="310">                          
+                            <div>                              
+                          <!-- BEGIN switch_topic_title --><span class="smallfont" align="left">
+                                <a onmouseover="show_tooltip(this, ' {catrow.forumrow.LATEST_TOPIC_TITLE} ');" onMouseOut="hidetip();" href="{catrow.forumrow.U_LATEST_TOPIC}">{catrow.forumrow.LATEST_TOPIC_NAME}</a></span>
+                              <!-- END switch_topic_title --><br/>{catrow.forumrow.USER_LAST_POST}
+                                
+                                <table align="center">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center">
+                                                <img src="http://i1205.photobucket.com/albums/bb427/LoveStudio/9xstudio/info.gif" />
+                                            </td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td align="center" style="padding: 0pt 4px; margin-top: 0pt; display: inline; border: 1px dotted ! important;">
+                                                <span style="font-size: 8pt">
+                                                    <font color="#373737">Chủ đề :
+                                                        <font size="+2" color="#99bf00">
+                                                            <b> {catrow.forumrow.TOPICS}</b>
+                                                        </font>
+                                                    </font>
+                                                    <font color="red"> ♥ </font>
+                                                    <font color="#373737">Bài viết :
+                                                        <font size="+1" color="#ff8a00">
+                                                            <b> {catrow.forumrow.POSTS}</b>
+                                                        </font>
+                                                    </font>
+                                                </span>                                              
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>                           
+                            </div>  
+                          <br />
+                                  <!-- BEGIN switch_moderators_links -->
+                                    {catrow.forumrow.switch_moderators_links.L_MODERATOR}{catrow.forumrow.switch_moderators_links.MODERATORS}
+                                  <!-- END switch_moderators_links -->
+                                
+                          
+                      </td>
+                    </tr>                      
+                    <tr>
+                        <td>
+                            <img style="padding-bottom:10px" src="http://i1205.photobucket.com/albums/bb427/LoveStudio/9xstudio/sep.gif" />
+                        </td>
+                    </tr>
+                    <!-- END forumrow -->
+                    <!-- BEGIN tablefoot -->                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <p style="margin-top: -40px;">
+	<img src="http://i1205.photobucket.com/albums/bb427/LoveStudio/9xstudio/sep2.gif" />
+    </p>
+    <!-- END tablefoot -->
+    <!-- END catrow -->
+</div>
+
