@@ -1,0 +1,25 @@
+ $(function () {
+    $(".newltopic").each(function (a) {
+        $(this);
+        $(this).attr("id", "newlast" + a);
+        a = $(this).attr("id");
+        $(this).find(".ltitletopic[alt='" + a + "'] a").next().attr("alt", a);
+        $(this).find(".ltitletopic").attr("alt", a);
+        $(this).find(".lpostertopic").attr("alt", a);
+        $(this).find(".ltimetopic").attr("alt", a);
+        var b = $(this).find(".ltitletopic[alt='" + a + "']").text(),
+            tieude = $(this).find(".ltitletopic[alt='" + a + "']").text(),
+            d = $(this).find(".ltimetopic[alt='" + a + "']").text(),
+            thoigian = $(this).find(".ltimetopic[alt='" + a + "']").text(),
+            e = b.replace(/ /gi, "+"),
+            f = $(this).find(".ltitletopic[alt='" + a + "'] a").next();
+        f.load("/search?mode=searchbox&search_keywords=" + e + '&show_results=topics tr:contains("' + b + '"):contains("' + d + '")', function () {
+            var d = $(this).find(".tcl a[href^='/u']").text(),
+                e = $(this).find(".tc2").text(),
+                f = $(this).find(".tc3:first").text(),
+                g = $(this).find(".tc3:last").text(),
+                j = $(".lpostertopic[alt='" + a + "']").text();
+            $(this).html('<b><span class="tiplFMvi">Tiêu &#273;&#7873;:</span> ' + tieude + '</b><hr><span class="tiplFMvi">T&#7841;o ch&#7911; &#273;&#7873;:</span> ' + d + '<br><span class="tiplFMvi">G&#7917;i cu&#7889;i:</span> ' + j + '<br><span class="tiplFMvi">Vào lúc:</span> ' + thoigian + '<hr><span class="tiplFMvi">Thu&#7897;c chuyên m&#7909;c:</span> ' + e + '<br><span class="tiplFMvi">L&#432;&#7907;t xem:</span> ' + g + '<br><span class="tiplFMvi">Tr&#7843; l&#7901;i:</span> ' + f + "<br>");
+        })
+    })
+});
