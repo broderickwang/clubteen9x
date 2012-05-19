@@ -138,7 +138,7 @@ HD: - Past code dứơi đây vào cuối header
         </div>
     </menu>
 
-<code>
+</code>
 
 *Lưu ý:
 - Muốn chỉnh lại qua phải hay qua trái thì chỉnh ở đoạn code này (ở chỗ số -579px)
