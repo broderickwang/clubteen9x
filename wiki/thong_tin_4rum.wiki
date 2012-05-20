@@ -1,0 +1,42 @@
+<code>
+<center>
+<body>
+		<div class="duoi">
+			<div class="duoi_trai">
+				<div class="duoi_phai">
+					<table border="1" cellpadding="1" cellspacing="1" style="width: 800px; height: 200px;">
+						<tbody>
+							<tr>
+								<td style="text-align: center;">
+									<blink><span style="font-size:28px;"><b><b><b><span style="color: rgb(199, 43, 110);">W</span><span style="color: rgb(184, 37, 59);">E</span><span style="color: rgb(156, 90, 126);">L</span><span style="color: rgb(143, 77, 187);">C</span><span style="color: rgb(21, 50, 102);">O</span><span style="color: rgb(242, 8, 40);">M</span><span style="color: rgb(18, 187, 100);">E</span><span style="color: rgb(13, 163, 191);"> </span><span style="color: rgb(27, 30, 151);">T</span><span style="color: rgb(149, 59, 106);">O</span><span style="color: rgb(48, 254, 164);"> </span><span style="color: rgb(94, 89, 138);">D</span><span style="color: rgb(45, 231, 242);">L</span><span style="color: rgb(253, 136, 17);">K</span><span style="color: rgb(71, 161, 201);">6</span></b></b></b></span></blink></td>
+								<td style="text-align: center;">
+									<img alt="" src="http://i565.photobucket.com/albums/ss96/ga9160188/Forum/080710051292345.gif" style="width: 383px; height: 40px;" /></td>
+							</tr>
+							<tr>
+								<td>
+									<div style="text-align: center;">
+										<span class="genmed"><img alt="Ưu tiên" src="http://matcuoi.com/smilies/yahoo_67.gif" style="width: 22px; height: 18px;" /></span><b>Ch&agrave;o mừng bạn</b> <strong><font color="#ff3300" size="4"><b><img src="http://r19.imgfast.net/users/1911/13/87/62/album/th/yeu10.png" style="width: 16px; height: 16px;" /><span style="font-size:26px;">{USERNAME}</span></b></font></strong><strong><font color="#ff3300" size="4"><b><img src="http://r19.imgfast.net/users/1911/13/87/62/album/th/yeu10.png" style="width: 16px; height: 16px;" /></b></font></strong><b> đ&atilde; trở lại !</b><br />
+										<span style="font-size:14px;"><span style="color: rgb(178, 34, 34);">Số b&agrave;i viết của bạn l&agrave;</span></span> : <span style="color:#4b0082;"><strong><span style="font-size: 18px;">{USERCOUNTPOST}</span></strong></span><span class="genmed"><img alt="Ưu tiên" src="http://matcuoi.com/smilies/yahoo_67.gif" style="width: 22px; height: 18px;" /></span><br />
+										<span class="genmed">&nbsp; </span><b><b><span style="color:#00ff00;">Woa !</span> <span style="color:#ff8c00;">Bạn</span> </b></b><b><b><strong><font color="pink" size="5"><b><span class="mtmymenuu"><span><strong> </strong></span></span></b></font></strong></b></b><span class="genmed"><img alt="hh" src="http://i20.servimg.com/u/f20/15/90/59/25/th_min11.gif" /></span><span style="font-size:20px;"><b><b><strong><font color="pink"><b><span class="mtmymenuu"><strong>{FORUMLASTUSERLINK} </strong></span></b></font></strong></b></b></span><span class="genmed"><img alt="hh" src="http://i20.servimg.com/u/f20/15/90/59/25/th_min11.gif" /></span><b><b> <span style="color:#ff8c00;">l&agrave; mem mới nhất.<br />
+										C&oacute; g&igrave; gi&uacute;p đỡ bạn ấy nha!</span></b></b> <img alt="" src="http://matcuoi.com/smilies/yahoo_67.gif" style="width: 22px; height: 18px;" /><br />
+										<b><span style="color:#ff0000;"><blink>Hỗ trợ Online</blink></span></b><br />
+										<strong><a href="ymsgr:sendIM?levjetdung"><span style="color: rgb(0, 100, 0);"><img border="0" height="25" src="http://opi.yahoo.com/online?u=levjetdung;m=g&amp;t=2" style="border: none;" width="125" /></span></a></strong></div>
+								</td>
+								<td>
+									<center>
+										<div style="text-align: center;">
+											<span class="genmed"><img alt="hh" src="http://matcuoi.com/smilies/yahoo_69.gif" style="width: 26px; height: 18px;" /></span> <span style="color:#ff0000;"><b>S&ocirc;́ Chủ đề </b>: </span><span style="font-size:26px;"><font color="#9acd32"><b>{FORUMCOUNTOPIC}</b></font></span><span class="genmed"><img alt="hh" src="http://matcuoi.com/smilies/yahoo_69.gif" style="width: 26px; height: 18px;" /></span><b><span style="color:#008000;"><b>B&agrave;i gửi</b>:</span> <span style="font-size:26px;"><font color="#00bfff"><b>{FORUMCOUNTPOST}</b></font></span></b><span class="genmed"><img alt="hh" src="http://matcuoi.com/smilies/yahoo_69.gif" style="width: 26px; height: 18px;" /></span></div>
+									</center>
+									<center>
+										<span><a href="http://www.dienluck6.net/t449-topic?view=newest"><img alt="Xem bài viết mới nhất" src="http://i24.servimg.com/u/f24/15/64/85/86/boy1411.gif" title="Xem bài viết mới nhất" /></a></span><b><span style="color:#800080;"><b> </b></span><span style="color:#0000ff;"><b>Hi&ecirc;̣n Tại Di&ecirc;̃n Đàn Có</b>:</span> </b><span class="genmed"> </span><b><span style="font-size:24px;"><font color="#ff8c00"><b>{FORUMCOUNTUSER}</b></font> </span><span style="color:#0000ff;"><b>Th&agrave;nh vi&ecirc;n</b></span> ! </b><span><a href="http://www.dienluck6.net/t449-topic?view=newest"><img alt="Xem bài viết mới nhất" src="http://i24.servimg.com/u/f24/15/64/85/86/boy1411.gif" title="Xem bài viết mới nhất" /></a></span><br />
+										<span><a href="http://www.dienluck6.net/t449-topic?view=newest"><img alt="Xem bài viết mới nhất" src="http://matcuoi.com/smilies/yahoo_8.gif" style="width: 18px; height: 18px;" title="Xem bài viết mới nhất" /></a></span><b><b> <span style="color:#800080;">S&ocirc;́ Ng&agrave;y hoạt động</span></b><span style="color:#800080;">:</span> <span style="font-size: 26px;"><font color="green"><b>{FORUMAGE}</b></font><span style="font-size:16px;"><b> <span style="color:#800080;">rồi nha !</span></b></span></span></b><span><a href="http://www.dienluck6.net/t449-topic?view=newest"><img alt="Xem bài viết mới nhất" src="http://matcuoi.com/smilies/yahoo_8.gif" style="width: 18px; height: 18px;" title="Xem bài viết mới nhất" /></a></span><br />
+										<span><a href="http://www.dienluck6.net/t449-topic?view=newest"><img alt="Xem bài viết mới nhất" src="http://i24.servimg.com/u/f24/15/64/85/86/boy1411.gif" title="Xem bài viết mới nhất" /></a> </span><b>Diễn đ&agrave;n hiện c&oacute; <img border="0" src="http://monster.gostats.vn/bin/count?0.7632952888927147&amp;a=441531&amp;t=7&amp;i=3&amp;r=http%3A%2F%2Fwww.4allvn.tk%2Ft2065-topic&amp;p=http%3A%2F%2F12a2tanha.nspro.biz%2F&amp;c=y&amp;j=y&amp;w=1280&amp;h=1024&amp;d=24&amp;js=1.8&amp;show=hits" /> <b>lượt kh&aacute;ch gh&eacute; thăm</b></b><span class="genmed"> ! </span><span class="genmed"><img alt="Hot" src="http://i20.servimg.com/u/f20/15/90/59/25/post_n10.gif" /></span></center>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</center></code>
