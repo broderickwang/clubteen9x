@@ -1,0 +1,134 @@
+
+Bước đầu
+Thanh lv thuận 007
+B1: theo clip
+
+Code: Chọn Code
+    http://www.youtube.com/watch?v=JPrX5h27icg&feature=youtu.be&hd=1
+
+
+B2: đoạn code cần dán vào view_topic
+
+<code>
+     <script type="text/javascript">
+    $(document).ready(function(){
+    $('#menu li p').animate({opacity:0});//ẩn thẻ p ban đâu đi
+    $('#menu li').hover(function(){
+    $(this).find('p').css('display','block').stop().an imate({
+    opacity:1},100);//định dạng hiện lên khi rê chuột
+    },function(){
+    $(this).find('p').css('display','none').stop().ani mate({
+    opacity:0},0);//cho ẩn khi biến out chuột
+    });
+    })
+    </script>
+                              <div id="menu">
+    <h2><color="red"><a>.†.Linh Thú.†.</a></color></h2>
+    <a>.†.Cấp Bậc.†.</a>
+                          <div class="fmlevel" align="left">
+    <span style="font-size:11px;font-family:Tahoma;font-weight:normal; display: none;">
+    <!-- BEGIN profile_field -->
+    {postrow.displayed.profile_field.LABEL}{postrow.displayed.profile_field.CONTENT}{postrow.displayed.profile_field.SEPARATOR}
+    <!-- END profile_field -->
+    {postrow.displayed.POSTER_RPG}
+    </span></div>
+                                <ul>
+      <li>=====================================
+      <p>{postrow.displayed.POSTER_RANK}<br><img src="http://1.bp.blogspot.com/-tW3-ghYEpLI/TspwDPdqLgI/AAAAAAAAAXk/VJtB9eP5DC8/s1600/black-018-loading-p.gif"width="150"height="20"/> </br></p>
+    </li>
+                                </ul> </div>
+
+     
+                               
+                               
+                                <!--end#menu-->
+                              </div>                                                                     
+                            </div>
+                        </div>
+
+</code>
+tiếp theo
+bạn vào display-> quản lý tổng thể->viewtopic_body
+tìm doan code sau
+
+<code>
+    <a target="_blank" onClick="javascript:alert('Đang phát triển')" class="Umoney"><img alt="Tài sản" src="http://i48.servimg.com/u/f48/16/58/89/73/table_10.png" />Tài sản</a>
+
+</code>
+chèn sau đó doan code trên vào .
+B3:
+Đoạn script
+
+<code>
+    function A1level(){
+    dir="http://s832.photobucket.com/albums/zz244/a1tg3/boom/"
+    var ip="15"
+    var ie="100"
+    var ir="22"
+    var ine="20"
+    var maxm="8000"
+    var maxl=(ine*500)
+    var aq=[];
+    var level=[];
+    var posts=[];
+    var points=[];
+    var thanks=[];
+    var boom = new Array()
+    x = document.getElementsByTagName('div')
+    for(y=0;y<x.length;y++){
+    if(x[y].className == "fmlevel"){
+    z= x[y].parentNode.parentNode.parentNode.getElementsByTagName("A")[0].innerHTML;
+    a= x[y].parentNode.parentNode.parentNode.getElementsByTagName("A")[0].innerHTML;
+    tks= x[y].parentNode.parentNode.parentNode.getElementsByTagName("A")[0].innerHTML;
+    posts[z]=parseInt(x[y].innerHTML.toLowerCase().split("posts</span>: </span>")[1]);
+    points[a]=parseInt(x[y].innerHTML.toLowerCase().split("points</span>: </span>")[1]);
+    thanks[tks]=parseInt(x[y].innerHTML.toLowerCase().split("thanked</span>: </span>")[1]);
+    if(points[a]>=0){
+    var xp=[];
+    var firstchar=[];
+    xp[z]=Math.floor(posts[z]*ip/10+(points[a]+thanks[tks]*4)*ir/10)
+    level[z]=(xp[z]/ine)
+    var exp = Math.floor((level[z]-Math.floor(level[z]))*ie)
+    var nol = Math.floor(level[z]+parseInt(1));
+    var title1="Level"
+    if (nol > 450){(nol = "450")&&(exp = "99")&&(title1="Max-Level")}
+    var width=(exp-5)
+    var mag = "100"
+    if(xp[z]>0){mag = Math.floor(thanks[tks]*19+posts[z]*2+points[a])}
+    var mperc = (Math.floor((mag/maxm)*100)-6)
+    if(mag > maxm) {(mag = maxm)&&(mperc = "94")}
+    var lperc = (Math.floor((xp[z]/maxl)*100)-6)
+    if(xp[z] > maxl) {(xp[z]= maxl)&&(lperc = "94")}
+    aq[z]="Unknown"
+    var medal=[];
+    var i=1;
+    while (i>0){
+    if (nol==i){
+    boom[i]="<img src='"+dir+"exp_medal_"+i+".gif'>";
+    medal[z]=boom[i];i=0;} else{i++;}
+    }
+    stats="<div align='center'><div valign='bottom' align='left' style='width: 127px;color: gray;font-size: 7pt;'><font style='color: #333;font-size:11px;'>"+title1+": </font><font style='color: crimson;'><b>"+ nol +"</b>  </font><font color='red' style='font-size: 12px'><b> ¤"+medal[z]+"¤</b></font><br>Life: "+ xp[z]+" / "+maxl+"<div class='levelbg'><img src='/users/2211/12/43/96/album/orange10.gif' width='"+lperc+"%' height='9px'><img src='/users/2211/12/43/96/album/hp1010.gif' width='2px' height='9px'></div>Magic: " +mag+" / "+maxm+"<div class='levelbg'><img src='/users/2211/12/43/96/album/green110.gif' width='"+mperc+"%' height='9px'><img src='/users/2211/12/43/96/album/mp1010.gif' width='2px' height='9px'></div>Experience: "+exp+"%<div class='levelbg'><img src='/users/2211/12/43/96/album/blue10.gif' width='"+width+"%' height='9px'><img src='/users/2211/12/43/96/album/exp1010.gif' width='2px' height='9px'></div></div></div> "
+    x[y].innerHTML +="<span class='gensmall'>" + stats} else{x[y].innerHTML +="<font color=red><br><br><b>Unknown ("+points[a]+" points)</b></font>"}}}
+    }
+    A1level();
+
+</code>
+
+đoạn css
+
+<code>
+    .levelbg{line-height: 13px;background: url(/users/2211/12/43/96/album/levelc10.png) no-repeat;width: 120px; height: 13px;padding-top: 2px;padding-left: 2px;}
+</code>
+
+
+đây là link tải
+
+Code: Chọn Code
+    http://www.mediafire.com/?4kldm5bno9578fb
+
+</code>
+
+Demo:
+
+<code>
+     http://camxucfan9x.one-forum.net/t468-topic</code>
