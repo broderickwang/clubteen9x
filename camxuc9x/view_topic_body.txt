@@ -1,0 +1,298 @@
+﻿<script type="text/javascript">//<![CDATA[
+var multiquote_img_off = '{JS_MULTIQUOTE_IMG_OFF}', multiquote_img_on = '{JS_MULTIQUOTE_IMG_ON}', _atr = '{JS_DIR}addthis/', _ati = '{PATH_IMG_FA}addthis/'{ADDTHIS_LANG}, addthis_localize = { share_caption: "{L_SHARE_CAPTION}", email: "{L_EMAIL}", email_caption: "{L_EMAIL_CAPTION}", favorites: "{L_SHARE_BOOKMARKS}", print: "{L_PRINT}", more: "{L_MORE}" };
+$(function(){
+   _atc.cwait = 0;
+   $('.addthis_button').mouseup(function(){
+      if ($('#at15s').css('display') == 'block') {
+         addthis_close();
+         addthis_close();
+      }
+   });
+});
+//]]>
+</script>
+ 
+<div class="main paged">
+   <div class="paged-head clearfix">
+      <!-- BEGIN topicpagination -->
+      <p class="paging">{PAGINATION}</p>
+      <!-- END topicpagination -->
+      <p class="posting">
+          <!-- BEGIN switch_user_authpost -->
+         <a onmouseover="show_tooltip(this, ' {L_POST_NEW_TOPIC} ');" onMouseOut="hidetip();" href="{U_POST_NEW_TOPIC}" rel="nofollow"><img src="{POST_IMG}" class="{POST_IMG_CLASS}" /></a>&nbsp;&nbsp;
+         <!-- END switch_user_authpost -->
+ 
+         <!-- BEGIN switch_user_authreply -->
+         <a onmouseover="show_tooltip(this, ' {L_POST_REPLY_TOPIC} ');" onMouseOut="hidetip();" href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}" class="i_reply"/></a>
+         <!-- END switch_user_authreply -->
+
+      </p>
+   </div>{POLL_DISPLAY}
+   <div class="main-head clearfix">
+      <p class="h2">
+         <a href="#bottom">{L_GOTO_DOWN}</a>{L_MESSAGE} [{PAGE_NUMBER}]</p>
+     <span style="float:right; margin-top: -0px;margin-right: -200px;;position: relative;">
+				<g:plusone size="medium"></g:plusone>
+				<span id="twitter_btn">
+					<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+				</span>
+				<span id="fb_likebtn">
+					<iframe src="http://www.facebook.com/plugins/like.php?href={FORUM_URL}{TOPIC_URL}&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:auto; height:21px;" allowTransparency="true"></iframe>
+				</span>
+			</span>      
+
+      <p class="options options-button">
+         <a title="FMvi" target="_blank" rel="nofollow" href="http://www.fmvi.vn" name="bottom" class="skinfmvi2">&copy; <font color="green">FMvi</font>.<font color="red">vn</font></a>
+      </p>
+   </div>
+   <div class="main-content-topic">
+      <!-- BEGIN postrow -->
+      <!-- BEGIN displayed -->
+      <div class="post" {postrow.displayed.THANK_BGCOLOR}>
+         <a name="{postrow.displayed.U_POST_ID}"></a>
+         <div class="postmain" {postrow.displayed.THANK_BGCOLOR}>
+            <div id="p{postrow.displayed.U_POST_ID}" class="posthead" {postrow.displayed.THANK_BGCOLOR}>
+               <h2>                                             
+                  <a href="?showpost={postrow.displayed.U_POST_ID}"><strong>#{postrow.displayed.COUNT_POSTS}</strong></a>{postrow.displayed.ICON}
+                  <a class="tieudeT" href="{postrow.displayed.POST_URL}">{postrow.displayed.POST_SUBJECT}</a>
+               </h2>
+            </div>
+            <div class="postbody" {postrow.displayed.THANK_BGCOLOR}>
+               <div class="user">
+                  <div class="user-ident" id="userinfo{postrow.displayed.U_POST_ID}" style="position: relative;">
+                     <div class="posthead">
+                        <em>{postrow.displayed.POST_DATE_NEW}</em>
+                     </div>
+                     <div onmouseover="show_user({postrow.displayed.U_POST_ID})" onmouseout="hide_user({postrow.displayed.U_POST_ID})" class="userInfoF">
+                        <div class="useravatar" style="float: left;">{postrow.displayed.POSTER_AVATAR}</div>
+                        <div class="user-info">
+                           <div class="manuUserF">
+                              <strong>{postrow.displayed.POSTER_NAME}</strong>
+                              <span class="fmviOnoff">{postrow.displayed.ONLINE_IMG}</span>                              
+                           </div>
+                           <dl class="cl" style="float:right; width: 370px;">
+                              <!-- BEGIN profile_field -->
+                              <dt>{postrow.displayed.profile_field.LABEL}</dt>
+                              <dd>{postrow.displayed.profile_field.CONTENT}</dd>
+                              <!-- END profile_field -->
+                           </dl>
+                           <div>
+                              <span style="color:blue">Phương châm:</span>
+                              <marquee class="status"></marquee>
+                           </div>
+                           <div class="morelink">
+                              <a target="_blank" class="Upro5"><img alt="Tường nhà" src="http://i48.servimg.com/u/f48/16/58/89/73/profil10.png" />Tường nhà</a>
+                              <a target="_blank" class="Utopic"><img alt="Xem bài viết" src="http://i48.servimg.com/u/f48/16/58/89/73/total_10.gif" />Bài viết</a>
+                              <a target="_blank" class="Ufrien"><img alt="Kết bạn" src="http://i48.servimg.com/u/f48/16/58/89/73/friend10.png" />Kết bạn</a>
+                              <a target="_blank" onClick="javascript:alert('Đang phát triển')" class="Umoney"><img alt="Tài sản" src="http://i48.servimg.com/u/f48/16/58/89/73/table_10.png" />Tài sản</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="user-basic-info">
+                        <div onmouseover="show_user({postrow.displayed.U_POST_ID})" class="useravatar" style="padding: 15px 0 15px 9px">{postrow.displayed.POSTER_AVATAR}</div>
+                        <p class="rankimg" style="padding:11px">{postrow.displayed.RANK_IMAGE}</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="post-entry">
+                  <div class="entry-content">
+                     <div>
+                        <div>{postrow.displayed.MESSAGE}</div>
+                        <!-- BEGIN switch_attachments -->
+                        <dl class="attachbox">
+                           <dt>{postrow.displayed.switch_attachments.L_ATTACHMENTS}</dt>
+                           <dd>
+                              <!-- BEGIN switch_post_attachments -->
+                              <dl class="file">
+                                 <dt>
+                                    <img src="{postrow.displayed.switch_attachments.switch_post_attachments.U_IMG}"
+                                    />
+                                    <!-- BEGIN switch_dl_att -->
+                                    <a class="postlink" href="{postrow.displayed.switch_attachments.switch_post_attachments.switch_dl_att.U_ATTACHMENT}">{postrow.displayed.switch_attachments.switch_post_attachments.switch_dl_att.ATTACHMENT}</a>{postrow.displayed.switch_attachments.switch_post_attachments.switch_dl_att.ATTACHMENT_DEL}
+                                    <!-- END switch_dl_att -->
+                                    <!-- BEGIN switch_no_dl_att -->{postrow.displayed.switch_attachments.switch_post_attachments.switch_no_dl_att.ATTACHMENT}
+                                    {postrow.displayed.switch_attachments.switch_post_attachments.switch_no_dl_att.ATTACHMENT_DEL}
+                                    <!-- END switch_no_dl_att -->
+                                 </dt>
+                                 <!-- BEGIN switch_no_comment -->
+                                 <dd>
+                                    <em>{postrow.displayed.switch_attachments.switch_post_attachments.switch_no_comment.ATTACHMENT_COMMENT}</em>
+                                 </dd>
+                                 <!-- END switch_no_comment -->
+                                 <!-- BEGIN switch_no_dl_att -->
+                                 <dd>
+                                    <em>
+                                       <strong>{postrow.displayed.switch_attachments.switch_post_attachments.switch_no_dl_att.TEXT_NO_DL}</strong>
+                                    </em>
+                                 </dd>
+                                 <!-- END switch_no_dl_att -->
+                                 <dd>({postrow.displayed.switch_attachments.switch_post_attachments.FILE_SIZE})
+                                    {postrow.displayed.switch_attachments.switch_post_attachments.NB_DL}</dd>
+                              </dl>
+                              <!-- END switch_post_attachments -->
+                           </dd>
+                        </dl>
+                        <!-- END switch_attachments -->
+                        <div class="clear"></div>
+                     </div>
+                  </div>
+                                        </div>
+            </div>
+           <br /><img src="http://i44.servimg.com/u/f44/16/54/92/12/untitl11.png" />
+            <!-- BEGIN switch_signature -->
+            <div class="sig-content">{postrow.displayed.SIGNATURE_NEW}</div>
+            <!-- END switch_signature -->
+            <div class="postfoot">
+               <div class="options-button user-contact">{postrow.displayed.PROFILE_IMG} {postrow.displayed.PM_IMG} {postrow.displayed.EMAIL_IMG} <!-- BEGIN contact_field -->{postrow.displayed.contact_field.CONTENT}<!-- END contact_field -->
+               </div>
+               <div class="post-options">
+            <iframe style="display:none" name="vote{postrow.displayed.U_POST_ID}" height="0px" width="0px" frameborder="0"></iframe>                                          
+            <div onmouseover="show_like({postrow.displayed.U_POST_ID})" onmouseout="hide_like({postrow.displayed.U_POST_ID})" class="FMvi-like">
+               <a target="vote{postrow.displayed.U_POST_ID}" class="nolikeplus" onclick="comment_like({postrow.displayed.U_POST_ID})"><p id="FMvi_like{postrow.displayed.U_POST_ID}" class="likeNone">Thích</p></a>
+               <a onclick="report_like({postrow.displayed.U_POST_ID})" target="vote{postrow.displayed.U_POST_ID}" class="nolikeminus">Báo xấu [<font color="red">0</font>]</a>
+               <div id="nub{postrow.displayed.U_POST_ID}" class="nub"></div>
+               <div id="like{postrow.displayed.U_POST_ID}" class="commentLike">
+                  <span class="closeFMvi_like" style="display:none" onclick="close_like({postrow.displayed.U_POST_ID})"></span>
+                  <p></p>
+                            <div class="loaddingLike"></div>
+                  <em>Gửi một bình luận lên tường nhà {postrow.displayed.POSTER_NAME}<br /></em>
+                  <input onkeyup="send_comment(event,{postrow.displayed.U_POST_ID})" type="text" value="" />
+               </div>
+               <div style="display:none" id="data-link-comment{postrow.displayed.U_POST_ID}"></div>
+                                                <!-- BEGIN switch_vote_active -->
+                                                   <!-- BEGIN switch_vote -->
+                                                   <a style="display:none" class="likeplus" href="{postrow.displayed.switch_vote_active.switch_vote.U_VOTE_PLUS}"><p class="likeNone">Thích</p></a>
+                                                   <!-- END switch_vote -->
+                                                   <!-- BEGIN switch_bar -->
+                                                   <div style="display:none" class="vote-bar" title="{postrow.displayed.switch_vote_active.L_VOTE_TITLE}">
+                                                      <!-- BEGIN switch_vote_plus -->
+                                                      <div class="vote-bar-plus" style="height:{postrow.displayed.switch_vote_active.switch_bar.switch_vote_plus.HEIGHT_PLUS}px;"></div>
+                                                      <!-- END switch_vote_plus -->
+                                                      <!-- BEGIN switch_vote_minus -->
+                                                      <div class="vote-bar-minus" style="height:{postrow.displayed.switch_vote_active.switch_bar.switch_vote_minus.HEIGHT_MINUS}px;"></div>
+                                                      <!-- END switch_vote_minus -->
+                                                   </div>
+                                                   <!-- END switch_bar -->
+                                                   <!-- BEGIN switch_vote -->
+                                                   <a style="display:none" class="likeminus" href="{postrow.displayed.switch_vote_active.switch_vote.U_VOTE_MINUS}">Báo xấu</a>
+                                                   <!-- END switch_vote -->
+                                                <!-- END switch_vote_active -->
+                                           </div>
+                                     
+                                                <span class="options-button">
+                                                   <a href="javascript:vol(0)" onClick="delpre();repfmvi($(this))"><img alt="Trả lời nhanh" title="Trả lời nhanh" src="http://i46.servimg.com/u/f46/15/26/55/24/quickr10.gif" /></a> {postrow.displayed.THANK_IMG} {postrow.displayed.MULTIQUOTE_IMG} {postrow.displayed.QUOTE_IMG} {postrow.displayed.EDIT_IMG} {postrow.displayed.DELETE_IMG} {postrow.displayed.IP_IMG} {postrow.displayed.REPORT_IMG}                                                    
+                                             </span>
+                                     </div>
+               <div style="clear:both;"></div>
+            </div>
+         </div>
+     </div>
+      <!-- BEGIN first_post_br -->
+   </div>
+   <hr id="first-post-br" />
+   <div class="main-content topic">
+      <!-- END first_post_br -->
+      <!-- END displayed -->
+      <!-- BEGIN hidden -->
+      <p class="p-hidden">{postrow.hidden.MESSAGE}</p>
+      <!-- END hidden -->
+      <!-- END postrow -->
+   </div>
+ 
+   <div class="main-foot clearfix modBottom">
+      <p class="h2">
+         <a href="#top">{L_BACK_TO_TOP}</a>{L_MESSAGE} [{PAGE_NUMBER}]</p>
+      <p class="options options-button">
+         <input type="hidden" name="t" value="{TOPIC_ID}" />
+         <!-- <input type="hidden" name="sid" value="{S_SID}" />-->
+         <input type="hidden" name="{SECURE_ID_NAME}" value="{SECURE_ID_VALUE}" />
+         <!-- BEGIN viewtopic_bottom -->{S_TOPIC_ADMIN}
+         <!-- END viewtopic_bottom -->
+                &nbsp;&nbsp;<a title="FMvi" target="_blank" rel="nofollow" href="http://www.fmvi.vn" name="bottom" class="skinfmvi2">&copy; <font color="green">FMvi</font>.<font color="red">vn</font></a>
+      </p>
+   </div>
+   <a name="bottomtitle"></a>
+   <div class="paged-foot clearfix">
+      <!-- BEGIN topicpagination -->
+      <p class="paging">{PAGINATION}</p>
+      <!-- END topicpagination -->
+      <p class="posting">
+                 <!-- BEGIN switch_user_authpost -->
+         <a onmouseover="show_tooltip(this, ' {L_POST_NEW_TOPIC} ');" onMouseOut="hidetip();" href="{U_POST_NEW_TOPIC}" rel="nofollow"><img src="{POST_IMG}" class="{POST_IMG_CLASS}"/></a>&nbsp;&nbsp;
+         <!-- END switch_user_authpost -->
+ 
+         <!-- BEGIN switch_user_authreply -->
+         <a onmouseover="show_tooltip(this, ' {L_POST_REPLY_TOPIC} ');" onMouseOut="hidetip();" href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}" class="i_reply" /></a>
+         <!-- END switch_user_authreply -->
+
+      </p>
+   </div>
+</div>
+<p style="padding: 20px 0; text-align: center">«
+   <a href="{U_VIEW_OLDER_TOPIC}"> Xem bài trước </a>|
+   <a href="{U_VIEW_NEWER_TOPIC}"> Xem bài kế tiếp </a>»</p>
+ 
+<div class="fmviToggle">
+   <div class="main">
+      <div class="main-head clearfix">
+         <p class="h2">Bài viết liên quan</p>
+      </div>
+      <ol id="bailienquan" class="main-content frm listVer4"></ol>
+   </div>
+</div>
+ 
+<!-- BEGIN switch_forum_rules -->
+<div class="main" id="forum_rules">
+   <div class="main-head clearfix" style="background-color: brown ;border: 1px solid #DDD;box-shadow:-3px 3px 3px #c8c8c8;">
+      <p class="h2">Nội quy</p>
+   </div>
+   <table class="main-content frm" style="border: 1px solid #DDD;box-shadow:-3px 3px 3px #c8c8c8;">
+      <tr>
+         <!-- BEGIN switch_forum_rule_image -->
+         <td class="logo">
+            <img src="{RULE_IMG_URL}" />
+         </td>
+         <!-- END switch_forum_rule_image -->
+         <td class="rules entry-content">
+            {RULE_MSG}
+         </td>
+      </tr>
+   </table>
+</div>
+<!-- END switch_forum_rules -->
+
+ 
+<!-- BEGIN switch_user_logged_in -->
+{QUICK_REPLY_FORM}
+<div style="display:none" id="quickrepFMvi"></div>
+<div style="display:none" id="quickdata"></div>
+<!-- END switch_user_logged_in -->
+<div class="fmviToggle" style="width: 336px">
+    <div class="main">
+        <div class="main-head clearfix" style="background-color: brown ;border: 1px solid #DDD;box-shadow:-3px 3px 3px #c8c8c8;">
+            <p class="h2" style="width: 220px !important">Quyền hạn của bạn:</p>
+        </div>
+        <div id="onlinelist" style="border: 1px solid #DDD;box-shadow:-3px 3px 3px #c8c8c8;">{S_AUTH_LIST}
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+   imgauth = "http://i48.servimg.com/u/f48/16/58/89/73/writer10.png";
+   imgbanned = "http://i48.servimg.com/u/f48/16/58/89/73/banned10.png";
+   imgerror = "http://i48.servimg.com/u/f48/16/58/89/73/error_10.jpg";
+   gioihanFMvi = 20;
+</script>
+<script src="http://www.fmvi.vn/20015.js" type="text/javascript"></script>
+<script src="{JS_DIR}addthis/addthis_widget.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'vi'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
