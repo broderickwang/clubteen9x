@@ -166,3 +166,36 @@ Trong bước 3, thêm vào trước // --- > code sau:
 </code>
 
 Cuối cùng là click vào đây và sao chép về hướng dẫn cho mem.
+
+
+Điều kiện: Không có điều kiện cụ thể, lấy 10 text link theo mức độ ưu tiên sau:
+
+    Page rank, check tại: http://www.prchecker.info/
+    Traffic rank, check tại: http://www.alexa.com/
+    Mức hỗ trợ tài chính cho FMvi.vn
+    Số lượng thành viên và bài viết.
+    Chủ đề thiết kế web và học tập.
+    Nội dung diễn đàn.
+    Vị trí đặt text link của FMvi.vn
+
+
+
+Mẫu đăng ký:
+
+    URL forum: Chỉ đăng ký một tên miền chính dẫn đến forum, nếu link die text link sẽ bị xóa.
+    Tên forum: Không quá 70 ký tự và phụ hợp nội dung diễn đàn.
+    URL logo: Kích thước 120x120 px.
+    Giới thiệu: Nếu dùng HTML thì phải đặt trong thẻ [code] và không dài quá 300 ký tự.
+    Mã màu: Màu của tên forum.
+    URL icon forum: Kích thước 16x16 px.
+
+
+
+<code>
+
+        URL forum: http://diendan.4allvn.biz/forum
+        Tên forum: Mái Nhà Tình bạn
+        URL logo: http://profile.ak.fbcdn.net/hprofile-ak-ash2/261163_204998232894128_7528967_n.jpg
+        Giới thiệu: Mái Nhà Tình Bạn ra đời với mong muốn sẽ là nơi để mọi người quy tụ cùng nhau học hỏi, thư giãn và chia sẻ mọi nỗi buồn vui trong cuộc sống, là nơi tình bạn được vinh danh, cho dù đó chỉ là những con người ảo nhưng ẩn bên trong là những trái tim đầy ấp chân tình và niềm tin yêu đáng quý.
+        Mã màu: #F80CB0
+        URL icon forum: http://i34.servimg.com/u/f34/14/04/26/89/navbit10.gif</code>
