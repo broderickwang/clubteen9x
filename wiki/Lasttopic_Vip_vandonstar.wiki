@@ -15,13 +15,14 @@ Hướng dẫn:
 <code>
 
         <div id="main">
-</code>
 
+</code>
 Thêm vào phía trên code sau:
 
 <code>
 
          
+        <div id="Load"></div>
         <div id="last-posts">
           <div id="option-lastpost">
             <div class="op-last" onclick="Op1Last('')">Toàn bộ</div>
@@ -62,7 +63,7 @@ Thêm vào phía trên code sau:
           <div id="name-lastpost"><span class="lp2">Tiêu đề</span><span class="lp3">Sáng lập</span><span class="lp4">Gửi cuối</span><span class="lp5">Chuyên mục</span><span class="lp6">Bình</span><span class="lp7">Xem</span></div>
           <div id="main-lastpost"></div>
           <div id="option2-lastpost">
-            <div class="op-last-bottom op-last-bottom2" onclick="Op2Last('/search?search_author=%2A&search_keywords')">Bài gửi sau cùng</div>
+            <div class="op-last-bottom op-last-bottom2" onclick="Op2Last('/search?search_author=%%%&search_keywords')">Bài gửi sau cùng</div>
             <div class="op-last-bottom" onclick="Op2Last('/search?search_id=newposts')">Bài từ lần truy cập trước</div>
             <div class="op-last-bottom" onclick="Op2Last('/search?search_id=egosearch')">Bài bạn đã tham gia thảo luận</div>
             <div class="op-last-bottom" onclick="Op2Last('/search?search_id=unanswered')">Bài chưa ai trả lời</div>
@@ -81,8 +82,8 @@ Trong overall_footer_begin tìm:
 <code>
 
         {S_JUMPBOX_SELECT}&nbsp;<input type="submit" value="{L_GO}" />
-</code>
 
+</code>
 Thay bằng:
 
 <code>
@@ -187,8 +188,8 @@ Tiếp theo thêm vào CSS:
         border-radius: 50px;
         margin-left: -25px;
         }
-
 </code>
+
 
 jQuery Script:
 
@@ -196,7 +197,7 @@ In all the pages
 
 <code>
 
-        Link = '/search?search_author=%2A&search_keywords';
+        Link = '/search?search_author=%%%&search_keywords';
         Start = '&start=';
         Where = '';
         Trang = 20;
@@ -321,9 +322,9 @@ In all the pages
         Link = op;
         LoadLastPost(0);
         }
-
-
 </code>
+
+
 In the home page
 
 <code>
@@ -332,8 +333,8 @@ In the home page
         $('#option-lastpost .op-last:first').addClass('op-last2');
         LoadLastPost(0);
         });
-</code>
 
+</code>
 
 In the topics
 
@@ -353,6 +354,5 @@ In the topics
         LoadLastPost(0);
          
         });
-
 
 </code>
