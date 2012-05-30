@@ -1,3 +1,4 @@
+
 Do nhìu người hỏi xin nên vds share cho các bạn dùng luôn.
 
 DEMO: http://www.vandonstar.com/
@@ -15,8 +16,8 @@ Hướng dẫn:
 <code>
 
         <div id="main">
-
 </code>
+
 Thêm vào phía trên code sau:
 
 <code>
@@ -75,8 +76,8 @@ Thêm vào phía trên code sau:
         </div>
         <div class="clear"></div>
 
-</code>
 
+</code>
 Trong overall_footer_begin tìm:
 
 <code>
@@ -89,8 +90,8 @@ Thay bằng:
 <code>
 
         <span id="jumpbox-last">{S_JUMPBOX_SELECT}</span>&nbsp;<input type="submit" value="{L_GO}" />
-</code>
 
+</code>
 
 Tiếp theo thêm vào CSS:
 
@@ -188,8 +189,8 @@ Tiếp theo thêm vào CSS:
         border-radius: 50px;
         margin-left: -25px;
         }
-</code>
 
+</code>
 
 jQuery Script:
 
@@ -322,12 +323,12 @@ In all the pages
         Link = op;
         LoadLastPost(0);
         }
-</code>
+
 
 
 In the home page
 
-<code>
+Code: Chọn nội dung
 
         $(function(){
         $('#option-lastpost .op-last:first').addClass('op-last2');
