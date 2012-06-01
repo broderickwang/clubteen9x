@@ -5,7 +5,7 @@
 Lần lượt thay thế temp
 mod_most_active_topics
 
-</code>
+<code>
 
          
         -->
@@ -37,7 +37,7 @@ mod_most_active_topics
 
 mod_most_viewed_topics
 
-</code>
+<code>
 
          
          
