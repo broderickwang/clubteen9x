@@ -1,14 +1,17 @@
-Chức năng:
+Chức năng:http://i47.servimg.com/u/f47/17/47/88/95/11110.jpg
 
     Thay avatar ngay lập tức tại mọi nơi trên diễn đàn.
     Thay bằng URL hình ảnh bằng cách click vào avatar góc trên diễn đàn FMvi.
-    Chọn một hình ảnh trong bài viết làm avatar (chưa thử nghiệm).
 
+    Chọn một hình ảnh trong bài viết làm avatar.
+
+
+
+Đăng nhập để thử ngiệm chức năng này!
 
 
 <code>
-    function avatarfmvi() {
-       var a = prompt("Nh\u1eadp URL h\u00ecnh \u1ea3nh v\u00e0o \u0111\u00e2y!\nCh\u1ea5p nh\u1eadn c\u00e1c \u0111\u1ecbnh d\u1ea1ng jpg, jpeg, gif, png, bmp", "");
+    function avatarfmvi(a) {
        change() && null != a && 0 == a.indexOf("http") && (-1 != a.indexOf(".jpg") || -1 != a.indexOf(".png") || -1 != a.indexOf(".gif") || -1 != a.indexOf(".jpeg") || -1 != name.indexOf(".bmp")) && $.post(avatar, {
           avatarurl: a,
           username: jQuery("#userID").text(),
@@ -16,9 +19,21 @@ Chức năng:
           submit: "Ok"
        }, function (a) {
           2 != $(a).find("#main-content p.message a").length ? alert("Kh\u00f4ng t\u1ea3i \u0111\u01b0\u1ee3c d\u1eef li\u1ec7u. Vui l\u00f2ng ch\u1ecdn h\u00ecnh \u1ea3nh kh\u00e1c") : $.post("/", function (a) {
-             $("img[src='" + $(".avatarUn img").attr("src") + "']").replaceWith($(a).find(".avatarUn a").html())
+             $(".blog_comment-avatar a[href='/u" + jQuery("#numID").text() + "'] img, .useravatar a[href='/u" + jQuery("#numID").text() + "'] img, .avatarUn img").replaceWith($(a).find(".avatarUn a").html())
           })
        })
-    }
+    };
+</code>
+
+</code>
+    $(".entry-content img").load(function () {
+       var a = $(this),
+          b = a.attr("src"),
+          c = a.parent("a").attr("href"),
+          d = a.parent("a").attr("class");
+       a.mouseover(function () {
+          120 <= a.height() && 100 <= a.width() && (c == b ? "linkava" != d && a.parent("a").replaceWith('<span class="fmvichange"><span onClick="avatarfmvi(\'' + b + '\')" class="changeatvar">Thay avatar</span><a class="linkava" href="' + b + '"><img alt="www.fmvi.vn" src="' + b + '" /></a></span>') : a.replaceWith('<span class="fmvichange"><span onClick="avatarfmvi(\'' + b + '\')" class="changeatvar">Thay avatar</span><a class="linkava" href="' + b + '"><img alt="www.fmvi.vn" src="' + b + '" /></a></span>'))
+       })
+    });
 
 </code>
