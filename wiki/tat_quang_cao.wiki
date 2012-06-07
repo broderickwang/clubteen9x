@@ -1,0 +1,10 @@
+<code>
+    #zzadcontent, #zzadfooter {
+    display: none;
+    }</code>
+
+
+chèn vào css. tắt hoàn toàn quảng cáo phía dưới. cướp biển*
+đặc trị cho punbb, các phiên bản khác không biết thế nào đâu vì không dùng
+demo: cho vào thì biêt cười nhăn răng
+http://www.xaydungthanhhoa.com/
