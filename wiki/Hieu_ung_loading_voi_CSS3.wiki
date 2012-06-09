@@ -1,16 +1,15 @@
-
 •Mô tả: Tut này được viết bằng CSS3 với các hiệu ứng di chuyển đơn giản
 •Demo:http://jdemo01.1talk.net
 •Yêu cầu: Trình duyệt hỗ trợ CSS3
 •Ghi chú: Không đem bán @@!
-•Cách cài đặt: ACP Muiten Display Muiten Template Muiten overal_header(dùng cho tất cả các trang) hoặc index_body(dùng cho trang chính) Muiten Dán code 1 vào trước thẻ </head>(dùng overal_header) hoặc sau {JAVASCRIPT}(dùng index_body) Muiten Dán Code 2 vào sau đoạn
+•Cách cài đặt: ACP http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png Display http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png Template http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png overal_header(dùng cho tất cả các trang) hoặc index_body(dùng cho trang chính) http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png Dán code 1 vào trước thẻ <code></head></code>(dùng overal_header) hoặc sau {JAVASCRIPT}(dùng index_body) http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png Dán Code 2 vào sau đoạn
 
 <code>
     <!-- END saut -->
                                         <!-- END giefmod_index1 -->
                                      </div>
 </code>
-(nếu dùng overal_header) hoặc dán Code 2 vào sau Code 1(nếu dùng index_body) Muiten Chấp nhận Muiten Nhấn nút để xem thử. Nếu ứng ý thì nhấn add , không ưng thì xóa đi.
+(nếu dùng overal_header) hoặc dán Code 2 vào sau Code 1(nếu dùng index_body) http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png Chấp nhận http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png Nhấn nút để xem thử. Nếu ứng ý thì nhấn add , không ưng thì xóa đi.
 •Code 1:
 
 <code>
