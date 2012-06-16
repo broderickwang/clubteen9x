@@ -428,4 +428,21 @@ margin-left: -25px;
 }
 
 
-</code>
+</code>Index_body:<code>{JAVASCRIPT}
+
+
+
+ 
+
+<div class="main-head">
+</div>
+ <div>
+<!-- BEGIN giefmod_index1 -->
+{giefmod_index1.MODVAR}  
+
+<!-- END giefmod_index1 -->
+  </div>
+
+
+
+<img src="http://www.9xstudio.biz/users/2012/10/88/45/album/sep21010.gif" /></code>
