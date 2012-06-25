@@ -1,0 +1,53 @@
+Demo:
+
+<code>
+    http://www.12b6pro.tk/t196-topic
+
+</code>
+
+Acc test:
+
+<code>
+
+    ID:Test1
+    pass:12b6pro.tk
+</code>
+
+
+1/Ẩn link
+Tạo 1 trang js ko cho hiện ở đâu cả
+
+<code>
+    $(document).ready(function(){$(".entry-content").find("a").each(function(){$(this).replaceWith('[Bạn cần phải <a href="/login">đăng nhập</a> hoặc <a href="/register">đăng ký</a> để thấy liên kết này]')});});
+
+</code>
+
+Vào viewtopic dán đoạn
+
+<code>
+    <!-- BEGIN switch_user_logged_out -->
+    <script src="link trang js vừa tạo" type="text/javascript"></script>
+    <!-- END switch_user_logged_out -->
+
+</code>
+
+2/Ẩn ảnh
+Tương tự các bước trên, thay code link js:
+
+<code>
+    $(document).ready(function(){$(".entry-content").find("img").not("img[src*='imgfast']").each(function(){$(this).replaceWith('[Bạn cần phải <a href="/login">đăng nhập</a> hoặc <a href="/register">đăng ký</a> để xem ảnh này]')});});
+
+</code>
+
+Sẽ k bị ẩn emoticon, ngoài ra đều ẩn cả.
+
+Phpbb2 thì tìm trong đoạn js, sửa
+
+Code: Chọn nội dung CODE
+    entry-content
+
+
+thành
+
+<code>
+    postbody</code>
