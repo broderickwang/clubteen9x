@@ -51,3 +51,4 @@ thành
 
 <code>
     postbody</code>
+Lưu ý: Ai đang dùng xem ảnh bằng fancybox, colorbox,... nói chung là các trình xem ảnh thì ko cần phải ẩn ảnh, vì ảnh đã dc replace thành link rồi, nên sẽ tự ẩn luôn.
