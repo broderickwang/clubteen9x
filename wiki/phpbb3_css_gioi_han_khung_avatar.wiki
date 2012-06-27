@@ -1,0 +1,19 @@
+Demo :
+
+Cách làm :
+
+
+Cho code sau vào Css
+
+<code>
+    .postprofile dt img {
+        max-width: 101px;
+        max-height: 220px;
+    }
+
+</code>
+
+Chỉnh thông số
+max-width: 101px;
+max-height: 220px;
+theo ý thích của bạn
