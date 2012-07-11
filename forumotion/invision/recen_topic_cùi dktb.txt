@@ -1,0 +1,135 @@
+﻿-->
+<!-- BEGIN classical_row -->
+        <div class="module main recentWidth" style="border-right: 1px solid #DDDDDD">
+           <div class="starsTitle" style="position: relative;">
+              <h3>
+                
+                <span title="" onmouseover="show_tooltip(this, ' <b>» Click Để Reload Bài Viết Mới </b> ');" onmouseout="hidetip();">
+                
+                <span id="FMviloadimg" style="cursor:pointer;" onmouseover="showtip('Click Để Reload Topic.')" onmouseout="hidetip()" id="FMviloadimg"><b><img src="http://i47.servimg.com/u/f47/17/07/15/37/th/4-110.gif" width="16px" height="16px"></b></span>
+               </span>Thống kê bài viết mới&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="taidulieu" style="display:none;">
+                <img src="http://i43.servimg.com/u/f43/16/03/04/56/13x13p10.gif"/></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thời gian&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Người gửi </h3> 
+           </div>
+              <div class="test" id="loadoday"><div id="recentnew1" class="main-content" style="border: 0pt none; margin-top: -3px;background-image: url(http://i46.servimg.com/u/f46/17/56/78/10/bg101010.png);">
+          
+
+             <ul class="latest_topics" style="padding-left: 20px ! important;">             
+                       <!-- BEGIN recent_topic_row --> <div class="a1tg3td">
+    <li>
+                    <span class="leftrecent">
+
+
+                   
+                     <a onmouseover="show_tooltip(this,this.getElementsByTagName('span')[0].innerHTML,'Info');" href="{classical_row.recent_topic_row.U_TITLE}">
+  
+ {classical_row.recent_topic_row.L_TITLE}<span style="display: none;"><b>Tiêu đề: </b><font color=#0072ff>{classical_row.recent_topic_row.L_TITLE}</font><br><br> <b>Thời gian: </b> <font color=#ff0000>{classical_row.recent_topic_row.S_POSTTIME}</font><br><br><b>Người gửi cuối: </b> <!-- BEGIN switch_poster -->{classical_row.recent_topic_row.switch_poster.S_POSTER}<!-- END switch_poster --></span></a>
+ </span>
+                    <span class="imgstatus">
+                                     <img width="10px" src="http://i48.servimg.com/u/f48/15/98/54/42/th_5710.gif" />    
+                    </span>
+                    <span class="rightrecent">
+                                      <span title="" onmouseover="show_tooltip(this, ' <b>Click Để Xem Thông Tin Thành Viên </b> ');" onmouseout="hidetip();"> <!-- BEGIN switch_poster -->
+                       <a href="{classical_row.recent_topic_row.switch_poster.U_POSTER}">{classical_row.recent_topic_row.switch_poster.S_POSTER}</a>
+                                        <!-- END switch_poster --></span>
+                       <!-- BEGIN switch_poster_guest -->
+                       {classical_row.recent_topic_row.switch_poster_guest.S_POSTER}
+                       <!-- END switch_poster_guest -->
+                    </span>
+                    <span class="showpost">
+                     <a href="javascript:vol(0)" class="firstTopic"> ►    </a> 
+                    </span> 
+                    <span class="lastcate">
+                       {classical_row.recent_topic_row.S_POSTTIME}
+                    </span> </li>
+ </div> 
+                             <!-- END recent_topic_row -->                    
+              </ul>
+           </div></div>
+        </div>
+        <!-- END classical_row -->
+<style>
+.leftrecent {width: 380px;white-space: nowrap;position: absolute;overflow: hidden;text-overflow: ellipsis;}
+  .rightrecent  {position: absolute;right: 0;width: 120px;white-space: nowrap;position: absolute;overflow: hidden;text-overflow: ellipsis;}
+  .lastcate{position: absolute; right: 120px;}
+
+          </style>
+
+<script>jQuery("#ca3chatbox").click(function(){jQuery("#ca3rules").toggle("slow");});function reloadlast() {jQuery(document).ready(function(){jQuery("#loadoday").empty();jQuery('<span class="abcd" />').load('/forum #loadoday', function() {jQuery(this).appendTo('#loadoday');});}</script><script>
+function reloadlast() {
+jQuery(document).ready(function(){
+jQuery("#loadoday").empty();
+jQuery('<span class="abcd" />').load('/forum #loadoday', function() {
+jQuery(this).appendTo('#loadoday');
+jQuery(".c3zonee:contains('»')").remove();});});}
+</script>
+
+
+
+<style>#FMviloadimg{color:red;}#FMviloadimg:hover{color:blue}</style>
+<script>
+  jQuery(".c3zonee:contains('»')").remove();
+  $("#FMviloadimg").click(function(){
+$(".taidulieu").show();
+    $("#loadoday").fadeOut();
+      $.ajax({
+        url:"/forum",
+        success:function(a){$("#loadoday").html($(a).find("#loadoday").html()).fadeIn(1000);$(function () {
+    $(".newltopic").each(function (a) {
+        $(this);
+        $(this).attr("id", "newlast" + a);
+        a = $(this).attr("id");
+        $(this).find(".ltitletopic").next().attr("alt", a);
+        $(this).find(".ltitletopic").attr("alt", a);
+        $(this).find(".lpostertopic").attr("alt", a);
+        $(this).find(".ltimetopic").attr("alt", a);
+        var b = $(this).find(".ltitletopic[alt='" + a + "']").text(),
+            tieude = $(this).find(".ltitletopic[alt='" + a + "']").text(),
+            d = $(this).find(".ltimetopic[alt='" + a + "']").text(),
+            thoigian = $(this).find(".ltimetopic[alt='" + a + "']").text(),
+            e = b.replace(/ /gi, "+"),
+            f = $(this).find(".ltitletopic[alt='" + a + "']").next();
+        f.load("/search?mode=searchbox&search_keywords=" + e + '&show_results=topics tr.layemno:contains("' + b + '"):contains("' + d + '")', function () {
+            var d = $(this).find("#tacgiamt a[href^='/u']").text(),
+                e = $(this).find(".row3:first").text(),
+                f = $(this).find(".row2:first").text(),
+                g = $(this).find(".row2:last").text(),
+                j = $(".lpostertopic[alt='" + a + "']").text();
+            $(this).html('<b><span class="tiplFMvi">Tiêu đề:</span> ' + tieude + '</b><hr><span class="tiplFMvi">Tạo chủ đề:</span> ' + d + '<br><span class="tiplFMvi">Gửi cuối:</span> ' + j + '<br><span class="tiplFMvi">Vào lúc:</span> ' + thoigian + '<hr><span class="tiplFMvi">Thuộc chuyên mục:</span> ' + e + '<br><span class="tiplFMvi">Lượt xem:</span> ' + g + '<br><span class="tiplFMvi">Trả lời:</span> ' + f + "<br>");
+        })
+    })
+});$(".taidulieu").hide();},
+        error:function(){$("#loadoday").html('<p><font face="Courier New"><font color="red">C\u00f3 l\u1ed7i x\u1ea3y ra trong qu\u00e1 tr\u00ecnh t\u1ea3i d\u1eef li\u1ec7u.</font></font></p>')}
+     })
+     
+  });
+
+</script>
+<script type="text/javascript">$(function () {
+    $(".newltopic").each(function (a) {
+        $(this);
+        $(this).attr("id", "newlast" + a);
+        a = $(this).attr("id");
+        $(this).find(".ltitletopic").next().attr("alt", a);
+        $(this).find(".ltitletopic").attr("alt", a);
+        $(this).find(".lpostertopic").attr("alt", a);
+        $(this).find(".ltimetopic").attr("alt", a);
+        var b = $(this).find(".ltitletopic[alt='" + a + "']").text(),
+            tieude = $(this).find(".ltitletopic[alt='" + a + "']").text(),
+            d = $(this).find(".ltimetopic[alt='" + a + "']").text(),
+            thoigian = $(this).find(".ltimetopic[alt='" + a + "']").text(),
+            e = b.replace(/ /gi, "+"),
+            f = $(this).find(".ltitletopic[alt='" + a + "']").next();
+        f.load("/search?mode=searchbox&search_keywords=" + e + '&show_results=topics tr.layemno:contains("' + b + '"):contains("' + d + '")', function () {
+            var d = $(this).find("#tacgiamt a[href^='/u']").text(),
+                e = $(this).find(".row3:first").text(),
+                f = $(this).find(".row2:first").text(),
+                g = $(this).find(".row2:last").text(),
+                j = $(".lpostertopic[alt='" + a + "']").text();
+  $(this).html('<b><span class="tiplFMvi">Tiêu đề:</span><font color="#FFFF00"> ' + tieude + '</font></b><hr><b><span class="tiplFMvi">Người tạo:</span></b><font color="#00eeff"> ' + d + '</font><br><b><span class="tiplFMvi">Gửi cuối:</span></b><font color="#FF00E1"> ' + j + '</font><br><b><span class="tiplFMvi">Vào lúc:</span></b><font color="#FF6600"> ' + thoigian + '</font><hr><b><span class="tiplFMvi">Thuộc chuyên mục:</span></b><font color="#0099FF"> ' + e + '</font><br><b><span class="tiplFMvi">Lượt xem:</span></b><font color="#FF66CC"> ' + g + '</font><br><b><span class="tiplFMvi">Trả lời:</span></b><font color="#009933"> ' + f + "</font>");
+        })
+    })
+});
+</script>
+<script type="text/javascript"> jQuery(function(){jQuery(".c3zonee:contains('»')").remove();});jQuery("#ca3last").animate({display:"block"});jQuery(document).ready(function(){jQuery("#ca3last").animate({height:"396px"});jQuery("#layid").change(function() {if(jQuery("#layid").val()=='v4'){ jQuery("#ca3last").animate({height:"796px"});}if(jQuery("#layid").val()=='v2'){ jQuery("#ca3last").animate({height:"599px"});}if(jQuery("#layid").val()=='v1'){ jQuery("#ca3last").animate({height:"998px"});}if(jQuery("#layid").val()=='v3'){ jQuery("#ca3last").animate({height:"396px"});}if(jQuery("#layid").val()=='v5'){ jQuery("#ca3last").animate({height:"1197px"});};}); });</script>
+
+<script type="text/javascript">$(function(){$("div.a1tg3td:contains('»')").remove();})</script>
