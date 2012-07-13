@@ -1,0 +1,32 @@
+﻿if (location['host'] != '9xstudio.clubme.net' && location['host'] != 'www.9xstudio.biz') {
+    window['location']['replace']('http://www.9xstudio.biz')
+};
+$(function () {
+    _atc.cwait = 0;
+    $('.addthis_button').mouseup(function () {
+        if ($('#at15s').css('display') == 'block') {
+            addthis_close();
+            addthis_close()
+        }
+    });
+    $(".votene").click(function () {
+        $("#" + $(this).attr("target")).html(chvote($(this).attr("alt"), $("." + $(this).attr("target")).attr("alt")));
+        $(this).parent().parent().html('');
+        $("#" + $(this).attr("target")).removeAttr("title")
+    })
+});
+
+function chvote(c, v) {
+    if (v == "Message not voted") v = "c3zone z vietk 0% (0 vote)";
+    var a = parseInt(v.split(" ")[3], 10) / 100;
+    var b = parseInt(v.split(" ")[4].substr(1), 10);
+    if (c == 'plus') a = (a * b + 1) / (b + 1);
+    else a = a * b / (b + 1);
+    v = "Message reputation : " + Math.round(a * 100) + "% (" + (b + 1) + " vote)";
+    return votetrans(v)
+}function votetrans(v) {
+    if (v == "Message not voted") return '<span class=qua>Hãy là người đầu tiên thích bài viết này</span>';
+    var a = parseInt(v.split(" ")[3], 10) / 100;
+    var b = parseInt(v.split(" ")[4].substr(1), 10);
+    return '<span class=no>' + ((a != 0) ? '<span class=vop>' + Math.round(a * b) + ' Thích</span>' : '') + ((a != 0 && a != 1) ? ' <span style="color:#C2D5E3">|</span> ' : '') + ((a != 1) ? '<span class=vom>' + Math.round(b - a * b) + ' Không thích</span>' : '') + '</span> <span class=qua>Đánh giá: ' + Math.round(a * 100) + '%</span>'
+}
