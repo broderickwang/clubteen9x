@@ -1,0 +1,11 @@
+﻿<script>
+$(function () {
+    $(".dulieu").load('/u' + $("#pun-desc a").attr("href").split('u=')[1] + ' #field_id-7 .field_uneditable img', function () {
+        if ($(".dulieu img").attr("alt") == 'Nam') {
+            $(".chanchua").attr("href", "/h4-shop-gunny-boy").fadeIn();
+        } else {
+            $(".chanchua").attr("href", "/h5-shop-gunny-nu").fadeIn();
+        }
+    });
+});
+</script>
