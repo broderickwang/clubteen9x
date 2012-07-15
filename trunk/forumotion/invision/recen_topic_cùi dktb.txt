@@ -1,4 +1,4 @@
-﻿-->
+-->
 <!-- BEGIN classical_row -->
         <div class="module main recentWidth" style="border-right: 1px solid #DDDDDD">
            <div class="starsTitle" style="position: relative;">
@@ -14,7 +14,7 @@
           
 
              <ul class="latest_topics" style="padding-left: 20px ! important;">             
-                       <!-- BEGIN recent_topic_row --> <div class="a1tg3td">
+                       <!-- BEGIN recent_topic_row --> <div class="a1tg3td" style="height: 15px;">
     <li>
                     <span class="leftrecent">
 
@@ -133,3 +133,4 @@ $(".taidulieu").show();
 <script type="text/javascript"> jQuery(function(){jQuery(".c3zonee:contains('»')").remove();});jQuery("#ca3last").animate({display:"block"});jQuery(document).ready(function(){jQuery("#ca3last").animate({height:"396px"});jQuery("#layid").change(function() {if(jQuery("#layid").val()=='v4'){ jQuery("#ca3last").animate({height:"796px"});}if(jQuery("#layid").val()=='v2'){ jQuery("#ca3last").animate({height:"599px"});}if(jQuery("#layid").val()=='v1'){ jQuery("#ca3last").animate({height:"998px"});}if(jQuery("#layid").val()=='v3'){ jQuery("#ca3last").animate({height:"396px"});}if(jQuery("#layid").val()=='v5'){ jQuery("#ca3last").animate({height:"1197px"});};}); });</script>
 
 <script type="text/javascript">$(function(){$("div.a1tg3td:contains('»')").remove();})</script>
+
