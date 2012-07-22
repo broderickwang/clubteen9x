@@ -1,0 +1,15 @@
+﻿if (location['host'] != 'www.teenlythuongkiet.net' && location['host'] != 'www.teenlythuongkiet.net') {
+    window['location']['replace']('http://www.teenlythuongkiet.net')
+};
+
+function shop(a, c) {
+    if (a.substr(a.indexOf('title="') + 7, 3) != 'Nam' && a.substr(a.indexOf('title="') + 7, 2) != 'Nữ') {
+        var b = a.split('|');
+        if (c.substr(c.indexOf('title="') + 7, 3) == 'Nam') {
+            var d = 'm'
+        } else {
+            var d = 'f'
+        }
+        document.write('<embed src="http://9xinh.ucoz.com/avatar.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" play="true" loop="true" scale="showall" wmode="transparent" name="gnAvatar" menu="true" allowfullscreen="false" allowscriptaccess="always" salign="" flashvars="_face=equip/' + d + '/face/face' + b[0] + '/&amp;_hair=equip/' + d + '/hair/hair' + b[3] + '/&amp;_cloth=equip/' + d + '/cloth/cloth' + b[2] + '/&amp;_eff=equip/' + d + '/eff/eff' + b[5] + '/&amp;_hat=equip/' + d + '/head/head' + b[4] + '/&amp;_glass=equip/' + d + '/glass/glass' + b[1] + '/&amp;_hide1=2&amp;_hide2=1&amp;_hide3=1&amp;_hidewings=&amp;_wing=wing' + b[6] + '&amp;_circle=&amp;_suit=equip/' + d + '/suits/suits102/" type="application/x-shockwave-flash" height="180px" width="160px" align="middle">')
+    }
+}
