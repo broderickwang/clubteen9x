@@ -1,0 +1,37 @@
+hehe . cái này vẫn làm thủ công hơi nhiều
+
+
+vào index_box tìm:
+
+<code>
+    <img title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}"/>
+</code>
+
+sửa lại thành:
+
+<code>
+     <img title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" value="{catrow.forumrow.FORUM_NAME}"  />
+
+</code>
+Tiếp tục tìm
+
+<code>
+     <!-- BEGIN catrow -->
+
+</code>
+chèn ngay bên dưới nó đoạn script này
+
+<code>
+
+    <script type="text/javascript">
+    $("[value='Tên box cần thay icon']").replaceWith('<img src="link ảnh thay thế">');
+
+    </script></code>
+
+
+
+với mỗi box dc thay ta cần sử dụng thêm 1 đoạn<code>
+$("[value='Tên box cần thay icon']").replaceWith('<img src="link ảnh thay thế">');</code>
+Lưu ý : kích thước icon thay thế phải bằng kích thước của icon mặc định
+DEMO:
+http://i24.servimg.com/u/f24/15/64/85/86/firesh10.png
