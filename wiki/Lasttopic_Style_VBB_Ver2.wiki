@@ -292,6 +292,16 @@ MODTOPOSSTER
                   <!--</td>
 
 </code>
+Vào Index_body thêm đoạn này lên đầu
+
+<code>
+    <div class="main-head">
+    <div class="page-title"><h2>Lastest topic</h2></div></div>
+     <div class="main-content">
+    <!-- BEGIN giefmod_index1 -->
+    {giefmod_index1.MODVAR}
+    <!-- END giefmod_index1 -->
+      </div></code>
 sắp xếp widget
 http://a.imageshack.us/img221/4597/nhchpmnhnh2012060120482.png
 
