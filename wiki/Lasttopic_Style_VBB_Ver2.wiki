@@ -1,7 +1,4 @@
-- Chú Ý : cấm dìm hàng dưới mọi hình thức
-- Demo : forum.maitruongmenyeu.org
-- Tác giả : notme
-- Cách làm :
+http://i43.servimg.com/u/f43/15/93/33/76/1210.jpg
 Lần lượt thay thế temp
 mod_most_active_topics
 
@@ -101,90 +98,87 @@ mod_most_viewed_topics
 </code>
 Rêcnt_topic
 
-<code>
-
-        -->
-         
-        <!-- BEGIN classical_row -->
-        <td class="alt1" rowspan="3" valign="top" id="changstats_latestposts">
-            <table cellpadding="0" cellspacing="0" border="0" width="100%" height="358">
-                <tbody class="hienlast" style="display:none">
-                    <tr>
-                        <td width="380px" class="smallfont" nowrap="nowrap" style="border-bottom: 1px dashed #C6D7E9;">
-                            <i>Chủ đề</i>
-                        </td>
-                      <td width="47px" class="smallfont" nowrap="nowrap" style="border-bottom: 1px dashed #C6D7E9;">
-                            <i>Trả lời</i>&nbsp;</td>
-                      <td width="44px" class="smallfont" nowrap="nowrap" style="border-bottom: 1px dashed #C6D7E9;">
-                            <i>Xem</i>&nbsp;</td>
-                        <td width="109px" class="smallfont" nowrap="nowrap" style="border-bottom: 1px dashed #C6D7E9;">
-                            <i>Người gửi</i>&nbsp;</td>
-                        <td width="175px" class="smallfont" nowrap="nowrap" style="border-bottom: 1px dashed #C6D7E9;">
-                            <i>Diễn đàn</i>
-                        </td>
-                    </tr>
-                  <script type="text/javascript">
-         function gioihanl(a){
-         if(a.length > 40){
-          return a.substring(0,40)+'...';}else{return a;}
-          };
-                    function shpost(a){
-                    window.open(a,'','width=200,height=100,top=200,left=400,menubar=no,titlebar=no,location=no');
-                    };
-        $(function () {
-            $('.dulieu').load('/search?search_keywords=&search_author=*** table.table .statused tr:lt(20)', function () {
-                var i;
-                for (i = 0; i < 20; i++) {
-                    $('.box:eq(' + i + ')').html($('.dulieu tr:eq(' + i + ') .tc2').html());
-        $('.reply:eq(' + i + ')').html($('.dulieu tr:eq(' + i + ') .tc3:eq(0)').html());
-        $('.view:eq(' + i + ')').html($('.dulieu tr:eq(' + i + ') .tc3:eq(1)').html());
-                }
-        $(".hienlast").show();
-            });
+<code>-->
+     
+    <!-- BEGIN classical_row -->
+    <td class="alt1" rowspan="3" valign="top" id="changstats_latestposts">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" height="358">
+            <tbody class="hienlast" style="display:none">
+                <tr>
+                    <td width="380px" class="smallfont" nowrap="nowrap" style="border-bottom: 1px dashed #C6D7E9;">
+                        <i>Chủ đề</i>
+                    </td>
+                  <td width="47px" class="smallfont" nowrap="nowrap" style="border-bottom: 1px dashed #C6D7E9;">
+                        <i>Trả lời</i> </td>
+                  <td width="44px" class="smallfont" nowrap="nowrap" style="border-bottom: 1px dashed #C6D7E9;">
+                        <i>Xem</i> </td>
+                    <td width="109px" class="smallfont" nowrap="nowrap" style="border-bottom: 1px dashed #C6D7E9;">
+                        <i>Người gửi</i> </td>
+                    <td width="175px" class="smallfont" nowrap="nowrap" style="border-bottom: 1px dashed #C6D7E9;">
+                        <i>Diễn đàn</i>
+                    </td>
+                </tr>
+              <script type="text/javascript">
+     function gioihanl(a){
+     if(a.length > 40){
+      return a.substring(0,40)+'...';}else{return a;}
+      };
+                function shpost(a){
+                window.open(a,'','width=200,height=100,top=200,left=400,menubar=no,titlebar=no,location=no');
+                };
+    $(function () {
+        $('.dulieu').load('/search?search_keywords=&search_author=*_* table.table .statused tr:lt(20)', function () {
+            var i;
+            for (i = 0; i < 20; i++) {
+                $('.box:eq(' + i + ')').html($('.dulieu tr:eq(' + i + ') .tc2').html());
+    $('.reply:eq(' + i + ')').html($('.dulieu tr:eq(' + i + ') .tc3:eq(0)').html());
+    $('.view:eq(' + i + ')').html($('.dulieu tr:eq(' + i + ') .tc3:eq(1)').html());
+            }
+    $(".hienlast").show();
         });
-        </script>   
-                              <!-- BEGIN recent_topic_row -->
-                    <tr style="height: 17px;">
-                        <td width="380px" nowrap="nowrap">
-                          <img src="http://forum.fullvn.net/fullvn/statusicon/post_new.gif"/>
-                            <span class="smallfont">
-                                <a href="javascript:shpost('{classical_row.recent_topic_row.U_TITLE}');" title="Click to view post">▼</a>
-                                <a title="{classical_row.recent_topic_row.L_TITLE}" href="{classical_row.recent_topic_row.U_TITLE}">
-        <script>document.write(gioihanl('{classical_row.recent_topic_row.L_TITLE}'));</script>
-        </a>
-                            </span>
-                           
-                        </td>
-        <td nowrap="nowrap" class="reply" width="47px">
-         
-                        </td>
-        <td nowrap="nowrap" class="view" width="44px">
-                           
-                        </td>
-                        <td nowrap="nowrap" width="109px">
-                            <span class="smallfont">
-                              <!-- BEGIN switch_poster -->
-              <a href="{classical_row.recent_topic_row.switch_poster.U_POSTER}">{classical_row.recent_topic_row.switch_poster.S_POSTER}</a>
-              <!-- END switch_poster -->
-         
-              <!-- BEGIN switch_poster_guest -->
-              {classical_row.recent_topic_row.switch_poster_guest.S_POSTER}
-              <!-- END switch_poster_guest -->
-                                                                                    &nbsp;</span>
-                        </td>
-                        <td nowrap="nowrap" class="box" width="175px">
-                         
-                        </td>
-                    </tr>
-                    <!-- END recent_topic_row -->
-                </tbody>
-            </table>
-          <div style="display:none" class="dulieu"></div>
-        </td>
-                                         
-        <!-- END classical_row -->
-        <!--</td>
-
+    });
+    </script>   
+                          <!-- BEGIN recent_topic_row -->
+                <tr style="height: 17px;">
+                    <td width="380px" nowrap="nowrap">
+                      <img src="http://forum.fullvn.net/fullvn/statusicon/post_new.gif"/>
+                        <span class="smallfont">
+                            <a href="javascript:shpost('{classical_row.recent_topic_row.U_TITLE}');" title="Click to view post">▼</a>
+                            <a title="{classical_row.recent_topic_row.L_TITLE}" href="{classical_row.recent_topic_row.U_TITLE}">
+    <script>document.write(gioihanl('{classical_row.recent_topic_row.L_TITLE}'));</script>
+    </a>
+                        </span>
+                       
+                    </td>
+    <td nowrap="nowrap" class="reply" width="47px">
+     
+                    </td>
+    <td nowrap="nowrap" class="view" width="44px">
+                       
+                    </td>
+                    <td nowrap="nowrap" width="109px">
+                        <span class="smallfont">
+                          <!-- BEGIN switch_poster -->
+          <a href="{classical_row.recent_topic_row.switch_poster.U_POSTER}">{classical_row.recent_topic_row.switch_poster.S_POSTER}</a>
+          <!-- END switch_poster -->
+     
+          <!-- BEGIN switch_poster_guest -->
+          {classical_row.recent_topic_row.switch_poster_guest.S_POSTER}
+          <!-- END switch_poster_guest -->
+                                                                                 </span>
+                    </td>
+                    <td nowrap="nowrap" class="box" width="175px">
+                     
+                    </td>
+                </tr>
+                <!-- END recent_topic_row -->
+            </tbody>
+        </table>
+      <div style="display:none" class="dulieu"></div>
+    </td>
+                                     
+    <!-- END classical_row -->
+    <!--</td>
 </code>
 mod_top_post_users_week
 
