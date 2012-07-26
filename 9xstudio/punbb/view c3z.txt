@@ -1,0 +1,330 @@
+﻿
+
+<script type="text/javascript" src="/55152.js"></script>
+<!-- BEGIN switch_user_logged_in -->
+<div id="pun-visit" class="clearfix">
+	<ul>
+		<!-- BEGIN switch_plus_menu -->
+		<li>
+			<script type="text/javascript">
+				//<![CDATA[
+				var url_favourite = '{switch_user_logged_in.U_FAVOURITE_JS_PLUS_MENU}';
+				var url_newposts = '{U_NEWPOSTS_JS_PLUS_MENU}';
+				var url_egosearch = '{U_EGOSEARCH_JS_PLUS_MENU}';
+				var url_unanswered = '{U_UNANSWERED_JS_PLUS_MENU}';
+				var url_watchsearch = '{U_WATCHSEARCH_JS_PLUS_MENU}';
+				var url_tellfriend = '{U_TELLFRIEND_JS_PLUS_MENU}';
+				insert_plus_menu_new('f{FORUM_ID}&amp;t={TOPIC_ID}', '{JS_SESSION_ID}', {
+					JS_AUTH_FAVOURITES
+				});
+				//]]>
+				
+			</script>
+		</li>
+		<!-- END switch_plus_menu -->
+		<li>
+			<a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a>
+		</li>
+		<li>
+			<a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a>
+		</li>
+		<!-- BEGIN watchtopic -->
+		<li>{S_WATCH_TOPIC}</li>
+		<!-- END watchtopic -->
+	</ul>
+	<p>{LOGGED_AS}. {LAST_VISIT_DATE}</p>
+</div>
+<!-- END switch_user_logged_in -->
+<!-- BEGIN switch_user_logged_out -->
+<div id="pun-visit">
+	<p>{L_NOT_CONNECTED} {L_LOGIN_REGISTER}</p>
+</div>
+<!-- END switch_user_logged_out -->
+<div class="pun-crumbs noprint">
+	<a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}&nbsp;&raquo;&nbsp;
+	<strong>
+		<a href="{TOPIC_URL}">{TOPIC_TITLE}</a>
+	</strong>
+</div>
+<p class="posting">
+	<span id="twitter_btn" style="margin-left: 6px; ">
+		<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	</span>
+	<span id="fb_likebtn" style="margin-left: 6px; ">
+		<iframe src="http://www.facebook.com/plugins/like.php?href={FORUM_URL}{TOPIC_URL}&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=21"
+		scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:auto; height:21px;"
+		allowTransparency="true"></iframe>
+	</span>
+	<span style="margin-left: 6px; ">
+		<g:plusone size="medium"></g:plusone>
+	</span>
+	<a class="btn btn-warning addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=kalenv"
+	data-original-title="Chia sẻ bài viết đến các mạng xã hội" style="float: right;">Chia sẻ</a>
+</p>
+<div class="main paged">
+	<div class="paged-head clearfix">
+		<!-- BEGIN topicpagination -->
+		<p class="paging">{PAGINATION}</p>
+		<!-- END topicpagination -->
+		<p class="posting">
+			<!-- BEGIN switch_user_authpost -->
+			<a href="{U_POST_NEW_TOPIC}" rel="nofollow" class="btn btn-large btn-danger i_post" data-original-title="Gửi một chủ đề khác"><i class="i-white i-plus-sign"></i> Gửi bài mới</a>
+			<!-- END switch_user_authpost -->&nbsp;&nbsp;
+			<!-- BEGIN switch_user_authreply -->
+			<a href="{U_POST_REPLY_TOPIC}" class="btn btn-large btn-success i_reply" data-original-title="Trả lời chủ đề này"><i class="i-white i-comment"></i> Trả lời</a>
+			<!-- END switch_user_authreply -->
+		</p>
+	</div>{POLL_DISPLAY}
+	<div class="main-head clearfix">
+		<p class="h2">
+			<a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a>&nbsp;
+			<a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a>&nbsp;
+			<a href="#bottom">{L_GOTO_DOWN}</a>&nbsp;&nbsp; {L_MESSAGE} [{PAGE_NUMBER}]</p>
+	</div>
+	  <div class="main-content-topic">
+		<!-- BEGIN postrow -->
+            <div class="main-content-topic">
+		<!-- BEGIN displayed -->
+            <span class="baigui" style="display:none">{postrow.displayed.COUNT_POSTS}</span>
+              <div id="p50" class="posthead clearfix" style="background: #FBFBFB;float: left; width: 780px; margin-bottom: -11px;margin-left: 21px;margin-top: 10px;" align="center"><p class="h2" align="center"><a href="http://www.onepiecefm.net{TOPIC_URL}">{postrow.displayed.POST_SUBJECT}</a></p></div>
+		<div class="post" {postrow.displayed.THANK_BGCOLOR}>
+			<a name="{postrow.displayed.U_POST_ID}"></a>
+
+<div class="user"><div class="blast1"></div>
+  <div class="blast">
+  <marquee behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="1" scrolldelay="20" direction="left" truespeed="truespeed" style="width: 640px;margin-left: -8px;">
+<!-- BEGIN profile_field -->
+        <span class="khung">
+          <span class="c3stats">
+            <span class="coin">
+              <p>{postrow.displayed.profile_field.LABEL}{postrow.displayed.profile_field.CONTENT}</p>
+            </span>
+          </span>
+        </span>
+<!-- END profile_field -->    
+ </marquee>
+        </div> 
+	<div class="user-ident">
+          <div class="user-avatar">{postrow.displayed.POSTER_AVATAR}</div>	
+		<div class="user-basic-info">
+			<p class="user-name">{postrow.displayed.POSTER_NAME} {postrow.displayed.ONLINE_IMG}</p>
+			<p class="user-rank">{postrow.displayed.RANK_IMAGE}</p>
+              <p class="user-contact" align="center">{postrow.displayed.PROFILE_IMG} {postrow.displayed.PM_IMG} {postrow.displayed.EMAIL_IMG}
+                
+                <!-- BEGIN contact_field --> {postrow.displayed.contact_field.CONTENT}<!-- END contact_field --></p>
+		</div>
+<script type="text/javascript">$(".coin").each(function(){$(this).html($(this).find("div:contains('Status:') div").html());});});</script>
+<script type="text/javascript">$(function(){$(".khung:contains('dulieuava')").css('display','none');$(".khung:contains('I'm')").css('display','none');$(".khung:contains('Yahoo')").css('display','none');$(".khung:contains('Posts')").css('display','none');$(".khung:contains('Points')").css('display','none');$(".khung:contains('Thanked')").css('display','none');$(".khung:contains('Giới tính')").css('display','none');$(".xoa1:contains('Status')").css('display','none');$(".xoa1:contains('dulieuava')").css('display','none');})</script>
+<script type="text/javascript">
+document.getElementById('c3stats').innerHTML=document.getElementById('c3stats').innerHTML.replace(/Status/,'=>').replace(/Status/,'=>').replace(/Status/,'=>').replace(/Users with a birthday within the next (.+) days/,'Thành viên có sinh nhật trong $1 ngày kế tiếp').replace(/No users are having a birthday in the upcoming (.+) days/,'Không có thành viên nào có sinh nhật trong $1 ngày kế tiếp');
+</script>
+<div class="user-pet"><img alt="pet" onclick="javascript:alert('Đang phát triển')" src="http://i47.servimg.com/u/f47/17/57/92/32/c1410.gif" /></div>
+
+          <!-- BEGIN profile_field --><span class="xoa1"><div class="user-info" style="float: right;display: block;margin-left: 30px;">
+    <p>{postrow.displayed.profile_field.LABEL} {postrow.displayed.profile_field.CONTENT}</p></div></span>
+          <!-- END profile_field -->
+
+        </div>
+                  </div>
+
+					<div style="clear:both;"></div>
+				
+				<div class="postbody" {postrow.displayed.THANK_BGCOLOR}>
+                                  
+                                  <p style="margin-left:-10px" align="center"> 
+                                    <img src="/users/1113/13/44/26/avatars/gallery/thanhn10.png">  </p> 
+                                  
+                                <div class="hihi"><span class="smallfont" style="font-style: italic;">
+                                  <img src="{postrow.displayed.MINI_POST_IMG}" alt="{postrow.displayed.L_MINI_POST_ALT}" title="{postrow.displayed.L_MINI_POST_ALT}" border="0" style="margin-top: -5px;"/>{L_POST_SUBJECT}: {postrow.displayed.POST_SUBJECT} <img src="{postrow.displayed.MINI_TIME_IMG}" alt="" border="0" />{postrow.displayed.POST_DATE}<strong style="float: right; background: #2ebcff;padding: 2px;color: #fff;min-width:15px;height: 15px;font-size: 12px;text-align: center;-webkit-border-radius: 99px;  -moz-border-radius: 99px;  border-radius: 99px;position: relative;top: -2px;">{postrow.displayed.COUNT_POSTS}</strong></span></div>
+                                   <hr>      
+                                
+                                     <br>
+					<div class="post-entry">
+                                          	
+                                          <div class="entry-content">                                                  
+							<div>
+                                                          {postrow.displayed.MESSAGE}
+								<!-- BEGIN switch_attachments -->
+								<dl class="attachbox">
+									<dt>{postrow.displayed.switch_attachments.L_ATTACHMENTS}</dt>
+									<dd>
+										<!-- BEGIN switch_post_attachments -->
+										<dl class="file">
+											<dt>
+												<img src="{postrow.displayed.switch_attachments.switch_post_attachments.U_IMG}" />
+												<!-- BEGIN switch_dl_att -->
+												<a class="postlink" href="{postrow.displayed.switch_attachments.switch_post_attachments.switch_dl_att.U_ATTACHMENT}">{postrow.displayed.switch_attachments.switch_post_attachments.switch_dl_att.ATTACHMENT}</a>{postrow.displayed.switch_attachments.switch_post_attachments.switch_dl_att.ATTACHMENT_DEL}
+												<!-- END switch_dl_att -->
+												<!-- BEGIN switch_no_dl_att -->{postrow.displayed.switch_attachments.switch_post_attachments.switch_no_dl_att.ATTACHMENT}
+												{postrow.displayed.switch_attachments.switch_post_attachments.switch_no_dl_att.ATTACHMENT_DEL}
+												<!-- END switch_no_dl_att -->
+											</dt>
+											<!-- BEGIN switch_no_comment -->
+											<dd>
+												<em>{postrow.displayed.switch_attachments.switch_post_attachments.switch_no_comment.ATTACHMENT_COMMENT}</em>
+											</dd>
+											<!-- END switch_no_comment -->
+											<!-- BEGIN switch_no_dl_att -->
+											<dd>
+												<em>
+													<strong>{postrow.displayed.switch_attachments.switch_post_attachments.switch_no_dl_att.TEXT_NO_DL}</strong>
+												</em>
+											</dd>
+											<!-- END switch_no_dl_att -->
+											<dd>({postrow.displayed.switch_attachments.switch_post_attachments.FILE_SIZE})
+												{postrow.displayed.switch_attachments.switch_post_attachments.NB_DL}</dd>
+										</dl>
+										<!-- END switch_post_attachments -->
+									</dd>
+								</dl>
+								<!-- END switch_attachments -->
+								<div class="clear"></div>
+							</div>
+							<p>{postrow.displayed.EDITED_MESSAGE}</p>
+						</div>
+					</div>
+                                     </div>
+                                  <img src="/users/2211/12/43/96/album/box-sh10.gif" style="margin-left: 10px">
+                                  <p style="padding-bottom: 10px"></p> 
+                                    <script type="text/javascript">
+$(function () {
+   $('#cungchuyenmuc').load('/f{FORUM_ID}-forum .tdtopics:not(".tdtopics:contains(\"Thông báo\"), .tdtopics:contains(\"Chú ý\"), .tdtopics:contains(\"{TOPIC_TITLE}\"), .tdtopics:contains(\"Thông báo chung\")") .topic-title a.topictitle:lt(10)', function () {
+      $('#cungchuyenmuc a.topictitle').wrap("<p></p>");
+   });
+});
+</script>
+                                  <div class="bai{postrow.displayed.COUNT_POSTS}"></div>
+                          <div style="float: right;"><font size="1"><i>{postrow.displayed.EDITED_MESSAGE}</i></font></div>                                      
+                          <br /><img src="http://i44.servimg.com/u/f44/16/54/92/12/untitl11.png" style="margin-right: 30px;" align="right">
+                                <!-- BEGIN switch_signature -->
+                                          <div class="sig-content"><center>{postrow.displayed.SIGNATURE_NEW}</center></div>
+				<!-- END switch_signature -->
+                               
+                                  
+                                  <div class="postfoot">
+                                  <div style="float: left;margin-top: 1px;">
+						 <!-- BEGIN switch_vote_active -->
+       <div class="vote vote-button" title="Thích bài viết này"> 
+          <!-- BEGIN switch_vote -->
+       <a target="v{postrow.displayed.U_POST_ID}" href="{postrow.displayed.switch_vote_active.switch_vote.U_VOTE_PLUS}" alt="c3zplus" class="c3zplus lvote"><span style="font: normal 11px Tahoma, Arial, Helvetica, sans-serif;margin-left: -2px; color: #3B5998;">Thích</span></a>
+          <!-- END switch_vote -->
+       </div>
+       <div class="vote vote-button" title="Không thích bài viết này">
+          <!-- BEGIN switch_vote -->
+        <a target="v{postrow.displayed.U_POST_ID}" href="{postrow.displayed.switch_vote_active.switch_vote.U_VOTE_MINUS}" alt="c3zminus" class="c3zminus lvote"><span style="font: normal 11px Tahoma, Arial, Helvetica, sans-serif;margin-left: -2px; color: #3B5998;">Không thích</span></a>
+         <!-- END switch_vote --></div><div id="v{postrow.displayed.U_POST_ID}" class="loadding" style="display: none"><img src="http://i43.servimg.com/u/f43/16/03/04/56/icon_l12.gif"> Đang Vote (^_^)^^! </div>
+                                                <!-- END switch_vote_active -->
+
+					</div>
+					<div class="post-options" style="float: right;margin-top: -2.9px;">
+                                  <span class="options-button">{postrow.displayed.MULTIQUOTE_IMG} {postrow.displayed.QUOTE_IMG}<a href="#quickreply" onclick="quick($(this))" class="small_textbutton">Trả lời nhanh</a>
+						{postrow.displayed.EDIT_IMG} {postrow.displayed.DELETE_IMG} 
+                                                  {postrow.displayed.REPORT_IMG}</span></div>
+					<div style="clear:both;"></div></div></div>
+                <div class="main-footp clearfix" style="background: #FBFBFB;float: left; width: 780px; margin-bottom: 10px;margin-left: 21px;margin-top: -11px;" align="center">
+                <div style="float:left; margin-top:-1px;"> 
+              <!-- BEGIN switch_vote_active -->        
+   <iframe name="v{postrow.displayed.U_POST_ID}" class="ajaxvote" style="display:none"></iframe>   
+<!-- BEGIN switch_no_bar -->
+   <span class="c3zvau v{postrow.displayed.U_POST_ID}" title="{postrow.displayed.switch_vote_active.L_VOTE_TITLE}">{postrow.displayed.switch_vote_active.L_VOTE_TITLE}</span>
+ <!-- END switch_no_bar -->
+<!-- BEGIN switch_bar -->
+   <span class="c3zvau v{postrow.displayed.U_POST_ID}" title="{postrow.displayed.switch_vote_active.L_VOTE_TITLE}">{postrow.displayed.switch_vote_active.L_VOTE_TITLE}</span>
+ <!-- END switch_bar -->
+   <!-- END switch_vote_active --></div>
+<div style="float:right;margin-top:-1px;font-weight:bold;text-align:right"><span class="ost"><strong>#1</strong> - <a href="#" onclick="link_bbcode();return false">BBCode</a></span> <a target="blank" class="share" href="http://www.addthis.com/bookmark.php?v=250&amp;pub=camxuc9x">Chia sẻ</a><div align="center" style="width:600px;display:none; padding-top:6px" ></div></div>  </font></div></span></div>
+               <div style="display:none"><div class="main-footp clearfix" style="background: #FBFBFB;float: left; width: 780px; margin-bottom: 10px;margin-left: 21px;margin-top: -11px;" align="center">
+                <div style="float:left; margin-top:-1px;">
+<div style="overflow: auto; max-height: 160px;"><div align="center">{postrow.displayed.POSTER_RPG}</div></div>
+                 </div></div></div>
+                <!-- END displayed -->
+		<!-- END postrow -->
+                                  </div><div class="main-foot clearfix" style="float: left; width: 813px;margin-top: 9px; margin-bottom: 13px;background-color: white;border-bottom: 1px solid #E8E8E8;-webkit-border-radius: 5px 5px 5px 5px;-moz-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;">
+		<p class="h2">
+			<a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a>&nbsp;
+			<a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a>&nbsp;
+			<a href="#top">{L_BACK_TO_TOP}</a>&nbsp;&nbsp; {L_MESSAGE} [{PAGE_NUMBER}]</p>
+		<p class="options options-button">
+			<input type="hidden" name="t" value="{TOPIC_ID}" />
+			<!-- <input type="hidden" name="sid" value="{S_SID}" />-->
+			<input type="hidden" name="{SECURE_ID_NAME}" value="{SECURE_ID_VALUE}" />
+			<!-- BEGIN viewtopic_bottom -->{S_TOPIC_ADMIN}
+			<!-- END viewtopic_bottom -->
+		</p>
+	</div>
+	<a name="bottomtitle"></a>
+	<div class="paged-foot clearfix">
+		<!-- BEGIN topicpagination -->
+		<p class="paging">{PAGINATION}</p>
+		<!-- END topicpagination -->
+		<p class="posting">
+			<!-- BEGIN switch_user_authpost -->
+			<a href="{U_POST_NEW_TOPIC}" rel="nofollow" class="btn btn-large btn-danger i_post" data-original-title="Gửi một chủ đề khác"><i class="i-white i-plus-sign"></i> Gửi bài mới</a>
+			<!-- END switch_user_authpost -->&nbsp;&nbsp;
+			<!-- BEGIN switch_user_authreply -->
+			<a href="{U_POST_REPLY_TOPIC}" class="btn btn-large btn-success i_reply" data-original-title="Trả lời chủ đề này"><i class="i-white i-comment"></i> Trả lời</a>
+			<!-- END switch_user_authreply -->
+		</p>
+	</div>
+</div>
+<div class="pun-crumbs">
+	<p class="crumbs">
+		<a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}&nbsp;&raquo;&nbsp;
+		<strong>
+			<a href="{TOPIC_URL}">{TOPIC_TITLE}</a>
+		</strong>
+	</p>
+</div>
+<!-- BEGIN switch_forum_rules -->
+<div class="main" id="forum_rules">
+	<div class="main-head clearfix" style="background-color: white;margin-bottom: 4px;border-bottom: 1px solid #E8E8E8;-webkit-border-radius: 5px 5px 5px 5px;-moz-border-radius: 5px 5px 5px 5px;border-radius: 5px 5px 5px 5px;">
+		<p class="h2">{L_FORUM_RULES}</p>
+	</div>
+	<table class="main-content frm">
+		<tr>
+			<!-- BEGIN switch_forum_rule_image -->
+			<td class="logo">
+				<img src="{RULE_IMG_URL}" />
+			</td>
+			<!-- END switch_forum_rule_image -->
+			<td class="rules entry-content">{RULE_MSG}</td>
+		</tr>
+	</table>
+</div>
+<!-- END switch_forum_rules -->
+<!-- BEGIN switch_user_logged_in -->
+<a name="quickreply"></a>
+<div class="quotenhanh" style="display:none"></div>
+{QUICK_REPLY_FORM}
+<!-- END switch_user_logged_in --> 
+<div id="copyright">
+  <div class="module main">
+  <div class="main-head" style="background-color: #000000">
+    <h2><font color="#FFFFFF">Gửi bình luận lên Facebook</font></h2>
+  </div>
+  <div class="fb-comments" data-href="{FORUM_URL}{TOPIC_URL}" data-num-posts="10" data-width="810"></div>
+  </div>
+                  </div>
+                  
+<div id="pun-info" class="main">
+	<div class="main-content">
+		<div id="stats">
+			<p>{L_TABS_PERMISSIONS}
+				<br />{S_AUTH_LIST}</p>
+		</div>
+	</div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=271827022848335";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript" src="/14142.js"></script>
+<script type="text/javascript" src="/41718.js"></script><script type="text/javascript">$(function(){$(".post-entry img").lazyload({effect: "fadeIn",placeholder: "http://illiweb.com/fa/empty.gif",overflow: scroll});});</script>
+
