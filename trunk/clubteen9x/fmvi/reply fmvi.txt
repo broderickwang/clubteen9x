@@ -1,0 +1,330 @@
+﻿function bvvl() {
+    if ($(".skinfmvi2").length == 2 && $(".skinfmvi2").text() == "© FMvi.vn© FMvi.vn" && $(".skinfmvi2").attr("href").split("vi")[1] == ".vn") {
+        return true
+    } else {
+        return false
+    }
+}
+if (bvvl()) {
+    var fmviTopictitle = $(".tieudeT:first").text().replace(/[^a-z A-Z]/
+    gi, "").replace(/ /
+    gi, '+')
+}
+var bailienquan = '.tdtopics:not(".tdtopics:contains(\"' + fmviTopictitle + '\"), .tdtopics:contains(\"Announcement\"), .tdtopics:contains(\"Sticky\"), .tdtopics:contains(\"Global announcement\"), .tdtopics:contains(\"»\")") .topic-title:lt(10)';
+$.ajax({
+    url: '/search?mode=searchbox&search_keywords=' + fmviTopictitle + '&show_results=topics',
+    success: function (a) {
+        if ($(a).find(bailienquan).length == 0) {
+            $('#bailienquan').prev().remove();
+            $('#bailienquan').remove()
+        } else {
+            $(a).find(bailienquan).find(".topictitle, .tooltipFMvi").appendTo('#bailienquan');
+            $('#bailienquan .topictitle').wrap("<li></li>");
+            var b;
+            for (b = 0; b < 10; b++) {
+                var c = $('#bailienquan a.topictitle:eq(' + b + ')');
+                c.replaceWith('<a onmouseover="show_tooltip(this, $(this).parent().next().html(), \'fmvi.vn\')" href="' + c.attr("href").slice(0, c.attr("href").indexOf("?")) + '" class="topictitle">' + c.text() + '</a>')
+            }
+        }
+    },
+    error: function (a, b, c) {
+        $('#bailienquan').html('<p><font face="Courier New"><font color="red">Có lỗi xảy ra trong quá trình tải dữ liệu.</font></font></p>')
+    }
+});
+
+function daydu() {
+    $("#quick_reply").removeAttr("target");
+    $(".editorfmvi").remove()
+}function editorfmvi() {
+    return "none" == $("#quick_reply #text_editor_textarea").css("display") ? !1 : !0
+}function gioihanchar() {
+    return editorfmvi() ? $("#text_editor_textarea").val().length : $("#text_editor_iframe").contents().find("body").text().length
+}function resizeedit() {
+    var a = '<div style="clear:right;cursor:s-resize;float:right;margin-right:-32px;margin-top:-32px;position:relative;width:32px;z-index:999" class="resizeElement"><b><img onmousedown="javascript:resizeElement(event, \'' + (editorfmvi() ? "text_editor_textarea" : "text_editor_iframe") + '\')" src="http://i46.servimg.com/u/f46/15/26/55/24/78885210.png"></b></div>';
+    $("#textarea_content dd").children().css({
+        overflow: "none",
+        height: "150px"
+    });
+    $("#textarea_content dd").append(a)
+}
+$(function () {
+    setTimeout("resizeedit()", 1000);
+    $("#text_editor_cmd_switchmode").click(function () {
+        $(".resizeElement").remove();
+        setTimeout("resizeedit()", 1000)
+    })
+});
+$("#textarea_content dd").css("margin", 0);
+$("#quick_reply").attr("target", "qrpostfmvi");
+$("#quick_reply .frm-buttons").prepend('<img style="display:none" id="loadrep" src="http://i43.servimg.com/u/f43/16/03/04/56/black-10.gif" /><input type="button" onClick="daydu()" value="Not quickly" class="editorfmvi" />&nbsp;');
+$("#quick_reply").live("submit", function () {
+    if (gioihanFMvi <= gioihanchar()) {
+        $("#quickrepFMvi").html('<iframe id="ifafmvi" name="qrpostfmvi"></iframe>');
+        hsload();
+        $("#ifafmvi").load(function () {
+            hsload();
+            if ($("#ifafmvi").contents().find("p.p-hidden").length > 0) {
+                $("#quick_reply input[name='lt']").replaceWith($("#ifafmvi").contents().find(".frm-form input[name='lt']"));
+                $("#quick_reply input[name='post']").click()
+            } else {
+                if ($("#ifafmvi").contents().find(".frm-form").length == 0) {
+                    tainoidung()
+                } else {
+                    if ($("#ifafmvi").contents().find(".frm-form>.topic>.post").length != 0) {
+                        var a = $("#ifafmvi").contents().find(".main-content.topic:first");
+                        if ($("#pun-qpost .main-content.topic").length == 0) {
+                            $("#pun-qpost").prepend(a).prepend($("#ifafmvi").contents().find(".frm-form .main-head.clearfix:first"))
+                        } else {
+                            $("#pun-qpost .main-content.topic").replaceWith(a)
+                        }
+                    } else {
+                        if ($("#ifafmvi").contents().find(".main-content .center:first").text().indexOf("A browser error occured") != -1) {
+                            $("#quick_reply input[name='auth[]']").remove();
+                            $("#ifafmvi").contents().find(".frm-buttons input[name='auth[]']").appendTo("#quick_reply");
+                            $("#quick_reply input[name='post']").click()
+                        } else if ($("#ifafmvi").contents().find(".main-content .center:first").html().indexOf("<br>") != -1) {
+                            daydu();
+                            $("#quick_reply input[name='post']").click()
+                        } else {
+                            alert($("#ifafmvi").contents().find(".main-content .center:first").text().replace("<br>", ". "))
+                        }
+                    }
+                }
+            }
+        })
+    } else {
+        alert("Bài viết phải chứa tối thiểu " + gioihanFMvi + " ký tự mới được đăng. Bạn cần nhập thêm ít nhất " + (gioihanFMvi - eval(gioihanchar())) + " ký tự nữa.");
+        return false
+    }
+});
+quotefmvi();
+
+function titlefmvi(a) {
+    $("#pun-qpost .main-head .h2").html(a)
+}function fixedit() {
+    if ("block" == $("#pun-qpost").css("display") && "none" == $("#text_edit").css("display")) {
+        $("#text_editor_cmd_switchmode").click()
+    }
+}function repfmvi(a) {
+    fixedit();
+    titlefmvi("Quick reply");
+    a.parents(".post").after($("#pun-qpost"));
+    $("#quickdata input").appendTo("#quick_reply .frm-buttons");
+    $("#quick_reply input[name='mode']").val("reply");
+    $("#quick_reply input[name='p']").remove()
+}function tainoidung() {
+    titlefmvi("Bài của bạn đã được gửi thành công");
+    $("#alertQuick").fadeIn(1000);
+    setTimeout(function () {
+        $("#alertQuick").remove()
+    }, 3000);
+    $("#pun-qpost").insertBefore($("#quickrepFMvi"));
+    var a = $("#ifafmvi").contents().find("p.message a:first").attr("href");
+    $(".main.paged").load(a + " .main.paged", function () {
+        quotefmvi()
+    });
+    $("#quickrepFMvi").empty();
+    delpre()
+}function delpre() {
+    titlefmvi("Quick reply");
+    $("#pun-qpost .main-content.topic").prev().remove();
+    $("#pun-qpost .main-content.topic").remove();
+    $("#text_editor_textarea").val("");
+    $("#text_editor_iframe").contents().find("body").empty()
+}function comment_like(a) {
+    if (bvvl()) {
+        if ($("#FMvi_like" + a).attr("class") != "likeNone") {
+            var b = $("#like" + a + " em a").attr("href").match(/[0-9]+/);
+            $("#nub" + a + ",#like" + a + ",#like" + a + " .closeFMvi_like,#like" + a + " .loaddingLike").show();
+            $("#data-link-comment" + a).load("/privmsg?mode=post_profile&u=" + b + " #main .frm-form", function () {
+                $("#like" + a + " .loaddingLike").remove();
+                $("#like" + a + " input,#like" + a + " em").show();
+                $("#data-link-comment" + a + " .frm-form").attr("target", "vote" + a)
+            });
+            $("#FMvi_like" + a).removeClass().addClass("likeNone");
+            var c = $("#like" + a + " p").text().match(/[0-9]+/);
+            if (c == null) {
+                $("#like" + a + " p").text("Bạn là người đầu tiên thích bài viết này")
+            } else {
+                $("#like" + a + " p").text("Bạn và " + c + " người khác đã thích bài viết này")
+            }
+        }
+    }
+}function report_like(a) {
+    if (bvvl()) {
+        if ($("#FMvi_like" + a).attr("class") != "likeNone") {
+            var b = eval($("#FMvi_like" + a).parent().next().find("font").text()) + 1;
+            $("#FMvi_like" + a).parent().next().find("font").text(b)
+        }
+        $("#FMvi_like" + a).removeClass().addClass("likeNone");
+        var c = confirm("Bạn có muốn gửi một báo cáo đến người quản lý");
+        if (c == true) {
+            window.location.replace("http://" + location.host + "/report?mode=report&p=" + a)
+        }
+    }
+}function close_like(a) {
+    var b = $("#i_icon_mini_logout").attr("title");
+    var c = b.slice(b.indexOf("[") + 2, b.indexOf("]") - 1);
+    var d = "[url=http://" + location.host + location.pathname + "?showpost=" + a + "]" + $(".tieudeT:first").text() + "[/url]";
+    var e = c + " thích bài viết của bạn tại " + d;
+    var f = $("#like" + a + " input").val();
+    if (f == "") {
+        var g = ""
+    } else {
+        var g = '[quote="' + c + '"]' + f + '[/quote]'
+    }
+    if ($("#data-link-comment" + a + " #text_editor_textarea").css("display") != "none") {
+        $("#data-link-comment" + a + " #text_editor_textarea").val(e + g)
+    } else {
+        $("#data-link-comment" + a + " #text_editor_iframe").contents().find("body").text(e + g)
+    }
+    $("#data-link-comment" + a + " input[name='subject']").val("[Tin nhắn tự động]");
+    $("#data-link-comment" + a + " input[name='post']").click();
+    $("#nub" + a + ",#like" + a + ",#like" + a + " .closeFMvi_like,#like" + a + " input,#like" + a + " em").hide()
+}function send_comment(a, b) {
+    if (a.keyCode == 13) {
+        close_like(b)
+    }
+}function show_like(a) {
+    $("#nub" + a + ", #like" + a).show()
+}function hide_like(a) {
+    if ($("#like" + a + " .closeFMvi_like").css("display") == "none") {
+        $("#nub" + a + ", #like" + a).hide()
+    }
+}function tieudeban() {
+    $("#quick_reply input[name='subject']").val($("#tieudeedit").val())
+}function reportVot(r) {
+    r.parent().next().show().css("background-color", "#000");
+    r.parent().remove()
+}function show_user(z) {
+    if (bvvl()) {
+        var a = $("#userinfo" + z);
+        var b = a.find(".user-info dt:contains('Status')").next().text();
+        var c = a.find(".user-info div:first a:first").text();
+        var d = a.find(".user-info div:first a").attr("href");
+        var e = a.parent().parent().prev().find("strong").text();
+        a.find(".Upro5").attr("href", d + "wall");
+        a.find(".Utopic").attr("href", "http://" + location.host + "/spa/" + c);
+        a.find(".Ufrien").attr("href", "/profile?friend=" + c + "&mode=editprofile&page_profil=friendsfoes");
+        if (b.length > 0) {
+            a.find(".user-info .status").text(b)
+        } else {
+            a.find(".user-info .status").replaceWith('<span style="color:red"> [' + c + ' chưa đăng phương châm sống]</span>')
+        };
+        if (a.find(".user-info .fmviOnoff img").length == 0) {
+            a.find(".user-info .fmviOnoff").html('<img title="Offline" alt="Offline" src="http://i48.servimg.com/u/f48/16/58/89/73/icon_u11.gif" />')
+        };
+        a.find(".userInfoF").show()
+    }
+}function hide_user(a) {
+    $("#userinfo" + a).find(".userInfoF").hide()
+}function hsload() {
+    $("#quick_reply .frm-buttons input, #loadrep").toggle()
+}function quotefmvi() {
+    $(".user-basic-info a:not(':first')").each(function () {
+        if ($(this).attr("href") == $(".user-basic-info:first a").attr("href")) {
+            $(this).parents(".user-basic-info").find(".rankimg").html('<img title="Author" alt="Author" src="' + imgauth + '" />')
+        }
+    });
+    if (bvvl()) {
+        $(".options-button a[href$='mode=quote']").each(function () {
+            var a = $(this).attr("href"),
+                b = $(this).html();
+            $(this).replaceWith('<a href="javascript:vol(0)" rev="' + a + '" class="quote">' + b + "</a>")
+        });
+        $(".options-button a[href$='mode=editpost']").each(function () {
+            var c = $(this).attr("href"),
+                d = $(this).html();
+            $(this).replaceWith('<a href="javascript:vol(0)" rev="' + c + '" class="editpost">' + d + "</a>")
+        });
+        $(".options-button .quote, .options-button .editpost").click(function () {
+            fixedit();
+            var a = $(this).attr("rev"),
+                b = a.match(/[0-9]+/),
+                c = $(this).parents(".post").find(".tieudeT").attr("href").replace("#", "?showpost=");
+            titlefmvi("[Loading...]");
+            $(this).parents(".post").after($("#pun-qpost"));
+            delpre();
+            if ($(this).attr("class") == "editpost") {
+                $("#quick_reply input[name='attach_sig'], #quick_reply input[name='tid'], #quick_reply input[name='t'], #quick_reply input[name='notify']").appendTo("#quickdata");
+                $("#quick_reply input[name='mode']").val("editpost");
+                if ($("#quick_reply input[name='p']").length == 1) {
+                    $("#quick_reply input[name='p']").replaceWith('<input type="hidden" value="' + b + '" name="p">')
+                } else {
+                    $("#quick_reply .frm-buttons").append('<input type="hidden" value="' + b + '" name="p">')
+                }
+                if ($("#quick_reply input[name='subject']").length == 0) {
+                    $("#quick_reply .frm-buttons").append('<input type="hidden" value="' + $(".tieudeT:first").text() + '" name="subject">')
+                }
+                $("#quickrepFMvi").load(a + " .frm-form #text_editor_textarea", function () {
+                    titlefmvi('<input type="text" size="40" value="' + $(".tieudeT:first").text() + '" style="font-size:12px" id="tieudeedit" onkeyup="tieudeban()">');
+                    if (editorfmvi()) $("#quick_reply #text_editor_textarea").val($("#quickrepFMvi #text_editor_textarea").val());
+                    else {
+                        var y = $("#quickrepFMvi #text_editor_textarea").val().replace("&lt;", "<").replace("&gt;", ">");
+                        $("#quick_reply #text_editor_iframe").contents().find("body").html(y)
+                    }
+                })
+            } else {
+                $("#quickdata input").appendTo("#quick_reply .frm-buttons");
+                $("#quick_reply input[name='mode']").val("reply");
+                $("#quick_reply input[name='p']").remove();
+                $("#quickrepFMvi").load(a + " .frm-form #text_editor_textarea", function () {
+                    titlefmvi("Quick quotes");
+                    if (editorfmvi()) $("#quick_reply #text_editor_textarea").val("[url=http://" + location.host + c + "][img]http://i48.servimg.com/u/f48/16/58/89/73/flag_r10.png[/img][/url]" + $("#quickrepFMvi #text_editor_textarea").val());
+                    else {
+                        var k = $("#quickrepFMvi #text_editor_textarea").val().replace("&lt;", "<").replace("&gt;", ">");
+                        $("#quick_reply #text_editor_iframe").contents().find("body").html('<a rel="nofollow" target="_blank" href="http://' + location.host + c + '"><img alt="fmvi quote" src="http://i48.servimg.com/u/f48/16/58/89/73/flag_r10.png"></a>' + k)
+                    }
+                })
+            }
+        });
+        $("img[src='http://i48.servimg.com/u/f48/16/58/89/73/flag_r10.png']").parent().each(function () {
+            $(this).prependTo($(this).next().find("cite:first"))
+        });
+        $("img[src*='imageshack.us']").each(function () {
+            $(this).replaceWith('<img src="http://a.' + $(this).attr("src").slice($(this).attr("src").indexOf("imageshack")) + '" />')
+        });
+        $("a[href*='imageshack.us']").each(function () {
+            var a = 'http://a.' + $(this).attr("href").slice($(this).attr("href").indexOf("imageshack"));
+            $(this).replaceWith('<a href="' + a + '">' + a + '</a>')
+        });
+        $('img').error(function () {
+            $(this).replaceWith('<img src="' + imgerror + '" alt="Image Error" />')
+        });
+        fancyfmvi();
+        $(".entry-content a[href*='?showpost=']").click(function () {
+            openWin($(this).attr("href"), 1000, 500);
+            return false
+        });
+        $(".user-info dt:contains('Status')").hide().next().hide();
+        $(".user-info .fmviOnoff br").remove();
+        $(".FMvi-like").fadeIn(1000);
+        var e;
+        for (e = 0; e < $(".FMvi-like").length; e++) {
+            if ($(".rankimg img:eq(" + e + ")").attr("src") == imgbanned) {
+                $(".post:eq(" + e + ")").hide().before('<div class="autohidepost" style="padding:10px"><p style="color: rgb(61, 137, 242); text-align: center; padding: 5px; font-size: 14px;" class="closeWIndowF">Bài viết này đã được ẩn do người viết vi phạm nội quy</p><p onclick="reportVot($(this))" class="reportVote closeWIndowF" style="font-size: 15px ! important; text-align: center;cursor: pointer;">Click vào đây để hiển thị bài viết</p></div>')
+            }
+            if ($(".FMvi-like:eq(" + e + ") .vote-bar").length == 1) {
+                if (bvvl()) {
+                    var f = $(".FMvi-like:eq(" + e + ") .vote-bar").attr("title").split(" ");
+                    var g = parseInt(f[3].replace(/%/, "")) / 100;
+                    var h = parseInt(f[4].replace(/\(/, ""));
+                    plus = String(Math.round(g * h));
+                    minus = String(h - plus);
+                    $(".FMvi-like:eq(" + e + ") .nolikeminus font").text(minus);
+                    $(".commentLike:eq(" + e + ") p").text(plus + " thành viên thích bài viết này");
+                    if ((plus > 3 && minus > plus * 2) || (plus == 0 && minus > 5)) {
+                        $(".post:eq(" + e + ")").hide().before('<div class="autohidepost" style="padding:10px"><p style="color: rgb(61, 137, 242); text-align: center; padding: 5px; font-size: 14px;" class="closeWIndowF">Bài viết này đã được ẩn do bị xếp hạng thấp</p><p onclick="reportVot($(this))" class="reportVote closeWIndowF" style="font-size: 15px ! important; text-align: center;cursor: pointer;">Click vào đây để hiển thị bài viết</p></div>')
+                    }
+                }
+            } else {
+                $(".commentLike:eq(" + e + ") p").text("Chưa có đánh giá cho bài viết này")
+            }
+            if ($(".FMvi-like:eq(" + e + ")").find(".likeplus").length == 1) {
+                $(".FMvi-like:eq(" + e + ") .likeNone").removeClass().addClass("likePro");
+                $(".FMvi-like:eq(" + e + ") .nolikeplus").attr("href", $(".FMvi-like:eq(" + e + ") .likeplus").attr("href"));
+                $(".FMvi-like:eq(" + e + ") .nolikeminus").attr("href", $(".FMvi-like:eq(" + e + ") .likeminus").attr("href"))
+            }
+        }
+    }
+}
