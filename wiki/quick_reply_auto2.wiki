@@ -41,3 +41,11 @@ Punbb
 
 </code>
 với mtmybaiviet là thẻ class bao ngoài toàn bộ bài viết #post + b chính là thẻ id của mỗi post. b là post id
+
+ <!-- BEGIN postrow -->
+nhock.demon9x: ở trước nó có đoạn <div class="main-content-topic">
+nhock.demon9x: thêm cái mtmybaiviet vào
+nhock.demon9x: tìm tiếp
+nhock.demon9x: <!-- BEGIN displayed -->
+nhock.demon9x: thêm dưới nó
+nhock.demon9x: <div class="main-content-topic" id="post{postrow.displayed.U_POST_ID}">
