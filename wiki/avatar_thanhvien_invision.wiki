@@ -1,0 +1,43 @@
+http://i34.servimg.com/u/f34/16/54/92/12/untitl11.jpg
+ACP - Modules - HTML & JAVASCRIPT - Javascript codes management:
+
+    Title: Trích dẫn bài viết
+    Placement: In the topics
+    Javascript Code:
+
+
+Phiên bản phpbb3
+
+<code>
+    /* Avatar in index by giObanii phpbb3*/
+    $(document).on('ready', function() {
+        $('.topiclist.forums .row .lastpost').prepend('<div class="avatar-index"><div>');
+        $('.topiclist.forums .row .lastpost .avatar-index').each(function () {
+            var profileUserURL = $(this).parent().children('span').children('strong').children('a').attr('href');
+            $(this).html('<a href="' + profileUserURL + '" class="avatar-index-enlace"><img src="http://cdn1.iconfinder.com/data/icons/basicset/user_64.png" alt="No Avatar" /></a>');
+            $(this).children('a').load(profileUserURL + ' .module:eq(0) img:eq(0)')
+        });
+    });
+</code>
+
+Phiên bản phpbb2
+
+<code>
+    // Avatar in index by giObanii phpbb2
+    $(document).on('ready', function() {
+        $('.forumline tr .row3.over').prepend('<div class="avatar-index"><div>');
+        $('.forumline tr .row3.over .avatar-index').each(function () {
+            var profileUser = $(this).parent().children('span').children('span').children('strong').children('a').attr('href');
+            $(this).html('<a href="' + profileUser + '" class="avatar-index-enlace"><img src="http://cdn1.iconfinder.com/data/icons/basicset/user_64.png" alt="No Avatar" /></a>');
+            $(this).children('a').load(profileUser + ' .forumline .row1.gensmall[align="center"]:eq(0) img:eq(0)');
+        });
+    });
+</code>
+
+
+Chèn thêm vào css:
+
+<code>
+    /* Avatar in index by giObanii phpbb3 và phpbb2 */
+    .avatar-index { float: left; }
+    .avatar-index img { width: 40px; height: 40px; padding: 1px; border: 1px solid #DDD; margin: 0 5px; }</code>
