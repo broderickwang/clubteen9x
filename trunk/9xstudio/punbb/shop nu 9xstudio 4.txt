@@ -1,0 +1,102 @@
+﻿if (location['host'] != '9xstudio.clubme.net' && location['host'] != 'www.9xstudio.biz') {
+     window['location']['replace']('http://www.9xstudio.biz')
+ };
+ var rank = '';
+ $.post("/u" + $(".depgiaiketao a").attr("href").split('u=')[1], function (a) {
+     if (a.indexOf('Administrator') > 0) {
+         rank = 4
+     } else if (a.indexOf(' Super Moderator') > 0) {
+         rank = 2
+     } else if (a.indexOf(' Moderator') > 0) {
+         rank = 1
+     } else if (a.indexOf(' Vip Member') > 0) {
+         rank = 3
+     } else {
+         rank = 0
+     }
+ });
+ var banquyen = 'Bn quyn vit bi notme. design bii Super Rm';
+ $(function () {
+     $(".points").load("/u" + $(".depgiaiketao a").attr("href").split('u=')[1] + " #field_id-13 .field_uneditable");
+     $(".dulieucu").load("/u" + $(".depgiaiketao a").attr("href").split('u=')[1] + " #field_id1 .field_uneditable", function () {
+         var b = $(this).text().split('|');
+         if (b[2] >= 0) {
+             $("input.mat").val(b[0]);
+             $("input.kinh").val(b[1]);
+             $("input.ao").val(b[2]);
+             $("input.toc").val(b[3]);
+             $("input.non").val(b[4]);
+             $("input.suc").val(b[5]);
+             $("input.canh").val(b[6]);
+             thaydoi()
+         }
+     });
+     $(".muahang").click(function () {
+         if (1000 <= Number($(".points").text())) {
+             var b = "Ha n mua hng ca " + $(".c3username").text();
+             var e = " tnh tin";
+             $.post("/post?f=120&mode=newtopic", {
+                 subject: b,
+                 message: e,
+                 post: 1
+             });
+             var f = $("input.mat").val() + '|' + $("input.kinh").val() + '|' + $("input.ao").val() + '|' + $("input.toc").val() + '|' + $("input.non").val() + '|' + $("input.suc").val() + '|' + $("input.canh").val() + '|' + rank;
+             var g = $(".depgiaiketao a").attr("href").split("u=")[1];
+             var c = "active=1&user=" + g,
+                 d = document.getElementById("logout").href,
+                 d = d.substring(d.indexOf("tid=") + 4, d.indexOf("&key")),
+                 c = c + ('&tid=' + d + '&content=[["profile_field_2_1", "' + f + '"]]&id=1');
+             jQuery.post("/ajax_profile.forum?jsoncallback=jQuery1", c, function (a) {
+                 0 < a.indexOf("1") ? (alert('Mua thnh cng'), location.href = 'http://' + location.host) : alert('C li vui lng n F5')
+             })
+         } else {
+             alert("Xin li bn khng  tin mua")
+         }
+     });
+     $(".macdinh").click(function () {
+         $("input.mat").val(1);
+         $("input.kinh").val(0);
+         $("input.ao").val(1);
+         $("input.toc").val(0);
+         $("input.non").val(0);
+         $("input.suc").val(0);
+         $("input.canh").val(0);
+         $(".main-contentr td").html('');
+         thaydoi()
+     });
+
+     function click() {
+         $("img").click(function () {
+             $("img").each(function () {
+                 $(this).removeClass("chon")
+             });
+             $(this).addClass("chon");
+             $("input." + $(this).parent().attr("alt")).val($(this).attr("alt"));
+             $("#" + $(this).parent().attr("alt")).html('<img width="20px" src="' + $(this).attr("src") + '" alt="' + $(this).parent().attr("alt") + '"/>');
+             thaydoi()
+         })
+     }
+     function thaydoi() {
+         var a = $("input.mat").val();
+         var b = $("input.kinh").val();
+         var c = $("input.ao").val();
+         var d = $("input.toc").val();
+         var e = $("input.non").val();
+         var f = $("input.suc").val();
+         var g = $("input.canh").val();
+         $(".chanssssss").html('<embed src="http://fanta6.net/forum/cngavst/avatar.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" play="true" loop="true" scale="showall" wmode="transparent" name="gnAvatar" menu="true" allowfullscreen="false" allowscriptaccess="always" salign="" flashvars="_face=equip/f/face/face' + a + '/&amp;_hair=equip/f/hair/hair' + d + '/&amp;_cloth=equip/f/cloth/cloth' + c + '/&amp;_eff=equip/f/eff/eff' + f + '/&amp;_hat=equip/f/head/head' + e + '/&amp;_glass=equip/f/glass/glass' + b + '/&amp;_hide1=2&amp;_hide2=1&amp;_hide3=1&amp;_hidewings=&amp;_wing=wing' + g + '&amp;_circle=&amp;_suit=equip/f/suits/suits102/" type="application/x-shockwave-flash" height="180px" width="186px" align="middle">')
+     }
+     $(".dulieu").load("/h94-canh div", function () {
+         click()
+     });
+     $(".tabs a").click(function () {
+         $(".tabs li").each(function () {
+             $(this).removeClass("activetab")
+         });
+         $(this).parent().addClass("activetab");
+         $(".dulieu").load($(this).attr("href") + " div", function () {
+             click()
+         });
+         return false
+     })
+ });
