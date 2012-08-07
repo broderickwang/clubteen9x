@@ -1,5 +1,4 @@
 
-
 http://i34.servimg.com/u/f34/15/64/85/86/113.png
 
 <code>
@@ -11,7 +10,7 @@ http://i34.servimg.com/u/f34/15/64/85/86/113.png
 
 Thay link vào nhá
 
-<cod>
+<code>
     http://www.facebook.com/plugins/like.php?href=http://www.chupy/{TOPIC_URL}
 </code>
 
