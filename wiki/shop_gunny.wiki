@@ -1,0 +1,116 @@
+o ngày mai mình bận cho nên hôm nay mình sẽ share shop gunny ver4 sớm hơn dự kiến nhé
+Như ở topic trước http://thpthoaiduca.forumvi.com/t515p15-topic
+Để thực hiện lời hứa của mình. Hôm nay mình chính thức share shop gunny ver 4 cho mọi người dùng.
+Mình cố gắng sẽ viết chi tiết hướng dẫn. Do thời gian sau này mình bận cho nên bạn nào không làm được hãy hỏi người làm được rồi
+nhé
+demo
+
+
+demo online http://teenviet8.forumvi.com/h161-shop-gunny
+Hướng dẫn
+http://www.servimg.com/u/f39/16/49/44/04/untitl18.png
+Bước 1: ACP - Ganeral - Forum - Categories and forums
+Click vào nút Add để tạo một chuyên mục mới để lưu hóa đơn mua nhân vật gunny.
+
+
+Choose the kind of forum you want : forum
+Forum name : Hóa đơn mua nhân vật gunny
+
+
+Sau khi tạo xong chuyên mục, bạn ghi nhớ số thự tự chuyên mục đó để thực hiện các bước tiếp theo.
+
+tiếp theo vào ACP - Modules - Points system - General options
+chỉnh như trong hình
+
+vào ACP - Modules - Points system - Points management
+
+tìm đến tên chuyên mục và điền vào ô per subject -500 (bạn có thể thay đổi vì đây là số points khi mua sẽ bị trừ )
+Bước 2: ACP - Users & Groups - Users - Profiles - Profile fields
+Click vào nút Add để tạo khung dữ liệu cho gunny.
+
+Field edit
+Type : Text field
+Name : dulieuava
+Necessarily filled ? : No
+Display : Messages
+Display type : Text
+Who can modify the profile field value ? : Moderators & Member himself
+Display this field for users that are at least : Guests
+
+Text field
+
+Default content :<code>1|0|1|0|0|0|0|1|</code>
+
+Sau đó sắp xếp profile như sau
+
+Sau khi làm xong bước này, các bạn vào trang chỉnh sửa Profile
+
+( Ví dụ http://thpthoaiduca.forumvi.com/profile?mode=editprofile ).
+
+Tìm id của input dulieuava bằng cách:
+
+
+Tìm id bằng cách view mã nguồn (Ctrl U) và tìm dulieuava (Ctrl F)
+ví dụ
+
+Hoặc có thể Dùng chức năng Kiểm tra phần tử của Chrome hoặc firebug cho Firefox (add-on) với chức năng Thăm dò phần tử hoặc Kiểm tra thành phần của Opera trong menu chuột phải.
+ghi nhớ dòng chữ đằng sau id=" như ở ví dụ trên là profile_field_13_5 để thực hiện các bước tiếp theo nhé
+
+Bước 3
+Vào trang thông tin của một thành viên bất kỳ.
+Ví dụ http://thpthoaiduca.forumvi.com/u1
+chúng ta cũng tìm id bằng cách view mã nguồn (Ctrl U) và tìm dulieuava (Ctrl F)
+
+ví dụ
+
+hãy ghi nhớ cái id ( như của diễn đàn THPT Hoài Đức A là field_id5)
+
+Bước 4ACP - Display - Templates - Ganeral - viewtopic_body
+Bước này sẽ sửa templates của forum, vì thế các bạn cần cẩn lưu lại code gốc trước khi thao tác.
+Tìm đoạn code sau ( Ctrl+F ) ( hoặc tương tự ):
+
+<code>
+    <script type="text/javascript">//<![CDATA[
+    var multiquote_img_off = '{JS_MULTIQUOTE_IMG_OFF}', multiquote_img_on = '{JS_MULTIQUOTE_IMG_ON}', _atr = '{JS_DIR}addthis/', _ati = '{PATH_IMG_FA}addthis/'{ADDTHIS_LANG}, addthis_localize = { share_caption: "{L_SHARE_CAPTION}", email: "{L_EMAIL}", email_caption: "{L_EMAIL_CAPTION}", favorites: "{L_SHARE_BOOKMARKS}", print: "{L_PRINT}", more: "{L_MORE}" };
+    $(function(){
+      _atc.cwait = 0;
+      $('.addthis_button').mouseup(function(){
+          if ($('#at15s').css('display') == 'block') {
+            addthis_close();
+            addthis_close();
+          }
+      });
+    });
+    //]]>
+    </script>
+</code>
+
+thay thành
+
+Tiếp tục tìm
+
+<code>
+    <!-- BEGIN profile_field -->
+                            {postrow.displayed.profile_field.LABEL}{postrow.displayed.profile_field.CONTENT}{postrow.displayed.profile_field.SEPARATOR}
+                            <!-- END profile_field -->
+
+</code>
+thay thành
+
+<code>
+    <!-- BEGIN profile_field --><div class="user-info">
+
+
+      {postrow.displayed.profile_field.LABEL}{postrow.displayed.profile_field.CONTENT}{postrow.displayed.profile_field.SEPARATOR}
+
+    </div><!-- END profile_field -->
+</code>
+
+Tiếp tục để đoạn sau vào nơi muốn hiện nhân vật gunny trong viewtopic_body
+
+<code>
+    <div class="user-pet" style="margin-left: 15px;margin-top: -20px;"><div class="huanchuong"><script>shop(<!-- BEGIN profile_field -->'{postrow.displayed.profile_field.CONTENT}',<!-- END profile_field -->1);</script>
+                </div></div>
+</code>
+
+nguồn : http://thpthoaiduca.forumvi.com
