@@ -1,6 +1,5 @@
 demo :
-
-
+http://i43.servimg.com/u/f43/15/93/33/76/221110.png
 Tạo một Script mới
 Title * : Youtube
 Placement : In all the pages
