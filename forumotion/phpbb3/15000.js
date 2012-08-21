@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){jQuery(".postbody a").each(function(){jQuery(this).html(jQuery(this).html().toLowerCase().replace("http://www.hoangtin.tk","...").split("#")[0])})})
