@@ -1,0 +1,1 @@
+$(function(){$("a[href*='/post?f='][href$='&mode=newtopic']").html('<span class="newpost"><font color=#FFFFFF>  <b>+</b> Viết chủ đề mới  </font></span>');$("a[href*='/post?t='][href$='&mode=reply']").html('<span class="newpost"><font color=#FFFFFF>  <b>+</b> Trả lời Chủ đề  </font></span>')});
