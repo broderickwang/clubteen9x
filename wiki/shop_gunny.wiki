@@ -16,14 +16,15 @@ Click vào nút Add để tạo một chuyên mục mới để lưu hóa đơn 
 
 Choose the kind of forum you want : forum
 Forum name : Hóa đơn mua nhân vật gunny
-http://i39.servimg.com/u/f39/16/49/44/04/untitl20.png
+
 
 Sau khi tạo xong chuyên mục, bạn ghi nhớ số thự tự chuyên mục đó để thực hiện các bước tiếp theo.
 
-I love you tiếp theo vào ACP - Modules - Points system - General options
+http://r19.imgfast.net/users/1914/13/79/90/smiles/2109348208.gif  tiếp theo vào ACP - Modules - Points system - General options
 chỉnh như trong hình
 
-http://i39.servimg.com/u/f39/16/49/44/04/untitl18.png
+http://i39.servimg.com/u/f39/16/49/44/04/untitl20.png
+
 I love you vào ACP - Modules - Points system - Points management
 
 tìm đến tên chuyên mục và điền vào ô per subject -500 (bạn có thể thay đổi vì đây là số points khi mua sẽ bị trừ )
@@ -44,7 +45,7 @@ Text field
 Default content :1|0|1|0|0|0|0|1|
 
 Sau đó sắp xếp profile như sau
-
+http://i39.servimg.com/u/f39/16/49/44/04/untitl18.png
 
 Sau khi làm xong bước này, các bạn vào trang chỉnh sửa Profile
 
@@ -58,9 +59,9 @@ ví dụ
 
 <code>
     <span style="color:#000000;">dulieuava</span>: </label></dt><dd><input type="text" class="inputbox" id="profile_field_13_5" name="profile_field_13_5" style="width:250px" value="1|0|1|0|0|0|0|1|" />
-
-
 </code>
+
+
 
 Hoặc có thể Dùng chức năng Kiểm tra phần tử của Chrome hoặc firebug cho Firefox (add-on) với chức năng Thăm dò phần tử hoặc Kiểm tra thành phần của Opera trong menu chuột phải.
 ghi nhớ dòng chữ đằng sau id=" như ở ví dụ trên là profile_field_13_5 để thực hiện các bước tiếp theo nhé
@@ -148,7 +149,10 @@ Tiếp tục để đoạn sau vào nơi muốn hiện nhân vật gunny trong v
 
 <code>
     <div class="user-pet" style="margin-left: 15px;margin-top: -20px;"><div class="huanchuong"><script>shop(<!-- BEGIN profile_field -->'{postrow.displayed.profile_field.CONTENT}',<!-- END profile_field -->1);</script>
-                </div></div></code>
+                </div></div>
+
+</code>
+
 
 
 Bước 5 ACP - Display - Templates - Ganeral - overall_header
