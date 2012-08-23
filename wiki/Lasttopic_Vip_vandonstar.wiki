@@ -1,4 +1,5 @@
 
+
 DEMO: http://www.vandonstar.com/
 
 Chú ý:
@@ -11,13 +12,15 @@ Hướng dẫn:
 
 Đầu tiên vào overall_header và tìm
 
-<code>
+Code: Chọn nội dung
+
     <div id="main">
 
-</code>
+
 Thêm vào phía trên code sau:
 
 <code>
+
 
     <div id="Load"></div>
     <div id="last-posts">
@@ -60,7 +63,7 @@ Thêm vào phía trên code sau:
       <div id="name-lastpost"><span class="lp2">Tiêu đề</span><span class="lp3">Sáng lập</span><span class="lp4">Gửi cuối</span><span class="lp5">Chuyên mục</span><span class="lp6">Bình</span><span class="lp7">Xem</span></div>
       <div id="main-lastpost"></div>
       <div id="option2-lastpost">
-        <div class="op-last-bottom op-last-bottom2" onclick="Op2Last('/search?search_author=%%%&search_keywords')">Bài gửi sau cùng</div>
+        <div class="op-last-bottom op-last-bottom2" onclick="Op2Last('/search?search_author=*+*&search_keywords')">Bài gửi sau cùng</div>
         <div class="op-last-bottom" onclick="Op2Last('/search?search_id=newposts')">Bài từ lần truy cập trước</div>
         <div class="op-last-bottom" onclick="Op2Last('/search?search_id=egosearch')">Bài bạn đã tham gia thảo luận</div>
         <div class="op-last-bottom" onclick="Op2Last('/search?search_id=unanswered')">Bài chưa ai trả lời</div>
@@ -76,20 +79,23 @@ Thêm vào phía trên code sau:
 
 Trong overall_footer_begin tìm:
 
-<code>
-    {S_JUMPBOX_SELECT} <input type="submit" value="{L_GO}" />
-</code>
 
+<code>
+    {S_JUMPBOX_SELECT}&nbsp;<input type="submit" value="{L_GO}" />
+
+</code>
 Thay bằng:
 
 <code>
-    <span id="jumpbox-last">{S_JUMPBOX_SELECT}</span> <input type="submit" value="{L_GO}" />
+
+    <span id="jumpbox-last">{S_JUMPBOX_SELECT}</span>&nbsp;<input type="submit" value="{L_GO}" />
+
 
 </code>
-
 Tiếp theo thêm vào CSS:
 
 <code>
+
     #last-posts{width:100%;}
     #select-lastpost{float:right;cursor:pointer;}
     #option-lastpost{height:18px;}
@@ -182,15 +188,16 @@ Tiếp theo thêm vào CSS:
     border-radius: 50px;
     margin-left: -25px;
     }
+
+
 </code>
-
-
 jQuery Script:
 
 In all the pages
 
+
 <code>
-    Link = '/search?search_author=%%%&search_keywords';
+    Link = '/search?search_author=*+*&search_keywords';
     Start = '&start=';
     Where = '';
     Trang = 20;
@@ -314,23 +321,25 @@ In all the pages
     function Op2Last(op){
     Link = op;
     LoadLastPost(0);
-    }</code>
+    }
 
-
+</code>
 
 In the home page
 
 <code>
+
     $(function(){
     $('#option-lastpost .op-last:first').addClass('op-last2');
     LoadLastPost(0);
     });
-
-
 </code>
+
+
 In the topics
 
 <code>
+
     $(function(){
 
     $('#select-lastpost option').each(function(){
@@ -344,6 +353,4 @@ In the topics
     Where = '&search_where='+$('#select-lastpost').val();
     LoadLastPost(0);
 
-    });
-
-</code>
+    });</code>
