@@ -105,3 +105,4 @@ http://www.convertstring.com/vi/EncodeDecode/HtmlDecode
  http://jsunpack.jeek.org/
 http://tools.dinhcaoviet.net/
 http://tools.sinhvienit.net/
+http://www.tareeinternet.com/scripts/decrypt.php
