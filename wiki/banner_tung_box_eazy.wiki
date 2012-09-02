@@ -1,0 +1,18 @@
+Demo1: http://12b6.eazy.vn/viewforum.php?f=5
+Demo2: http://12b6.eazy.vn/viewforum.php?f=6
+
+Trong demo mình ko áp dụng làm banner mà mình dùng làm nội quy cho từng box.
+
+Tạo bbcode và cho vào mod thông báo chung nhé:
+
+<code>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script><scrip type="javascript">$(function(){$(".post-icon:first a[href*='/posting.php?mode=post&f=5']").each(function(){$('<br/><img src="link ảnh"/>').insertBefore(".topic-actions:first");});});</script>
+</code>
+
+Trong đó,
+
+<code>
+    f=5
+</code>
+
+Thay số 5 thành
