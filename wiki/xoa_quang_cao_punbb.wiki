@@ -15,6 +15,11 @@ display: none;
 }
 #zzadfooter {
 display: none;
+
+    #pun-about{display: none;}
+
+.module-advert{display:none;}a{text-decoration: none;}
+
 }</code>
 Tác dụng của nó là khi click vào nút đóng quảng cáo ở footer thì nó sẽ xóa cả 2 quảng cáo và lưu lại trong cookie, vì thế khi bạn chuyển sang trang khác cũng sẽ ko bị quảng cáo nữa.
 Về việc có bị xóa 4r ko thì mình ko chắc, chỉ làm 1 cái cho punBB.
