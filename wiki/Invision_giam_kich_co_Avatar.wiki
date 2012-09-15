@@ -1,0 +1,10 @@
+<code>
+
+        .postprofile dt img {
+            max-width: 101px;
+            max-height: 220px;
+        }
+
+</code>
+
+Phang vào Css
