@@ -1,0 +1,102 @@
+Như đã hứa, khi hoàn thành cái này mình sẽ share đầy đủ
+Hôm nay mình tương đối rảnh Share Thông điệp yêu thương đầu tiên của Invision cho mọi người
+Style đơn giản thôi Style Vbb 4.x
+
+(*) Đôi lời từ tác giả: Đây là bài hướg dẫn chi tiết cho cả new mem.
+Nên bài hướg dẫn chi tiết trên 1 style.
+Nếu ai muốn style khác, có thể post vào box Thắc mắc Code, TUT,..., có thời gian mình sẽ làm giúp
+
+Thông điệp yêu thương tự động cập nhật cho Invision.
+By: miamor.
+
+
+Demo: http://invision.chinhphuc.info
+
+
+Bước 1: Tạo 1 chuyên mục mới:
+Choose the kind of forum you want : Blog
+Tên diễn đàn : Thông điệp yêu thương.
+
+Bước 2: Lấy mã số box Thông điệp yêu thương:
+Ra ngoài diễn đàn, tìm chuyên mục Thông điệp yêu thương vừa tạo ở bước 1,
+click vào đó, sẽ dẫn đến đường link dạng http://link4rbạn/f[...]-forum.
+Ví dụ link của 4r mình là: http://invision.chinhphuc.info/f42-forum
+thì số 42 là mã số box Thông điệp yêu thương của mình.
+
+Bước 3: Tạo phần hiển thị Thông điệp yêu thương:
+Vào widget, tạo 1 widget mới:
+
+<code>
+
+        <div class="lovemes"><br><table cellpadding="0" cellspacing="0" style="border:1px solid #ccc;height:55px;">
+                <tr>
+                    <td width="25%" valign="middle" class="ifcmess">
+                        <a title="Click để gửi thông điệp" href="/h89-"><img src="http://i34.servimg.com/u/f34/15/64/85/86/tdyt11.png" border="0">
+                        <img title="Love Telling" src="http://i34.servimg.com/u/f34/15/64/85/86/tdyt_s11.png" alt="Love Telling" border="0"></a>
+                    </td>
+                    <td width="75%">
+                        <marquee width="800px" behavior="scroll" onmouseover="this.stop()"
+                        onmouseout="this.start()" scrollamount="3" direction="left">
+        <div class="ifcmes"></div>
+                        </marquee>
+                    </td>
+                </tr>
+           
+        </table><style>.ifcmess {white-space:nowrap;}</style></div>
+</code>
+
+Bước 4: Tạo javascript hiển thị thông điệp yêu thương:
+[Phần này đã được ẩn, bạn phải reply để thấy được nội dung trong phần này]
+Tạo 1 file javascript mới:
+
+    Title: Thông điệp yêu thương.
+    Placement: In all the pages.
+    Content: 
+
+Thay số 42 trong code trên bằng mã số box Thông điệp yêu thương đã lấy ở Bước 2.
+Thay số 8 trong code trên bằng số Thông điệp yêu thương bạn muốn hiện.
+[Để thông điệp yêu thương hiển thị đẹp, bạn cần gửi từng đấy thông điệp yêu thương.]
+
+Bước 5: Tạo trang HTML smiles cho phần gửi thông điệp:
+Vào link http://link4rbạn/smilies.forum?action=smilies&js=no&mode=smilies_frame
+Ctrl+U >> Copy bắt đầu từ đoạn
+
+<code>
+
+        <div class="smiley-element">
+</code>
+đến hết.
+Dán đoạn đó vào 1 trang HTML mới, xóa đoạn
+
+<code>
+
+        <div class="clear"></div></body></html>
+</code>
+ở cuối đi.
+Sau đó, tìm các chỗ emoticonp xóa hết chữ p ở cuối đi.
+
+Bước 6: Lấy mã số trang HTML hình vui:
+Trang HTML này của bạn sẽ có dạng http://link4rbạn/h[...]-page.
+Ví dụ link trang đó của mình là http://invision.chinhphuc.info/h90-page
+thì số 90 là mã số trang HTML trang hình vui của mình.
+
+Bước 7: Tạo trang HTML gửi Thông điệp yêu thương:
+[Phần này đã được ẩn, bạn phải reply để thấy được nội dung trong phần này]
+Tạo một trang HTML mới với nội dung như sau: Thay các số 42 trong code trên bằng mã số box Thông điệp yêu thương đã lấy ở Bước 2.
+Thay số 90 ở chỗ url:"/h90-" bằng mã số trang HTML hình vui đã lấy ở Bước 6.
+
+Bước 8: Lấy mã số trang HTML gửi Thông điệp yêu thương:
+Trang HTML ở Bước 7 của bạn sẽ có dạng http://link4rbạn/h[...]-page.
+Ví dụ link trang đó của mình là http://invision.chinhphuc.info/h89-page
+thì số 89 là mã số trang HTML gửi Thông điệp yêu thương của mình.
+
+Bước 9: Tùy chỉnh lần cuối:
+Trong code ở Bước 3 có đoạn như thế này href="/h89-", bạn thay số 89 bằng mã số trang HTML gửi Thông điệp yêu thương đã lấy ở Bước 8.
+
+Bước 10: Hưởng thụ thành quả và báo xấu:
+Bạn ra 4r bạn và thử gửi Thông điệp yêu thương.
+Nếu có lỗi xảy ra, vui lòng thắc mắc tại topic này.
+Nhận mọi loại gạch, đá, chai, lọ,... tại topic này Lo lắng
+Chỉ nhận các loại gạch, đá có văn hóa, tôn trọng tác giả k có gì để nói
+
+----- Hết -----
