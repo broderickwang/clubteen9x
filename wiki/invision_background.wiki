@@ -2,6 +2,8 @@ Tùy chọn Background.
 By: baivong - fmvi.vn
 Convert and edit: miamor
 
+
+http://i34.servimg.com/u/f34/15/64/85/86/select10.jpg
     Demo: http://invision.chinhphuc.info
 
     Thực hiện:
@@ -66,4 +68,3 @@ Convert and edit: miamor
 
 
 </code>
-
