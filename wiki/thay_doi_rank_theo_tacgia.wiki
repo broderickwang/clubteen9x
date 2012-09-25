@@ -4,8 +4,10 @@ By: miamor
 
 Demo:
 
-    Tác giả sẽ có rank thay đổi thànhhttp://i48.servimg.com/u/f48/16/58/89/73/writer10.png
-    Người đứng đầu Top Posters sẽ có rank đổi thànhhttp://i48.servimg.com/u/f48/16/58/89/73/1stpla10.png
+    Tác giả sẽ có rank thay đổi thành
+http://i48.servimg.com/u/f48/16/58/89/73/writer10.png
+    Người đứng đầu Top Posters sẽ có rank đổi thành
+http://i48.servimg.com/u/f48/16/58/89/73/1stpla10.png
     Người đứng thứ 2 Top Posters sẽ có rank đổi thành http://i48.servimg.com/u/f48/16/58/89/73/2ndpla10.png
 
 Demo online: http://invision.chinhphuc.info
