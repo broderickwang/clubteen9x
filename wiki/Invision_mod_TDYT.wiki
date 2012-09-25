@@ -43,8 +43,8 @@ Vào widget, tạo 1 widget mới:
                 </tr>
            
         </table><style>.ifcmess {white-space:nowrap;}</style></div>
-</code>
 
+</code>
 Bước 4: Tạo javascript hiển thị thông điệp yêu thương:
 [Phần này đã được ẩn, bạn phải reply để thấy được nội dung trong phần này]
 Tạo 1 file javascript mới:
@@ -84,6 +84,7 @@ Bước 7: Tạo trang HTML gửi Thông điệp yêu thương:
 [Phần này đã được ẩn, bạn phải reply để thấy được nội dung trong phần này]
 Tạo một trang HTML mới với nội dung như sau: Thay các số 42 trong code trên bằng mã số box Thông điệp yêu thương đã lấy ở Bước 2.
 Thay số 90 ở chỗ url:"/h90-" bằng mã số trang HTML hình vui đã lấy ở Bước 6.
+Thay đoạn link http://invision.chinhphuc.info/forum trong code trên bằng link 4r bạn.
 
 Bước 8: Lấy mã số trang HTML gửi Thông điệp yêu thương:
 Trang HTML ở Bước 7 của bạn sẽ có dạng http://link4rbạn/h[...]-page.
