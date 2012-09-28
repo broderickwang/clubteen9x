@@ -20,20 +20,12 @@ Chức năng:
 
 
 
-Demo
-* Thông báo khi có tin nhắn
-http://i48.servimg.com/u/f48/16/58/45/96/anh_ch13.png
-
-* Xem ảnh với fancybox
-http://i40.servimg.com/u/f40/17/20/31/93/ssss2210.png
-* Xem clip trực tiếp với link
-http://i40.servimg.com/u/f40/17/20/31/93/dd222210.jpg
-
 Hướng dẫn:
 Bước 1: Thêm vào CSS
 ACP - Display - Pictures and Colors - Colors - CSS Stylesheet:
 
 <code>
+
     /* Fancybox2 - www.FMvi.org */
     .fancybox-tmp iframe,.fancybox-tmp object{vertical-align:top;margin:0;padding:0}
     .fancybox-wrap{position:absolute;top:0;left:0;z-index:1002}
@@ -78,7 +70,7 @@ ACP - Display - Pictures and Colors - Colors - CSS Stylesheet:
     #fancybox-buttons a.btnClose{border-left:1px solid #111;width:38px;background-position:-57px 0}
     #fancybox-buttons a.btnDisabled{opacity:0.5;cursor:default}
     .fancybox-prev:hover,.fancybox-next:hover,.fancybox-opened .fancybox-title{visibility:visible}
-    .post-entry .entry-content img{max-width:350px; display:none}
+    .post-entry .entry-content img{max-width:350px}
     .iconPlayer{background:url(//ssl.gstatic.com/s2/tt/images/play-overlay.png) no-repeat scroll center center transparent;left:140px;opacity:0.8;position:absolute;top:-155px;z-index:99;padding:40px !important}
 </code>
 
@@ -87,23 +79,15 @@ Bước 2: Thêm vào cuối overall_footer_begin
 ACP - Display - Templates - Ganeral - overall_footer_begin
 
 <code>
-    <script type="text/javascript" src="http://fmvi-group.googlecode.com/files/punBB-fancybox2-FMvi.js"></script>
-    <!--[if lte IE 6]>
-       <style type="text/css">
-                    .post-entry .entry-content img{display: block !important}
-       </style>
-    <![endif]-->
-    <noscript>
-       <style type="text/css">
-                    .post-entry .entry-content img{display: block !important}
-       </style>
-    </noscript>
-</code>
 
+    <script type="text/javascript" src="http://fmvi-group.googlecode.com/files/punBB-fancybox2-FMvi.js"></script>
+
+</code>
 
 Chú ý: Với những bạn sử dụng skin FMvi thì tìm trong javascript có tên là FMvi-display
 
 <code>
+
     $('img').error(function () {
        $(this).replaceWith('<img src="http://i48.servimg.com/u/f48/16/58/89/73/errorf10.jpg" alt="Image Error" />')
     });
