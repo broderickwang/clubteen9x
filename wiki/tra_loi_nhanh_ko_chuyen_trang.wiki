@@ -1,0 +1,28 @@
+Áp dụng cho phpBB2, phpBB3, punBB, Invision. Tác dụng của code này là khi bạn Send, thì bài viết sẽ được gửi ngay mà không bị chuyển sang trang thông báo.
+B1: ACP - Ganeral - Forum - Security - Security Administration - Flood control. Delay between 2 messages, topics or private messages by a user. : 10
+ACP - Ganeral - Messages and e-mails - Configuration - Messages - Allow Quick Reply : Yes
+ACP - Modules - HTML & JAVASCRIPT - Javascript codes management:
+Title: Quick reply
+Placement: In the topics
+Javascript Code:
+
+<code>
+    $(function(){$("form#quick_reply input[name='post']").click(function(){$('<iframe name="replyreload" height="0px" width="0px" frameborder="0"></iframe>').insertBefore('form#quick_reply');$('form#quick_reply').attr('target','replyreload');$('form#quick_reply').submit(function(){var t=setTimeout("fmreply()",1000);});});});function fmreply(){window.location.replace(location.href)}
+</code>
+
+
+B2: phiên bản phpBB2 và punBB thì thêm code này cuối viewtopic_body
+
+<code>
+    <script type="text/javascript">$(function(){$("form#quick_reply input[name='post']").click(function(){$('<iframe name="replyreload" height="0px" width="0px" frameborder="0"></iframe>').insertBefore('form#quick_reply');$('form#quick_reply').attr('target','replyreload');$('form#quick_reply').submit(function(){var t=setTimeout("fmreply()",1000);});});});function fmreply(){window.location.replace("{FORUM_URL}{TOPIC_URL}")}</script>
+
+</code>
+
+B2 : Tìm {QUICK_REPLY_FORM} trong viewtopic_body chèn dưới nó code sau
+
+<code>
+    <script type="text/javascript">$("form#quick_reply input[name='post']").click(function(){$('<iframe name="replyreload" height="0px" width="0px" frameborder="0"></iframe>').insertBefore('form#quick_reply');$('form#quick_reply').attr('target','replyreload');$('form#quick_reply').submit(function(){var t=setTimeout("fmreply()",1000);});});function fmreply(){window.location.replace(location.href)}</script>
+
+</code>
+
+Nếu đc nhớ vote nha
