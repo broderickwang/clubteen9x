@@ -1,27 +1,22 @@
 Demo:
 
-<code>
-    http://www.12b6pro.tk/f1-forum
-    http://www.12b6pro.tk/f21-forum
-    http://www.12b6pro.tk/f3-forum
-    http://www.12b6pro.tk/f32-forum
-    http://www.12b6pro.tk/f27-forum
+    Demo đã hết hạn sử dụng - handsomevip007
 
-</code>
+
 
 Vào viewforum_body đặt code này ở chỗ bạn muốn banner hiện
 
 <code>
     <div class="banner{FORUM_ID}"></div>
-</code>
 
+</code>
 
 Tạo 1 trang js cho hiện ở subforum
 
 <code>
-    $(function(){$('<center><img src="link ảnh"/></center>').insertBefore(".banner1");});
+    $(function(){$(".banner1").replaceWith('<center><img src="link ảnh"/></center>');});
 
-</code>
+
 
 Tìm
 
@@ -40,7 +35,7 @@ Làm với box khác thì thêm vào trước
 Đoạn
 
 <code>
-    $('<center><img src="link ảnh"/></center>').insertBefore(".banner[ID box]");
+    $(".banner[id box]").replaceWith('<center><img src="link ảnh"/></center>');
 </code>
 
 Có thể ứng dụng làm nhiều cái khác, như mình cho kết quả Euro vào box Bóng đá.
