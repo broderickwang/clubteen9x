@@ -1,0 +1,43 @@
+người làm: Exterminator & Thuan007
+tìm trong view_topic đoạn
+
+<code>
+    <a href="{postrow.displayed.switch_vote_active.switch_vote.U_VOTE_PLUS}">
+
+</code>
+thay thành
+
+<code>
+    <a href="{postrow.displayed.switch_vote_active.switch_vote.U_VOTE_PLUS}" target="thanks" onclick="exec_refresh();">
+</code>
+
+
+sau đó dán đoạn sau vào cuối view_topic
+
+<code>
+    <script type="text/javascript">
+    <!--
+    function exec_refresh()
+    {
+      myvar = myvar + ' .';
+      var timerID = setTimeout('exec_refresh();', 20);
+      if (timeout > 0)
+      {
+          timeout -= 1;
+      }
+      else
+      {
+          clearTimeout(timerID);
+          window.status = '';
+      window.location.reload();
+       
+      }
+    }
+
+    var myvar = '';
+    var timeout = 50;
+    //-->
+    </script>
+    <iframe name="thanks" height="0" width="0" frameborder="0"></iframe>
+
+</code>
