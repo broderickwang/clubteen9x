@@ -1,0 +1,15 @@
+    <code><div style="margin:20px; margin-top:5px"><div
+    style="font: 12px Verdana, Geneva, Lucida, 'Lucida Grande';
+    margin-bottom:2px"><b></b> <input type="button"
+    value="Hiển thị"
+    style="width:180px;font-size:14px;margin:0px;padding:0px;" onclick="if
+    (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display
+    != '') {
+    this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display
+    = '';        this.innerText = ''; this.value = 'Ẩn đi'; } else {
+    this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display
+    = 'none'; this.innerText = ''; this.value = 'Hiển thị lại'; }"
+    /></div><div style="min-height: 0px; max-width: 200px;
+    background-color: transparent; margin: 0px; padding: 0px; border: 0px
+    inset;"><div style="display: none;">Nội dung ẩn
+    đi</div></div></div></code>
