@@ -1,0 +1,34 @@
+Mở rộng cho phiên bản punBB (ngồi ở lớp rảnh không có gì làm =,=)
+Điều kiện sử dụng : Không thay đổi cấu trúc index_box
+
+Cấu trúc:
+
+
+
+
+Thực hiện như phiên bản phpBB3 ở trên nhưng với Javascript Code * sau :
+
+<code>
+
+        // Copyright © 2012 Viet K, C3ZONE.NET
+        $(function () {
+           $(".main .main-head .page-title").before("<div class='c3zone'><i class='c3show c3inv'></i><i class='c3hide'></i></div>");
+           $(".c3zone").each(function (i) {
+              var id = "c3z" + ((/\/f\d*-/.test(location.pathname)) ? (location.pathname.match(/\d+/) + "v" + i) : i);
+              $(this).attr("id", id).parent().next().find(".table").addClass(id);
+              if (my_getcookie(id) == 1) {
+                 $(this).find("i").toggleClass("c3inv");
+                 $("." + id).hide()
+              }
+           });
+           $(".c3zone i").click(function () {
+              var id = $(this).parent().attr("id");
+              if (my_getcookie(id) == 1) my_setcookie(id, 0, 1);
+              else my_setcookie(id, 1, 1);
+              $(this).parent().find("i").toggleClass("c3inv");
+              $("." + id).fadeToggle();
+           });
+        });
+
+
+</code>
