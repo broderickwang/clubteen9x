@@ -1,0 +1,42 @@
+    THÔNG TIN
+    *Demo: Gần giống như vầy http://i44.servimg.com/u/f44/15/64/85/86/cp12311.png
+    *Phiên bản xây dựng: Ivision
+    *Viết bởi: nttmai- www.a6ltt.forum.st
+    *Ứng dụng: tạo nền bài viết riêng cho các thành viên đặc biệt
+
+
+[CSS] Background bài viết cho thành viên - by hand
+
+    *Vui lòng không sao chép bài viết này đi nơi khác*
+
+
+CÀI ĐẶT
+Vào AdminCP=>HTML & JAVASCRIPT=>tạo JS mới
+Title:Ảnh nền bài viết
+Placement :In all the pages
+Javascript Code
+
+<code>
+    $(function(){$('div.post:has(".re-Admin")').css('background-image','url("http://www.backgroundlabs.com/backgrounds/209.jpg")');$('div.post:has(".re-Smod")').css('background-image','url("http://www.backgroundlabs.com/backgrounds/45.jpg")');$('div.post:has(".re-Mod")').css('background-image','url("http://www.backgroundlabs.com/backgrounds/189.jpg")');$('div.post:has(".re-Mem")').css('background-image','url("http://www.backgroundlabs.com/backgrounds/52.jpg")')});
+
+</code>
+
+Lưu
+Vào quản lý cấp bậc
+=>Thêm mới
+Tiêu đề cấp bậc:
+
+<code>
+    <div class="re-Admin">Admin</div>
+</code>
+
+Smod mod và mem cũng vậy hehe
+có thể thay re-admin bằng re-Smod nhưng phải gióng trên đoạn JS nhé
+Xác lập như cấp bậc đăc biệt có
+Lưu sau đó cho thành viên cấp bậc đó và thưởng thức Cười nhe răng
+
+    Code chưa test, nếu có vấn đề vui lòng góp ý ngay dưới topic này
+
+
+Dề mô sống: http://c5zone.clubme.net/
+*Lưu ý: bị dị ứng với avatar drop của CPhuc mong Sưu phụ hand tìm cách khắc phục hehe
