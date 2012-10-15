@@ -1,0 +1,50 @@
+Demo:
+
+<code>
+    http://www.12b6pro.tk
+
+</code>
+
+Vào topic bất kỳ xem bài viết của rank Quản Trị Viên.
+
+Cách làm:
+
+Trong viewtopic tìm
+
+<code>
+    {postrow.displayed.POSTER_RANK_NEW}
+
+</code>
+Thay bằng
+
+<code>
+    <span class="r{postrow.displayed.U_POST_ID}">{postrow.displayed.POSTER_RANK_NEW}</span>
+</code>
+
+Tìm tiếp
+
+<code>
+    {postrow.displayed.MESSAGE}
+
+</code>
+Thay thành
+
+<code>
+    <span class="re{postrow.displayed.U_POST_ID}">{postrow.displayed.MESSAGE}</span>
+</code>
+
+Trong viewtopic, tìm
+
+<code>
+    <a name="{postrow.displayed.U_POST_ID}"></a>
+
+</code>
+Đặt ngay bên cạnh cho chắc =.=
+
+<code>
+    <script type="text/javascript">$(document).ready(function(){$(".r{postrow.displayed.U_POST_ID}:contains('Quản Trị Viên')").each(function(){$(".re{postrow.displayed.U_POST_ID}").css('font-weight','bold');});});</script>
+
+</code>
+Nhìn code chắc cũng biết rồi, thay Quản Trị Viên thành tên rank rồi chỉnh css như mong muốn là xong.
+
+Lỗi j post tại đây!!
