@@ -103,6 +103,12 @@ http://www.javascriptbeautifier.com/
 http://www.convertstring.com/vi/EncodeDecode/HtmlDecode
 
  http://jsunpack.jeek.org/
+http://matthewfl.com/unPacker.html
+http://www.strictly-software.com/unpack-javascript
+http://devgizmo.com/unpack-javascript-code-online/
+http://meyerweb.com/eric/tools/dencoder/
+http://lapo.it/asn1js/
+http://i-tools.org/pack
 http://tools.dinhcaoviet.net/
 http://tools.sinhvienit.net/
 http://www.tareeinternet.com/scripts/decrypt.php
