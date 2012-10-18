@@ -31,5 +31,6 @@ Now, you can either change the messages to your liking or even language, or keep
 Hit save.
 
 Then go to Admin Panel -> Users & Groups -> Special Rights -> View the profile -> Guests
+Then go to Admin Panel -> Users & Groups -> Users -> Profiles -> General options -> Activate advanced profile : Yes
 
 Save and you're done!
