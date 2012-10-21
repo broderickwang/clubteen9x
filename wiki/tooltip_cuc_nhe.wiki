@@ -19,7 +19,7 @@ thay bằng gì khi muốn cho nó hiện ở tooltip, còn cái
 
 thay bằng cái chữ để rê chuột vào
 
-Code: Chọn nội dung CODE
+<code>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <div class="container"><h2>Tooltip By ๖ۣۜGhost[1St]Die (๖ۣۜDemon ๖ۣۜDragon)</h2>   
         <p class="back"><a href="maze-game.9forum.net/register" class="tooltip" title="Trở lại maze-game">Vui lòng ủng hộ tớ 1 mem khi xài cái này :)</a></p>
