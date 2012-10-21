@@ -1,0 +1,91 @@
+First topic message reminder :
+
+sau đây mình xin hướng dẫn cách làm code lv 3 trong 1
+cho cái này vào viewtopic_body nơi muốn hiện tốt nhất là sau cái code
+
+<code>
+    <strong>{postrow.displayed.POSTER_NAME}</strong>
+                                  <span class="fmviOnoff">{postrow.displayed.ONLINE_IMG}</span> 
+</code>
+
+
+<code>
+     <style type="text/css">
+    .hidden {
+    display: none;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+    $(".tabmenu").removeClass("hidden");
+    $(".tabs h2").addClass("hidden");
+    $(".tabs").tabs();
+    });
+    </script>
+                          <div class="tabs">
+    <ul class="tabmenu hidden">
+    <li><a href="#tab-1">C1</a></li>
+    <li><a href="#tab-2">C2</a></li>
+    <li><a href="#tab-3">C3</a></li>
+    <li><a href="#tab-4">C4</a></li>
+    </ul>
+                            <div id="tab-1"><h2>Nhân Vật</h2>
+     <!--  THANH LEVEL HINH NGUOI -->
+                              <a>.†.Nhân Vật.†.</a><br>
+    <div class="levelhinhnguoi" align="left">
+    <span style="font-size:11px;font-family:Tahoma;font-weight:normal; display: none;">
+    <!-- BEGIN profile_field -->
+    {postrow.displayed.profile_field.LABEL}
+      {postrow.displayed.profile_field.CONTENT}
+      {postrow.displayed.profile_field.SEPARATOR}
+    <!-- END profile_field -->
+    {postrow.displayed.POSTER_RPG}
+    </span></div>
+      <!--  THANH LEVEL HINH NGUOI--></br>
+    </div>
+    <div id="tab-2"><h2>.†.Cấp Bậc.†.</h2>
+    <a>Cấp Bậc</a><br>
+      <div class="fmlevel" align="left">
+    <span style="font-size:11px;font-family:Tahoma;font-weight:normal; display: none;">
+    <!-- BEGIN profile_field -->
+    {postrow.displayed.profile_field.LABEL}{postrow.displayed.profile_field.CONTENT}{postrow.displayed.profile_field.SEPARATOR}
+    <!-- END profile_field -->
+    {postrow.displayed.POSTER_RPG}
+      </span></div> </br>
+    </div>
+    <div id="tab-3"><h2>Linh Thú</h2>
+      <a>.†.Linh Thú.†.</a><br><left><p>{postrow.displayed.POSTER_RANK}<br><img src="http://1.bp.blogspot.com/-tW3-ghYEpLI/TspwDPdqLgI/AAAAAAAAAXk/VJtB9eP5DC8/s1600/black-018-loading-p.gif"width="150"height="20"/> </br></p></left>
+      </br></div>
+    <div id="tab-4">
+    <h2>Up...</h2>
+    <p>Up...</p>
+    </div>
+    </div>
+</code>
+
+sau đó tìm trong viewtopic_body doạn sau
+
+<code>
+    <!-- END postrow -->
+</code>
+
+thêm vào sau nó
+
+<code>
+     <script type="text/javascript" src="http://camxucfan9x.one-forum.net/h161-page"></script>
+              <script type="text/javascript" src="http://camxucfan9x.one-forum.net/h178-page"></script>
+</code>
+
+tiếp đến các bạn ok là xong . nhớ vote tớ cái nghen
+Demo:
+
+<code>
+    http://camxucfan9x.one-forum.net/t501-topic#tab-1
+</code>
+Xem lý lịch thành viên Gửi tin nhắn http://camxucfan9x.one-forum.net/forum
+Thích
+Không thích
+Trả lời với trích dẫn nội dung bài viết này 
