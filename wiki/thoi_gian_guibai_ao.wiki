@@ -1,0 +1,72 @@
+     
+  <code>  <script>
+     
+     
+    jQuery.extend(true, XenForo,
+    {
+       visitor: { user_id: 0 },
+       serverTimeInfo:
+       {
+          now: 1341040246,
+          today: 1340989200,
+          todayDow: 6
+       },
+       _lightBoxUniversal: "0",
+       _enableOverlays: "1",
+       _animationSpeedMultiplier: "1",
+       _overlayConfig:
+       {
+          top: "10%",
+          speed: 200,
+          closeSpeed: 100,
+          mask:
+          {
+             color: "rgb(0, 0, 0)",
+             opacity: "0.6",
+             loadSpeed: 200,
+             closeSpeed: 100
+          }
+       },
+       _ignoredUsers: [],
+       _loadedScripts: {"dark_taigachat":true,"bb_code":true,"duythinht_recent_threads":true,"node_list":true,"node_category":true,"node_forum":true,"sidebar_share_page":true,"login_bar":true,"panel_scroller":true,"js\/dark\/taigachat.js?1323602330&_v=9c4e0d64":true,"js\/xenforo\/discussion_list.js?_v=9c4e0d64":true},
+       _cookieConfig: { path: "/", domain: "", prefix: "xf_"},
+       _csrfToken: "",
+       _csrfRefreshUrl: "index.php?login/csrf-token-refresh",
+       _jsVersion: "9c4e0d64"
+    });
+    jQuery.extend(XenForo.phrases,
+    {
+       cancel: "Hủy bỏ",
+     
+       a_moment_ago:    "Vài giây trước",
+       one_minute_ago:  "1 phút trước",
+       x_minutes_ago:  "%minutes% phút trước",
+       today_at_x:      "Hôm nay lúc %time%",
+       yesterday_at_x:  "Hôm qua, lúc %time%",
+       day_x_at_time_y: "%day% lúc %time%",
+     
+       day0: "Chủ nhật",
+       day1: "Thứ hai",
+       day2: "Thứ ba",
+       day3: "Thứ tư",
+       day4: "Thứ năm",
+       day5: "Thứ sáu",
+       day6: "Thứ bảy",
+     
+       _months: "Tháng một,Tháng hai,Tháng ba,Tháng tư,Tháng năm,Tháng sáu,Tháng bảy,Tháng tám,Tháng chín,Tháng mười,Tháng mười một,Tháng mười hai",
+       _daysShort: "CN,T2,T3,T4,T5,T6,T7",
+     
+       following_error_occurred: "Có lỗi sau sảy xa với yêu cầu của bạn",
+       server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+       logging_in: "Logging in",
+       click_image_show_full_size_version: "Nhấn vào hình này để xem kích thước đúng của nó.",
+       show_hidden_content_by_x: "Show hidden content by {names}"
+    });
+     
+    // Facebook Javascript SDK
+    XenForo.Facebook.appId = "";
+    XenForo.Facebook.forceInit = true;
+     
+     
+    </script>
+     </code>
