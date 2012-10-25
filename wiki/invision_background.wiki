@@ -13,6 +13,15 @@ http://i34.servimg.com/u/f34/15/64/85/86/select10.jpg
             Content: Hide rồi.. Reply để thấy nào hihi
 
 <code>
+    Demo: .info" target="_blank" rel="nofollow">http://invision.chinhphuc.info
+
+    Thực hiện:
+        Tạo một file js mới:
+            Title: Tùy chọn Background.
+            Placement: In all the pages.
+            Content: Hide rồi.. Reply để thấy nào hihi
+
+                Code: Select All
 
                         $(function () {
                           $(".mainmenu:last").after('<img src="http://i43.servimg.com/u/f43/15/93/40/94/nav_ba10.png" alt="Change background image" title="Tùy chọn hình nền" id="nav_background" />');
@@ -66,5 +75,5 @@ http://i34.servimg.com/u/f34/15/64/85/86/select10.jpg
                 #nav_background:active{background-color:#E71E7B}
 
 
-
 </code>
+Được sửa bởi miamor ngày Sun Sep 02, 2012 1:48 pm; sửa lần 2.
