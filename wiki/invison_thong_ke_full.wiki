@@ -1,11 +1,22 @@
-* TUT viết dựa trên top posters và recent topics 1 hàng cho invision của miamor (xem ...t/t6-topic#12). Last topics được convert từ last topic của vandonstar. TUT viết bởi miamor Lè lưỡi
+    * TUT viết dựa trên top posters và recent topics 1 hàng cho bb3 của vk. Last topics được convert từ last topic của vandonstar. TUT viết bởi miamor haha
+    (Tuyệt đối không xóa dòng này khi copy chia sẻ đi nơi khác.)
 
 
-* Demo: (Hẳn 3 cái đề mâu luôn macco Cả 3 cái đều hoạt độg tốt náz. Ai bị lỗi gì thì coi lại náz macco)
+Lần trước ngồi update sửa lỗi hộc máu mồm mà được có 4 like chịu
+Nay đưa 1 kiểu lên thôi, kiểu vandonstar, k có tooltip.
+Lần này mà k được đến 10 like sau nghỉ, chả chia sẻ gì nữa chịu
+
+
+* Demo: (Hẳn 3 cái đề mâu luôn mắc cỡ Cả 3 cái đều hoạt độg tốt náz. Ai bị lỗi gì thì coi lại náz mắc cỡ)
+<code>
 Pic: http://i44.servimg.com/u/f44/15/64/85/86/lastin13.png (skin Nice Blue 2)
-hoặc http://i44.servimg.com/u/f44/15/64/85/86/kkkk10.png (skin CP mới)
+hoặc http://i44.servimg.com/u/f44/15/64/85/86/kkkk10.png (skin CPhuc mới)
 hoặc http://i44.servimg.com/u/f44/15/64/85/86/source10.jpg (skin Source)
 
+Online: http://thekop.forumvi.com/ (skin Nice Blue 2)
+hoặc http://shopbp.forumvi.com/ (skin CPhuc mới)
+hoặc http://tomtest.forumvi.com/ (skin Source)
+</code>
 
 * Thực hiện:
 CSS:
@@ -140,21 +151,21 @@ CSS:
 
 
     NOTE: Bảng thống kê này mình viết trên skin Nice Blue 2 của ligerv. Các bạn chú ý trong đoạn CSS trên có đoạn code này:
-
+<code>
         .recent {float: left; width:680px;} /*hiển thị recent topics, bạn phải chỉnh sửa chiều rộng 680px cho phù hợp với 4r*/
-
+</code>
     mình đã chú thích ở đó, các bạn phải chỉnh lại chiều rộng 680px cho phù hợp với 4r của mình, nếu không sẽ có lỗi xảy ra.
 
-    Ví Dụ: Với nhữg ai sử dụng skin CP mới, khi giữ nguyên code đó last topic sẽ bị xuống dòng. Vì thế, khi sử dụng skin CP mới, bạn phải sửa số 680 thành 670. Khi đó, code trên sẽ trở thành
-
+    Ví Dụ: Với nhữg ai sử dụng skin CPhuc mới, khi giữ nguyên code đó last topic sẽ bị xuống dòng. Vì thế, khi sử dụng skin CPhuc mới, bạn phải sửa số 680 thành 670. Khi đó, code trên sẽ trở thành
+<code>
         .recent {float: left; width:670px;} /*hiển thị recent topics, bạn phải chỉnh sửa chiều rộng 680px cho phù hợp với 4r*/
 
+</code>
+    Các bạn thông cảm. Chịu khó edit tí. Tớ k có rành về CSS lắm nên chỉ thế được thôi mắc cỡ Chờ hand lên mà hỏi.
 
-    Các bạn thông cảm. Chịu khó edit tí. Tớ k có rành về CSS lắm nên chỉ thế được thôi macco Chờ hand lên mà hỏi.
 
 
-
-Javascript: Tạo 1 file javascript, đặt In the homepage nếu bạn đặt bảng thống kê chỉ ở trang chủ, đặt In all the pages nếu bạn đặt bảng thống kê ở mọi trang.
+Javascript: Tạo 3 file javascript, đặt In the homepage nếu bạn đặt bảng thống kê chỉ ở trang chủ, đặt In all the pages nếu bạn đặt bảng thống kê ở mọi trang.
 
 <code>
     Link = '/search?search_author=*_*&search_keywords';
@@ -278,12 +289,16 @@ Javascript: Tạo 1 file javascript, đặt In the homepage nếu bạn đặt b
     Link = op;
     LoadLastPost(0);
     }
+</code>
 
+<code>
     $(function(){
     $('#option-lastpost .op-last:first').addClass('op-last2');
     LoadLastPost(0);
     });
 
+
+Code: Chọn nội dung CODE
     $(function(){
       $('#left .module:eq(0)').addClass('topposter').next().remove();
       $('#left .module:eq(1)').addClass('hottest').next().remove();
@@ -295,7 +310,7 @@ Javascript: Tạo 1 file javascript, đặt In the homepage nếu bạn đặt b
 </code>
 
 Tạo 1 widget mới: Điền các thông tin như sau:
-(*) Widget name : Last mia macco
+(*) Widget name : Last mia mắc cỡ
 (*) Use a table type : Có
 (*) Widget title : Latest topics
 (*) Widget source * :
@@ -305,11 +320,17 @@ Tạo 1 widget mới: Điền các thông tin như sau:
     <tr class="baiguicuoi" style="display: table-row; ">
           <td width="100%" valign="top" colspan="2">
      <div id="Load"></div>
-
+     <table style="background:#FFF repeat;" width="100%">
+    <tr>
+    <td width="100%" valign="top">
       <div id="name-lastpost"><span class="lp2">Tiêu đề</span><span class="lp3">Sáng lập</span><span class="lp4">Gửi cuối</span><span class="lp5">Chuyên mục</span><span class="lp6">Bình</span><span class="lp7">Xem</span></div>
       <div id="main-lastpost"></div>
-    </td></tr>
-
+    </td>
+    </tr></table>
+    </td>
+    </tr>
+    </table>
+    </td></tr></table></td></tr>
     <tr><td>
       <div id="option2-lastpost">
         <div class="op-last-bottom op-last-bottom2" onclick="Op2Last('/search?search_author=*_*&search_keywords')">Lastest</div>
@@ -329,35 +350,81 @@ Tạo 1 widget mới: Điền các thông tin như sau:
     </div><div class="clear"></div>
      </td></tr>
       </table>
-</code>
 
+</code>
     NOTE: Cái đoạn
 
 <code>
         <option><div class="op-last" onclick="Op1Last('')">All</div></option><option value="-1"></option><option txt="01" value="f20">|--Cộng đồng game</option><option txt="01" value="f22">|--QTAN</option><option txt="01" value="f23">|--hot video youtube</option>
-<code>
+</code>
     các bạn viewsource đoạn jumbox của các bạn thay vào, sau đó tìm đoạn
 
-    Code: Select All
+<code>
         <option value="-1">Chọn Diễn Đàn</option>
-
+</code>
     sửa thành
 
 <code>
         <option><div class="op-last" onclick="Op1Last('')">All đàn</div></option>
-</code>
 
+</code>
 
 Sắp xếp widgets: http://i44.servimg.com/u/f44/15/64/85/86/widget16.png
 
-Cài đặt bài viết: QLTT >> Messages and email >> Chủ đề trong một trang: 20.
+Cài đặt bài viết: QLTT Muiten Messages and email Muiten Chủ đề trong một trang: 20.
 
 
 * P/s:
 
-    Cái CSS của last topics được vác nguyên từ pun qua nên sẽ hơi mất thẩm mĩ macco Các bạn tự sửa phần này nhé, lười lắm macco
-    Trên 15 lượt like tớ update tiếp last topic có tooltip Lăn lộn cơ mà cái nài các bạn tự sửa cũg được., có code mẫu kia rồi.
-    Last rất dài, đây là lúc thực hiện câu thành ngữ "Có chí thì nên", "Có công mài sắt có ngày nên kim". Hãy noi gương ông cha ta và thực hiện đến nơi đến chốn nhé ;-d
-    Như thường lệ, Tiếp nhận mọi loại gạch, đá, chai, lọ,... tại topic này. ;-d (Từ h k hỗ trợ qua Yh nữa ;-d)
-    Và cũg như thườg lệ, Chỉ nhận những loại gạch, đá, chai, lọ,... có văn hóa ;-d
-    Các chai lọ có thể mọc rêu, không dám nói trước điều gì ;-d
+    Cái CSS của last topics được vác nguyên từ pun qua nên sẽ hơi mất thẩm mĩ mắc cỡ Các bạn tự sửa phần này nhé, lười lắm mắc cỡ
+    Trên 15 lượt like tớ update tiếp last topic có tooltip Cười nghiêng ng cơ mà cái nài các bạn tự sửa cũg được., có code mẫu kia rồi.
+    Last rất dài, đây là lúc thực hiện câu thành ngữ "Có chí thì nên", "Có công mài sắt có ngày nên kim". Hãy noi gương ông cha ta và thực hiện đến nơi đến chốn nhé ngại quá
+    Như thường lệ, Tiếp nhận mọi loại gạch, đá, chai, lọ,... tại topic này. ngại quá (Từ h k hỗ trợ qua Yh nữa ngại quá)
+    Và cũg như thườg lệ, Chỉ nhận những loại gạch, đá, chai, lọ,... có văn hóa ngại quá
+    Các chai lọ có thể mọc rêu, không dám nói trước điều gì ngại quá
+
+
+
+
+    * Hướng dẫn sửa lỗi cho những ai sử dụng skin CPhuc mới:
+    Tìm trog CSS đoạn này:
+
+<code>
+        #forum_rules .maintitle,[href="#"]::before,.post img[src="http://illiweb.com/fa/empty.gif"],#chatbox_top+script+div img,.row1.centered + .row1.centered,#userlinks p,a[href^="/u"]+br+a[href^="/u"],dt+dd+dd>br,td[colspan="2"],.row1 span a+br+br,.ipbtable thead,#left .box-content>a+br{display:none}
+</code>
+    và thay bằng đoạn này:
+
+<code>
+        #forum_rules .maintitle,[href="#"]::before,.post img[src="http://illiweb.com/fa/empty.gif"],#chatbox_top+script+div img,.row1.centered + .row1.centered,#userlinks p,a[href^="/u"]+br+a[href^="/u"],dt+dd+dd>br,.row1 span a+br+br,.ipbtable thead{display:none}
+
+</code>
+    TÌm tiếp trong CSS đoạn này:
+
+<code>
+        #left{clear:none!important;width:100%!important;float:none!important;counter-reset:stt;}
+        #left .box-content > a[href*="/t"]::before{content: counter(stt)".";counter-increment: stt;float: left;position: absolute;text-align: right;width: 25px!important;margin-left: -25px;}
+        #left a[href*="/t"]{width:450px;float:left;margin-right:164px;height:14px;overflow:hidden;padding-left: 16px;}
+        #left a[href*="/t"]:hover::after{content:"☺ (xem ngay)"}
+        #left a[href*="/u"]{width:160px;position:absolute;margin-left:-164px;background:#FFF;}
+</code>
+    hoặc đoạn này:
+
+<code>
+        /*Last topic cho Invision ver.2*/
+        #left{clear:none!important;width:100%!important;float:none!important;counter-reset:stt}
+        #left .module.borderwrap:nth-child(1){margin-right:2px;width:220px;float:left}
+        #left .module.borderwrap:nth-child(1) .box-content{background:white}
+        #left .module.borderwrap:nth-child(3){width:705px;float:left}
+        #left .module.borderwrap:nth-child(3) a + br,#left [style="height:11px"]{display:none}
+        #left .module.borderwrap:nth-child(3) .box-content{overflow:hidden;height:281px;background:white}
+        #left .module.borderwrap:nth-child(3) .box-content:hover{overflow:auto}
+        #left .module.borderwrap:nth-child(3) .box-content a[href^="/t"]{margin-bottom:15px;width:342px;float:left;overflow:hidden;height:14px}
+        #left .module.borderwrap:nth-child(3) .box-content a[href*="/u"]{margin-bottom:15px;margin-left:-30px;background:white;width:157px;display:inline-block;padding-left:15px}
+        #left .module.borderwrap:nth-child(3) .box-content a[href*="/u"] img{margin-top:-16px}
+        #left .module.borderwrap:nth-child(3) .box-content a[href^="/t"]::before{content:counter(stt)".";counter-increment:stt;width:20px;display: inline-block;text-align:right}
+        [summary*="Top post"] tr{height:25px}
+        [summary*="Top post"] td{background:#FFF!important;border:0!important}
+        #left .module.borderwrap{width:937px;float:left}
+</code>
+    và xóa đi.
+
