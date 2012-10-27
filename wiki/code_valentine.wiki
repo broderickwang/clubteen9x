@@ -1,0 +1,214 @@
+Hello to everyone,
+
+Here we are soon in the most beautiful season of the year...Love season ! Yes, very soon, we'll celebrate Valentine's Day ! Wink
+
+On this occasion, Forumotion offers some animations in the form of codes, easy to install to decorate your forum I love you
+
+________________________________________________________________
+
+To install these codes, you have two methods :
+
+
+For the first one, you just have to insert the chosen code into :
+Administration Panel http://i62.servimg.com/u/f62/09/02/12/09/arrow10.gif General http://i62.servimg.com/u/f62/09/02/12/09/arrow10.gif  Forum | Configuration http://i62.servimg.com/u/f62/09/02/12/09/arrow10.gif Site description
+
+
+
+
+Result : Your decoration will be displayed on every pages of your forum.
+
+
+
+For the second one, you can add more codes at the same time, by the tags :
+
+
+Administration Panel http://i62.servimg.com/u/f62/09/02/12/09/arrow10.gif General http://i62.servimg.com/u/f62/09/02/12/09/arrow10.gif  Forum promotion | Search engines  http://i62.servimg.com/u/f62/09/02/12/09/arrow10.gif Additional tags
+
+http://i62.servimg.com/u/f62/09/02/12/09/arrow10.gif
+
+http://i41.servimg.com/u/f41/17/21/73/91/screen19.png
+
+http://i41.servimg.com/u/f41/17/21/73/91/screen17.png
+
+
+
+
+Result : Your decoration will be displayed on portal, home, sub-forums and topic pages of your forum.
+
+___________________________________________________________________________
+
+
+* Scripts by Adam_sfp
+
+
+
+	
+
+    I Love :
+
+
+<code>
+    <script src=http://sd-1.archive-host.com/membres/up/37821634957680146/stV/ilove.js></script>
+
+</code>
+
+
+
+	
+
+    Little hearts :
+
+<code>
+
+    <script src=http://sd-1.archive-host.com/membres/up/37821634957680146/stV/petitcoeur.js></script>
+</code>
+
+
+
+
+	
+
+    Heart in flowers :
+
+
+<code>
+    <script src=http://sd-1.archive-host.com/membres/up/37821634957680146/stV/heart.js></script>
+
+
+</code>
+
+
+	
+
+    Rings :
+
+
+<code>
+    <script src=http://sd-1.archive-host.com/membres/up/37821634957680146/stV/bague.js></script>
+</code>
+
+
+
+
+	
+
+    Heart 1 :
+
+
+<code>
+    <script src=http://sd-1.archive-host.com/membres/up/37821634957680146/stV/coeur2.js>
+    </script>
+</code>
+
+
+
+
+	
+
+    Heart 2 :
+
+
+<code>
+    <script src=http://sd-1.archive-host.com/membres/up/37821634957680146/stV/coeur.js>
+    </script>
+</code>
+
+
+
+
+	
+
+    Flower :
+
+
+<code>
+    <script src=http://sd-1.archive-host.com/membres/up/37821634957680146/stV/flower.js>
+    </script>
+
+
+</code>
+
+
+	
+
+    Happy :
+
+
+<code>
+    <script src=http://sd-1.archive-host.com/membres/up/37821634957680146/stV/happy.js>
+    </script>
+</code>
+
+
+
+___________________________________________________________________________
+
+
+
+* Scripts by Alex Fowl
+
+Rain of pictures :
+
+
+	
+
+http://fdf.aidactif.fr/valentin/s1.png <script src=http://fdf.aidactif.fr/valentin/s1.js></script>
+
+
+
+
+
+	
+
+http://fdf.aidactif.fr/valentin/s2.png <script src=http://fdf.aidactif.fr/valentin/s2.js></script>
+
+
+
+
+
+	
+
+http://fdf.aidactif.fr/valentin/s3.png <script src=http://fdf.aidactif.fr/valentin/s3.js></script>
+
+
+
+
+
+	
+
+http://fdf.aidactif.fr/valentin/s4.png <script src=http://fdf.aidactif.fr/valentin/s4.js></script>
+
+
+
+
+
+	
+
+http://fdf.aidactif.fr/valentin/s5.png <script src=http://fdf.aidactif.fr/valentin/s5.js></script>
+
+
+
+
+
+	
+
+http://fdf.aidactif.fr/valentin/s6.png <script src=http://fdf.aidactif.fr/valentin/s6.js></script>
+
+
+
+
+
+	
+
+http://fdf.aidactif.fr/valentin/s7.png <script src=http://fdf.aidactif.fr/valentin/s7.js></script>
+
+
+
+
+
+	
+
+http://fdf.aidactif.fr/valentin/s8.png <script src=http://fdf.aidactif.fr/valentin/s8.js></script>
+
+
+
