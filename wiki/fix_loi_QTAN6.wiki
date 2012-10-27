@@ -1,0 +1,31 @@
+Cái này áp dụng cho bạn nào ko chỉnh sửa code nhé
+Đầu tiên bạn vào Index_body tìm
+
+<code>
+    <div type="z-index:9999;" id="find_username" class="jqmWindow"></div>
+</code>
+
+
+
+Chèn vào sau nó đoạn
+
+<code>
+    <script type="text/javascript">
+    $(".qtantdyt_new").click(function(){
+    jQuery("<div />").load("/post?f=65&mode=newtopic input[name^=auth]").appendTo("form#form_qtanvds");
+    });</script>
+
+
+</code>
+
+
+Mình đã làm thành công giờ thì, đến lượt bạn
+
+
+<code>
+    http://www.maitruongmenyeu.org/t916-topic#2356
+
+
+</code>
+
+Hay thì vote nha
