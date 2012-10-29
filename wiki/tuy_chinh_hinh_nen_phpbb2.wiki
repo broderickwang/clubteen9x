@@ -1,0 +1,69 @@
+demo : http://dust.dust.tv/
+nút trên cùng bên phải
+demo ảnh làm sau :d
+an
+csss
+
+<code>
+    /* Tùy chọn hình nền */
+    #custom_background{background-image:url('http://i48.servimg.com/u/f48/16/58/89/73/backgr18.jpg') !important;box-shadow:0 0 10px rgba(0,0,0,0.8) inset;color:#FFF;position:relative;padding:15px 0 15px 15px}
+    #custom_background span{-moz-transition:all .2s ease-in-out 0;background:none no-repeat scroll 50% 50% #000;border-radius:7px 7px 7px 7px;box-shadow:0 1px 7px #000 inset, 0 1px 0 rgba(255,255,255,0.05), 0 0 1px rgba(255,255,255,0.35);cursor:pointer;display:block;float:left;height:90px;margin-right:15px;width:15%}
+    #custom_background span:hover{box-shadow:0 1px 2px #000 inset, 0 1px 0 rgba(255,255,255,0.05), 0 0 1px rgba(255,255,255,0.35)}
+    #bg1{background-image:url(http://farm06.go.vn/photo02/data/20120322/10798851/1AF1A332300A3C556B1E72853968DEF5.jpg.140.90.cache)!important}
+    #bg6{background-image:url(http://i48.servimg.com/u/f48/16/58/89/73/backgr15.jpg)!important}
+    #bg5{background-image:url(http://newevolutiondesigns.com/images/freebies/black-wallpaper-8.jpg)!important}
+    #bg2{background-image:url(http://i48.servimg.com/u/f48/16/58/89/73/backgr17.jpg)!important}
+    #bg3{background-image:url(http://i.imm.io/IFGx.png)!important}
+    #bg4{background-image:url(http://i48.servimg.com/u/f48/16/58/89/73/backgr18.jpg)!important}
+    #custom_url{clear:left;padding-top:10px;text-align:center}
+    #custom_input{background:none repeat scroll 0 0 rgba(0,0,0,0.5);border:0 none;border-radius:4px 4px 4px 4px;box-shadow:0 1px 3px rgba(0,0,0,0.75) inset, 0 1px 0 rgba(255,255,255,0.15);color:#FFF;font-size:20px;height:40px;margin-left:-15px;margin-right:8px;white-space:nowrap;width:780px;padding:0 10px 0 0}
+    #custom_submit{background:url(http://i48.servimg.com/u/f48/16/58/89/73/highli10.png) repeat-x scroll 0 0 rgba(197,206,213,0.4);border-radius:4px 4px 4px 4px;box-shadow:0 1px 3px rgba(0,0,0,0.6);color:#FFF;cursor:pointer;display:inline-block;font-size:20px;font-weight:400;line-height:40px;text-shadow:0 -1px 0 #4C5057;padding:0 10px}
+    .bg1{background:url(http://farm06.go.vn/photo02/data/20120322/10798851/1AF1A332300A3C556B1E72853968DEF5.jpg) no-repeat fixed 100% 0 #000!important}
+    .bg2{background:url(http://i48.servimg.com/u/f48/16/58/89/73/backgr12.jpg) no-repeat fixed 50% 0 #000!important}
+    .bg3{background:url(http://www.khoaqhqt.edu.vn/upload/fckeditor/image/Konfident%20Halloween%202012%20%E2%80%93%20T%C3%AAn%20g%E1%BB%8Di%20mang%20nhi%E1%BB%81u%20%C3%BD%20ngh%C4%A9a.jpg) repeat fixed 50% 0 #000!important}
+    .bg4{background:url(http://i48.servimg.com/u/f48/16/58/89/73/backgr14.jpg) repeat fixed 50% 0 #000!important}
+    .bg5{background:url(http://newevolutiondesigns.com/images/freebies/black-wallpaper-8.jpg) no-repeat fixed 50% 0 #0E1E2D!important}
+    .bg6{background:url(http://i48.servimg.com/u/f48/16/58/89/73/backgr19.jpg) no-repeat fixed 50% 0 #000!important}
+    .bg_custom{background-size:100% auto;background-position:0 43px;background-attachment:fixed;background-color:#000;background-repeat:no-repeat}
+    .toplinkfmvi{background-color:#000;border:3px dotted #444!important;border-radius:15px 15px 15px 15px;cursor:pointer;float:right;padding:5px}
+    .toplinkfmvi:hover{background-color:#FFF}
+    .toplinkfmvi:active{background-color:#E71E7B}
+
+</code>
+
+
+cho vào head
+
+<code>
+
+    <script src="http://www.hotrofm.com/33969.js" type="text/javascript"></script>
+
+
+                                     
+            <div id="toggle_background" style="display: none;">
+                                        <div id="custom_background">
+                                           <span id="bg1"></span>
+                                           <span id="bg6"></span>
+                                           <span id="bg5"></span>
+                                           <span id="bg2"></span>
+                                           <span id="bg3"></span>
+                                           <span id="bg4"></span>
+                                           <div id="custom_url">
+                                              <input type="text" placeholder=" Chọn hình nền khác bằng cách nhập một URL hình ảnh và nhấn [Thay đổi]" id="custom_input" />
+                                              <strong id="custom_submit">Thay đổi</strong>
+                                           </div>
+                                        </div>
+                                     </div>                
+
+</code>
+
+<code>var CopyrightNoticeEn='Copyright ©  by FmVi. All Rights Reserved. Use, modification, and/or distribution of this script is not allowed without direct permission from baivong (webmaster@fmvi.vn). This entire copyright notice must remain in the original, copied, or modified script';var CopyrightNoticeVi='Bản quyền © FmVi. Giữ toàn quyền. Việc sử dụng, sửa đổi , và / hoặc phân phối mã này mà không được phép trực tiếp từ baivong (webmaster@fmvi.vn) là không được phép. Toàn bộ thông báo bản quyền này phải được giữ nguyên khi sao chép, hoặc sửa đổi';$(function(){$("#content").prepend('<div id="toggle_background" style="display: none;"><div id="custom_background"><span id="bg1"></span><span id="bg6"></span><span id="bg5"></span><span id="bg2"></span><span id="bg3"></span><span id="bg4"></span><div id="custom_url"><input type="text" placeholder=" Chọn hình nền khác bằng cách nhập một URL hình ảnh và nhấn [Thay đổi]" id="custom_input"><strong id="custom_submit">Thay đổi</strong></div></div></div>');$("#custom_background span").click(function(){$("body").removeClass("bg1 bg2 bg3 bg4 bg5 bg6 bg_custom").addClass($(this).attr("id"));my_setcookie("custom_background",$(this).attr("id"),true)});$("#custom_submit").click(function(){var urlbg=$("#custom_input").val();$("body").removeClass("bg1 bg2 bg3 bg4 bg5 bg6 bg_custom").addClass("bg_custom").css("background-image","url('"+urlbg+"')");my_setcookie("custom_background",urlbg,true)});$("#nav_background").click(function(){$("#toggle_background").slideToggle()});if(my_getcookie("custom_background")!=""){if(my_getcookie("custom_background").length>4){$("body").addClass("bg_custom").css("background-image","url("+my_getcookie("custom_background")+")")}else{$("body").addClass(my_getcookie("custom_background"))}}});</code>
+
+tiếp theo đặt nút:
+cho code này vào vị trí bạn cần cho nút vào đó có thế cho head nun cho tiện
+
+
+<code>
+     <img src="http://i48.servimg.com/u/f48/16/58/89/73/nav_ba10.png" alt="Change background image" title="Change background image" class="toplinkfmvi" id="nav_background" />
+
+</code>
