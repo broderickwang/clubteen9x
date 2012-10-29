@@ -5,7 +5,7 @@ Convert: miamor.
 
 Chèn vào CSS:
 
-</code>
+<code>
 
         .prettyprint .pln{font-family:Courier New;color:#000}
         .prettyprint .str{color:#080}
