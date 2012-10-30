@@ -1,0 +1,121 @@
+Js In the topics:
+<code>
+     function timlink(a) {
+            a = a.substring(a.indexOf("<a href=") + 9);
+            b = a.indexOf('"');
+            return a.substring(0, b)
+        };
+
+        function upbai(a) {
+            var b = a.split('#')[1];
+            $('<br/><div class=postcuoi><div align=center><img src="http://i43.servimg.com/u/f43/16/03/04/56/black-10.gif"/></div></div>').appendTo('.cleared:last').load(a + " #post" + b, function () {
+                loadsss();
+                $('input[name=post]').show().prev().show().next().next().remove()
+            });
+            $("#text_editor_textarea").val('');
+            $('input[name=lt]').val(b);
+            $(".ruled").html('')
+        };
+        $('input[name=post]').click(function () {
+            if ($("#text_editor_textarea").val().replace('<br>', '').replace(/ /
+            gi, '').length < 2) {
+                alert('Nội dung quá ngắn vui lòng nhập lại')
+            } else {
+                $(this).after('<span>Đang gửi chờ chút...</span>');
+                $(this).hide().prev().hide();
+                var a = $("form").serialize() + "&post=1";
+                $.post('/post', a, function (c) {
+                    if (c.indexOf("Flood control") > 0) {
+                        alert('Bạn chưa gửi được do bạn vừa gửi một bài cách đây không lâu.');
+                        $('input[name=post]').show().prev().show().next().next().remove()
+                    } else if (c.indexOf('A new message') > 0) {
+                        alert('Vừa có người gửi trước đó. Vui lòng nhấn OK.');
+                        window.location.reload()
+                    } else {
+                        if ($("html").attr("xml:lang") == "en") {
+                            var a = c.indexOf("has been sent"),
+                                e = c.indexOf("entered successfully");
+                            0 < a || 0 < e ? (c = c.substring(0 < a ? a : e), c = timlink(c), upbai(c)) : (alert('Error! please press F5 of turn off A/a for send reply.'))
+                        } else if ($("html").attr("xml:lang") == "vi") {
+                            var a = c.indexOf("Bấm chuột");
+                            0 < a ? (c = c.substring(a), c = timlink(c), upbai(c)) : (alert('Có lỗi vui lòng ấn F5 hoặc tắt nút A/A để gửi bài.'))
+                        }
+                    }
+                })
+            }
+            return false
+        });
+        $('input[name=preview]').click(function () {
+            $(".ruled").html($("form #text_editor_textarea").val()).show();
+            return false
+        });
+        $("a[href^='/post?p='][href*='&mode=quote']").click(function () {
+            $(".Load").show();
+            $.get($(this).attr("href"), function (c) {
+                var a = (c.indexOf("width:98%") + 11);
+                var c = c.substring(a);
+                var noidung = c.substring(0, c.indexOf("<"));
+                $("#text_editor_textarea").val($("#text_editor_textarea").val() + noidung).focus();
+                $(".Load").fadeOut()
+            });
+            return false
+        })
+    });
+
+</code>
+Css:
+
+<code>
+    .ruled { display: none; margin: auto; background-color: white; padding: 10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin-bottom: 20px; margin-top: 20px; }
+
+
+</code>
+Tìm:
+
+<code>
+    <!-- BEGIN postrow -->
+
+</code>
+Thêm vào trước nó:
+
+<code>
+    <div class="main-content-topic cleared">
+
+
+</code>
+Tìm:
+
+<code>
+    <!-- BEGIN displayed -->
+</code>
+
+Thêm vào dưới nó:
+
+<code>
+    <div class="main-content-topic" id="post{postrow.displayed.U_POST_ID}">
+
+</code>
+
+Tìm:
+
+<code>
+    <!-- END postrow -->
+</code>
+
+Thêm vào dưới nó:
+
+<code>
+    </div>
+
+
+</code>
+Tìm:
+
+<code>
+    <!-- END displayed -->
+</code>
+
+Thêm vào trên nó:
+
+<code>
+    </div> </code>
