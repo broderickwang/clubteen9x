@@ -1,0 +1,53 @@
+Hướng dẫn:
+
+color=blue]Chèn thêm vào cuối overall_footer_end[/color]
+- ACP> Display> Templates> QLTT> Overall_footer_end
+- copy và dán script sau vô cuối
+
+<code>
+
+    <script>$("a.krokodil").each(function(){
+            if ($(this).text().length > 65) {$(this).text($(this).text().substr(0, 62));$(this).append('...');
+            }
+        });</script>
+
+</code>
+
+- thay đổi số 65 với 62 tùy theo độ dài muốn rút ngắn !
+- bấm save rùi
+
+Thêm trong recent_topic,
+- ACP> Display> Templates> Portal > Recent_topics
+- tìm chỗ hiểm thị link muốn rút ngắn thêm class này vào:
+
+<code>
+
+    class="krokodil"
+
+</code>
+
+- bấm save rùi
+
+ví dụ: rút ngắn tiêu đề
+thì tìm :
+
+<code>
+
+    {classical_row.recent_topic_row.L_TITLE}
+
+</code>
+
+thay bằng:
+
+<code>
+
+    <span class="krokodil">
+    {classical_row.recent_topic_row.L_TITLE}
+      </span>
+
+
+</code>
+Demo:
+http://chinhphuc.123.st
+
+Nguồn: Chinhphuc.info
