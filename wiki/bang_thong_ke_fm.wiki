@@ -1,0 +1,203 @@
+demo
+
+http://img24.imageshack.us/img24/156/26987517.png
+http://www.xaydungthanhhoa.com/
+
+
+cách làm:
+vào index body tìm code
+
+<code>
+    <!-- BEGIN disable_viewonline -->
+    <div id="pun-info" class="main">
+       <div class="main-content">
+          <div id="stats">
+             <p class="right">{TOTAL_POSTS}</p>
+             <p>{TOTAL_USERS}</p>
+             <p>{NEWEST_USER}</p>
+          </div>
+          <div id="onlinelist">
+             <img src="{L_ONLINE_IMG}" alt="{L_WHO_IS_ONLINE}" />
+             <p class="right">
+                <!-- BEGIN switch_viewonline_link -->
+                <a href="{U_VIEWONLINE}" rel="nofollow">{L_WHO_IS_ONLINE}</a>
+                <!-- END switch_viewonline_link -->
+                <!-- BEGIN switch_viewonline_nolink -->
+                {L_WHO_IS_ONLINE}
+                <!-- END switch_viewonline_nolink -->
+             </p>
+             <p>{TOTAL_USERS_ONLINE}<br />
+             {RECORD_USERS}
+
+             <br />
+             {LOGGED_IN_USER_LIST}
+
+             {L_ONLINE_USERS}
+             {L_CONNECTED_MEMBERS}<br />
+             {L_WHOSBIRTHDAY_TODAY}{L_WHOSBIRTHDAY_WEEK}</p>
+             <div class="clear"></div>
+
+             <p>{LEGEND}&nbsp;:&nbsp;{GROUP_LEGEND}</p>
+
+          </div>
+          <!-- BEGIN switch_chatbox_activate -->
+          <div id="onlinechat">
+             <p class="page-bottom">
+             {TOTAL_CHATTERS_ONLINE}&nbsp;:&nbsp;
+             {CHATTERS_LIST}<br />
+             <!-- BEGIN switch_chatbox_popup -->
+                <div id="chatbox_popup"></div>
+                <script type="text/javascript">
+                   insertChatBoxPopup('{disable_viewonline.switch_chatbox_activate.switch_chatbox_popup.U_FRAME_CHATBOX}', '{L_CLICK_TO_JOIN_CHAT}');
+                </script>
+             <!-- END switch_chatbox_popup -->
+             </p>
+          </div>
+          <!-- END switch_chatbox_activate -->
+       </div>
+    </div>
+    <!-- END disable_viewonline -->
+
+
+</code>
+thay bằng code
+
+<code>
+    <!-- BEGIN disable_viewonline -->
+
+
+    <br/>
+
+
+
+      <table id="general-stats" cellspacing="0" cellpadding="0">
+
+          <td id="online"> 
+
+    <div class="on-title"> <a href="{U_VIEWONLINE}" rel="nofollow"> <img class="globe" src="http://i36.servimg.com/u/f36/11/96/49/61/earth10.png"/> {L_WHO_IS_ONLINE} </a> </div>
+
+            <div class="online-content">
+           
+    {TOTAL_USERS_ONLINE}
+      <br/>
+    {LOGGED_IN_USER_LIST}
+            <br/>
+           
+    {L_CONNECTED_MEMBERS}
+
+            </div>
+             
+    </td>
+
+
+
+     <td id="statistics">
+
+      <div class="stats-title"> <a href="#" rel="nofollow"> <img class="chart" src="http://i36.servimg.com/u/f36/11/96/49/61/partie10.png"/> STATISTICS</a> </div>
+
+     <div class="stats-content"> 
+     
+    {TOTAL_POSTS}
+      <br/>
+    {TOTAL_USERS}
+      <br/>
+    {NEWEST_USER}
+      <br/>
+    {RECORD_USERS}
+     
+      </div>
+     
+    </td>   
+           
+      </table>
+
+     <br/>
+
+
+    <div class="main-box" id="legend">
+    <div align="left" class="legend">{LEGEND} : {GROUP_LEGEND}</div>
+     
+      <a href="/groups" class="groups" align="right">Groups</a>
+     
+    </div>
+
+          <!-- BEGIN switch_chatbox_activate -->
+          <div id="onlinechat">
+             <p class="page-bottom">
+             {TOTAL_CHATTERS_ONLINE}&nbsp;:&nbsp;
+             {CHATTERS_LIST}<br />
+             <!-- BEGIN switch_chatbox_popup -->
+                <div id="chatbox_popup"></div>
+                <script type="text/javascript">
+                   insertChatBoxPopup('{disable_viewonline.switch_chatbox_activate.switch_chatbox_popup.U_FRAME_CHATBOX}', '{L_CLICK_TO_JOIN_CHAT}');
+                </script>
+             <!-- END switch_chatbox_popup -->
+             </p>
+          </div>
+          <!-- END switch_chatbox_activate -->
+
+    <!-- END disable_viewonline -->
+
+</code>
+
+tiếp theo cho code này vào css
+
+<code>
+
+    #general-stats{
+      width: 100%;
+      text-shadow: 1px 1px 0 white;
+      background: #f5f5f5;
+      -moz-box-shadow: 0px 0px 7px 0px #dcdcdc;
+      -webkit-box-shadow: 0px 0px 7px 0px #dcdcdc;
+      box-shadow: 0px 0px 7px 0px #dcdcdc;
+      border: 1px solid white;}
+
+    #statistics{
+      vertical-align: top;
+      padding-bottom: 15px;
+      border-left: 1px solid white;
+      width: 100%;
+      float: right;}
+
+    #statistics .stats-title{background: #e3e3e3;}
+
+    .stats-content{
+      border-top: 1px solid #d9d9d9; 
+      padding: 15px;}
+
+    #online{
+      vertical-align: top;
+      border-right: 2px solid #d2d2d2;
+      background: #eaeaea;
+      width: 60%;}
+
+    #online .on-title{background: #f3f3f3;}
+
+    #online .on-title, #statistics .stats-title{
+      height: 70px;
+      padding 0 0 0 20px;
+      text-transform: uppercase;
+      font-size: 30px;
+      border-bottom: 1px solid white;}
+
+    #online .on-title a, #statistics .stats-title a{
+      font-family: Century Gothic !important;
+      bottom: -23px;
+      position: relative;
+      left: 20px;}
+
+
+    .online-content{
+      border-top: 1px solid #d9d9d9; 
+      padding: 15px;}
+    #legend{margin: 25px 0;}
+
+    .groups{
+      background: url(http://i36.servimg.com/u/f36/11/96/49/61/custom10.png) no-repeat left;
+      padding: 5px 0 5px 18px;
+      float: right;
+      margin-top: -22px;}
+
+
+</code>
