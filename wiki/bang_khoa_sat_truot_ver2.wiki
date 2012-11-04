@@ -1,4 +1,6 @@
 Chức năng:
+`<font color="#FF0000">ttt</font>`
+
 
     Làm bảng khảo sát trượt dọc forum, chỉ hiển thị một Icon bên trái, không chiếm nhiều diện tích diễn đàn.
     Bảng khảo sát chỉ được hiển thị khi người dùng Click, không làm chậm diễn đàn khi khởi động.
