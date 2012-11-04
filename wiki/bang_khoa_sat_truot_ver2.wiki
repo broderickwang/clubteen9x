@@ -10,7 +10,7 @@ Chức năng:
 
 Hướng dẫn:
 
-Bước 1: ACP - Display - Templates - Ganeral - overall_footer: Thêm vào bên dưới {PROTECT_FOOTER} (hoặc trước </body>) đoạn code sau
+Bước 1: ACP - Display - Templates - Ganeral - overall_footer: Thêm vào bên dưới {PROTECT_FOOTER} (hoặc trước ` </body> 	`) đoạn code sau
 
 <code>
 
