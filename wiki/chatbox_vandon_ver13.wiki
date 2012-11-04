@@ -3,7 +3,7 @@ Ver 1.3 là phiên bản phát triển hiệu ứng âm thanh. Xem ver 1.2 tại
 
 Những chức năng mới so với ver 1.2:
 
-    Chức năng buzz : Chức năng buzz làm rung chatbox trong 0.8s và phát âm thanh buzz (yahoo) cho tất cả thành viên đang có mặt trong chatbox (đối với IE và các trình duyệt không hỗ trợ CSS3 thì chỉ có âm thanh, ko có rung). Nếu bạn mới truy cập vào trang có chatbox chứa buzz thì bạn sẽ nhận được buzz.
+    Chức năng http://r12.imgfast.net/users/1215/11/75/00/smiles/2270249841.gif : Chức năng buzz làm rung chatbox trong 0.8s và phát âm thanh buzz (yahoo) cho tất cả thành viên đang có mặt trong chatbox (đối với IE và các trình duyệt không hỗ trợ CSS3 thì chỉ có âm thanh, ko có rung). Nếu bạn mới truy cập vào trang có chatbox chứa buzz thì bạn sẽ nhận được buzz.
     Disconnect: Chỉ mình bạn nghe thấy âm thanh này khi bạn bị disconnect trên chatbox.
     Online: Bạn sẽ nghe âm thanh online (yahoo) khi có số thành viên online tăng lên.
     Away: Bạn sẽ nghe âm thanh offline (yahoo) khi có số thành viên away tăng lên.
@@ -192,3 +192,16 @@ Ghi chú Để IDM không tự động bắt link mp3 - âm thanh chatbox, các 
 
 
 [+] Nếu bạn muốn sao chép hướng dẫn này đi nơi khác vui lòng không thay đổi bất kỳ thành phần nào trong code và phải ghi bản quyền thuộc www.FMvi.org
+
+Tìm trong javascript, đoạn:
+
+<code>
+
+    [src='http://r12.imgfast.net/users/1215/11/75/00/smiles/2270249841.gif']
+</code>
+
+sửa lại thành
+
+
+
+   <code> [alt='buzz']</code>
