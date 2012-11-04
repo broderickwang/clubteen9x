@@ -1,5 +1,5 @@
 Chức năng:
-`<font color="#FF0000">ttt</font>`
+<g:plusone size="medium"></g:plusone>
 
 
     Làm bảng khảo sát trượt dọc forum, chỉ hiển thị một Icon bên trái, không chiếm nhiều diện tích diễn đàn.
