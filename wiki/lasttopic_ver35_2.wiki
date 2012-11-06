@@ -1,4 +1,5 @@
 http://i47.servimg.com/u/f47/17/87/12/55/vew12.png
+deno:
 an
 cho vào index body
 
@@ -76,8 +77,8 @@ cho vào index body
                 <div class="module main recentWidth1" style="border-color: ##DDD; border-radius: 0">
                     <div class="starsTitle">
                         Thống kê bài viết mới
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gửi Bởi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trả lời&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mục Gửi
+                                                          
+                                  Gửi Bởi         Xem     Trả lời       Mục Gửi
                    
                  
                       <div id="proLastLoad" class="loaddingLike"></div>
@@ -123,35 +124,35 @@ search_results_topics
                       </span>
 
                       {searchresults.NEWEST_POST_IMG}
-                      {searchresults.PARTICIPATE_POST_IMG}&nbsp;
-                      {searchresults.TOPIC_TYPE}&nbsp;
+                      {searchresults.PARTICIPATE_POST_IMG} 
+                      {searchresults.TOPIC_TYPE} 
                       <h2 class="topic-title">
                          <a class="topictitle" href="{searchresults.U_VIEW_TOPIC}">{searchresults.TOPIC_TITLE}</a>
                          <div class="tooltipFMvi" style="display:none"><div style="padding:10px">
-                            <p class="tiplFMvi">Tiêu đề:&nbsp;
+                            <p class="tiplFMvi">Tiêu đề: 
                                <font color="blue">{searchresults.TOPIC_TITLE}</font>
                             </p>
-                            <p>Tạo chủ đề:&nbsp;{searchresults.TOPIC_AUTHOR}</p>
-                            <p>Chuyên mục:&nbsp;
+                            <p>Tạo chủ đề: {searchresults.TOPIC_AUTHOR}</p>
+                            <p>Chuyên mục: 
                                <font color="#0099FF"><a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_NAME}</a></font>
                             </p>
-                            <p>Trạng thái:&nbsp;
+                            <p>Trạng thái: 
                                <font color="#CC0000">{searchresults.L_TOPIC_FOLDER_ALT}</font>
                             </p>
-                            <p>Lần xem:&nbsp;
+                            <p>Lần xem: 
                                <font color="#FF66CC">{searchresults.VIEWS}</font>
                             </p>
-                            <p class="tiplFMvi">Lượt trả lời:&nbsp;
+                            <p class="tiplFMvi">Lượt trả lời: 
                                <font color="#009933">{searchresults.REPLIES}</font>
                             </p>
-                            <p>Người gửi cuối:&nbsp;{searchresults.LAST_POST_AUTHOR}</p>
-                            <p>Thời gian gửi:&nbsp;
+                            <p>Người gửi cuối: {searchresults.LAST_POST_AUTHOR}</p>
+                            <p>Thời gian gửi: 
                                <font color="#FF6600">{searchresults.LAST_POST_TIME}</font>
                             </p>
                                                               <span style="display:none" class="lastlink-FMvi">{searchresults.LAST_POST_IMG}</span>
-                                </div></div>&nbsp;
+                                </div></div> 
                                                     </h2>
-                      {searchresults.GOTO_PAGE}&nbsp;
+                      {searchresults.GOTO_PAGE} 
                       {searchresults.L_BY} {searchresults.TOPIC_AUTHOR}
                    </td>
                    <td class="tc2"><a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_NAME}</a></td>
@@ -175,8 +176,8 @@ search_results_topics
     </div>
      
     </div>
-</code>
 
+</code>
 
 
 memberlist_body
@@ -200,7 +201,7 @@ memberlist_body
 
     <div class="pun-crumbs">
        <p class="crumbs">
-          <a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}&nbsp;&raquo;&nbsp;<strong>{PAGE_TITLE}</strong>
+          <a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC} » <strong>{PAGE_TITLE}</strong>
        </p>
     </div>
 
@@ -261,7 +262,7 @@ memberlist_body
                       <!-- BEGIN memberrow -->
                       <tr>
                          <td class="tcl avatar-mini">
-                             <a class="gen" href="{memberrow.U_VIEWPROFILE}">{memberrow.AVATAR_IMG}&nbsp;</a>
+                             <a class="gen" href="{memberrow.U_VIEWPROFILE}">{memberrow.AVATAR_IMG} </a>
                              <span class="dataUserFmvi">
                                  <span>
                                      <a class="gen" href="{memberrow.U_VIEWPROFILE}">{memberrow.USERNAME}</a>
@@ -326,8 +327,8 @@ memberlist_body
 
     </div>
 
-</code>
 
+</code>
 
 
 css
@@ -380,8 +381,8 @@ vào head tìm
 
 <code>
     [head]....[/head]
-</code>
 
+</code>
 
 thay bằng
 
@@ -603,6 +604,12 @@ thay bằng
     <script type="text/javascript" src="http://dangvietpy.googlecode.com/files/select.js"></script>
      
       </head>
+
+
+
+
+
+
 
 
 </code>
