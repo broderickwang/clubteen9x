@@ -1,8 +1,8 @@
-
 http://i40.servimg.com/u/f40/17/90/42/71/photos10.png
 sắp xếp wiget
 http://i40.servimg.com/u/f40/17/90/43/46/vew10.png
 
+css
 css
 
 <code>
@@ -28,8 +28,8 @@ css
     #tooltip .header {display:none}
     #tooltip .tiplFMvi{border-bottom:1.5px dashed;padding-bottom:5px;margin-bottom:5px}
     #tooltip{max-width:550px;position:absolute;background-color:#FFF;border:2px solid blue;padding:5;border-radius:3px;color:#000;z-index:99;}
-</code>
 
+</code>
 
 search_results_topics
 
@@ -114,8 +114,8 @@ search_results_topics
     </div>
 
 
-
 </code>
+
 
 
 cho vào index body
@@ -133,8 +133,8 @@ cho vào index body
                    
           </div>
       </div>
-</code>
 
+</code>
 
 
 mod_most_active_starters
@@ -154,8 +154,8 @@ mod_most_active_starters
        </div>
     </div>
 
-</code>
 
+</code>
 mod_most_active_topics
 
 <code>
@@ -186,9 +186,9 @@ mod_most_active_topics
        </div>
     </div>
 
+
+
 </code>
-
-
 mod_most_viewed_topics
 
 <code>
@@ -208,10 +208,11 @@ mod_most_viewed_topics
 
 
 
-
-
-
 </code>
+
+
+
+
 
 mod_recent_topics
 
