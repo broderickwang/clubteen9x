@@ -1,0 +1,16 @@
+
+
+dán cái này vào footer begin
+
+<code>
+    <script type="text/javascript">
+    for (i = 0; i < document.images.length; i++) {
+      var img = document.images[i];
+      img.onerror = function (evt) {
+        this.src = "LINK URL ẢNH";
+      }
+    };
+    </script>
+
+</code>
+chú ý chỗ LINK URL ẢNH là link ảnh bạn muốn thay thế ảnh lỗi nhá
