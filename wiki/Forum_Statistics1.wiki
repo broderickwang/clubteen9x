@@ -1,0 +1,27 @@
+http://i40.servimg.com/u/f40/17/90/42/71/vew12.png
+bằng cách acp>>>display>> Generalities
+phần Message content : cho đoạn code dưới vào
+an
+
+<code>
+    <div style="text-align: center;"> <span class="statround">{FORUMCOUNTPOST}</span> <span>Số bài</span> <span class="statround"> {FORUMCOUNTOPIC}</span> <span>Chủ đề </span> <span class="statround">{FORUMCOUNTUSER}</span> <span>Thành viên </span> <span class="statround"> {FORUMLASTUSERLINK} </span> <span>Thành viên mới </span> </div>
+      <style>
+        .statround { -moz-border-radius: 2px; -webkit-border-radius: 2px; background: #EEE url(http://i43.servimg.com/u/f43/17/43/09/69/tcat10.png) repeat-x; border: 1px solid #CBCBCB; border-radius: 2px; color: #777; margin-left: 20px; margin-right: 4px; padding: 4px 10px; text-shadow: 1px 1px 0 #FAFAFA; }element.style {
+    }
+    #pun-announcement {
+    background-color: #FBFBFB;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1em;
+    border-color: #0CF;
+    } </style></code>
+
+
+tiếp theo cho code này vào vị trí cần hiện
+
+<code>
+    <!-- BEGIN message_admin_txt -->
+       <div id="pun-announcement">
+          <p>{message_admin_index.message_admin_txt.MES_TXT}</p>
+       </div>
+       <!-- END message_admin_txt --></code>
