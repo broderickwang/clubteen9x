@@ -6,6 +6,7 @@ an
 
 <code>
      
+     
      <div class="main">
             <div class="main-head">
               <div class="page-tile"><h2>Bài Viết Mới</h2></div>
@@ -78,7 +79,7 @@ an
           <!-- BEGIN switch_poster_guest -->
           {classical_row.recent_topic_row.switch_poster_guest.S_POSTER}
           <!-- END switch_poster_guest -->
-                                                                                </span>
+                                                                                 </span>
                     </td>
                     <td style="text-align:right" nowrap="nowrap" class="box" width="20%">
                      
@@ -92,4 +93,6 @@ an
 
                                      
     <!-- END classical_row -->
+
+
 </code>
