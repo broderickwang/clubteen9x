@@ -1,0 +1,149 @@
+* Bài hướng dẫn này được baivong phát triển từ bài viết của batuan94vt trên chinhphuc: 
+
+
+Chèn vào view_topic_body
+
+<code>
+
+    <script>
+    $(document).ready(function(){
+    $(function() {
+    $('<span class="bv" />').load('/f{FORUM_ID}-forum .ca3vt', {limit: 10}, function() {
+    jQuery(this).hide()
+    .appendTo('.baiviet')
+    .fadeIn(1);
+    });
+    return false;
+    });
+    });
+    </script>
+
+</code>
+
+Vào topic_list_box tìm
+
+<code>
+    <a href="{topics_list_box.row.U_VIEW_TOPIC}">{topics_list_box.row.TOPIC_TITLE}</a>
+</code>
+
+Sửa thành
+
+<code>
+    <div class="ca3vt"><a href="{topics_list_box.row.U_VIEW_TOPIC}">{topics_list_box.row.TOPIC_TITLE}</a></div>
+
+</code>
+
+Chèn cái này vào chỗ bạn muốn hiện trong view_topic_body ( nèn thêm thẻ div bên ngoài giới hạn chiều cao đề phòng vỡ khung Cười nhe răng)
+
+<code>
+    <div class="baiviet" style="overflow:hidden; width:175; height:155px;"></div>
+
+</code>
+
+Còn cái gì còn thiếu thì mngo mọi người bổ sung cho em với nhé.
+
+
+
+http://diendan.chinhphuc.info/t17592-topic
+Chức năng:
+
+    Thay Forumotion Traffic exchange bằng danh sách các bài viết cùng chuyên mục.
+    Lấy tối đa 13 bài viết, thay đổi kích thước tùy theo số lượng bài.
+    Có thể bật/tắt bằng cách bật/tắt Traffic exchange
+
+
+
+Bước 1: Ganeral - Messages and e-mails - Configuration:
+Điền vào 3 vị trí sau:
+
+    Define another name for Stickies : Chú ý
+    Define another name for Announcements : Thông báo
+    Customize a global announcement name : Thông báo khẩn
+
+
+Bước 2: Display - Templates - Ganeral - Topics_list_box:
+Tìm đoạn code sau:
+
+<code>
+             <div class="topictitle">
+                {topics_list_box.row.NEWEST_POST_IMG}{topics_list_box.row.PARTICIPATE_POST_IMG}{topics_list_box.row.TOPIC_TYPE}
+                <h2 class="topic-title">
+                   <a class="topictitle" href="{topics_list_box.row.U_VIEW_TOPIC}">{topics_list_box.row.TOPIC_TITLE}</a>
+                </h2>
+             </div>
+
+</code>
+
+Thay nó bằng:
+
+<code>
+    <script type="text/javascript">$(function(){$(".xname").hide();});</script>
+             <div class="topictitle" style="display:block;">
+                {topics_list_box.row.NEWEST_POST_IMG}{topics_list_box.row.PARTICIPATE_POST_IMG}{topics_list_box.row.TOPIC_TYPE}
+                <h2 class="topic-title">
+                   <a class="topictitle" href="{topics_list_box.row.U_VIEW_TOPIC}">{topics_list_box.row.TOPIC_TITLE}</a><span class="xname" style="float: right;"><strong>{topics_list_box.row.TOPIC_AUTHOR}</strong><br/></span>
+                </h2>
+             </div>
+</code>
+
+
+Bước 3: Display - Templates - Ganeral - Viewtopic_body:
+Tìm đoạn này
+
+<code>
+    <!-- BEGIN promot_trafic -->
+    ...
+    <!-- END promot_trafic -->
+</code>
+
+
+và thay bằng:
+
+<code>
+    <!-- BEGIN promot_trafic -->
+    <table class="forumline" width="100%" border="0" cellpadding="1" cellspacing="0" id="ptrafic_close" style="display:none;margin: 1px 0px 1px 0px">
+       <tr>
+          <td class="thead" height="28">
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                   <td valign="top"><h1>&nbspXem thêm các bài viết khác cùng chuyên mục</h1></td>
+                   <td align="right" valign="middle" width="10"><span class="gensmall"><a onmouseover="showtip('Mở danh mục');" onmouseout="hidetip();" href="javascript:ShowHideLayer('ptrafic_open','ptrafic_close');"><img src="{TABS_MORE_IMG}" alt="+" align="middle" border="0" /></a></span></td>
+                </tr>
+             </table>
+          </td>
+       </tr>
+    </table>
+    <table class="forumline" width="100%" border="0" cellpadding="1" cellspacing="0" id="ptrafic_open" style="display:'';margin: 1px 0px 1px 0px">
+       <tr>
+          <td class="thead" height="28">
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                   <td valign="top"><h1>&nbspXem thêm các bài viết khác cùng chuyên mục</h1></td>
+                   <td align="right" valign="middle" width="10"><span class="gensmall"><a onmouseover="showtip('Đóng danh mục');" onmouseout="hidetip();" href="javascript:ShowHideLayer('ptrafic_open','ptrafic_close');"><img src="{TABS_LESS_IMG}" alt="-" align="middle" border="0" /></a></span></td>
+                </tr>
+             </table>
+          </td>
+       </tr>
+       <tr>
+          <td class="row2 postbody" valign="top">
+    <script type="text/javascript">
+    $(function() {
+    $('<span class="bv" />').load('/f{FORUM_ID}-forum div.topictitle:not("div.topictitle:contains(\'Thông báo khẩn\'),div.topictitle:contains(\'Thông báo\'),div.topictitle:contains(\'Chú ý\'),div.topictitle:gt(13)")', {limit: 10}, function() {
+    jQuery(this).hide()
+    .appendTo('.cungchuyenmuc')
+    .fadeIn(1);
+    });
+    return false;
+    });
+    </script>
+    <div class="cungchuyenmuc" style="overflow:hidden; width:100%; height:auto;"></div>
+          </td>
+       </tr>
+    </table>
+    <!-- END promot_trafic -->
+
+</code>
+
+Chú ý: Vì TUT được thiết kế thay cho vị trí Forumotion Traffic exchange để bạn có thể bật/tắt nó, nên bạn cần bật Traffic exchange cho forum của bạn nếu muốn nó hiển thị.
+Ganeral - Forum promotion - Traffic exchange - Options - Activate traffic exchange: Members and guests
+Nếu nó vẫn không hiển thị, hoặc bạn không tìm thấy đoạn code trong hướng dẫn bước 3 thì vui lòng xem lại bài này: http://help.forumotion.com/t85157-new-update-forumotion-traffic-exchange
