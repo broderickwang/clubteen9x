@@ -183,3 +183,138 @@ Sau đây là code .
 
 
 </code>
+
+<code>
+    <table width="100%"><tbody><tr><td width="90%" valign="top">
+          {BOARD_INDEX}</td>
+          <td width="23%" valign="top" style="padding-left: 10px">
+           
+     
+     
+     <div class="main">
+            <div class="main-head-quangcaobenphai">
+                <div class="page-tile">Last Online</div>
+            </div>
+            <div class="main-content">
+            <div style="padding:10px;">
+       
+             
+              <style>#topp img {margin:3px;height: 35px;width: 35px;background-color: #FCFCFF;padding: 2px;border: 1px solid #CCC;border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;-khtml-border-radius: 4px;}#topp {text-align: left;width: 215px;}#topp a span{display:none;}#topp a:hover span {display: inline;position: absolute;padding: 5px;border: 1px solid white;border-radius: 1px;background: rgba(0, 0, 0, 0.8);box-shadow: 0 0 4px #333;color: white !important;font-size: 10px;}</style>
+              <div id="topp"></div>
+              <script>jQuery("#topp").load("/memberlist?mode=lastvisit&order=DESC&submit=Ok&username td.avatar-mini a:lt(20)");</script>
+             
+             
+            </div>
+        </div>
+    </div>
+
+
+
+         
+           
+           
+        <div class="main">
+            <div class="main-head-quangcaobenphai">
+                <div class="page-tile">Thành Viên Tích Cực</div>
+            </div>
+            <div class="main-content">
+            <div style="padding:10px;">
+       
+             
+              <style>#top-guibai img {margin:3px;height: 35px;width: 35px;background-color: #FCFCFF;padding: 2px;border: 1px solid #CCC;border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;-khtml-border-radius: 4px;}#top-guibai {text-align: left;width: 215px;}#top-guibai a span{display:none;}#top-guibai a:hover span {display: inline;position: absolute;padding: 3px;border: 1px solid white;border-radius: 1px;background: rgba(0, 0, 0, 0.8);box-shadow: 0 0 4px #333;color: white !important;font-size: 11px;text-align: center;}</style>
+              <div id="top-guibai"></div>
+              <script>jQuery("#top-guibai").load("/memberlist?mode=posts&order=DESC&submit=Ok&username td.avatar-mini a:lt(20)");</script>
+             
+            </div>
+        </div>
+    </div>
+
+       
+     
+     
+     
+     
+      <div class="main">
+            <div class="main-head-quangcaobenphai">
+                <div class="page-tile">Thành Viên Mới</div>
+            </div>
+            <div class="main-content">
+            <div style="padding:10px;">
+       
+             
+              <style>#thanhvienmoi img {margin:3px;height: 35px;width: 35px;background-color: #FCFCFF;padding: 2px;border: 1px solid #CCC;border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;-khtml-border-radius: 4px;}#top-guibai {text-align: left;width: 215px;}#thanhvienmoi a span{display:none;}#thanhvienmoi a:hover span {display: inline;position: absolute;padding: 5px;border: 1px solid white;border-radius: 1px;background: rgba(0, 0, 0, 0.8);box-shadow: 0 0 4px #333;color: white !important;font-size: 10px;}</style>
+              <div id="thanhvienmoi"></div>
+              <script>jQuery("#thanhvienmoi").load("/memberlist?mode=joined&order=DESC&submit=Ok&username td.avatar-mini a:lt(20)");</script>
+
+             
+            </div>
+        </div>
+    </div>
+     
+           
+           
+
+
+     <div class="main">
+            <div class="main-head-quangcaobenphai">
+                <div class="page-tile">Music</div>
+            </div>
+            <div class="main-content">
+            <div style="padding:10px;">
+              <object width="300" height="400">  <param name="movie" value="http://www.nhaccuatui.com/l/vGEcupnRaHd1" />  <param name="quality" value="high" />  <param name="wmode" value="transparent" />  <param name="allowscriptaccess" value="always" />  <param name="flashvars" value="&autostart=false" />  <embed src="http://www.nhaccuatui.com/l/vGEcupnRaHd1" flashvars="target=blank&autostart=false" allowscriptaccess="always" quality="high" wmode="transparent" type="application/x-shockwave-flash" width="200" height="220"></embed></object>
+            </div>
+        </div>
+    </div>
+
+
+
+     <div class="main">
+            <div class="main-head-quangcaobenphai">
+                <div class="page-tile">Sự Kiện</div>
+            </div>
+            <div class="main-content">
+            <div style="padding:10px;">
+
+    <span style="font-weight: bold;">
+    <img src="http://i646.photobucket.com/albums/uu185/vanhoai1111/th_28.gif" alt="" align="" border="0px" />
+    <a href="http://www.zone-fm.tk/">
+      <span style="color: rgb(255, 0, 0); "> Zone-FM.tk</span>
+    </a></span>
+    <br/>
+    <br/>
+    <span style="font-weight: bold; ">
+    <img src="http://i646.photobucket.com/albums/uu185/vanhoai1111/th_28.gif" alt="" align="" border="0px" />
+    <a href="/">
+    <span style="color: rgb(255, 0, 0); "> Tổng hợp Code FM</span>
+    </a></span>
+    <br/>
+    <br/>
+    <span style="font-weight: bold; ">
+    <img src="http://i646.photobucket.com/albums/uu185/vanhoai1111/th_28.gif" alt="" align="" border="0px" />
+    <a href="/">
+    <span style="color: rgb(255, 0, 0); "> Tổng hợp Code FM</span>
+    </a></span>
+    <br/>
+    <br/>
+    <span style="font-weight: bold; ">
+    <img src="http://i646.photobucket.com/albums/uu185/vanhoai1111/th_28.gif" alt="" align="" border="0px" />
+    <a href="/">
+    <span style="color: rgb(255, 0, 0); "> Tổng hợp Code FM</span>
+    </a></span>
+    <br/>
+    <br/>
+    <span style="font-weight: bold; ">
+    <img src="http://i646.photobucket.com/albums/uu185/vanhoai1111/th_28.gif" alt="" align="" border="0px" />
+    <a href="/">
+    <span style="color: rgb(255, 0, 0); "> Tổng hợp Code FM</span>
+    </a>
+    </span>
+
+    </div>
+    </div>
+    </div>
+
+     
+      </td></tr></tbody></table>
+
+</code>
