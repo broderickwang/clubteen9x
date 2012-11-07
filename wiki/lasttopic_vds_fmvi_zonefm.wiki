@@ -13,7 +13,6 @@ http://i40.servimg.com/u/f40/17/90/43/46/untitl10.png
 
 cho cái này vào đầu body
 an
-
 <code>
     <div class="main-head"><div class="page-title"><h2>CHATBOX</h2></div></div>
     <div class="boxContent" style="float: left; width: 20%;">
@@ -186,8 +185,8 @@ tiếp theo cho vào recent_topic
       $('#rf-content .tenltp a').live('mouseleave',function(){$('#DL_LastTopic').hide();});
     //]]>
     </script>
-
 </code>
+
 
 tiếp nữa là css
 
