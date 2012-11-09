@@ -2,26 +2,96 @@ http://i40.servimg.com/u/f40/17/90/42/71/vew12.png
 bằng cách acp>>>display>> Generalities
 phần Message content : cho đoạn code dưới vào
 an
+Nguồn từ Notme forum của chú Bụi nhá
+hồi trước rip về dùng ^^
+
+Cách làm :
+
+Bước 1 : Vào DISPLAY >> Homepage >> Generalities >>
+Homepage message : dán code này vào
 
 <code>
-    <div style="text-align: center;"> <span class="statround">{FORUMCOUNTPOST}</span> <span>Số bài</span> <span class="statround"> {FORUMCOUNTOPIC}</span> <span>Chủ đề </span> <span class="statround">{FORUMCOUNTUSER}</span> <span>Thành viên </span> <span class="statround"> {FORUMLASTUSERLINK} </span> <span>Thành viên mới </span> </div>
-      <style>
-        .statround { -moz-border-radius: 2px; -webkit-border-radius: 2px; background: #EEE url(http://i43.servimg.com/u/f43/17/43/09/69/tcat10.png) repeat-x; border: 1px solid #CBCBCB; border-radius: 2px; color: #777; margin-left: 20px; margin-right: 4px; padding: 4px 10px; text-shadow: 1px 1px 0 #FAFAFA; }element.style {
+     <center><span class="statround">{FORUMCOUNTPOST}</span> Số bài
+        <span class="statround">{FORUMCOUNTOPIC}</span> Chủ đề
+        <span class="statround">{FORUMCOUNTUSER}</span> Thành viên
+        <span class="statround">
+          <a href="http://www.cntt-k3.biz">{FORUMLASTUSERLINK} </a>
+        </span>  Thành viên mới
+        <span class="tooltip" style="cursor: default;">
+            <span class="statround">{FORUMAGE}</span>Lượt truy cập</span></center>
+</code>
+
+
+Bước 2 : Vào cSs thêm đoạn này vào
+
+<code>
+
+    .statround {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    background: #EEE url(http://i43.servimg.com/u/f43/17/43/09/69/tcat10.png) repeat-x;
+    border: 1px solid #CBCBCB;
+    border-radius: 2px;
+    color: #777;
+    margin-left: 20px;
+    margin-right: 4px;
+    padding: 4px 10px;
+    text-shadow: 1px 1px 0 #FAFAFA;
     }
-    #pun-announcement {
-    background-color: #FBFBFB;
-    border-style: solid;
-    border-width: 1px;
-    padding: 1em;
-    border-color: #0CF;
-    } </style></code>
-
-
-tiếp theo cho code này vào vị trí cần hiện
 
 <code>
-    <!-- BEGIN message_admin_txt -->
+
+Bước 3 :
+Vào index body tìm đoạn
+
+<code>
+    <!-- BEGIN message_admin_index -->
+    <div class="main">
+       <!-- BEGIN message_admin_titre -->
+       <div class="main-head">
+          <h1 class="page-title">{message_admin_index.message_admin_titre.MES_TITRE}</h1>
+       </div>
+       <!-- END message_admin_titre -->
+
+       <!-- BEGIN message_admin_txt -->
        <div id="pun-announcement">
           <p>{message_admin_index.message_admin_txt.MES_TXT}</p>
        </div>
-       <!-- END message_admin_txt --></code>
+       <!-- END message_admin_txt -->
+    </div>
+    <!-- END message_admin_index -->
+
+<code>
+Xóa đi
+
+Và nếu bạn muốn cái thống kê kia hiển thị trên cái Thống kê tình hình diễn đàn thì làm như sau :
+Vào Index_Body
+tìm
+
+<code>
+    {BOARD_INDEX}
+
+</code>
+Cho code này vào dưới nó
+
+<code>
+     <!-- BEGIN message_admin_index -->
+
+       <!-- BEGIN message_admin_titre -->
+
+          <h1 class="page-title">{message_admin_index.message_admin_titre.MES_TITRE}</h1>
+
+       <!-- END message_admin_titre -->
+
+       <!-- BEGIN message_admin_txt -->
+
+          <p>{message_admin_index.message_admin_txt.MES_TXT}</p>
+
+       <!-- END message_admin_txt -->
+
+    <!-- END message_admin_index -->
+
+</code>
+Còn nếu bạn muốn nó hiển thị ở đâu thì cứ pase code trên vào chỗ bạn muốn hiển thị
+
+thế là xong ^^
