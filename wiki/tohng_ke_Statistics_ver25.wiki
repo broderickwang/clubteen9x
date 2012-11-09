@@ -1,0 +1,108 @@
+
+http://i40.servimg.com/u/f40/17/50/76/58/statio10.jpg
+
+
+Nói Qua về cái này 1 chút nhá
+Cái này là Chupy làm và lấy áp dụng theo cái Forum Statistics 1
+http://www.cntt-k3.biz/t6358-topic << này
+và 1 chút riêng tư nữa là Forum Cntt-k3 dùng đầu tiên nhá ^^ ko các mem lại hiểu nhầm lấy từ đâu
+Edit theo cái Forum Statistics 1
+( cái này áp dụng cho cột bên phải nhá )
+mình hướng dẫn theo skin Cntt-k3 đang dùng bây giờ ^^
+
+
+Cách làm :
+
+
+Vào : DISPLAY >> Homepage >> Generalities >> Homepage message
+Pase code dưới vào
+
+<code>
+          <div class="pairsJustified">
+                   <dl class="discussionCount"><dt>Số bài :</dt>
+                      <dd>{FORUMCOUNTPOST}</dd></dl>
+                   <dl class="messageCount"><dt>Chủ đề:</dt>
+                      <dd>{FORUMCOUNTOPIC}</dd></dl>
+                   <dl class="memberCount"><dt>Thành viên:</dt>
+                      <dd>{FORUMCOUNTUSER}</dd></dl>
+                   <dl><dt>Thành viên mới:</dt>
+                      <dd><a href="http://www.cntt-k3.biz">{FORUMLASTUSERLINK}</a></dd></dl>
+    <dl class="memberCount"><dt>Lượt truy cập:</dt>
+                      <dd>{FORUMAGE}</dd></dl>
+
+                   <!-- slot: forum_stats_extra -->
+                </div>
+
+</code>
+Bước 2 : Cho code này vào Css
+
+
+
+<code>
+    .pairsRows, .pairsColumns, .pairsJustified {
+    line-height: 1.5;
+    }
+    dl.pairsColumns, dl.pairsJustified, .pairsColumns dl, .pairsJustified dl {
+    overflow: hidden;
+    zoom: 1;
+    }
+    .pairsJustified dt {
+    float: left;
+    }
+
+    .pairs dt, .pairsInline dt, .pairsRows dt, .pairsColumns dt, .pairsJustified dt {
+    color: #969696;
+    }
+    .pairsJustified dd {
+    float: right;
+    text-align: right;
+    }
+    .pairsJustified dd {
+    text-align: right;
+    }</code>
+
+
+Bước 3 :
+Vào index body tìm đoạn
+
+<code>
+    <!-- BEGIN message_admin_index -->
+    <div class="main">
+      <!-- BEGIN message_admin_titre -->
+      <div class="main-head">
+          <h1 class="page-title">{message_admin_index.message_admin_titre.MES_TITRE}</h1>
+      </div>
+      <!-- END message_admin_titre -->
+
+      <!-- BEGIN message_admin_txt -->
+      <div id="pun-announcement">
+          <p>{message_admin_index.message_admin_txt.MES_TXT}</p>
+      </div>
+      <!-- END message_admin_txt -->
+    </div>
+    <!-- END message_admin_index -->
+
+</code>
+Đến bước 4 thì các bạn muốn nó hiển thị ở đâu thì cho code duới vào đó
+
+<code>
+     <!-- BEGIN message_admin_index -->
+
+      <!-- BEGIN message_admin_titre -->
+
+          <h1 class="page-title">{message_admin_index.message_admin_titre.MES_TITRE}</h1>
+
+      <!-- END message_admin_titre -->
+
+      <!-- BEGIN message_admin_txt -->
+
+          <p>{message_admin_index.message_admin_txt.MES_TXT}</p>
+
+      <!-- END message_admin_txt -->
+
+    <!-- END message_admin_index -->
+</code>
+
+
+( Cho vào 1 cột bên phải nhá ( code trên là hiển thị thống kê )
+thế là xong ^^
