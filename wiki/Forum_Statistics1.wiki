@@ -38,8 +38,8 @@ Bước 2 : Vào cSs thêm đoạn này vào
     padding: 4px 10px;
     text-shadow: 1px 1px 0 #FAFAFA;
     }
+</code>
 
-<code>
 
 Bước 3 :
 Vào index body tìm đoạn
@@ -61,7 +61,7 @@ Vào index body tìm đoạn
     </div>
     <!-- END message_admin_index -->
 
-<code>
+</code>
 Xóa đi
 
 Và nếu bạn muốn cái thống kê kia hiển thị trên cái Thống kê tình hình diễn đàn thì làm như sau :
