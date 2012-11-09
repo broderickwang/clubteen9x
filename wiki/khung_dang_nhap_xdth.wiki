@@ -1,0 +1,55 @@
+<code>
+    <div id="conectare" align="center"><div class="c_continut"><form action="login.forum?connexion" method="post"> <table align="center"><tbody><tr><td><span style="color: white; font-size: 12px;">Tên đăng nhập:  </span><input name="username" size="15" maxlength="40" type="text" style="background: white; border: 1px solid darkgrey;"></td><td><span style="color: white; font-size: 12px;">Mật Khẩu:  </span><input name="password" size="15" maxlength="32" type="password" style="background: white; border: 1px solid darkgrey;"></td><td colspan="2"><label for="autologin"><input style="position: relative; bottom: -4px; left: -9px;" type="checkbox" name="autologin" id="autologin" tabindex="4" checked="checked" class="radio"></label><input class="mainoption" name="login" value="Đăng nhập" type="submit">    </td><td style="color: white;"><a style="font-weight: bold; color: white;" href="/profile.forum?mode=register">Đăng Ký</a> || <a style="font-weight: bold; color: white;" href="/profile.forum?mode=sendpassword">Quên Mật khẩu</a></td></tr></tbody></table></form></div></div>
+
+</code>
+cho code sau vào phía dưới đoạn này trong header
+
+<code>
+    <!-- BEGIN switch_login_popup -->
+       <div id="login_popup" class="module main">
+          <div id="login_popup_title" class="main-head">
+             <div class="h3">{SITENAME}</div>
+          </div>
+          <div class="main-content">
+             {LOGIN_POPUP_MSG}
+             <div id="login_popup_buttons">
+                <form action="{S_LOGIN_ACTION}" method="get">
+                   <input type="submit" class="button2" value="{L_LOGIN}" />
+                   <input type="button" class="button2" value="{L_REGISTER}" onclick="parent.location='{U_REGISTER}';" />
+                   <input id="login_popup_close" type="button" class="button2" value="{L_DONT_DISPLAY_AGAIN}" />
+                </form>
+             </div>
+          </div>
+       </div>
+       <!-- END switch_login_popup -->
+
+
+</code>
+cho vào css
+
+<code>
+    #conectare{background: url(http://i42.servimg.com/u/f42/14/52/34/74/try10.png) repeat-x center;
+
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+       
+        left: 0;
+     
+        top: 0;
+        width: 100%;
+        z-index: 999;
+
+
+
+    height: 52px;
+    float: center;
+    }
+    #conectare table td{padding-right: 15px;}
+
+    #conectare .c_continut{position: relative;
+    top: 15px;}
+
+</code>
+
+demo:
+http://www.xaydungthanhhoa.com/
+
