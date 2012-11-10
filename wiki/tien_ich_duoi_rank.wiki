@@ -1,0 +1,31 @@
+demo : http://i38.servimg.com/u/f38/16/18/15/10/138.jpg
+
+muốn chèn dưới rank thì tìm :
+
+<code>
+    {postrow.displayed.RANK_IMAGE}
+
+</code>
+
+chèn dưới = code sau::
+
+<code>
+    <span class="smallfont">
+    <fieldset style="border: 1px dashed rgb(250, 4, 4); padding: 10px; width: 150px;">
+    <legend> Ứng dụng </legend>
+    <a class="ungdung" onmouseover="showtip('<font color=#ff50fd>Gửi lời yêu thương</font>');" onmouseout="hidetip();" href="link chuyen mục">
+    <img src="http://i48.servimg.com/u/f48/14/58/28/06/love-i10.png"/>
+    </a>
+    <a class="ungdung" onmouseover="showtip('<font color=#e8ff4e>Thưởng thức âm nhạc</font>');" onmouseout="hidetip();" href="link chuyen mục">
+    <img src="http://i48.servimg.com/u/f48/14/58/28/06/headph10.png" height="35" width="35"/>
+    </a>
+    <a class="ungdung" onmouseover="showtip('<font color=#2bf50c>Mua sắm online</font>');" onmouseout="hidetip();" href="link chuyen mục">
+    <img src="http://i48.servimg.com/u/f48/14/58/28/06/muasam10.jpg"/>
+    </a>
+    <a class="ungdung" onmouseover="showtip('<font color=#0ce5f5>Ủng hộ diễn đàn</font>');" onmouseout="hidetip();" href="link chuyen mục">
+    <img src="http://i48.servimg.com/u/f48/14/58/28/06/taitro10.jpg"/>
+    </a>
+    </fieldset>
+    </span>
+
+</code>
