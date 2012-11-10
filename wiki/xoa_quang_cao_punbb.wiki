@@ -1,6 +1,6 @@
 <code>
 
-        $(function () {
+            $(function () {
             if (my_getcookie('deladsFMvi') == 'yes') {
                 $("#main-content div:first, #add-google-bottom").remove();
             };
