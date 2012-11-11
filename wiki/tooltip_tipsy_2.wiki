@@ -82,6 +82,11 @@
         height: 9px;
           }</style>
     <script type="text/javascript" async="" src="http://chupy.googlecode.com/files/vifm.js"></script>
+
+
+
+
+
   </code>
 
 vifm.js
