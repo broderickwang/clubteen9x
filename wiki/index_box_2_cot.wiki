@@ -1,4 +1,3 @@
-
 vao CSS them
 
 <code>
@@ -117,3 +116,96 @@ thay index_box =
 </code>
 
 nguồn lấy từ C3Z.CO.CC
+
+<code><br /><table width="100%" border="0" cellspacing="1" cellpadding="0" align="center">
+	<tr>
+		<td valign="bottom">
+			<!-- BEGIN switch_user_logged_in -->
+			<span class="smallfont"><br />
+			<br />
+			</span>
+			<!-- END switch_user_logged_in -->
+			<div class="navbar"><a class="navbar" href=""></a></div>
+		</td>
+		<td class="smallfont" align="right" valign="bottom">
+			<!-- BEGIN switch_user_logged_in -->
+			<a class="smallfont" href=""></a><br />
+			<a class="smallfont" href=""></a><br />
+			<!-- END switch_user_logged_in -->
+			<a class="smallfont" href=""></a>
+		</td>
+	</tr>
+</table><br />
+<!-- BEGIN catrow -->
+<!-- BEGIN tablehead -->
+<table cellpadding="0" cellspacing="0" width="100%" align="center"><tr><td><img src="http://i64.servimg.com/u/f64/14/64/52/89/tcat_l10.jpg" alt="" /></td><td style="background: url(http://i64.servimg.com/u/f64/14/64/52/89/tcat_c10.jpg) repeat-x top left" width="100%"><table cellpadding="0" cellspacing="0" width="100%" align="left"><tr><td align="left" style="padding: 12px 0px 0px 0px;"><table cellpadding="0" cellspacing="0" align="left" width="75%"><tr><td><img src="http://i64.servimg.com/u/f64/14/64/52/89/tcat_t10.jpg" alt="" /></td><td class="tcat" style="background: url(http://i64.servimg.com/u/f64/14/64/52/89/tcat_t11.jpg) repeat-x top left" width="100%" align="left"><Span class="secondarytitle"> <h2>{catrow.tablehead.L_FORUM}</h2> </span></td><td width="200"><img src="http://i64.servimg.com/u/f64/14/64/52/89/tcat_t12.jpg" alt="" /></td></tr></table></td><td align="right"><a style="float:right" href="#" onclick="return toggle_collapse('forumbit_1')"><img id="collapseimg_forumbit_1" src="http://i64.servimg.com/u/f64/14/64/52/89/top1010.png" alt="" border="0" /></a></td></tr></table></td><td><img src="http://i64.servimg.com/u/f64/14/64/52/89/tcat_r10.jpg" alt="" /></td></tr><tr><td style="background: url(http://i64.servimg.com/u/f64/14/64/52/89/scale_10.jpg) repeat-y top left" valign="bottom">&nbsp;</td><td style="background: #FFFFFF;" width="100%"><table class="tborder" cellpadding="3" cellspacing="2" border="0" width="100%" align="center"><tbody id="collapseobj_forumbit_1" style=""><tr align="center">
+		<td class="thead" colspan="{catrow.tablehead.INC_SPAN}" nowrap="nowrap" width="100%" height="25"> Chuyên mục </td>
+		<td class="thead" nowrap="nowrap" width="50" height="25">{L_TOPICS}</td>
+		<td class="thead" nowrap="nowrap" width="50" height="25">{L_POSTS}</td>
+		<td class="thead" nowrap="nowrap" width="150" height="25"><div style="width:150px;">{L_LASTPOST}</div></td>
+	</tr>
+	<!-- END tablehead -->
+<!-- BEGIN cathead -->
+	<tr>
+		<!-- BEGIN inc -->
+		<td class="{catrow.cathead.inc.INC_CLASS}" width="46"><img src="{SPACER}" height="0" width="46" /></td>
+		<!-- END inc -->
+		<td colspan="6" width="100%">
+			<h{catrow.cathead.LEVEL}>
+				
+					<a title="{catrow.cathead.CAT_DESC}" href="{catrow.cathead.U_VIEWCAT}">{catrow.cathead.CAT_TITLE}</a>
+				</span>
+			</h{catrow.cathead.LEVEL}>
+		</td>
+		<td class="{catrow.cathead.CLASS_ROWPIC}" colspan="3" align="right"> </td>
+	</tr>
+	<!-- END cathead -->
+	<!-- BEGIN forumrow -->
+	<tr>
+		<!-- BEGIN inc -->
+		<td class="{catrow.forumrow.inc.INC_CLASS}" width="46"><img src="{SPACER}" height="0" width="46" alt="." /></td>
+		<!-- END inc -->
+		<td class="alt1" align="center" valign="middle">
+			<img title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" />
+		</td>
+		<td class="alt1" onmouseover='this.className="alt2"' onmouseout='this.className="alt1"' colspan="{catrow.forumrow.INC_SPAN}" valign="top" width="100%" height="50"><div>
+					<a class="forumlink" href="{catrow.forumrow.U_VIEWFORUM}">{catrow.forumrow.FORUM_NAME}</a><br /></div>
+			<span class="smallfont">{catrow.forumrow.FORUM_DESC}</span>
+			<span class="smallfont">
+				<!-- BEGIN switch_moderators_links -->
+				
+				<!-- END switch_moderators_links -->
+				
+			</span>
+		</td>
+		<!-- BEGIN forum_link_no -->
+		<td class="alt1" align="center" valign="middle" height="50">
+			<span class="smallfont">{catrow.forumrow.TOPICS}</span>
+		</td>
+		<td class="alt2" align="center" valign="middle" height="50">
+			<span class="smallfont">{catrow.forumrow.POSTS}</span>
+		</td>
+		<td class="alt1" onmouseover='this.className="alt1"' onmouseout='this.className="alt1"' align="center" valign="middle" height="50">
+			<span class="smallfont">{catrow.forumrow.LAST_POST}</span>
+		</td>
+		<!-- END forum_link_no -->
+		<!-- BEGIN forum_link -->
+		<td class="alt3" colspan="3" align="center" valign="middle" height="50"><span class="smallfont">{catrow.forumrow.forum_link.HIT_COUNT}</span></td>
+		<!-- END forum_link -->
+	</tr>
+	<!-- END forumrow -->
+	<!-- BEGIN catfoot -->
+	<tr>
+		<!-- BEGIN inc -->
+		<td class="{catrow.catfoot.inc.INC_CLASS}" width="46"><img src="{SPACER}" height="0" width="46" /></td>
+		<!-- END inc -->
+		<td class="spaceRow" colspan="{catrow.catfoot.INC_SPAN}" height="1"><img src="{SPACER}" alt="" height="1" width="1" /></td>
+	</tr>
+	<!-- END catfoot -->
+	<!-- BEGIN tablefoot -->
+</td></tr></table><td style="background: url(http://i64.servimg.com/u/f64/14/64/52/89/scale_11.jpg) repeat-y top right" valign="bottom">&nbsp;</td></tr> <tr><td><img src="http://i64.servimg.com/u/f64/14/64/52/89/footer10.jpg" alt="" /></td><td style="background: url(http://i64.servimg.com/u/f64/14/64/52/89/footer11.jpg) repeat-x top left" width="100%">&nbsp;</td><td><img src="http://i64.servimg.com/u/f64/14/64/52/89/footer12.jpg" alt="" /></td></tr></table>
+<img src="{SPACER}" alt="" height="5" width="1" />
+<!-- END tablefoot -->
+<!-- END catrow -->
+
+</code>
