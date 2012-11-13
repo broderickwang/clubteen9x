@@ -1,0 +1,119 @@
+
+vao CSS them
+
+<code>
+    li.main-content {list-style: none; display:inline; width:49.0%}
+    ul#c3z {list-style: none; padding: 0px;width:100% !important;margin: 0;float: left}
+    #c3z li {width:48.9%;float: left;margin-left: 0px; padding: 4px;}
+    .c3zone br {display:none} .c3zone strong, .c3zone img {float:right}
+    .c3zone a {font-weight:bold; font-size:11px;padding-right:5px}
+    .tren_trai { background: url(http://i60.servimg.com/u/f60/14/90/90/23/tren_t10.gif) no-repeat bottom left; height:14px; }
+    .tren_phai { background: url(http://i60.servimg.com/u/f60/14/90/90/23/tren_p10.gif) no-repeat bottom right; height:14px; }
+    .tren { background: url(http://i60.servimg.com/u/f60/14/90/90/23/tren10.gif) repeat-x bottom left; height:14px; }
+    .duoi_trai { background: url(http://i60.servimg.com/u/f60/14/90/90/23/duoi_t10.gif) no-repeat top left; height:14px; }
+    .duoi_phai { background: url(http://i60.servimg.com/u/f60/14/90/90/23/duoi_p10.gif) no-repeat top right; height:14px; }
+    .duoi { background: url(http://i60.servimg.com/u/f60/14/90/90/23/duoi10.gif) repeat-x top left; height:14px; }
+    .doc_trai { background: url(http://i60.servimg.com/u/f60/14/90/90/23/doc_tr10.gif) repeat-y top left; }
+    .doc_phai { background: url(http://i60.servimg.com/u/f60/14/90/90/23/doc_ph10.gif) repeat-y top right; } 
+
+</code>
+
+thay index_box =
+
+<code>
+    <table width="100%" border="0" cellspacing="1" cellpadding="0" align="center">
+       <tr>
+          <td valign="bottom">
+             <!-- BEGIN switch_user_logged_in -->
+             <span class="gensmall">{LAST_VISIT_DATE}<br />
+             {CURRENT_TIME}<br />
+             </span>
+             <!-- END switch_user_logged_in -->
+             <div class="nav"><a class="nav" href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}</div>
+          </td>
+          <td class="gensmall" align="right" valign="bottom">
+             <!-- BEGIN switch_user_logged_in -->
+             <a class="gensmall" href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a><br />
+             <a class="gensmall" href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a><br />
+             <!-- END switch_user_logged_in -->
+             <a class="gensmall" href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a>
+          </td>
+       </tr>
+    </table>
+    <!-- BEGIN catrow --><!-- BEGIN tablehead --><table class="tborder" border="0" align="center" cellpadding="6" cellspacing="1" width="100%">
+
+       <tr>
+          <td class="tcat" colspan="5">
+             <a style="float: right;" href="#top"></a>
+    {catrow.tablehead.L_FORUM}         
+          </td>
+       </tr>
+    </table>
+    <ul id="c3z">
+       <!-- END tablehead -->
+       <!-- BEGIN forumrow --><li class="main-content">
+    <!-- begin vien top setup -->
+    <div class="tren">
+    <div class="tren_trai">
+    <div style="" class="tren_phai">
+    </div></div></div>
+    <div class="doc_trai">
+    <div class="doc_phai">
+    <div class="doc_duoi">
+    <div style="padding-left: 14px; padding-right: 14px;">
+    <!-- end vien top setup -->
+    <table>
+    <tbody><tr>
+    <td>
+     <img src="http://i60.servimg.com/u/f60/14/90/90/23/c31010.gif " border="0"><img title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" /></td>
+
+    <td><a href="{catrow.forumrow.U_VIEWFORUM}"><strong><font color="darkred">{catrow.forumrow.FORUM_NAME}</font></strong></a><br />
+    </td>
+    </tr>
+    </tbody></table>
+
+
+
+    <div class="smallfont"><strong><center><table style="border:1px dashed orange; background:#FFFFFF"">
+    <tr>
+    <td width="100%"  class="text_hotnews">
+    Chủ đề: {catrow.forumrow.TOPICS} | Bài gửi: {catrow.forumrow.POSTS}</td>
+    </table>
+    </center></strong></div>
+    <div class="forum_info">
+    <div class="smallfont" align="left">
+
+       <div style="white-space: nowrap;" class="c3zone">
+             {catrow.forumrow.LAST_POST}
+    </div></div>
+    </div>
+
+    <div class="forum_info">
+             {catrow.forumrow.FORUM_DESC}</span><br />
+                <!-- BEGIN switch_moderators_links -->
+    <table width="100%" style="border:1px dashed orange; background:#fffddf"">
+    <tr>
+    <td><img src="http://i60.servimg.com/u/f60/14/90/90/23/nguoid10.png" /></td>
+    <td width="100%"  class="text_hotnews"><font color=orangee size=1>Người Điều Hành:</font>{catrow.forumrow.switch_moderators_links.MODERATORS}
+    </td>
+    </table>
+                <!-- END switch_moderators_links -->
+                 {catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
+    </div>
+
+    <!-- begin vien bot setup -->
+    </div></div></div></div>
+    <div class="duoi">
+    <div class="duoi_trai">
+    <div class="duoi_phai">
+    </div></div></div>
+
+    </li></span>
+       <!-- END forumrow -->
+       <!-- BEGIN tablefoot --></ul>
+    <img src="{SPACER}" alt="" height="5" width="1" /><!-- END tablefoot --><!-- END catrow -->
+
+
+</code>
+
+nguồn lấy từ C3Z.CO.CC
