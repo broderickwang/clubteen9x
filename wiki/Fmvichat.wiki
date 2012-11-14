@@ -231,8 +231,7 @@ B) Cài đặt chatbox.
 - var refreshtime : sửa giá trị 80000 nếu không muốn refresh chatbox mỗi 80s
 - var style : Css của chatbox
 - var chatboxurl : Sửa ? thành trang html vừa mới tạo ở trên, ví dụ trang html của chatbox mình là fmvi.vn/h1- thì mình điền vào đó /h1-
-- var permission : -1 có nghĩa là chatbox sẽ không hiển thị với khách, bạn có thể cấm một số user sử dụng chatbox bằng cách thêm số uid của họ vào, ví dụ mình không muốn khách, admin và zero sử dụng chatbox, uid của admin là 1, của zero là 27. Mình sửa giá trị thành -1||1||27.
+- var permission : -1 có nghĩa là chatbox sẽ không hiển thị với khách, bạn có thể cấm một số user sử dụng chatbox bằng cách thêm số uid của họ vào, ví dụ mình không muốn khách, admin và zero sử dụng chatbox, uid của admin là 1, của zero là 27. Mình sửa giá trị thành -1 | | 1 || 27.
 
 Written by Zero and Dion.
 Mã hoá để chống ăn trộm và tôn trọng tác giả chứ không phải dìm hàng.
-
