@@ -1,6 +1,6 @@
 http://i43.servimg.com/u/f43/15/93/33/76/411.jpg
 
-{{{}
+{{{
     /* Khung viền trả lời */
     #text_editor_textarea, textarea{
     padding: 3px;
