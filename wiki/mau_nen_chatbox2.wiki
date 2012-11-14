@@ -1,0 +1,10 @@
+
+Code này có thễ thay đỗi màu nền cho chatbox nhé !
+
+Cho vào CSS :
+
+
+<code>    #chatbox,#chatbox_footer,#chatbox_members{background-color:#FFF}
+</code>
+
+thay #FFF thành màu bạn mún nhé !
