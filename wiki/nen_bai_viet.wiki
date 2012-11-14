@@ -1,0 +1,32 @@
+Hướng dẫn :
+
+http://i34.servimg.com/u/f34/17/74/93/21/nen10.png
+
+Các bạn vào viewtopic_body tìm:
+
+<code>
+    {postrow.displayed.MESSAGE}
+
+</code>
+Thay thế bằng :
+
+<code>
+    <div style="width:650px; background:url(http://img.photobucket.com/albums/v335/ti_nhoc/giay11.jpg) repeat; center">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+
+                                  {postrow.displayed.MESSAGE}
+        </td>
+      </tr>
+    </table>
+    </div>
+        
+
+</code>
+Các bạn có thể thay
+
+<code>
+     http://img.photobucket.com/albums/v335/ti_nhoc/giay11.jpg
+</code>
+= hình mình thích 
