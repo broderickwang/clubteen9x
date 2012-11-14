@@ -17,4 +17,6 @@ Scrolling : cách hiển thị
 + Go down (Đi Xuống)
 + Deactivate (Đứng Yên)
 
-Announcements: Click vào dấu Cộng ( ++ ) Để Tạo Thông Báo }}}
+Announcements: Click vào dấu Cộng ( ++ ) Để Tạo Thông Báo 
+
+}}}
