@@ -1,0 +1,77 @@
+
+http://www.vietvbb.vn/up/demo/ads/subforum.png
+cách làm
+
+
+tạo 1 js in the home page với javascript code là :
+
+phiên bản punbb
+
+<code>
+     $(document).ready(function() {$('.table:eq(0)').after('
+
+    <img style="width:731px;height:100px;" src="http://i40.servimg.com/u/f40/17/60/05/62/bn110.jpg">
+
+
+    ');});
+                                                       
+</code>
+
+phiên bản invision
+
+<code>
+    $(document).ready(function() {$('div.borderwrap:eq(0)').after('<img style="width:731px;height:100px;" src="http://i40.servimg.com/u/f40/17/60/05/62/bn110.jpg"> ');});
+
+</code>
+phiên bản phpbb3
+
+<code>
+    $(document).ready(function() {$('.forabg:eq(0)').after('<img style="width:731px;height:100px;" src="http://i40.servimg.com/u/f40/17/60/05/62/bn110.jpg"> ');});
+
+</code>
+
+
+đối với phpbb2
+vào index_box tìm
+
+<code>
+    <!-- BEGIN catrow --><!-- BEGIN tablehead -->
+</code>
+và add sau nó
+
+<code>
+    <div class="qcvna">
+
+</code>
+tìm tiếp
+
+<code>
+    <!-- END tablefoot --><!-- END catrow -->
+
+</code>
+và thêm trước nó
+
+<code>
+    </div>
+
+</code>
+sau đó tạo 1 js in the homepage với javascript code như sau
+
+<code>
+    $(document).ready(function() {$('.qcvna:eq(0)').after('<img style="width:731px;height:100px;" src="http://i40.servimg.com/u/f40/17/60/05/62/bn110.jpg"> ');});
+
+</code>
+trong code có
+
+<code>
+    eq(0)
+</code>
+chính là đoạn code của box muốn hiện
+VD eq(0) là box thứ nhất
+eq(1) là box thứ hai ! cứ vậy mà nhân lên
+còn đoạn
+
+<code>
+    <img style="width:731px;height:100px;" src="http://i40.servimg.com/u/f40/17/60/05/62/bn110.jpg"> 
+</code>
+chính là đoạn banner quảng cáo 731px là chiều rộng bắt buộc của banner 100px là chiều dài
