@@ -1,0 +1,92 @@
+http://i43.servimg.com/u/f43/15/93/66/72/demo_b10.jpg
+
+
+- Lời mở đầu của tác giả:
+Trước đây khi vào một forum vbb và nhìn vào button gửi bài mới, gửi trả lời mình cứ tưởng đó là hình ảnh. Định copy về cho về forum FM cho đẹp nhưng không lấy địa chỉ ảnh được. Sau này trình độ lên tay một chút mới đoán ra là nó xài css . Và bây giờ mình lại có ý tưởng làm button này cho FM.
+- Mục lục: bao gồm 2 code rất đơn giản, đặt class ở viewtopic_body và thêm thuộc tính ở css
+- Chương I: Viewtopic_body
+Vào viewtopic_body tìm:
+
+
+
+
+
+<code>
+    <a href="{U_POST_NEW_TOPIC}" rel="nofollow"><img src="{POST_IMG}" id="{POST_IMG_ID}one" alt="{L_POST_NEW_TOPIC}" align="middle" border="0" /></a>
+</code>
+
+
+Và thay bằng:
+
+<code>
+    <a href="{U_POST_NEW_TOPIC}" rel="nofollow"><span class="newpost"><font color=#FFFFFF>  <b>+</b> Viết chủ đề mới  </font></span></a>
+</code>
+
+Tìm tiếp:
+
+<code>
+    <a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}" id="i_reply" alt="{L_POST_REPLY_TOPIC}" align="middle" border="0" /></a>
+
+</code>
+Thay bằng:
+
+<code>
+    <a href="{U_POST_REPLY_TOPIC}"><span class="newpost"><font color=#FFFFFF>  <b>+</b> Trả lời Chủ đề  </font></span></a>
+
+</code>
+- Chương II: Css
+Vào Css và dán code này vào dưới cùng:
+
+<code>
+    span.newpost {
+    filter:alpha(opacity=50);
+    -moz-opacity: 1.0;
+    opacity: 1.0;
+    -khtml-opacity: 1.0;
+    padding:6px;
+    background-color: #488AC7;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    }
+    span.newpost:hover{
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.7;
+    opacity: 0.7;
+    -khtml-opacity: 0.7;}
+
+
+</code>
+
+----------------------------
+- Chú thích:
+
+<code>
+    background-color: #488AC7;
+</code>
+
+là nền của button. Thay màu cho phù hợp với 4rum bạn.
+
+<code>
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+
+</code>
+Là đoạn code làm bo tròn góc.
+
+Các bạn có thể làm tương tự ở viewforum_body
+
+
+Update:
+Cái này bạn có thể dùng Script xóa cái ảnh button, như thế đỡ mất công sửa Templates, và có thể áp dụng cho mọi phiên bản forumotion.
+
+Vào Modules > HTML & JAVASCRIPT > Javascript codes management > Creat a new...:
+
+Title * : Button CSS
+Placement : In the sub-forums và In the topics
+Javascript Code * :
+
+<code>
+    $(function(){$("a[href*='/post?f='][href$='&mode=newtopic']").html('<span class="newpost"><font color=#FFFFFF>  <b>+</b> Viết chủ đề mới  </font></span>');$("a[href*='/post?t='][href$='&mode=reply']").html('<span class="newpost"><font color=#FFFFFF>  <b>+</b> Trả lời Chủ đề  </font></span>');});
+
+</code>
+nguồn fmvi.org
