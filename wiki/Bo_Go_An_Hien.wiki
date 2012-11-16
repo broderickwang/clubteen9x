@@ -1,0 +1,78 @@
+Style CP Orange :
+http://i45.servimg.com/u/f45/16/55/88/76/bogo11.png
+<code>
+    #mudimPanel {
+    background: white url('http://i45.servimg.com/u/f45/16/55/88/76/bogo11.png') no-repeat right center!important;
+    border: 2px solid #DDD!important;
+    position: fixed!important;
+    width: 295px!important;
+    height: 35px;
+    padding: 11px 25px 11px 4px!important;
+    font-size: 9px!important;
+    vertical-align: middle;
+    bottom: 100px!important;
+    left: -302px!important;
+    border-radius: 10px 0px 0px 10px;
+    }
+    #mudimPanel:hover {
+    left: -2px!important;
+    }
+</code>
+
+Style Ribbon :
+http://www.c3zone.net/users/1214/94/30/93/album/ribb10.png
+<code>
+    #mudimPanel {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: url('http://www.c3zone.net/users/1214/94/30/93/album/ribb10.png') 333px 0 no-repeat,url('http://www.c3zone.net/users/1214/94/30/93/album/ribb11.png') center right no-repeat, url('http://www.c3zone.net/users/1214/94/30/93/album/ribb12.png') repeat-x 0 center !important;
+    bottom: 20px!important;
+    left: -333px!important;
+    width: 330px!important;
+    height: 45px!important;
+    padding: 11px 48px 11px 5px !important;
+    font-size: 9px!important;
+    font-weight: bold;
+    vertical-align: middle;
+    border: none !important;
+    }
+    #mudimPanel:hover {
+    left: 0!important;
+    }
+
+</code>
+Lightblue background:
+http://www.c3zone.net/users/1214/94/30/93/album/lblue10.png
+<code>
+    #mudimPanel {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    background: white url('http://www.c3zone.net/users/1214/94/30/93/album/lblue10.png') no-repeat right center!important;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    filter: alpha(opacity=90);
+    bottom: 9px!important;
+    left: -333px!important;
+    width: 330px!important;
+    height: 45px!important;
+    padding: 4px 50px 4px 4px!important;
+    font-size: 9px!important;
+    font-weight: bold;
+    vertical-align: middle;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    }
+    #mudimPanel:hover {
+    left: 0!important;
+    }
+
+</code>
+Đây là đoạn script đã làm sẵn cho vào footer_end nhé
+
+<code>
+    <script type="text/javascript" src="http://mudim.googlecode.com/files/mudim-0.8-r153.js"></script></code>
