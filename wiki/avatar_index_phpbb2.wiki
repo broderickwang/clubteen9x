@@ -1,0 +1,62 @@
+p/s: Chỉ dành cho những skin có index_box có cột bài cuối, chủ về và topic tách rời nhau.
+
+Bước 1: Cho đoạn này vào CSS
+
+ <code>
+    td.row3 {
+    background-color: #ffffff;
+    }
+    td.row1, td.row3.over:hover
+    {
+      background-color: #ffffff;
+    }
+    .row1 over
+      {
+       background: #ffffff;
+       color: #000000;
+    }
+    td.row1 over:hover
+    {
+      background-color: #ffffff;
+    }
+    .row3 over
+    {
+       background: #ffffff;
+       color: #000000;
+    }
+
+ </code>
+
+Bước 2: Vào index_box tìm:
+
+ <code>
+    {catrow.forumrow.LAST_POST}
+
+ </code>
+
+Thường thường ở trên code này sẽ có đoạn code:
+
+ <code>
+    <td class="alt1">
+ </code>
+
+hoặc có 1 class khác!
+
+Vì vậy thay Code
+
+ <code>
+    <td class="class riped thay">
+
+ </code>
+bằng code sau:
+
+ <code>
+    <td class="row3 over">
+
+ </code>
+
+Sau đó ấn chấp nhận rồi ++
+
+Tiếp theo là các bạn làm theo hướng dẫn làm avatar_indexbox nhá :))
+
+Fix by cubimtq và the_dav!
