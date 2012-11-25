@@ -1,8 +1,8 @@
 Demo: http://invision.chinhphuc.info/h95-
 
-Chèn code sau vào 1 widget, học bất kì chỗ nào hỗ trợ HTML: [Đã ẩn. Reply để thấy nộii dung]
+Chèn code sau vào 1 widget, học bất kì chỗ nào hỗ trợ HTML:
 
-</code>
+<code>
             <style>#StickyWin{border-radius:5px 5px 5px 5px;display:none;left:50%;margin-left:-160px;margin-top:-70px;opacity:0;position:absolute;top:50%;visibility:visible;z-index:9000}
             .modalWrap{background:url(http://jsfiddle.net/img/modal/bg.png) repeat scroll 0 0 transparent;border-radius:4px 4px 4px 4px;font-size:.8em;z-index:300;padding:10px}
             .modal_jslint{width:auto}
