@@ -1,0 +1,44 @@
+code này hoạt động giống code tiếp đầu ngữ, nội dung trả lời bạn soạn trước.
+
+http://www.avacweb.com/t611-new-code-automatic-quick-replies
+
+bạn nào văn hay chữ tốt thì dịch lại nhé :4: đại loại là chèn code
+
+<code>
+
+    <div class="user_name" style="text-align: center;"><strong><font color="#ff0000" size="3">Quick responses :</font>
+    <font color="#0006FF" size="3">Clicking on any of these buttons will be automatically written in reply box</font><br>
+    <button style="font-size:12px" onclick="bbfontstyle('In the name of God the Merciful  ','');selectWysiwyg(this,'kalimat');return false"> Basmalah</button>
+    <button style="font-size:12px" onclick="bbfontstyle('Peace be upon you and God's mercy and blessings ','');selectWysiwyg(this,'kalimat');return false">  Peace </button>
+    <button style="font-size:12px" onclick="bbfontstyle('And you peace and God's mercy and blessings  ','');selectWysiwyg(this,'kalimat');return false"> Reply peace </button>
+    <button style="font-size:12px" onclick="bbfontstyle('Brother ','');selectWysiwyg(this,'kalimat');return false"> Brother</button>
+    <button style="font-size:12px" onclick="bbfontstyle('Sister: ','');selectWysiwyg(this,'kalimat');return false"> Sister</button>
+    <button style="font-size:12px" onclick="bbfontstyle('Welcome ','');selectWysiwyg(this,'kalimat');return false"> Welcome </button>
+    <button style="font-size:12px" onclick="bbfontstyle('Thank you for your reply ','');selectWysiwyg(this,'kalimat');return false"> Thank you for your reply </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <br>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    <button style="font-size:12px" onclick="bbfontstyle('ADD YOUR OWN WORDS ','');selectWysiwyg(this,'kalimat');return false"> NEW </button>
+    </strong></div>
+
+</code>
+
+dưới code
+
+<code>
+    {QUICK_REPLY_FORM}
+</code>
+
+trong view topic body
+
+hoạt động với pun và php2
