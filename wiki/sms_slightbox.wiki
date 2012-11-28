@@ -3,6 +3,35 @@ nick test:linh_nhi
 pass : linh_nhi12
 http://i42.servimg.com/u/f42/13/82/55/09/d204e412.png
 cho vào mod_new
+demo ảnh cập nhập sau :
+nick test:linh_nhi
+pass : linh_nhi12
+
+
+
+
+
+Tạo Box Thông điệp yêu thương
+
+ACP> QLTT> Forum> Categories & Forum
+- tạo 1 Forum (diễn đàn) đặt tên là Thông điệp yêu thương
+để lưu giữ những dòng thông điệp
+- bấm Save
+- ra ngòai Index, bấm vào Box Thông điệp yêu thương vừa tạo
+- nhìn lên thanh address sẽ thấy link
+ví dụ của hotrofm
+http://www.hotrofm.com/f43-forum
+>>> Số thứ tự của Box Thông điệp yêu thương là 43.
+
+
+Kích họat 3 Widgets Top poster, Recent topics và News
+
+- ACP> Module> Portal & Forum widgets management> cho mod new vào khung
+http://i24.servimg.com/u/f24/14/64/54/11/211.jpg
+
+ko cần làm giống y hệt trong hình vì chỉ cần mod new ở dưới cùng cho đỡ vỡ khung thui
+
+cho vào mod_new
 
 <code>
     <div class="main">
@@ -153,11 +182,12 @@ cho vào mod_new
     <input type="hidden" name="f" value="15">
     /search?search_keywords=&search_where=f15
     /post?f=15&mode=newtopic input[name^=auth]
-
-
 </code>
+
+
 sửa lại 15 thành số thự tự chuyên mục
 
 hết
 
 mình nhớ sms này kèm them skin soft dc viết bởi notme lên nguồn của soft
+
