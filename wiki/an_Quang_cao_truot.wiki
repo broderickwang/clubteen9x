@@ -1,0 +1,14 @@
+Vào Header Tìm :
+
+<code>
+    <body>
+
+</code>
+thay bằng
+
+<code>
+    <body onload="zzcatfishclose();">
+
+
+
+</code>
