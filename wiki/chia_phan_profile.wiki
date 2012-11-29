@@ -1,0 +1,44 @@
+http://i.imm.io/aANp.png
+
+
+Cách Làm :
+ACP --> Display --> Templates -->Viewtopic_body :
+Tìm Đoạn Này :
+
+<code>
+    {postrow.displayed.profile_field.LABEL}{postrow.displayed.profile_field.CONTENT}
+
+</code>
+Thay = Đoạn Này :
+
+<code>
+    <div class=toibigay>{postrow.displayed.profile_field.LABEL}{postrow.displayed.profile_field.CONTENT}</div>
+
+</code>
+
+AP--> Display --> Colors --> CSS :
+
+<code>
+
+    .toibigay {
+    background-color: #ffffff;
+    border: 1px solid #dfdfdf;
+    color: #3a3a3a;
+    margin-top: 2px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 3px;
+    padding-top: 3px;
+    text-align: left;
+    width: 154px;
+     }</code>
+
+
+
+ACP --> Modules --> JS managment
+
+<code>
+    $(function(){
+    $('.toibigay').next('br').hide();
+    });
+</code>
