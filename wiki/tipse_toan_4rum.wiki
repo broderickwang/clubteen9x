@@ -24,7 +24,7 @@ Vào : overall_footer_begin cho code sau xuống dưới cùng
 
 Vào :
 
-</code>
+<code>
     <style>    .tipsy {
         padding: 5px;
         font-size: 10px;
