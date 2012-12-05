@@ -1,0 +1,168 @@
+*Tên tác giả: baivong
+*Tên sản phẩm: Avatar anime version 2
+
+* Chức năng mới (so với version 1):
+
+    *Cài đặt đơn giản.
+    *Bỏ chức năng mua bán.
+    *Phân trang theo cụm 5 trang, mỗi lần chuyển trang chỉ tải 12 ảnh, tiện và nhẹ hơn.
+    *Hiển thị item theo giới tính, nhưng vẫn dễ dàng chuyển đổi.
+    *Có thể truy cập item theo parameter từ location search, sử dụng 2 parameter:
+    * + item: với các giá trị phongnen|matkinh|trangsuc|tocnam|tocnu|aonam|aonu|quannam|quannu|thucung|canh, mặc định là phongnen
+    * + get: với các giá trị số tùy theo số lượng trang, nếu vượt quá sẽ chuyển về trang 1
+    * Bổ sung một số item mới, không có trên go.vn, tuy nhiên không được đầy đủ cho lắm.
+    * Thống kê tình hình sử dụng, bao gồm tình hình truy cập, tạo và xóa avatar anime, lưu trữ trong mục Nhật ký
+    *Tạo và chia sẽ mẫu dễ dàng, lưu trữ trong mục Đóng góp mẫu:
+    * + Gửi mẫu: dùng để chia sẽ ngay trong diễn đàn, chỉ 1 Click có thể áp dụng ngay cài đặt của thành viên khác.
+    * + Code: Có thể sử dụng ở bất cứ diễn đàn nào dùng mods này. Lấy code avatar anime, chép code này và dán vào ô nhập liệu trong mục Chia sẽ mẫu, sau đó nhấn Áp dụng.
+    * Admin có thể xóa thông tin trong phần Thống kê dễ dàng chỉ với 1 Click
+
+
+Demo:
+http://www.fmvi.vn/h150-avatar-anime
+http://www.fmvi.vn/h150-avatar-anime?item=tocnam&get=19
+http://www.fmvi.vn/h150-avatar-anime?item=aonu&get=6
+
+
+Hướng dẫn:
+Bước 1: Tạo 2 tài khoản mới đặt tên lần lượt là *avatar1* và *avatar2* ghi nhớ lại số uid của 2 tài khoản này.
+Ví dụ: ở fmvi *avatar1* là http://www.fmvi.vn/u1152 , như vậy uid sẽ là *1152*
+Sau đó vào phần thông tin tài khoản, mục giao diện
+ _ DOMAIN/profile?mode=editprofile&page_profil=preferences _
+Allow visitor messages on my profile : Tất cả thành viên (All members)
+
+Bước 2: ACP >> Modules >> Portal & Widgets >> Forum widgets management >> Create a widget http://illiweb.com/fa/admin/icones/ajouter.png
+Tạo widget tên là *userID*
+Làm như trong ảnh: 
+http://i40.servimg.com/u/f40/17/70/81/78/userid10.png
+
+<code>
+
+        <span style="display:none" id="userID">{USERLINK}</span>
+
+</code>
+Mở column 3 (right) và đặt widget vừa tạo vào: 
+http://i40.servimg.com/u/f40/17/70/81/78/widget10.png
+Bước 3: ACP >> Quản lý người dùng >> Profile >> Profile fields >>
+Tạo một field mới tên là *avatar-data* và làm như trong ảnh: http://i40.servimg.com/u/f40/17/70/81/78/avadat10.png
+Phần màu bắt buộc phải chọn một màu nào đó và phải khác với màu của các field khác, nên chọn màu trùng mới màu nền.
+
+Bước 4: ACP >> Templates >> QLTT >> viewtopic_body
+1 - Tìm
+
+<code>
+
+        {postrow.displayed.POSTER_AVATAR}
+
+</code>
+Thay bằng
+
+<code>
+
+        <span class="fmviAA">{postrow.displayed.POSTER_AVATAR}</span>
+</code>
+
+Nếu không muốn thay nó vào avatar, bạn có thể đặt code
+
+<code>
+
+        <span class="fmviAA"></span>
+</code>
+
+... tại nơi bạn muốn trong post.
+2 - Tìm
+
+<code>
+
+        {postrow.displayed.profile_field.LABEL}{postrow.displayed.profile_field.CONTENT}
+</code>
+
+Thay bằng
+
+<code>
+
+        <span class="fmviTT">{postrow.displayed.profile_field.LABEL}<span class="fmviZZ">{postrow.displayed.profile_field.CONTENT}</span></span>
+
+</code>
+3 - Tìm
+
+<code>
+
+        <!-- END postrow -->
+</code>
+
+Đặt bên dưới nó code sau:
+
+<code>
+
+        <script type="text/javascript">
+           $(".fmviTT:contains('avatar-data')").each(function () {
+              $(this).parents(".post").find(".fmviAA").html('<object width="119" height="179" type="application/x-shockwave-flash" data="http://my.go.vn/swf/avatar2.swf" id="avatar_flash" style="visibility: visible"><param name="flashvars" value="itempath=http://farm01.gox.vn/avatar/store/avatar_part_item/&amp;browser=Other&amp;itemlist=' + $(this).find('.fmviZZ').text() + '" /></object>');
+              $(this).remove()
+           })
+        </script>
+</code>
+
+
+Bước 5: ACP >> Modules >> HTML & JAVASCRIPT >> HTML pages management >> Create new HTML page
+Cho code sau vào và nhấn Xem thử (Preview):
+
+<code>
+
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" id="min-width" lang="vi" xml:lang="vi">
+           <head>
+              <title>HTML avatar anime</title>
+              <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+              <link rel="shortcut icon" type="image/x-icon" href="http://i48.servimg.com/u/f48/16/58/89/73/minilo10.png" />
+              <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+              <script type="text/javascript">
+                 jQuery(function () {
+                    var n = 0,
+                       time = setInterval(function () {
+                          jQuery("#time").text(n++)
+                       }, 1);
+                    jQuery.get("/u1?change_temp=1", function (a) {
+                       clearInterval(time);
+                       var d = jQuery(a).find("dt:contains('avatar-data')").parent("dl").attr("id"),
+                          e = jQuery(a).find("dt:contains('avatar-data') span").attr("style"),
+                          a = jQuery(a).find("dt:contains('avatar-data')").next().find("input").attr("id"),
+                          b = check(),
+                          c = check2();
+                       void 0 == a || null == b || null == c ? alert("L\u1ed7i! Kh\u00f4ng t\u00ecm \u0111\u01b0\u1ee3c th\u00f4ng tin c\u1ea7n thi\u1ebft\nTr\u00ecnh duy\u1ec7t Internet Explorer v\u00e0 Opera kh\u00f4ng ch\u1ea1y \u0111\u01b0\u1ee3c m\u00e3 n\u00e0y.") : jQuery("body").html('<h1>CSS</h1><h3>ACP >> Display >> Pictures and Colors >> Colors >> CSS Stylesheet</h3><div style="border: 1px solid rgb(221, 221, 221); padding: 10px;">/* X\u00f3a \u0111o\u1ea1n n\u00e0y n\u1ebfu d\u00f9ng right widget */<br>#container{margin-right: 0px ! important; float: none ! important;}<br>#content{margin-right: 0px ! important;}<br>#right{display: none;}<br>/* \u1ea8n avatar-data */<br>#ucp dt span[style="' + e + '"],#' + d + ",#" + a + '{display: none;}</div><h1>HTML</h1><h3>ACP >> Modules >> HTML & JAVASCRIPT >> HTML pages management >> Create new HTML page</h3><p><img alt="H\u01b0\u1edbng d\u1eabn" src="http://i40.servimg.com/u/f40/17/70/81/78/html10.png" /></p><div style="border: 1px solid rgb(221, 221, 221); position: relative; height: 400px;"><iframe src="http://www.fmvi.vn/h148-source-avatar-anime?fmvi1=' + a + "&fmvi2=" + b + "&fmvi3=" + c + '" style="width: 100%; position: absolute; border: 0px none; height: 400px;"></iframe></div>')
+                    })
+                 });
+         
+                 function check() {
+                    var a = prompt("Nh\u1eadp s\u1ed1 uID c\u1ee7a avatar1:", "");
+                    return isNaN(a) ? check() : a
+                 }
+                 function check2() {
+                    var a = prompt("Nh\u1eadp s\u1ed1 uID c\u1ee7a avatar2:", "");
+                    return isNaN(a) ? check2() : a
+                 };
+              </script>
+              <script type="text/javascript">
+                 //<![CDATA[ var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-26966514-1"]);_gaq.push(["_trackPageview"]);(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})(); //]]>                 
+              </script>
+           </head>
+           <body>Đang kiểm tra, vui lòng chờ trong giây lát!
+              <br />Thời gian kiểm tra <span id="time">0</span> ms
+              <br />Trình duyệt Internet Explorer và Opera không chạy được mã này.</body>
+         
+        </html>
+</code>
+
+Code kiểm tra này chỉ chạy được trên Chrome và Firefox (ai biết cách fix thì nói để mình bổ sung), nếu bạn thấy thời gian kiểm tra chạy tức là code đang hoạt động, nếu nó đứng mãi số 0 là lỗi.
+Sau khi chạy xong nó sẽ yêu cầu 2 thông số *uID* của tài khoản *avatar1* và *avatar2* đã tạo ở bước 1, bạn nhập lần lượt 2 thông tin đó vào.
+Kết quả sẽ cho ra code *CSS*, bạn chép nó vào CSS của forum, nó có tác dụng ẩn column 3(right) và avatar-data. Nếu forum bạn dùng column 3(right) thì xóa phần đánh dấu đi.
+Bạn lấy code *HTML* và thay vào trang *HTML* bạn vừa dùng chạy code ở bước 5 luôn, theo như hướng dẫn.
+
+Chúc thành công!
+
+*Lưu ý*: Hoạt động của avatar anime phụ thuộc của host go.vn nên ảnh hay flash bị lỗi do bảo trì hay gì gì đấy... mình không kiểm soát được.
+Khi sao chép bài viết sang forum khác không được dùng thẻ [hide]
+Không được sửa dòng copyright, không được thay link www.fmvi.vn trong mã nguồn. Các mod mình thiết kế sau này một khi mod chạy sẽ mất dòng copyright nên mong là các bạn không lấy lý do vì thẫm mỹ hay quảng cáo...
+Mình rất hoan nghênh các bạn nghiên cứu và đóng góp về lỗi trong mod, mình chỉ là dân không chuyên nên code viết chưa đẹp chưa gọn cũng rất mong nhận được phản hồi của các bạn.
+
+Viết bởi baivong - www.fmvi.vn
