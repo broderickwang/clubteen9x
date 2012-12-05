@@ -1,0 +1,28 @@
+
+http://www.4rkinggame.net/
+Tìm trong viewtopic_body:
+
+<code>
+    {postrow.displayed.profile_field.LABEL} {postrow.displayed.profile_field.CONTENT}{postrow.displayed.profile_field.SEPARATOR}
+
+</code>
+
+Thay bằng
+
+<code>
+    <span class="hidenfield">{postrow.displayed.profile_field.LABEL} {postrow.displayed.profile_field.CONTENT}{postrow.displayed.profile_field.SEPARATOR}</span>
+
+</code>
+
+Rồi thêm đoạn này ở đầu hoặc cuối viewtopic_body:
+
+<code>
+    <script type="text/javascript">$(function(){$(".hidenfield:contains('avatar-dulieu')").css('display','none');})</script>
+
+</code>
+
+Like nhé
+
+
+
+Được sửa bởi Zin_Ken ngày Wed 5 Dec - 16:56; sửa lần 1.
