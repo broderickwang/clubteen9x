@@ -139,3 +139,55 @@ Bước 2: Tạo js:
 
 
 Mọi người test thử nhé.
+
+Các bạn để ý đoạn code này:
+<code>
+    $(function () {
+    $(".post-container").each(function () {
+    var x = $(this).find(".postprofile-details dd:last").html(),
+    Posts = x.substring(x.indexOf("Posts") + 21),
+    Posts = Posts.substring(0, Posts.indexOf("Points") - 39),
+    Coins = x.substring(x.indexOf("Points") + 22),
+    Coins = Coins.substring(0, Coins.indexOf("Thanked") - 39),
+    Thanked = x.substring(x.indexOf("Thanked") + 23),
+    Thanked = Thanked.substring(0, Thanked.indexOf("Join date") - 39);
+    $(this).parent().children('.post-container').children().children().children('.postprofile-details.postdetails').children('dd:eq(1)').html(miarank(Posts, Coins, Thanked)).addClass('leveli')
+    })
+    });</code>
+
+
+    Sửa chữ Join date thành tên mục đứng sau Thanked trong Profile của bạn.
+    Sửa các số in đậm và gạch dưới trong đoạn code trên.
+
+
+Nếu các bạn không biết sửa như thế nào,
+Mình sẽ nói đơn giản như sau:
+
+        Số in đậm là số kí tự đếm từ trái qua phải (bắt đầu từ chữ in nghiêng cùng dòng).
+        Số gạch dưới là số kí tự đếm từ phải qua trái (bắt đầu từ chữ in nghiêng cùng dòng).
+
+
+
+VD: Như ở post này: http://thewanted.yourme.net/t26-topic#62 thì đoạn code hiển thị Profile đó là:
+</code>
+    <dd style="display: block;"><span><span style="color:#0080FF;">Giới tính</span>: </span><img src="http://i40.servimg.com/u/f40/17/70/31/89/icon_m12.gif" alt="Nữ" title="Nữ"><br><span><span style="color:#0080FF;">Posts</span>: </span>11<br><span><span style="color:#0080ff;">Points</span>: </span>15<br><span><span style="color:#0080FF;">Thanked</span>: </span>4<br><span><span style="color:#0080ff;">Join date</span>: </span>29/11/2012<br></dd>
+</code></code>
+(Các bạn viewsource phần Profile của các bạn)
+
+
+Với đoạn ở trên, để lấy ra số Posts (số 11) thì phải đếm 2 lần:
+
+    Đếm từ trái qua phải bắt đầu từ chữ Posts (lấy kí tự in đậm) ~ Bao gồm 21 kí tự:
+<code>
+        Posts</span>: </span>
+</code>
+
+    Đếm từ phải qua trái bắt đầu từ chữ Points (lấy kí tự gạch dưới) ~ Bao gồm 39 kí tự:
+<code>
+        <br><span><span style="color:#0080ff;">
+</code>
+(Đếm cả kí tự cách)
+
+
+Các bạn đếm tương tự để lấy ra số Ponts và số Thanked,
+khi nào nó hiện có nghĩa là các bạn đã đếm đúng Mắc cỡ
