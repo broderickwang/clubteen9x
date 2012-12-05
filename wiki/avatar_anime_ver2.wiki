@@ -3,16 +3,16 @@
 
 * Chức năng mới (so với version 1):
 
-    *Cài đặt đơn giản.
-    *Bỏ chức năng mua bán.
-    *Phân trang theo cụm 5 trang, mỗi lần chuyển trang chỉ tải 12 ảnh, tiện và nhẹ hơn.
-    *Hiển thị item theo giới tính, nhưng vẫn dễ dàng chuyển đổi.
-    *Có thể truy cập item theo parameter từ location search, sử dụng 2 parameter:
+    * Cài đặt đơn giản.
+    * Bỏ chức năng mua bán.
+    * Phân trang theo cụm 5 trang, mỗi lần chuyển trang chỉ tải 12 ảnh, tiện và nhẹ hơn.
+    * Hiển thị item theo giới tính, nhưng vẫn dễ dàng chuyển đổi.
+    * Có thể truy cập item theo parameter từ location search, sử dụng 2 parameter:
     * + item: với các giá trị phongnen|matkinh|trangsuc|tocnam|tocnu|aonam|aonu|quannam|quannu|thucung|canh, mặc định là phongnen
     * + get: với các giá trị số tùy theo số lượng trang, nếu vượt quá sẽ chuyển về trang 1
     * Bổ sung một số item mới, không có trên go.vn, tuy nhiên không được đầy đủ cho lắm.
     * Thống kê tình hình sử dụng, bao gồm tình hình truy cập, tạo và xóa avatar anime, lưu trữ trong mục Nhật ký
-    *Tạo và chia sẽ mẫu dễ dàng, lưu trữ trong mục Đóng góp mẫu:
+    * Tạo và chia sẽ mẫu dễ dàng, lưu trữ trong mục Đóng góp mẫu:
     * + Gửi mẫu: dùng để chia sẽ ngay trong diễn đàn, chỉ 1 Click có thể áp dụng ngay cài đặt của thành viên khác.
     * + Code: Có thể sử dụng ở bất cứ diễn đàn nào dùng mods này. Lấy code avatar anime, chép code này và dán vào ô nhập liệu trong mục Chia sẽ mẫu, sau đó nhấn Áp dụng.
     * Admin có thể xóa thông tin trong phần Thống kê dễ dàng chỉ với 1 Click
