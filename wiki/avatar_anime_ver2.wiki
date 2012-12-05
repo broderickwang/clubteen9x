@@ -154,18 +154,17 @@ Cho code sau vào và nhấn Xem thử (Preview):
 </code>
 
 Code kiểm tra này chỉ chạy được trên Chrome và Firefox (ai biết cách fix thì nói để mình bổ sung), nếu bạn thấy thời gian kiểm tra chạy tức là code đang hoạt động, nếu nó đứng mãi số 0 là lỗi.
-Sau khi chạy xong nó sẽ yêu cầu 2 thông số *uID* của tài khoản *avatar1* và *avatar2* đã tạo ở bước 1, bạn nhập lần lượt 2 thông tin đó vào.
-Kết quả sẽ cho ra code *CSS*, bạn chép nó vào CSS của forum, nó có tác dụng ẩn column 3(right) và avatar-data. Nếu forum bạn dùng column 3(right) thì xóa phần đánh dấu đi.
-Bạn lấy code *HTML* và thay vào trang *HTML* bạn vừa dùng chạy code ở bước 5 luôn, theo như hướng dẫn.
+Sau khi chạy xong nó sẽ yêu cầu 2 thông số *uID* của tài khoản *avatar1* và *avatar*2 đã tạo ở bước 1, bạn nhập lần lượt 2 thông tin đó vào.
+Kết quả sẽ cho ra code *CSS* , bạn chép nó vào CSS của forum, nó có tác dụng ẩn column 3(right) và avatar-data. Nếu forum bạn dùng column 3(right) thì xóa phần đánh dấu đi.
+Bạn lấy code *HTML* và thay vào trang HTML bạn vừa dùng chạy code ở bước 5 luôn, theo như hướng dẫn và lưu lại.
+*Sau khi lưu xong lần 1, sẽ xuất hiện lỗi ký tự ở dòng 455 và 457, bạn chỉ việc chép lại mã HTML xuất hiện sau lần kiểm tra vừa rồi mà lưu lại lần thứ 2.*
 
 Chúc thành công!
 
-*Lưu ý*: Hoạt động của avatar anime phụ thuộc của host go.vn nên ảnh hay flash bị lỗi do bảo trì hay gì gì đấy... mình không kiểm soát được.
+Lưu ý: Hoạt động của avatar anime phụ thuộc của host go.vn nên ảnh hay flash bị lỗi do bảo trì hay gì gì đấy... mình không kiểm soát được.
 Khi sao chép bài viết sang forum khác không được dùng thẻ [hide]
 Không được sửa dòng copyright, không được thay link www.fmvi.vn trong mã nguồn. Các mod mình thiết kế sau này một khi mod chạy sẽ mất dòng copyright nên mong là các bạn không lấy lý do vì thẫm mỹ hay quảng cáo...
 Mình rất hoan nghênh các bạn nghiên cứu và đóng góp về lỗi trong mod, mình chỉ là dân không chuyên nên code viết chưa đẹp chưa gọn cũng rất mong nhận được phản hồi của các bạn.
-
-Viết bởi baivong - www.fmvi.vn
 
 <code><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" id="min-width" lang="vi" xml:lang="vi">
