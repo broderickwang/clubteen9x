@@ -1,0 +1,27 @@
+demo ko biết nói thế nào cả chỉ biết là gửi video thì ấn vào nút thì nó phóng to toàn màn hình
+
+tạo 1 js cho cái này vào
+js
+
+<code>
+    var source='Distribution/Editing of this code is allowed but the source(s) must be mentioned. http://www.diondesigns.org & http://lgforum.forumotion.co.uk';
+    $(function() {
+    $('.postbody embed').each(function() {
+        var srcF = $(this).attr('src');
+        var dimW = $(this).attr('width');
+        var dimH = $(this).attr('height');
+        $(this).replaceWith('<object width="' + dimW + '" height="' + dimH + '"><param name="movie" value="' + srcF + '?version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="' + srcF + '?version=3" type="application/x-shockwave-flash" width="' + dimW + '" height="' + dimH + '" allowscriptaccess="always" allowfullscreen="true" wmode="transparent" ></embed></object>');
+    });
+    });
+</code>
+
+
+rùi
+cho vào vewtopic
+
+<code>
+    <script type="text/javascript" src="link js"></script>
+</code>
+
+
+nhớ sửa link js thành link js của bạn
