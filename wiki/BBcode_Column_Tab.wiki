@@ -303,3 +303,60 @@ Thay số X đó vào số 142 trong code Javascript toàn diễn đàn
 Bạn có thể truy cập Trang HTML soạn thảo theo 2 link sau:
 URL/hX-page?bbcode=tab
 URL/hX-page?bbcode=column
+
+Không ẩn bài viết khi sao chép đi nơi khác.
+Không sửa, xóa bất kỳ thành phần nào trong code, mọi thắc mắc và góp ý vui lòng gửi tại đây.
+
+Nhược điểm:
+
+Có thể tạo nhiều Tab trong một bài viết, nhưng không thể lồng Tab vào trong Tab. Tương tự với Column.
+Có thể xảy ra lỗi trong bài viết dài. Mình định để nó chuyển về BBcode gốc trong khung soạn thảo luôn, mà thấy hơi mất thẫm mỹ nên để vậy.
+
+
+Tuy là cú pháp tương tự như BBcode nhưng đây không thực sự là BBcode, xử lý bằng javascript có nhiều hạn chế, mình cũng không rành dùng Regex lắm, chỉ làm được thế này thôi.
+
+Giới thiệu
+
+
+BBcode Column
+
+    Trình bày văn bản dạng cột.
+    Cú pháp:
+
+<code>
+        [column][tdXY]text[/td][/column]
+
+</code>
+
+    X: Giá trị độ rộng mỗi cột, từ 1-99 (đơn vị %). Có thể để trống.
+    Y: Đặt giá trị line để tạo đường phân cách trước cột đó
+    Ví dụ:
+
+<code>
+        [column][td30]text[/td][td70line]text[/td][/column]
+
+</code>
+    Khung soạn thảo:
+http://i12.servimg.com/u/f12/17/70/81/78/12-12-15.jpg
+http://i12.servimg.com/u/f12/17/70/81/78/12-13-10.jpg
+
+	BBcode Tab
+
+    Trình bày văn bản theo dạng tab.
+    Cú pháp:
+
+<code>
+        [tab width=XY][item=text]text[/item][/tab]
+
+</code>
+    X: Giá trị độ rộng tab, từ 1-999, đơn vị %,px,pt,em hoặc auto. Có thể để trống.
+    Y: Đơn vị độ rộng %,px,pt,em hoặc auto. Có thể để trống.
+    Ví dụ:
+
+<code>
+        [tab width=700px][item=text]text[/item][item=text]text[/item][/tab]
+</code>
+
+    Khung soạn thảo:
+    http://i12.servimg.com/u/f12/17/70/81/78/12-12-16.jpg
+    http://i12.servimg.com/u/f12/17/70/81/78/12-13-11.jpg
