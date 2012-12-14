@@ -294,6 +294,14 @@ ACP >> Modules >> HTML & JAVASCRIPT >> HTML pages management >> Create new HTML 
     </html>
 </code>
 
+Sau khi tạo xong Trang HTML soạn thảo, bạn sẽ có 1 link dạng URL/hX-page
+Với X là số thứ tự trang.
+Thay số X đó vào chữ X ở dòng 3 trong code trên: var fmviBB = "X";
+Bạn có thể truy cập Trang HTML soạn thảo theo 2 link sau:
+URL/hX-page?bbcode=tab
+URL/hX-page?bbcode=column
+
+
 
 Chú ý:
 
