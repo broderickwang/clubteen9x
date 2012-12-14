@@ -1,0 +1,325 @@
+Đây là bài viết đầu tiên mình thử nghiệm việc viết tut ở mức sơ lược nhưng đi sâu vào giải thích cách sử dụng hơn. Trong bài viết dưới đây mình dùng nick admin, uid=1 làm ví dụ, nó cũng không liên quan nhiều đến cách sử dụng code này.
+
+Demo: 
+http://i12.servimg.com/u/f12/17/70/81/78/12-14-10.jpg
+
+http://baivong.forumclan.com/t1718-test-status#5429
+ID: khachviengtham
+PW: 2012fmvi
+
+
+Bước 1: Tách riêng và hiển thị status trong bài viết.
+
+Templates >> viewtopic_body:
+
+Đầu tiên bạn cần xóa cái status trong bài viết đi, bạn tìm đoạn này:
+
+<code>
+
+        {postrow.displayed.profile_field.LABEL}{postrow.displayed.profile_field.CONTENT}
+
+</code>
+Thay bằng:
+
+<code>
+
+        <span class="fmviTT">{postrow.displayed.profile_field.LABEL}<span class="fmviZZ">{postrow.displayed.profile_field.CONTENT}</span></span>
+
+</code>
+Và ta sẽ dùng code sau để xóa nó:
+
+<code>
+
+        $(".fmviTT:contains('Status')").remove();
+
+
+
+Tiếp đó, bạn đặt code dưới đây vào chỗ nào muốn hiện status trong bài viết. Nó là toàn bộ profile field của thành viên.
+
+Code: Chọn nội dung
+
+        <div style="display:none" class="showST">
+             {postrow.displayed.POSTER_NAME}
+           <!-- BEGIN profile_field -->
+           <p>
+                     {postrow.displayed.profile_field.LABEL}
+              <strong>
+                 {postrow.displayed.profile_field.CONTENT}
+              </strong>
+           </p>
+           <!-- END profile_field -->
+        </div>
+
+</code>
+
+Trong template là thế, còn ngoài bài viết thì nó hiện như thế này:
+
+<code>
+
+        <div style="display:none" class="showST">
+             <a href="/u1">
+                    <span style="color:#FF2BC6">
+                      <strong>admin</strong>
+                   </span>
+           </a>
+             <p>
+                /* Các field linh tinh khác */
+             </p>
+             <p>
+                <span><span style="color:#FF0A0A;">Status</span>:</span>
+               <strong>Nội dung status</strong>
+           </p>
+        </div></code>
+
+
+
+Tất nhiên là có nhiều field khác, nhưng ta chỉ quan tâm cái status thôi, bây giờ ta sẽ dùng jQuery để xóa hết mất cái linh tinh, chỉ lấy ra Nội dung status thôi.
+
+<code>
+
+        $(".showST").each(function () {
+           var a = $(this).find("a[href^='/u']").attr("href").slice(2);
+           var b = $(this).find("p > span:contains('Status')").next("strong").text();
+           $(this).replaceWith('<span class="showST ' + a + '">' + b + '</span>');
+        });
+</code>
+
+
+Kết quả sẽ ra thế này:
+
+<code>
+
+        <span class="showST u1">Nội dung status</span>
+
+</code>
+
+Phần class u1 sẽ thay đổi tùy theo tác giả bài viết, mình làm thế này để tiện cho việc phân biệt status của ai, dùng cho phần cập nhật status sau này. Có cách gọn hơn, nhưng đây là cách đơn giản nhất. Theo cách này bạn chỉ cần đặt mớ Tempate kia ở đâu trong bài viết thì status sẽ hiện đúng chỗ đấy.
+
+Toàn bộ code hoàn chỉnh của bước 1:
+
+<code>
+
+        <script type="text/javascript">
+           $(".showST").each(function () {
+              var a = $(this).find("a[href^='/u']").attr("href").slice(2);
+              var b = $(this).find("p > span:contains('Status')").next("strong").text();
+              $(this).replaceWith('<span class="showST ' + a + '">' + b + '</span>');
+           });
+           $(".fmviTT:contains('Status')").remove();
+        </script>
+
+</code>
+
+Đặt code trên vào cuối viewtopic_body.
+
+
+Bước 2: Cập nhật Status tại mọi nơi trên diễn đàn.
+
+General > Site description:
+
+<code>
+
+        <span style="display:none" id="userID">{USERLINK}</span>
+</code>
+
+
+USERLINK sẽ cho ra cấu trúc HTML như thế này:
+
+<code>
+
+        <a href="http://www.fmvi.vn/profile.forum?mode=viewprofile&amp;u=1">admin</a>
+</code>
+
+
+Ta sẽ dễ dàng lấy ra tên và số thứ tự (uid) của thành viên đang truy cập.
+
+<code>
+
+        <script type="text/javascript">
+           var nameUser = $("#userID a").text();
+           var idUser = $("#userID a").attr("href").split("u=")[1];
+        </script>
+</code>
+
+
+Tuy nhiên, trong bài này ta không cần dùng đến nameUser
+
+Cấu trúc HTML cần có 2 phần Nhập và Đăng status:
+
+<code>
+
+        <input id="textST" name="status" type="text" />
+        <button id="sendST">Đăng status</button>
+
+</code>
+
+Một cái input để nhập liệu, và một button để... nhấn. Bạn có thể thay bằng bất cứ cách nào khác khi đã hiểu cách sử dụng nó.
+
+Bây giờ ta sẽ viết mã jQuery để gửi status:
+
+<code>
+
+        <script type="text/javascript">
+           $("#sendST").click(function () { // Đặt lệnh khi click vào button#sendST
+              var a = $("#textST").val(); // Giá trị của input#statusT
+              if (a != "") { // Có nghĩa là không chạy khi input#statusT không có giá trị
+                 $.post("/ajax_profile.forum?jsoncallback=?", { // Sử dụng ajax để gửi Status
+                    id: -8, // id của field Status
+                    user: idUser, // uid của thành viên đang truy cập
+                    active: "1", // Mặc định
+                    content: '[["profile_field_13_-8", "' + a + '"]]', // id của phần nhập liệu field Status
+                    tid: $("#qjump input[name='tid']").val() // tid của thành viên đang truy cập
+                 }, function (e) {
+                    if (e == "[object Object]") {
+                       // Xử lý khi gửi thành công
+                    } else {
+                       // Thông báo lỗi
+                    }
+                 }, "json");
+              }
+           });
+           });
+        </script></code>
+
+
+
+Phần chú thích mình đã ghi kỹ trong code, nên chỉ giải thích thêm một số chỗ sau:
+
+id của field Status: Mặc dịnh của fm là -8, nếu bạn dùng field khác thì nó là con số cuối cùng trong id của phần tử chứa nó, bật firebug lên là thấy ngay.
+
+id của phần nhập liệu field Status: khi bạn sửa status trong profile, nó hiện ra 1 cái input để bạn nhập, và đây là id của cái input đấy.
+
+Nếu bạn không thể tìm ra nó thì dùng đoạn mã sau:
+
+<code>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+           var a = prompt("Nhap ten field can tim:", "");
+           jQuery.get("/u1?change_temp", function (b) {
+              alert(jQuery(b).find("dt:contains('"+a+"')").parent("dl").attr("id").slice(8));
+              alert(jQuery(b).find("dt:contains('"+a+"')").parent("dl").find("span:last input").attr("id"))
+           });
+        </script>
+</code>
+
+Chỉ cần tạo một trang HTML, cho nó vào, bấm Preview rồi nhập tên của profile field bạn cần tìm. Nhớ nhập đúng chữ hoa thường, đợi 1 tý là nó trả kết quả về.
+Demo: http://www.fmvi.vn/h162-check-id-profile-field
+
+Bây giờ đến phần sử lý sau khi gửi.
+
+Code này mình tra trong trang profile, họ dùng json để tạo mảng lưu dữ liệu vào, cái dòng content ấy. Nói chung là sau khi xử lý json thì nó sẽ trả về kết quả kiểu thế này: *[[profile_field_id, value]]*
+
+Khi mình gửi xong nó trả về kết quả [object Object]. Nó không có nghĩa là gửi thành công, mà chỉ là thông báo có tìm thấy cái input nhập liệu. Nếu bạn không cho phép thành viên tự sửa status trong profile thì nó sẽ không trả kết quả về. Mình không tìm thấy lệnh nào thông báo nào khác nên tạm dùng cách này. (mà làm đúng như mình thì chẳng lỗi đâu, yên tâm.)
+
+Khi bạn gửi xong, theo như cách trên mình xem như gửi thành công. Do sever không trả gì về nên mình lấy luôn cái giá trị mình nhập vào input#statusT để cập nhật status. Ở đây mình cho nó cập nhật luôn vào phần Status trong bài viết.
+
+<code>
+
+        $(".showST.u" + idUser).text(a)
+
+</code>
+
+Xem lại một chút, đây là kết quả cuối bước 1:
+
+<code>
+
+        <span class="showST u1">Nội dung status</span>
+</code>
+
+
+Trong ví dụ này là thành viên có uid=1 đang thay status, thế nên đoạn mã trên sẽ tìm đúng status của người đó để cập nhật. Đấy là khi bạn đang ở trong trang xem bài viết, còn nếu bạn ở ngoài trang chủ hay hòm thư thì sao? phải làm một chổ hiển thị đẹp đẹp tý.
+
+<code>
+
+        <span id="viewST"></span>
+
+</code>
+
+Đặt nó ở chỗ nào bạn thích, nên đặt vào overall_header luôn để đi đâu cũng sài được. Sửa lại mã trên như sau:
+
+<code>
+
+        $("#viewST, .showST.u" + idUser).text(a)
+</code>
+
+
+Nếu vậy thì bình thường, khi bạn không thực hiện cập nhật status, cái span#viewST này sẽ trống trơn, chuyển trang mới là mất.
+
+Vậy ta sẽ dùng cách tải status ngay khi đăng nhập.
+
+<code>
+
+        $.get("/u" + idUser, function (c) { // Tải dữ liệu trang cá nhân
+           $("#viewST").text($(c).find("#profile_field_13_-8").val()) // Lấy giá trị của field Status
+        });
+
+</code>
+
+Nếu cứ mỗi lúc chuyển trang lại tải một lần nó sẽ khá bất tiện và làm chậm forum. Thế nên sau lần tải này, mình sẽ lưu luôn nó vào cookie của trình duyệt luôn cho tiện.
+
+<code>
+
+        my_setcookie("fmviST", $("#viewST").text()); // Đặt giá trị của status cho cookie fmviST
+        if (my_getcookie("fmviST") != null) {
+           $("#viewST").text(my_getcookie("fmviST")); // Cập nhật status từ cookie
+        }
+</code>
+
+
+Toàn bộ code hoàn chỉnh của bước 2:
+
+<code>
+
+        <div id="STfmvi" style="display:none">
+           <p>
+                Status: <span id="viewST">Bạn đang nghĩ gì?</span>
+           </p>
+           <p>
+              <input id="textST" name="status" type="text" />
+              <button id="sendST">Đăng status</button>
+           </p>
+        </div>
+        <script type="text/javascript">
+           jQuery(function () {
+              var idUser = jQuery("#userID a").attr("href").split("u=")[1];
+              if (idUser != -1) {
+                 jQuery("#STfmvi").show();
+                 if (my_getcookie("fmviST") != null) {
+                    jQuery("#viewST").text(unescape(my_getcookie("fmviST")));
+                 } else {
+                    jQuery.get("/u" + idUser, function (c) {
+                       jQuery("#viewST").text(jQuery(c).find("#profile_field_13_-8").val());
+                       my_setcookie("fmviST", escape(jQuery("#viewST").text()));
+                    })
+                 }
+                 jQuery("#sendST").click(function () {
+                    var a = jQuery("#textST").val();
+                    if (a != "") {
+                       jQuery.post("/ajax_profile.forum?jsoncallback=?", {
+                          id: -8,
+                          user: idUser,
+                          active: "1",
+                          content: '[["profile_field_13_-8", "' + a + '"]]',
+                          tid: jQuery("#qjump input[name='tid']").val()
+                       }, function (e) {
+                          if (e == "[object Object]") {
+                             jQuery("#viewST, .showST.u" + idUser).text(a);
+                             my_setcookie("fmviST", escape(a));
+                          } else {
+                             alert("Không tìm thấy dữ liệu hoặc người quản lý không cho phép")
+                          }
+                       }, "json")
+                    }
+                 })
+              }
+              $("a[href^='/login?logout']").click(function(){
+                 document.cookie = "fmviST=; expires=Monday, December 1, 2010 0:0:0 AM;"
+              });
+           });
+        </script>
+
+
+</code>
+
+Viết bởi baivong - www.fmvi.vn
