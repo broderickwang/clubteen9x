@@ -2,6 +2,8 @@ Nén CSS
 http://www.cleancss.com/
 http://www.csscompressor.com/
 http://jquery.com/
+http://sharetext.org/
+http://tny.cz
 http://jsbin.com/agucu/3/edit
 Nén và mã hóa javascript kiểu packer
 http://dean.edwards.name/packer/
