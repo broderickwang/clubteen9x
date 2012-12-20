@@ -1,11 +1,12 @@
 http://i12.servimg.com/u/f12/17/70/81/78/12-19-11.jpg
+
 Mod này được viết với ý tưởng của ligerv. Lúc đầu, mình nghĩ chỉ là thêm màu mè một chút, nhưng nghĩ lại vẫn thấy có lợi. Nếu như bạn đăng nhập sai, bạn sẽ bị chuyển về trang kiểm tra lỗi, như thế thì các mod đăng nhập không chuyển trang trước đây xem như bó tay. Nếu bạn nhập sai 2 lần, 3 lần thì bạn phải tải trang 4, 6 lần với đầy đủ css, js...
 Với cách này có thể nói là khắc phục các vấn đề trên, khi sử dụng mod này bạn không cần đến các mod đăng nhập không chuyển trang nào khác.
 Và bây giờ là cách viết.
 
 Đầu tiên bạn cần một form đăng nhập với đủ các thông tin cơ bản để khi thành viên không bật javascript vẫn đăng nhập được. Nên đặt ở Templates overall_header
 
-CSSHTMLDemo
+CSS
 
 <code>
         /* form đăng nhập - www.fmvi.vn */
@@ -27,6 +28,45 @@ CSSHTMLDemo
         .success input{background-color:#A0FBA8;border:1px solid #27B539;}
 
 </code>
+
+HTML:<code>    <!-- BEGIN switch_user_logged_out -->
+    <form id="fmvilogin" action="/login" method="post" name="form_login">
+       <div class="login_form">
+          <dl>
+             <dt>
+                <label for="username">Tài khoản :</label>
+             </dt>
+             <dd>
+                <input tabindex="1" type="text" class="postx" size="10" name="username" />
+                <img src="http://i15.servimg.com/u/f15/16/58/89/73/ajax-l10.gif" />
+             </dd>
+          </dl>
+          <dl style="float: right; margin-top: -30px;">
+             <dt>
+                <label for="autologin">Ghi nhớ?</label>
+             </dt>
+             <dd>
+                <input tabindex="3" type="checkbox" value="true" class="radio" name="autologin" checked="checked" />
+             </dd>
+          </dl>
+          <dl>
+             <dt>
+                <label for="password">Mật khẩu :</label>
+             </dt>
+             <dd>
+                <input tabindex="2" type="password" class="postx" size="10" name="password" />
+                <img src="http://i15.servimg.com/u/f15/16/58/89/73/ajax-l10.gif" />
+             </dd>
+          </dl>
+          <dl style="float: right; margin-top: -30px;">
+             <dt>&nbsp;</dt>
+             <dd>
+                <input tabindex="4" type="submit" class="submit" name="login" value="Đăng nhập" />
+             </dd>
+          </dl>
+       </div>
+    </form>
+    <!-- END switch_user_logged_out --></code>
 HTML đã xong, bạn có thể tùy biến các kiểu, hoặc sử dụng form login của forum bạn để làm khi đã hiểu cách dùng javascript mà mình sẽ hướng dẫn sau đây:
 
 Đầu tiên bạn cần chặn form chạy khi submit để không bị chuyển trang.
@@ -47,8 +87,8 @@ Dùng ajax để gửi dữ liệu đăng nhập:
     }, function (a) {
        // Xử lý ở đây
     });
-
 </code>
+
 
 Bây giờ khi có kết quả trả về, ta sẽ phân ra 3 trường hợp đăng nhập: Thành công, lỗi và bị chặn.
 Nếu đăng nhập thành công thì trên thanh nav bar sẽ có nút thoát, nếu forum bạn không dùng nav bar thì dùng cách khác để xác định, vì thế lưu ý khi xem hướng dẫn này.
@@ -71,8 +111,8 @@ Xử lý đăng nhập thành công mình dùng cách refresh, Zero đề nghị
 
 <code>
     window.location.reload();
-
 </code>
+
 
 Khi bị chặn thì mình dùng alert box để thông báo, nó có thể bị addon better popup của chrome chặn, nếu bạn có thể thì dùng một lightbox hoặc làm dòng thông báo đâu đó cho đẹp.
 
@@ -97,8 +137,8 @@ Trước tiên là kiểm tra ID, mình sẽ dùng ajax tìm thành viên. Mình
        }
     });
 
-
 </code>
+
 Về mặt kiểm tra như thế là ổn, giờ mình sẽ thêm chút màu mè làm hiệu ứng cho thành viên biết.
 Ở đây mình dùng một ảnh loading cho lúc đang kiểm tra dữ liệu. Màu lục để đánh dấu ID đúng. Màu đỏ để đánh dấu ID và PW sai. Nếu ID và PW đúng thì refresh trang rồi chẳng cần hiệu ứng nữa.
 
@@ -148,5 +188,3 @@ Dưới đây là toàn bô javascript hoàn chỉnh cho bước 2 đã bổ sun
     });
 
 </code>
-
-Demo của bài viết này: http://www.fmvi.vn/h164-kiem-tra-ang-nhap
