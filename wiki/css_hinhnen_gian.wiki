@@ -1,0 +1,11 @@
+  http://nt2.upanh.com/b5.s35.d4/fd1b8eda475c60256a2f5854e381b37d_51883752.gian.jpg
+ <code>
+ #text_editor_textarea {
+    border: 1px solid #BCBCBC;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 2px;
+    background: white url(http://mobiblog.org/images/gian.gif) no-repeat top left;
+    }
+</code>
