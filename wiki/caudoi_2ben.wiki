@@ -1,0 +1,21 @@
+   <code>
+ <div class="bg_header_left"></div>
+    <div class="bg_header_right"></div>
+    <style>
+    .bg_header_right {
+    width: 180px;
+    height: 620px;
+    background: url(http://i14.servimg.com/u/f14/16/58/45/96/banner12.png) no-repeat;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    }.bg_header_left {
+    width: 180px;
+    height: 620px;
+    background: url(http://i14.servimg.com/u/f14/16/58/45/96/banner13.png) no-repeat;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    }</style></code>
