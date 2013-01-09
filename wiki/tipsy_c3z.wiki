@@ -1,4 +1,4 @@
-cơ bản thì chỉ cần thêm đoạn này vào overall_header trước </head> để chạy tipsy cho những thẻ chứa title mặc định.
+cơ bản thì chỉ cần thêm đoạn này vào overall_header trước <code></head></code> để chạy tipsy cho những thẻ chứa title mặc định.
 
 
       
