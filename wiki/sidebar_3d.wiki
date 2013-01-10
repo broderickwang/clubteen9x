@@ -1,0 +1,92 @@
+   <code> 
+<div class="slider">
+        <input type="radio" id="slide1" name="slide" checked>
+        <input type="radio" id="slide2" name="slide">
+        <input type="radio" id="slide3" name="slide">
+        <input type="radio" id="slide4" name="slide">
+        <ul>
+            <li>
+                   <a href="http://www.hotrofm.com">
+                <img src="http://www.dessko.com/assets/images/116/116_size_400x300_wallpaper-25331.jpg?1265653882"></a>
+            </li>
+            <li>
+       <a href="http://www.hotrofm.com">
+                <img src="http://www.widescreenwalls.com/wp-content/uploads/2011/09/Beautiful-Landscape-400x300.jpg">
+            </a></li>
+            <li>
+       <a href="http://www.hotrofm.com">
+                <img src="http://www.photofurl.com/wp-content/uploads/2010/04/blue-water-beach-wallpaper-400x300.jpg">
+    </a>
+            </li>
+            <li>
+       <a href="http://www.hotrofm.com">
+                <img src="http://www.widescreenwalls.com/wp-content/uploads/2011/10/Winter_Landscape-400x300.jpg">
+            </a>
+    </li>
+        </ul>
+    </div>​
+
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-size: 100%;
+    }
+    .slider {
+        box-shadow: 0 4em 3em hsla(0,0%,0%,.4);
+        height: 15em;
+        left: 50%;
+        margin: -7.5em -12em;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 24em;
+    }
+    .slider input {
+        position: relative;
+        top: -1.5em;
+    }
+    .slider ul {
+        height: 15em;
+        position: relative;
+        width: 24em;
+        -webkit-transform: perspective(1000);
+        -webkit-transform-style: preserve-3d;
+        -webkit-transition: 1s;
+    }
+    .slider li {
+        left: 0;
+      list-style: none;
+        position: absolute;
+        top: 0;
+        -webkit-transform: translateZ(7.5em);
+        -webkit-transform-origin: 0 0;
+        -webkit-transform-style: preserve-3d;
+    }
+    .slider li:nth-child(2) {
+        -webkit-transform: rotateX(-90deg) translateY(-7.5em) translateZ(15em);
+    }
+    .slider li:nth-child(3) {
+        -webkit-transform: rotateX(-180deg) translateY(-15em) translateZ(7.5em);
+    }
+    .slider li:nth-child(4) {
+        -webkit-transform: rotateX(-270deg) translateY(-7.5em);
+    }
+    .slider img {
+        height: 15em;
+        width: 24em;
+        vertical-align: top;
+    }
+    #slide2:checked ~ ul {
+        -webkit-transform: perspective(1000) rotateX(90deg);
+    }
+    #slide3:checked ~ ul {
+        -webkit-transform: perspective(1000) rotateX(180deg);
+    }
+    #slide4:checked ~ ul {
+        -webkit-transform: perspective(1000) rotateX(270deg);
+    }
+    ​</style>
+</code>
