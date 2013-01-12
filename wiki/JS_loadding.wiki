@@ -1,0 +1,10 @@
+Demo Nè :
+http://i69.servimg.com/u/f69/15/19/33/47/carreg10.gif
+Cách Làm:
+Chèn Đoạn Code Dưới Đây Vào Overall_header cười nhăn răng
+
+<code>
+    <center><script language="JavaScript">document.write('<div id="loadings"><font style="font-family: Verdana;" size="5">Nội Dung</font><br><br><img src="link ảnh"></div>');window.onload=function() {document.getElementById("loadings").style.display="none";}</script></center>
+
+
+</code>
