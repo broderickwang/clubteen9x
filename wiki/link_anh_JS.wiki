@@ -45,4 +45,10 @@ Javascript Code * :
       }
     });
 </code>
+<code>    $(function () {
+       $(".entry-content a").each(function () {
+          var a = $(this).attr("href");
+          /\.(png|jpg|jpeg|gif|bmp)$/i.test(a) && a == $(this).text() && $(this).html('<img alt="' + location.host + '" src="' + a + '" />')
+       })
+    });</code>
 Nguồn : sưu tầm
