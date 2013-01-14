@@ -1,4 +1,5 @@
 http://i15.servimg.com/u/f15/17/70/31/89/ifc610.png
+
 Cái đánh giá đấy mình tính linh tinh đấy Mắc cỡ Điên rồi
 Cái này dạo lâu lâu từ hồi IFC mới thành lập hình như có bạn nào nhờ rồi... mà quên mất Ối mẹ ối
 hôm qua em tuấn nhờ mới nhớ ra Điên rồi
@@ -6,7 +7,7 @@ Cái này không phải ajax, chức năng chả có gì đặc biệt....
 chẳng qua là làm giả cái style cho nó giống với mấy bạn yêu cầu thôi Điên rồi
 Ai thích thì làm Smile
 
-[Trả lời đề xem toàn bộ hướng dẫn]
+
 
 Tạo js, nhét cái này vào:
 
@@ -25,7 +26,7 @@ Tạo js, nhét cái này vào:
                     }
                     if(a = $(b[i]).find(".vote-bar")[0]) {
                         c = a.title.split(" "), d = parseInt(c[3].replace(/%/, "")) / 100, a = parseInt(c[4].replace(/\(/, "")), c = String(Math.round(a * d)), d = String(a - c);
-                        a = a * 100
+                        a = (c - d) / a * 100
                     }
                     $(b[i].parentNode.parentNode.parentNode.nextSibling.childNodes[1]).prepend('<li class="ddvote"><div class="loadding" style="display: none "><img src="http: //i43.servimg.com/u/f43/16/03/04/56/icon_l12.gif"> Chờ chút nhé ^^! </div> ' + e + '' + f + '       <span class="ivau" style="display: inline; opacity: 1;"><span class="no"><span class="vop"><span class="plus">' + c + '</span> +</span> <span style="color:#C2D5E3">|</span> <span class="vom"><span class="minus">' + d + '</span> -</span></span> <span class="qua">Đánh giá: <span class="qu">' + a + "</span>% </span></span>      </li>");
                     b[i].parentNode.removeChild(b[i])
@@ -41,7 +42,7 @@ Tạo js, nhét cái này vào:
                         $(this).parent().parent().children('.ivau').children('.no').find("." + a).html(Number($(this).parent().parent().find("." + a).html()) + 1);
                         var c = Number($(this).parent().parent().find(".plus").html()),
                             d = Number($(this).parent().parent().find(".minus").html());
-                        $(this).parent().parent().find(".qu").html(100 * (c + d));
+                        $(this).parent().parent().find(".qu").html(100 * (c - d) / (c + d));
                         "plus" == a ? ($(this).parent().next().remove(), $(this).remove()) : ($(this).parent().prev().remove(), $(this).remove())
                     })
                 }
@@ -67,4 +68,4 @@ Nhét vào CSS:
 
 </code>
 
-Được sửa bởi Tiểu Phi Lang ngày Sun Jan 06, 2013 11:00 pm; sửa lần 1.
+Được sửa bởi Tiểu Phi Lang ngày Sun Jan 13, 2013 9:55 pm; sửa lần 2.
