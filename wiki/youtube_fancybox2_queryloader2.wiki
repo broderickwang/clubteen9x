@@ -8,7 +8,7 @@ Mod & Style by baivong - fmvi (2012) http://www.fmvi.vn
 
 Chức năng:
 Hiện tiến trình tải ảnh bằng queryloader2.
-Nhóm các ảnh và link ảnh cùng bài viết vào một slide.
+Nhóm các ảnh và link ảnh cùng bài viết vào một slideshow.
 Thông tin: Thứ tự ảnh / Tổng ảnh trong bài / Tổng ảnh trong trang
 Chuyển liên kết youtube thành video, phân biệt playlist.
 Nhóm các video trong cùng bài viết vào playlist.
@@ -19,7 +19,7 @@ http://i12.servimg.com/u/f12/17/70/81/78/12-29-10.jpg
 http://i12.servimg.com/u/f12/17/70/81/78/12-29-11.jpg
 http://i12.servimg.com/u/f12/17/70/81/78/12-29-10.png
 
-Hướng dẫn: [Đã ẩn - trả lời để xem]
+Hướng dẫn:
 
 Bước 1: Thêm vào CSS:
 ACP >> Display >> Pictures and Colors >> Colors >> CSS Stylesheet:
@@ -82,14 +82,18 @@ ACP >> Display >> Pictures and Colors >> Colors >> CSS Stylesheet:
     #qLoverlay{width:100%;position:fixed;z-index: 999;height:5px;left:0;bottom:0;background-color:#000}
     #qLbar{overflow:hidden;height:3px;background-color:red;width:0;min-width:0;margin:1px 0}
     #qLtip{position:absolute;text-align:center;background:url(http://i15.servimg.com/u/f15/16/58/89/73/12-28-10.png) no-repeat scroll left top transparent;width:35px;height:32px;top:-32px;color:#fff;font-size:.8em;line-height:25px;margin-left:-17px;display:none;left:0}
+
 </code>
 
-
+Bước 2: Tạo file javascript
+ACP >> Modules >> HTML & JAVASCRIPT >> Javascript codes management >> Add a Javascript Code
 Title * : Trình chiếu ảnh - video youtube - www.fmvi.vn
 Placement : In the topics
 Javascript Code * :
 
 <code>
+
+
     $(function () {
        $("body").append('<div id="qLoverlay"><div id="qLbar"></div><div id="qLtip">0%</div></div>');
        if ($(".entry-content a[href*='www.youtube'][href*='v=']").length) {
@@ -1265,11 +1269,11 @@ Javascript Code * :
           }
        }
     }(jQuery));
-
-
 </code>
+
+
 Lưu ý:
 Gỡ toàn bộ CSS và javascript của fancybox đang dùng (hoặc các lightbox khác).
 Xoá các dòng code sửa ảnh lỗi.
-Không được sao chép bài viết đi nơi khác trong ngày hôm nay.
+Không ẩn bài viết khi sao chép đi nơi khác.
 Không được sửa dòng copyright, không được thay link www.fmvi.vn trong mã nguồn.
