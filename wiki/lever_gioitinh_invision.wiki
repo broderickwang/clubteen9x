@@ -141,8 +141,8 @@ Bước 1: Tạo file js mới, đặt In the topics
 
 Bước 2 QUẢN LÝ NGƯỜI DÙNG & QUẢN LÝ NHÓM >> Quản lý người dùng >> Profiles, chỉnh như sau:
 
-
-
+http://i15.servimg.com/u/f15/17/70/31/89/profi10.png
+http://i15.servimg.com/u/f15/17/70/31/89/gender10.png
 <code>
         Mục Giới tính, mục Posts, mục Points, và mục Thanked các bạn phải đăt như hình, mục Giới tính ở vị trí 1, mục Posts ở mục 2, mục Points ở vị trí 3, mục Thanked ở vị trí 4, tên 4 mục phải được đặt như thế.
         Mục Giới tính phải được Cài đặt Y XÌ như trong hình. 2 mục chọn:
