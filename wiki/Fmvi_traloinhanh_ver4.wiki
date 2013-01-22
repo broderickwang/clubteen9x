@@ -10,8 +10,7 @@ http://i12.servimg.com/u/f12/17/70/81/78/1-16-210.png
 
 
 Thay code sau vào Templates viewcomments_body
-
-Code: Chọn toàn bộMàu nổi bật
+<code>
     <span id="changeSfmvi" style="left: 0px; top: 47px; border-radius: 0px 3px 3px 0px; background-color: rgb(221, 221, 221); padding: 5px; width: 20px;" class="contactF">
        <img src="http://www.google.com/reader/ui/3369744051-view_options_list.png" />
        <img style="display:none" src="http://www.google.com/reader/ui/3538434020-view_options_details.png" />
