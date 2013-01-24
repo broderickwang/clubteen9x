@@ -1,0 +1,10 @@
+<code>
+    <script type="text/javascript" src="http://static.yume.vn/yume/cms/20130102/js/jwplayer5.10.js"></script>
+          <script src="http://static.yume.vn/yume/cms/20130102/js/setup-jwplayer.js"></script>
+          
+          <center><div id="UWrH7_U82eE">Đang tải video....</div></center>
+           <script type="text/javascript">setupjw(510, 640, "UWrH7_U82eE", document.URL);</script>
+
+
+</code>
+Code được chôm trong lúc ríp trang chủ yume bởi bibo (yahoo: guidhoanggia)
