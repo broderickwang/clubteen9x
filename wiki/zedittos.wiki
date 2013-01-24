@@ -1,0 +1,214 @@
+Tác giả: Zero
+Quyền lợi: Bạn được quyền sử dụng miễn phí mod nếu bạn tôn trọng công sức của tác giả
+Phiên bản: 1.0
+
+Chức năng:
+- Rất nhẹ (~8kb).
+- Gửi bài, sửa bài, quote bài, xem trước, chọn smiley, và chọn màu không chuyển trang
+- Nâng cấp chức năng chọn màu của FM
+- Cập nhật bài mới không chuyển trang sau khi gửi và chỉnh sửa
+- Viết dành cho punBB, phpBB3, và Invision
+- Viết đặc biệt dành cho người không chuyên về javascript
+- Có thể chỉnh sửa 100% giao diện và thành phần
+- Những buttons đang có: Bold, Italic, Underline, Strike, Color, Smily, Tag
+- Thích hợp với skin fmvi version 3
+
+Phiên bản tiếp theo:
+- Hỗ trợ gửi tin nhắn vào inbox và vào wall
+- Hỗ trợ nhiều giao diện (người dùng có thể tự cài và đòi hỏi kiến thức về css)
+- Làm bbcode riêng cho chức năng Tag (sử dụng thẻ [tag])
+- Thêm chức năng upload ảnh (sử dụng host được nhiều người gợi ý nhất)
+- Hỗ trợ trong viết tin nhắn (maybe)
+- "Tweak" css và javascript
+.......... (Ai có ý tưởng gì hay thì comment )
+
+Showcase:
+
+    Bình thường
+
+    Xem trước
+http://i11.servimg.com/u/f11/16/80/27/29/firesh11.png
+    Color picker
+http://i11.servimg.com/u/f11/16/80/27/29/firesh12.png
+    Smiley
+http://i11.servimg.com/u/f11/16/80/27/29/firesh13.png
+
+
+Hướng dẫn:
+- General -> Messages and e-mails -> Configuration -> Allow quick reply: Yes
+- General -> Forum -> Security -> Unauthorize unofficial forms to post messages and private messages on the forum: No
+- Modules -> HTML & JAVASCRIPT -> Javascript codes management -> Create a new javascript -> Placement: In the topics
+[Đang cập nhật]
+Tuỳ chỉnh phiên bản forum của bạn
+Vào javascript vừa tạo -> Tìm var version -> Thay giá trị bằng phiên bản forum của bạn (mặc định: punbb)
+Nếu bạn muốn 'việt hoá' thì thay giá trị của reply_text, edit_text, quote_text, preview_text bằng từ mà bạn muốn
+
+- Display -> Pictures and Colors -> Colors -> Css Stylesheet
+
+<code>
+    /* Editor ------*/
+    #ddcbcolors div {
+        height: 12px;
+        width: 12px;
+        cursor: pointer;
+    }
+
+    #zd-editor {
+        background-color: #EFEFEF;
+        border-radius: 5px 5px 5px 5px;
+        margin: 15px 40px 15px;
+        padding: 20px 10px;
+    }
+
+    #outer-preview {
+        position: relative;
+        height: 200px;
+        width: 100%;
+    }
+
+    #editor-mode, #editor-post-button {
+        display: inline-block;
+    }
+
+    #editor-mode {
+        float: right;
+    }
+
+    #zd-preview {
+        background-color: #CCCCCC;
+        border: 1px solid #6EA2C7;
+        cursor: pointer;
+        display: none;
+        height: 100%;
+        margin-right: auto;
+        margin-top: 3px;
+        max-height: 100%;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1px;
+        position: absolute;
+        width: 100%;
+        z-index: 9;
+    }
+
+    #editor-post-tool {
+        margin-top: 10px;
+    }
+
+    #zd-editor textarea {
+        width: 100%;
+        resize: none;
+        height: 200px;
+    }
+
+    .editor-button-outer:hover {
+        background-color: #DCDCDC;
+        border-radius: 4px;
+    }
+
+    .editor-button {
+        background-image: url("http://glue.readthedocs.org/en/latest/_images/famfamfam1.png");
+        background-repeat: no-repeat;
+        height: 16px;
+        margin-top: 1px;
+        width: 16px;
+        display: block;
+    }
+
+    #zd-smiley, #zd-color {
+        background-color: #EFEFEF;
+        border: 1px solid #6EA2C7;
+        max-width: 500px;
+        position: absolute;
+        z-index: 999;
+        margin-top: 30px;
+        padding: 5px;
+    }
+
+    #zd-smiley {
+        margin-left: 130px;
+    }
+
+    .editor-button-outer {
+        display: block;
+        float: left;
+        padding: 4px;
+        margin-bottom: 4px;
+        cursor: pointer;
+    }
+
+    #editor-color {
+        background-image: none !important;
+        background-color: #000;
+        border-radius: 4px;
+    }
+
+    #editor-bold {
+        background-position: -129px -144px;
+    }
+
+    #editor-italic {
+        background-position: -143px -80px;
+    }
+
+    #editor-underline {
+        background-position: -128px -64px;
+    }
+
+    #editor-strike {
+        background-position: -128px -112px;
+    }
+
+    #editor-smiley {
+        background-position: -224px -384px;
+    }
+
+    #editor-tag {
+        background-position: -33px -96px;
+    }
+
+    #editor-top {
+        margin-bottom: 4px;
+        height: 20px;
+        margin-top: -15px;
+    }
+
+    #pun-qpost {
+        display: none !important;
+    } /* Cho punBB, xoá nếu xài phiên bản khác */
+    #quick_reply {
+        display: none !important;
+    } /* Cho phpBB3, xoá nếu xài phiên bản khác */
+    #qpost {
+        display: none !important;
+    } /* Cho Invsion, xoá nếu xài phiên bản khác */
+
+
+</code>
+Updates:
+
+<code>
+
+        // 15-01-2013
+        Bắt đầu phát triển lại dự án bỏ dở vào hè 2012
+
+        // 17-01-2013
+        Thêm chức năng smiley và color
+        Nâng cấp chức năng preview
+        Rút gọn script và css...
+
+        // 21-01-2013
+        Rút gọn 5% của script
+        Viết lại chức năng preview
+
+        // 22-01-2013
+        Thêm một vài functions mới
+        Sửa lại css cho chức năng preview
+        Thêm hỗ trợ cho phpbb3 và invision
+        Thêm vào dòng script cho phpbb3 và invision. Rút gọn tới mức có thể @_@
+
+</code>
+...........[Còn thêm hướng dẫn chỉnh sửa và vài dòng script cho phpbb3 và invision. Bài viết sẽ được cập nhật sớm nhất có thể]
+
+Bình luận/ Gợi ý: Tại đây
+Hỗ trợ: ....
