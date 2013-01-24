@@ -1,3 +1,4 @@
+http://i11.servimg.com/u/f11/17/96/18/65/untitl17.png
 <code>
     <script type="text/javascript" src="http://static.yume.vn/yume/cms/20130102/js/jwplayer5.10.js"></script>
           <script src="http://static.yume.vn/yume/cms/20130102/js/setup-jwplayer.js"></script>
