@@ -1,0 +1,10 @@
+<code>    <link rel="stylesheet" href="http://upfile.vn/up_q.css" type="text/css" charset="utf-8" />
+    <script type="text/javascript" src="http://upfile.vn/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="http://upfile.vn/up_q.js"></script>
+    <a href="#?w=980" rel="popup_name_all" class="poplight" ><center>Upload File Đính Kèm</center></a>
+    <div id="popup_name_all" class="popup_block" >
+    <iframe src="http://upfile.vn/tichhop_popup.html" width="980" height="300" frameborder="0" scrolling="no" ></iframe>
+    <div class="dongcuaso"><a class="close" href="#">Đóng cửa sổ</a></div>
+    </div></code>
+
+http://blog.upfile.vn/cache/0/90635598445ef0df0480b2f66a884d69.PNG
