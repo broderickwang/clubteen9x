@@ -1,0 +1,19 @@
+     http://i16.servimg.com/u/f16/16/16/45/18/captur11.jpg
+ <code>
+  <style>
+        #chiaseonline_left{
+            position:fixed;
+            left:-10px;
+            top:-20px;
+            z-index:9999
+        }
+        #chiaseonline_right{
+            position:fixed;
+            right:-5px;
+            top:-20px;
+            z-index:9999
+        }</style>
+
+        <div id="chiaseonline_left"><img src="http://img521.imageshack.us/img521/2284/utehyorgcaudoitet1.png"></div>
+          <div id="chiaseonline_right"><img src="http://img844.imageshack.us/img844/7981/utehyorgcaudoitet2.png"></div>
+</code>
