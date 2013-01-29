@@ -1,12 +1,14 @@
 http://i16.servimg.com/u/f16/17/22/61/18/d4900710.jpg
 đầu tiên bạn tìm đoạn này trong vewtopic
 
+
 <code>
      //]]>
-
-
 </code>
+
+
 vew ngang sửa thành
+
 <code>
       var code="Copyright LV By notme. Copyright LV PET by the_dav";
       function level(Posts,Coins,Thanked,From){
@@ -107,8 +109,8 @@ vew ngang sửa thành
     <b><font color=orange> Tài năng : </font></b>('+d+' / 25000)<div class="strengthbg"><div class="strengthbg2"><fieldset style="padding: 1px;border: 1px solid #666;border-radius: 3px 3px 3px 3px;"><img src="/users/2211/12/43/96/album/orange10.gif" width="'+j+'%" title="'+d+'" height="9px"><img src="/users/2211/12/43/96/album/hp1010.gif" width="2px" title="'+d+'" height="9px"></fieldset></div></div><b><font color=green> Uy tín : </font></b>('+h+' / 8000)<div class="abilitybg"><div class="abilitybg2"><fieldset style="padding: 1px;border: 1px solid #666;border-radius: 3px 3px 3px 3px;"><img src="/users/2211/12/43/96/album/green110.gif" width="'+i+'%" title="'+h+'" height="9px"><img src="/users/2211/12/43/96/album/mp1010.gif" width="2px" title="'+h+'" height="9px"></fieldset></div></div><font color=RoyalBlue1> <b>Kinh nghiệm :</b></font> '+f+'%<div class="expbg"><div class="expbg2"><fieldset style="padding: 1px;border: 1px solid #666;border-radius: 3px 3px 3px 3px;"><img src="/users/2211/12/43/96/album/blue10.gif" width="'+(f-1)+'%" title="'+(f)+'%" height="9px"><img src="/users/2211/12/43/96/album/exp1010.gif" width="2px" title="'+(f)+'%" height="9px"></fieldset></div></div></fieldset></div><a class="DAV'+o+''+g+'" style="height: 150px;float:left;width:150px"><span class="tooltip"><p class="DAV'+o+''+g+'" style="height: 150px;float:left;width:150px" > </p><p><img src="http://i48.servimg.com/u/f48/16/18/15/10/126.gif">Phòng Thủ:'+a+' </p> <p><img src="http://i48.servimg.com/u/f48/16/18/15/10/inv_sw10.png"> Sức Mạnh: '+v+' </p> <p><img src="http://i28.servimg.com/u/f28/16/18/15/10/cung_l18.png"> Phép Thuật: '+p+' </p><hr><p> Bạn đang dùng vũ khí</p> <p> '+k+' </p> <hr>  </span> <a>')};
       //]]>
 
-
 </code>
+
 
 
 vew dọc sửa thành
@@ -215,22 +217,26 @@ vew dọc sửa thành
 
 
 
+
+
 </code>
-
-
 
 
 cho code sau vào vị trí cần hiện
 
 <code>
     <div class="davlvimg" style="float:left;"><script>level(<!-- BEGIN profile_field -->'{postrow.displayed.profile_field.CONTENT}',<!-- END profile_field -->1);</script>
+
+
+
 </code>
-tiếp theo cho code này vào css
 
 
+tiếp theo cho code này vào cuối footer
 
 <code>
 
+    <style type="text/css">
     .DAVANGEL21  {
     background: transparent url(http://i1130.photobucket.com/albums/m540/dangvietpy/rank%203%20tang/angel1/21_zpsbd34ce6e.png) no-repeat scroll center top;margin-top: -29px;
     }
@@ -597,7 +603,7 @@ tiếp theo cho code này vào css
     -o-box-shadow: 0 1px 3px rgba(0,0,0,0.1), inset 0 1px 0 #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 0 1px 0 white;
     z-index: 10;
-    }
+    } </style>
 
 </code>
 
@@ -624,11 +630,11 @@ ANGEL
 trong đó có 1 dòng ghi là Default value thì bạn chọn 1 tộc làm mặc định
 
 
-tiêp theo vào acp>> quản lý nhóm>> profile>>
+tiêp theo vào acp>> Quản lý người dùng & Quản lý nhóm >> profile >>
 chỉnh sắp xếp theo đúng thứ tự
 Posts>>Coins>>Thanked>>chủng tộc
-
-đồng thời vào profile kick hoạt chủng tộc
+khi sắp xếp xong
+vào profile kick hoạt chủng tộc
 
 mình cũng chưa biết hướng dẫn đủ chưa
 bạn nào làm ko dc comen ngay topic này
