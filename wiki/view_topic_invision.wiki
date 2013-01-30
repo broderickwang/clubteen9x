@@ -1,4 +1,6 @@
   [MOD] Viewtopic_body ngang
+
+
   <code>
 
     .author a,.author>img,.box-content>a+br,.postdetails h3,.postprofile-details.postdetails a+br+a{display:none!important}
@@ -26,6 +28,8 @@
         .postbody img,embed,iframe{display:block;margin:0 auto}
         .blog_cal-border,.celldate{border:1px solid #3677E0}
         blockquote,.spoiler{background:#FFF;border:2px solid #DDD;border-radius:10px;box-shadow:2px 2px 5px #EBEADD}
+
+
 </code>
 
 MOD] Viewtopic_body dọc
