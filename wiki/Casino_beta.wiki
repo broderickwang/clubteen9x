@@ -1,8 +1,8 @@
-+ Đổ xí ngầu: http://www.fmvi.vn/h44-xi-ngau
-+ Số 7 may mắn: http://www.fmvi.vn/h43-casino-so-7
-+ Bầu cua: http://www.fmvi.vn/h45-bau-cua-ca-cop
-+ Oẳn tù tì: http://www.fmvi.vn/h46-oan-tu-ti
-+ Bài cào: http://www.fmvi.vn/h48-bai-cao
+* Đổ xí ngầu: http://www.fmvi.vn/h44-xi-ngau
+* Số 7 may mắn: http://www.fmvi.vn/h43-casino-so-7
+* Bầu cua: http://www.fmvi.vn/h45-bau-cua-ca-cop
+* Oẳn tù tì: http://www.fmvi.vn/h46-oan-tu-ti
+* Bài cào: http://www.fmvi.vn/h48-bai-cao
 
 
 Hướng dẫn: Bạn có thể đặt code sau vào vị trí cho phép HTML code, hoặc đơn giản là tạo trang HTML:
@@ -287,7 +287,8 @@ http://a.imageshack.us/img805/6813/taiphu.png
 + Khi bạn vào trang web, quá trình chia bài sẽ bắt đầu. Nếu có lỗi trong quá trình chia bài thì trang web sẽ tự tải lại.
 + Khi đã chia bài xong, nhà cái (BOT) sẽ lấy 3 lá bài.
 + Bạn click chọn 3 lá bất kỳ trong số bài còn lại. Sau khi bạn chọn xong 3 lá bài thì quá trình tính điểm sẽ bắt đầu theo luật ghi trên wikipedia.
-+ Sau khi có kết quả bạn có thể mớ các lá bài còn lại bằng cách click 
++ Sau khi có kết quả bạn có thể mớ các lá bài còn lại bằng cách click vào nó. Khi đã mở hết bài sẽ xuất hiện thông báo bắt đầu ván mới.
+
 
 <code>
 
