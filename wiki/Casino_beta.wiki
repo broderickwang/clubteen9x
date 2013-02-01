@@ -1,8 +1,8 @@
-# Đổ xí ngầu: http://www.fmvi.vn/h44-xi-ngau
-# Số 7 may mắn: http://www.fmvi.vn/h43-casino-so-7
-# Bầu cua: http://www.fmvi.vn/h45-bau-cua-ca-cop
-#  Oẳn tù tì: http://www.fmvi.vn/h46-oan-tu-ti
-# Bài cào: http://www.fmvi.vn/h48-bai-cao
+#Đổ xí ngầu: http://www.fmvi.vn/h44-xi-ngau
+#Số 7 may mắn: http://www.fmvi.vn/h43-casino-so-7
+#Bầu cua: http://www.fmvi.vn/h45-bau-cua-ca-cop
+#Oẳn tù tì: http://www.fmvi.vn/h46-oan-tu-ti
+#Bài cào: http://www.fmvi.vn/h48-bai-cao
 
 
 Hướng dẫn: Bạn có thể đặt code sau vào vị trí cho phép HTML code, hoặc đơn giản là tạo trang HTML:
