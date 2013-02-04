@@ -1,0 +1,474 @@
+Chức năng:
+
+#Nhắn tin chung:
+
+    *Việt hóa 99%
+    *Khắc phục lỗi không cuộn xuống cuối khi gửi tin nhắn bằng cách đảo ngược chatbox.
+    *Làm mới giao diện chọn màu và biểu tượng cảm xúc.
+#Thêm hiệu ứng âm thanh khi:
+        *Buzz (kèm hiệu ứng rung chatbox)
+        *Có thành viên truy cập hoặc thoát ra.
+        *Có tin nhắn mới
+        *Đăng nhập
+        *Đăng xuất
+
+#Gọn, nhẹ:
+        *HTML 3.2 Kb
+        *CSS 1.3 Kb
+        *Javascript 4.8 Kb / 3.3 Kb (Chưa tính jQuery)
+
+
+Nhắn tin riêng:
+
+    Chức năng tương tự chat chung, không có chức năng chat riêng và danh sách thành viên.
+    Dùng lệnh /chat [nickname] hoặc nhấp phải chuột vào nick thành viên, chọn Nhắn tin riêng.
+    Báo tin mới chỉ hoạt động khi thành viên đang online và chatbox chung đang mở.
+
+
+
+Demo:
+http://i12.servimg.com/u/f12/17/70/81/78/full-c10.png
+http://i12.servimg.com/u/f12/17/70/81/78/mini-c10.png
+
+Hướng dẫn:
+
+Bước 1: Announcements:
+
+    Name : cookie-chat fmvi 2.1
+    Content * :
+
+<code>
+        <script type="text/javascript">
+        jQuery(function () {
+           my_setcookie("get_tid", jQuery("#logout").attr("href").match(/&tid=(.*)&key/)[1], 1)
+        })
+        </script> </code>
+
+
+Hoặc có thể tạo javascript và đặt In all the pages.
+Tạo smilie mới theo mẫu sau:
+
+    *Smilie Code : * :buzz *
+    *Smilie Emotion : * :buzz *
+    *Smilie Image File : http://r12.imgfast.net/users/1215/11/75/00/smiles/2270249841.gif
+
+
+
+Bước 2: Tạo trang HTML Emoticons:
+Đầu tiên bạn vào trang <code>http://LOCATION_HOST/post?mode=smilies_chatbox</code>
+Thay LOCATION_HOST bằng link diễn đàn của bạn, ví dụ của mình là: 
+<code>www.fmvi.vn</code>
+Bạn sao chép mã nguồn của trang đó bằng tổ hợp phím Ctrl+U và Ctrl+C.
+Sau đó vào trang này http://www.fmvi.vn/h190-convert-emoticons để chuyển đổi.
+
+Tạo trang HTML mới theo mẫu sau:
+
+    Title * : smiley-chat fmvi 2.1
+    Do you wish to use your forum header and footer ? No
+    Use this page as homepage ? No
+    HTML source * : Sử dụng mã nguồn vừa chuyển đổi ở trên
+
+
+Ghi nhớ số thứ tự trang HTML vừa tạo.
+
+Bước 3: Tạo javascript mini-chat fmvi 2.1:
+
+    Title * : mini-chat fmvi 2.1
+    Placement : Không check
+    Javascript Code * : http://www.fmvi.vn/t870-2013-chatbox-fmvi-21#7693
+
+<code>    var hsmiley = 192;
+
+    function langvi(a) {
+       a = a.toLowerCase();
+       a = a.replace(/\u00e0|\u00e1|\u1ea1|\u1ea3|\u00e3|\u00e2|\u1ea7|\u1ea5|\u1ead|\u1ea9|\u1eab|\u0103|\u1eb1|\u1eaf|\u1eb7|\u1eb3|\u1eb5/g, "a");
+       a = a.replace(/\u00e8|\u00e9|\u1eb9|\u1ebb|\u1ebd|\u00ea|\u1ec1|\u1ebf|\u1ec7|\u1ec3|\u1ec5/g, "e");
+       a = a.replace(/\u00ec|\u00ed|\u1ecb|\u1ec9|\u0129/g, "i");
+       a = a.replace(/\u00f2|\u00f3|\u1ecd|\u1ecf|\u00f5|\u00f4|\u1ed3|\u1ed1|\u1ed9|\u1ed5|\u1ed7|\u01a1|\u1edd|\u1edb|\u1ee3|\u1edf|\u1ee1/g, "o");
+       a = a.replace(/\u00f9|\u00fa|\u1ee5|\u1ee7|\u0169|\u01b0|\u1eeb|\u1ee9|\u1ef1|\u1eed|\u1eef/g, "u");
+       a = a.replace(/\u1ef3|\u00fd|\u1ef5|\u1ef7|\u1ef9/g, "y");
+       a = a.replace(/\u0111/g, "d");
+       return a = a.replace(/\W/g, "bv")
+    }
+    function copy_user_name(a) {
+       $("#message").focus().val($("#message").val() + " " + a);
+       return !1
+    }
+    function ajax_connect() {
+       chatbox_updated = chatbox_last_update
+    }
+    function checkconect(a) {
+       "disconnect" == a ? ($("#chatbox_option_co").show(), $("#chatbox_option_disco, #chatbox_option_autorefresh, #chatbox_footer").hide(), soundchat("offline")) : "connect" == a && ($("#chatbox_option_co").hide(), $("#chatbox_option_disco, #chatbox_option_autorefresh, #chatbox_footer").show(), $("#refresh_auto").prop("checked", !0), soundchat("online"), connectC())
+    }
+    function connect_ajaxC(a) {
+       null == my_getcookie("get_tid") && window.location.replace("/");
+       checkconect(a);
+       $.ajax({
+          type: "POST",
+          url: "/chatbox/chatbox_actions.forum?archives=1&mode=" + a + "&tid=" + my_getcookie("get_tid"),
+          success: function (b) {
+             1 != b && $.ajax({
+                type: "GET",
+                url: "/",
+                success: function (b) {
+                   my_setcookie("get_tid", $(b).find("#logout").attr("href").match(/&tid=(.*)&key/)[1], 1);
+                   $.ajax({
+                      type: "POST",
+                      url: "/chatbox/chatbox_actions.forum?archives=1&mode=" + a + "&tid=" + my_getcookie("get_tid"),
+                      success: function () {
+                         checkconect(a)
+                      }
+                   })
+                }
+             })
+          }
+       })
+    }
+    function messfilter() {
+       var a, b = chatbox_messages.split("</p>"),
+          c = "";
+       for (a = 0; a < b.length - 1; a++) if (-1 != b[a].indexOf(code) || /class="user"><\/span/.test(b[a])) b[a] = /href="\/u(\d+)"/.test(b[a]) ? b[a].match(/href="\/u(\d+)"/)[1] == chatbox_memberlist.match(/',(\d+),/)[1] ? b[a].replace(/\sclearfix"/, ' clearfix left"') : b[a].replace(/\sclearfix"/, ' clearfix right"') : b[a].replace(/\sclearfix"/, ' clearfix center"'), c = b[a].replace(code, "") + "</p>" + c;
+       $("#chatbox").html(c);
+       a = c.split("</p>").length - 1 + (chatbox_messages.split('<span class="user"></span>').length - 1);
+       $("#chatmess").length || $(".chatbox-title").before('<span style="display:none" id="chatmess">' + a + "</span>");
+       b = eval($("#chatmess").text());
+       a > b && ($(opener.document).find("." + langvi(window.name)).text(a), -1 != c.split("</p>")[0].indexOf('alt=":buzz"') ? (c.split("</p>")[0].match(/href="\/u(\d+)"/)[1] != $("#scode").val() && $("title").text("BUZZ!!!"), soundchat("buzz"), transformL(), setTimeout("transformR()", 100), setTimeout("transformL()", 200), setTimeout("transformR()", 300), setTimeout("transformL()", 400), setTimeout("transformR()", 500), setTimeout("transformL()", 600), setTimeout("transformR()", 700), setTimeout("$('#chatbox_header, #chatbox_footer, #chatbox, #chatbox_members').css({'transform': 'rotate(0deg)', '-moz-transform': 'rotate(0deg)', '-webkit-transform': 'rotate(0deg)', '-o-transform': 'rotate(0deg)'})", 800)) : /href="\/u(\d+)"/.test(c.split("</p>")[0]) && (c.split("</p>")[0].match(/href="\/u(\d+)"/)[1] != $("#scode").val() ? ($("title").text("Tin nh\u1eafn m\u1edbi"), soundchat("message")) : $("title").text("Chatbox 2.1")));
+       $("#chatmess").text(a);
+       $("#chatbox").scrollTop(0)
+    }
+    function soundchat(a) {
+       $("#audio").prop("checked") && $("#sound").html('<audio preload="auto" autoplay="autoplay"><source src="http://dl.dropbox.com/u/126946313/fmviChat/' + a + '.ogg" type="audio/ogg" /><source src="http://dl.dropbox.com/u/126946313/fmviChat/' + a + '.mp3" type="audio/mpeg" /></audio>')
+    }
+    function tip(a) {
+       $("#chatbox").html('<p class="chatbox_row_2 clearfix"><span class="msg"><span style="font-style:italic; color:red;"><strong>' + a + "</strong></span></span></p>");
+       clearInterval(upd);
+       $("#chatbox_main_options, #chatbox_footer").hide()
+    }
+    function fmvicbox() {
+       $.ajax({
+          type: "GET",
+          url: "/chatbox/chatbox_actions.forum?archives=1",
+          success: function (a) {
+             -1 != a.indexOf("You have been banned from the ChatBox") ? tip("B\u1ea1n b\u1ecb c\u1ea5m truy c\u1eadp, vui l\u00f2ng li\u00ean h\u1ec7 ng\u01b0\u1eddi qu\u1ea3n l\u00fd.") : -1 != a.indexOf("You must be connected to use the ChatBox.") ? tip("B\u1ea1n kh\u00f4ng th\u1ec3 s\u1eed d\u1ee5ng ch\u1ee9c n\u0103ng n\u00e0y, h\u00e3y \u0111\u0103ng nh\u1eadp tr\u01b0\u1edbc.") : -1 != a.indexOf("You are disconnected.") ? ($("#chatbox").html('<p class="chatbox_row_2 clearfix"><span class="date-and-time">' + chatbox_messages.match(/\[[0-9\:]+\]/) + '</span><span class="msg"><span style="font-style:italic; color:red;"><strong> M\u1ea5t k\u1ebft n\u1ed1i \u0111\u1ebfn m\u00e1y ch\u1ee7, vui l\u00f2ng \u0111\u0103ng nh\u1eadp.</strong></span></span></p>'), clearInterval(upd), $("#refresh_auto").prop("checked", !1)) : chatbox_last_update > chatbox_updated && ($("#scode").val(chatbox_memberlist.match(/',(\d+),/)[1]), $("#sname").val(chatbox_memberlist.split("showMenu(" + $("#scode").val() + ",'")[1].split("'")[0]), $("#message").attr("placeholder", "Nh\u1eafn tin cho " + window.name.replace($("#sname").val(), "").replace(":|:", "")), "" == chatbox_messages ? $("#chatbox").html('<p class="chatbox_row_2 clearfix"><span class="msg"><span style="font-style:italic"><strong><span style="color:green;">B\u1ea1n \u0111ang s\u1eed d\u1ee5ng <span style="color:blue;">Chatbox 2.0</span> vi\u1ebft b\u1edfi</span> <span style="color:red;">baivong</span> <a target="_blank" href="http://www.fmvi.vn"></a></strong></span></span></p>') : messfilter(), chatbox_updated = chatbox_last_update)
+          }
+       })
+    }
+    function cookiecbox() {
+       if (null != my_getcookie("fmviminichat")) {
+          var a = my_getcookie("fmviminichat").split("|");
+          1 == a[0] ? ($("#sbold").val(1), $("#message").css("font-weight", "bold")) : ($("#sbold").val(0), $("#message").css("font-weight", "normal"));
+          1 == a[1] ? ($("#sitalic").val(1), $("#message").css("font-style", "italic")) : ($("#sitalic").val(0), $("#message").css("font-style", "normal"));
+          1 == a[2] && 1 == a[3] ? ($("#message").css("text-decoration", "underline line-through"), $("#sstrike, #sunderline").val(1)) : 0 == a[2] && 1 == a[3] ? ($("#message").css("text-decoration", "line-through"), $("#sstrike").val(1), $("#sunderline").val(0)) : 1 == a[2] && 0 == a[3] ? ($("#message").css("text-decoration", "underline"), $("#sstrike").val(0), $("#sunderline").val(1)) : 0 == a[2] && 0 == a[3] && ($("#message").css("text-decoration", "none"), $("#sstrike, #sunderline").val(0));
+          $("#scolor").val(a[4]);
+          $("#message").css("color", a[4]);
+          $("#show_color").css("background", a[4]);
+          $("#data input").each(function () {
+             1 == $(this).val() && $("#div" + $(this).attr("id").slice(1)).addClass("tg")
+          })
+       }
+    }
+    function my_getcookie(a) {
+       cname = a + "=";
+       cpos = document.cookie.indexOf(cname);
+       return -1 != cpos ? (cstart = cpos + cname.length, cend = document.cookie.indexOf(";", cstart), -1 == cend && (cend = document.cookie.length), unescape(document.cookie.substring(cstart, cend))) : null
+    }
+    function my_setcookie(a, b, c, d) {
+       domain = expires = "";
+       c && (expires = "; expires=Wed, 1 Jan 2020 00:00:00 GMT");
+       d || (d = "/");
+       document.cookie = a + "=" + b + "; path=" + d + expires + domain + ";"
+    }
+    function connectC() {
+       fmvicbox();
+       $("#refresh_auto").prop("checked") ? upd = setInterval(function () {
+          fmvicbox()
+       }, 3500) : clearInterval(upd)
+    }
+    function transformL() {
+       $("#chatbox_header, #chatbox_footer, #chatbox, #chatbox_members").css({
+          transform: "rotate(-5deg)",
+          "-moz-transform": "rotate(-5deg)",
+          "-webkit-transform": "rotate(-5deg)",
+          "-o-transform": "rotate(-5deg)"
+       })
+    }
+    function transformR() {
+       $("#chatbox_header, #chatbox_footer, #chatbox, #chatbox_members").css({
+          transform: "rotate(5deg)",
+          "-moz-transform": "rotate(5deg)",
+          "-webkit-transform": "rotate(5deg)",
+          "-o-transform": "rotate(5deg)"
+       })
+    }
+    function submitchat() {
+       var a = $("#scode").val(),
+          b = $("#message").val();
+       if ("" == b) return !1;
+       0 == b.indexOf("/me") || 0 == b.indexOf("/away") || 0 == b.indexOf("/abs") || 0 == b.indexOf("/cls") || 0 == b.indexOf("/clear") || 1 == a && 0 == b.indexOf("/ban ") || 1 == a && 0 == b.indexOf("/unban ") ? ($.ajax({
+          type: "POST",
+          url: "/chatbox/chatbox_actions.forum?archives=1",
+          data: {
+             mode: "send",
+             sent: $("#message").val()
+          },
+          success: function () {
+             messfilter();
+             chatbox_updated = chatbox_last_update
+          }
+       }), $("#message").val("")) : 0 == b.indexOf("/banlist") ? (window.open("/chatbox/chatbox_banlist.forum?archives=1", "baivong", "toolbar=no,menubar=no,personalbar=no,width=450,height=300,scrollbars=auto,resizable=yes"), $("#message").val("")) : $.ajax({
+          type: "POST",
+          url: "/chatbox/chatbox_actions.forum?archives=1",
+          data: {
+             mode: "send",
+             sbold: $("#sbold").val(),
+             sitalic: $("#sitalic").val(),
+             sunderline: $("#sunderline").val(),
+             sstrike: $("#sstrike").val(),
+             scolor: $("#scolor").val(),
+             sent: code + $("#message").val()
+          },
+          success: function () {
+             messfilter();
+             chatbox_updated = chatbox_last_update;
+             $("#message").val("")
+          }
+       })
+    }
+    function emotiocon() {
+       $("#cSmiley").contents().find("span").click(function () {
+          $("#message").focus().val($("#message").val() + " " + $(this).attr("alt"));
+          $("#divsmilies").removeClass("select");
+          $("#smileycbox").hide();
+          contr()
+       })
+    }
+    function CB_disconnect() {
+       connected = !1
+    }
+    function contr() {
+       $("#control").animate({
+          right: -305
+       }, 300)
+    }
+    var connected = 0,
+       chatbox_updated = 0,
+       chatbox_last_update = 1,
+       chatbox_messages = "b\u1ea1i vong",
+       upd, code = "[{" + window.name + "}]";
+    $(function () {
+       var a = $(opener.document).find("#spopup");
+       a.val(eval(a.val()) + 1);
+       0 == window.name.length ? (window.close(), alert("Ch\u01b0a ch\u1ecdn b\u1ea1n chat!")) : (cookiecbox(), connect_ajaxC("connect"), soundchat("online"), $("#divbuzz").click(function () {
+          $.ajax({
+             type: "POST",
+             url: "/chatbox/chatbox_actions.forum?archives=1",
+             data: {
+                mode: "send",
+                sent: code + ":buzz"
+             },
+             success: function () {
+                messfilter();
+                chatbox_updated = chatbox_last_update
+             }
+          })
+       }), $("#divsmilies").click(function () {
+          $("#cSmiley").length || $("#smileycbox").html('<iframe onload="emotiocon()" width="100%" height="100%" frameborder="0" src="/h' + hsmiley + '-smiley-chatbox-20" id="cSmiley"></iframe>')
+       }), $("#refresh_auto").click(function () {
+          connectC()
+       }), $(".wd").click(function () {
+          $(this).toggleClass("select").next().toggle()
+       }), $("#cColor a").click(function () {
+          $("#scolor").val($(this).text());
+          $("#divcolor").removeClass("select");
+          $("#cColor").hide()
+       }), $(".font").click(function () {
+          var a = $("#s" + $(this).attr("id").slice(3)),
+             c;
+          0 == a.val() ? (c = 1, $(this).addClass("tg")) : (c = 0, $(this).removeClass("tg"));
+          a.val(c)
+       }), $("#cColor a, .font").click(function () {
+          my_setcookie("fmviminichat", $("#sbold").val() + "|" + $("#sitalic").val() + "|" + $("#sunderline").val() + "|" + $("#sstrike").val() + "|" + $("#scolor").val(), 1);
+          cookiecbox()
+       }), $("#message").keypress(function (a) {
+          if (13 == a.keyCode) return submitchat(), !1
+       }), $("#submit_button").click(function () {
+          submitchat();
+          return !1
+       }), $("#divcontrol").click(function () {
+          "35px" != $("#control").css("right") ? $("#control").animate({
+             right: 35
+          }, 300) : contr()
+       }), $("#divbuzz, .font, #cColor a").click(function () {
+          contr()
+       }))
+    })</code>
+
+Tìm trong code trên số 192 và thay nó bằng số thứ tự trang HTML Emoticons mà bạn đã tạo ở bước 2.
+
+Bước 4: Tạo trang HTML mini-chat fmvi 2.1:
+Tạo trang HTML mới theo mẫu sau:
+
+    Title * : HTML mini-chat fmvi 2.1
+    Do you wish to use your forum header and footer ? No
+    Use this page as homepage ? No
+    HTML source * : http://www.fmvi.vn/t870-2013-chatbox-fmvi-21#7694
+
+<code>    <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" id="min-width" lang="en" xml:lang="en"  ><head><title>Chatbox 2.1</title><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><meta http-equiv="content-style-type" content="text/css" /><link rel="shortcut icon" type="image/x-icon" href="http://i48.servimg.com/u/f48/16/58/89/73/minilo10.png" /><meta name="language" content="en" /><meta name="description" content="Hướng dẫn - Chia sẽ - Phát triển ứng dụng cho Forumotion" /><meta name="keywords" content="Vietnamese Forumotion, fmvi.org, fmvi.vn, fmvi.tk, fmvi-group, free forum, templastes, HTML, JavaScript, jQuery, forumotion, support, TUT, share, free, easy, simple" lang="en" /><meta name="robots" content="index, follow, noodp" /><meta name="google-site-verification" content="c5k20fjsxZJqQF83Ldn3cySwds1MUd8CFhUBpIVPXUo" />
+    <meta name="title" content="Vietnamese Forumotion - chatbox 2.1" /><link rel="stylesheet" href="http://dl.dropbox.com/u/126946313/fmviChat/fmvicbox-mini.css" type="text/css" /><link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="Vietnamese Forumotion" /><link rel="search" type="application/opensearchdescription+xml" href="http://www.board-directory.net/en/search/improvedsearch.xml" title="Search forums" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="http://baivong.forumclan.com/21785.js"></script>
+
+    <script type="text/javascript">//<![CDATA[
+    var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-26966514-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);})();//]]></script></head><body>
+    <div style="display:none" id="chatbox_messenger_form">
+       Chatbox forumotion 2.1 viết bởi baivong - www.fmvi.vn. Giữ toàn quyền.
+       Nghiêm cấm mọi hành sửa, xóa, xuyên tạc bản quyền mod.
+       Mọi ý kiến đóng góp vui lòng gửi về địa chỉ lhthanh.pro@gmail.com.
+    </div>
+    <table id="chatbox_footer">
+       <tbody><tr>
+          <td id="data" style="width: 100px;">
+             <input type="submit" name="submit_button" value="Gửi" id="submit_button" />
+             <input type="hidden" id="sbold" value="0" />
+             <input type="hidden" id="sitalic" value="0" />
+             <input type="hidden" id="sunderline" value="0" />
+             <input type="hidden" id="sstrike" value="0" />
+             <input type="hidden" id="scolor" value="#FFFFFF" />
+             <input type="hidden" id="scode" value="0" />
+             <input type="hidden" id="sname" value="0" />
+             <input type="hidden" id="schat" value="" />
+          </td>
+          <td>
+             <input type="text" id="message" name="message" size="35" maxlength="1024" class="post" autocomplete="off" />            
+          </td>
+          <td style="width: 40px; text-align: center;">
+             <div id="divcontrol" class="control button">
+                <img width="20" height="20" title="control" alt="control" src="http://i15.servimg.com/u/f15/16/58/89/73/manage10.png" />
+             </div>
+             <div id="control">
+                <div id="divbuzz" class="button">
+                   <img width="60" height="20" title="buzz" alt="buzz" src="http://r12.imgfast.net/users/1215/11/75/00/smiles/2270249841.gif" />
+                </div>
+                <div id="divbold" class="font button">
+                   <img src="http://illiweb.com/fa/subsilver/wysiwyg/bold.gif" width="21" height="20" alt="Bold" title="Bold" />
+                </div>
+                <div id="divitalic" class="font button">
+                   <img src="http://illiweb.com/fa/subsilver/wysiwyg/italic.gif" width="21" height="20" alt="Ital." title="Ital." />
+                </div>
+                <div id="divunderline" class="font button">
+                   <img src="http://illiweb.com/fa/subsilver/wysiwyg/underline.gif" width="21" height="20" alt="Underl." title="Underl." />
+                </div>
+                <div id="divstrike" class="font button">
+                   <img src="http://illiweb.com/fa/subsilver/wysiwyg/strike.gif" width="21" height="20" alt="Strike" title="Strike" />
+                </div>
+                <div id="divcolor" class="wd button">
+                   <img width="20" height="20" title="Font color" alt="Font color" id="show_color" src="http://illiweb.com/fa/subsilver/wysiwyg/clear.gif" style="background-color: #333333" />
+                </div>
+                <div id="cColor"><ul><li><a style="background: #ffffff; colour: 000000;" rel="ffffff" title="#ffffff" href="#">#ffffff</a></li><li><a style="background: #ffccc9; colour: 000000;" rel="ffccc9" title="#ffccc9" href="#">#ffccc9</a></li><li><a style="background: #ffce93; colour: 000000;" rel="ffce93" title="#ffce93" href="#">#ffce93</a></li><li><a style="background: #fffc9e; colour: 000000;" rel="fffc9e" title="#fffc9e" href="#">#fffc9e</a></li><li><a style="background: #ffffc7; colour: 000000;" rel="ffffc7" title="#ffffc7" href="#">#ffffc7</a></li><li><a style="background: #9aff99; colour: 000000;" rel="9aff99" title="#9aff99" href="#">#9aff99</a></li><li><a style="background: #96fffb; colour: 000000;" rel="96fffb" title="#96fffb" href="#">#96fffb</a></li><li><a style="background: #cdffff; colour: 000000;" rel="cdffff" title="#cdffff" href="#">#cdffff</a></li><li><a style="background: #cbcefb; colour: 000000;" rel="cbcefb" title="#cbcefb" href="#">#cbcefb</a></li><li><a style="background: #cfcfcf; colour: 000000;" rel="cfcfcf" title="#cfcfcf" href="#">#cfcfcf</a></li><li><a style="background: #fd6864; colour: 000000;" rel="fd6864" title="#fd6864" href="#">#fd6864</a></li><li><a style="background: #fe996b; colour: 000000;" rel="fe996b" title="#fe996b" href="#">#fe996b</a></li><li><a style="background: #fffe65; colour: 000000;" rel="fffe65" title="#fffe65" href="#">#fffe65</a></li><li><a style="background: #fcff2f; colour: 000000;" rel="fcff2f" title="#fcff2f" href="#">#fcff2f</a></li><li><a style="background: #67fd9a; colour: 000000;" rel="67fd9a" title="#67fd9a" href="#">#67fd9a</a></li><li><a style="background: #38fff8; colour: 000000;" rel="38fff8" title="#38fff8" href="#">#38fff8</a></li><li><a style="background: #68fdff; colour: 000000;" rel="68fdff" title="#68fdff" href="#">#68fdff</a></li><li><a style="background: #9698ed; colour: 000000;" rel="9698ed" title="#9698ed" href="#">#9698ed</a></li><li><a style="background: #c0c0c0; colour: 000000;" rel="c0c0c0" title="#c0c0c0" href="#">#c0c0c0</a></li><li><a style="background: #fe0000; colour: 000000;" rel="fe0000" title="#fe0000" href="#">#fe0000</a></li><li><a style="background: #f8a102; colour: 000000;" rel="f8a102" title="#f8a102" href="#">#f8a102</a></li><li><a style="background: #ffcc67; colour: 000000;" rel="ffcc67" title="#ffcc67" href="#">#ffcc67</a></li><li><a style="background: #f8ff00; colour: 000000;" rel="f8ff00" title="#f8ff00" href="#">#f8ff00</a></li><li><a style="background: #34ff34; colour: 000000;" rel="34ff34" title="#34ff34" href="#">#34ff34</a></li><li><a style="background: #68cbd0; colour: 000000;" rel="68cbd0" title="#68cbd0" href="#">#68cbd0</a></li><li><a style="background: #34cdf9; colour: 000000;" rel="34cdf9" title="#34cdf9" href="#">#34cdf9</a></li><li><a style="background: #6665cd; colour: 000000;" rel="6665cd" title="#6665cd" href="#">#6665cd</a></li><li><a style="background: #9b9b9b; colour: 000000;" rel="9b9b9b" title="#9b9b9b" href="#">#9b9b9b</a></li><li><a style="background: #cb0000; colour: 000000;" rel="cb0000" title="#cb0000" href="#">#cb0000</a></li><li><a style="background: #f56b00; colour: 000000;" rel="f56b00" title="#f56b00" href="#">#f56b00</a></li><li><a style="background: #ffcb2f; colour: 000000;" rel="ffcb2f" title="#ffcb2f" href="#">#ffcb2f</a></li><li><a style="background: #ffc702; colour: 000000;" rel="ffc702" title="#ffc702" href="#">#ffc702</a></li><li><a style="background: #32cb00; colour: 000000;" rel="32cb00" title="#32cb00" href="#">#32cb00</a></li><li><a style="background: #00d2cb; colour: 000000;" rel="00d2cb" title="#00d2cb" href="#">#00d2cb</a></li><li><a style="background: #3166ff; colour: 000000;" rel="3166ff" title="#3166ff" href="#">#3166ff</a></li><li><a style="background: #6434fc; colour: 000000;" rel="6434fc" title="#6434fc" href="#">#6434fc</a></li><li><a style="background: #656565; colour: 000000;" rel="656565" title="#656565" href="#">#656565</a></li><li><a style="background: #9a0000; colour: 000000;" rel="9a0000" title="#9a0000" href="#">#9a0000</a></li><li><a style="background: #ce6301; colour: 000000;" rel="ce6301" title="#ce6301" href="#">#ce6301</a></li><li><a style="background: #cd9934; colour: 000000;" rel="cd9934" title="#cd9934" href="#">#cd9934</a></li><li><a style="background: #999903; colour: 000000;" rel="999903" title="#999903" href="#">#999903</a></li><li><a style="background: #009901; colour: 000000;" rel="009901" title="#009901" href="#">#009901</a></li><li><a style="background: #329a9d; colour: 000000;" rel="329a9d" title="#329a9d" href="#">#329a9d</a></li><li><a style="background: #3531ff; colour: 000000;" rel="3531ff" title="#3531ff" href="#">#3531ff</a></li><li><a style="background: #6200c9; colour: 000000;" rel="6200c9" title="#6200c9" href="#">#6200c9</a></li><li><a style="background: #343434; colour: 000000;" rel="343434" title="#343434" href="#">#343434</a></li><li><a style="background: #680100; colour: 000000;" rel="680100" title="#680100" href="#">#680100</a></li><li><a style="background: #963400; colour: 000000;" rel="963400" title="#963400" href="#">#963400</a></li><li><a style="background: #986536; colour: 000000;" rel="986536" title="#986536" href="#">#986536</a></li><li><a style="background: #646809; colour: 000000;" rel="646809" title="#646809" href="#">#646809</a></li><li><a style="background: #036400; colour: 000000;" rel="036400" title="#036400" href="#">#036400</a></li><li><a style="background: #34696d; colour: 000000;" rel="34696d" title="#34696d" href="#">#34696d</a></li><li><a style="background: #00009b; colour: 000000;" rel="00009b" title="#00009b" href="#">#00009b</a></li><li><a style="background: #303498; colour: 000000;" rel="303498" title="#303498" href="#">#303498</a></li><li><a style="background: #000000; colour: ffffff;" rel="000000" title="#000000" href="#">#000000</a></li><li><a style="background: #330001; colour: 000000;" rel="330001" title="#330001" href="#">#330001</a></li><li><a style="background: #643403; colour: 000000;" rel="643403" title="#643403" href="#">#643403</a></li><li><a style="background: #663234; colour: 000000;" rel="663234" title="#663234" href="#">#663234</a></li><li><a style="background: #343300; colour: 000000;" rel="343300" title="#343300" href="#">#343300</a></li><li><a style="background: #013300; colour: 000000;" rel="013300" title="#013300" href="#">#013300</a></li><li><a style="background: #003532; colour: 000000;" rel="003532" title="#003532" href="#">#003532</a></li><li><a style="background: #010066; colour: 000000;" rel="010066" title="#010066" href="#">#010066</a></li><li><a style="background: #340096; colour: 000000;" rel="340096" title="#340096" href="#">#340096</a></li></ul></div>
+                <div id="divsmilies" class="wd button">
+                   <img src="http://illiweb.com/fa/subsilver/wysiwyg/smilie.gif" width="21" height="20" alt="Emoticons" title="Emoticons" />
+                </div>
+                <div id="smileycbox"></div>
+             </div>
+          </td>
+       </tr></tbody>
+    </table>
+    <div id="chatbox_members" curpos="0" maxpos="460" pageincrement="144" increment="10">
+    </div>
+    <div id="chatbox" curpos="188" maxpos="325" pageincrement="0" increment="10"></div>
+    <div id="chatbox_header" class="main-head">
+       <h2 class="chatbox-title">Chatbox 2.1</h2>
+       <ul id="chatbox_main_options" class="chatbox-options">
+          <li id="chatbox_option_autorefresh">
+             <div id="sound"></div>
+             <label>
+                <a href="javascript:void(0)">Âm thanh</a>&nbsp;
+                <input type="checkbox" style="vertical-align: middle" checked="checked" id="audio" name="sound">
+             </label>
+             &nbsp;|&nbsp;
+             <label>
+                <a onclick="fmvicbox()" href="javascript:void(0)">Cập nhật</a>&nbsp;
+                <input type="checkbox" style="vertical-align: middle" checked="checked" id="refresh_auto" name="refresh_auto">
+             </label>&nbsp;|&nbsp;
+          </li>
+          <li>         
+                    <span style="display: none;" id="chatbox_option_co"><strong><a onclick="connect_ajaxC('connect')" href="javascript:void(0)">Đăng nhập</a></strong></span>
+             <span id="chatbox_option_disco"><a onclick="connect_ajaxC('disconnect')" href="javascript:void(0)">Đăng xuất</a></span>
+          </li>
+       </ul>
+    </div>
+    </body></html>
+
+</code>
+Tìm http://baivong.forumclan.com/21785.js trong code trên và thay nó bằng link file javascript đã tạo ở bước 3.
+
+
+Bước 5: Tạo javascript full-chat fmvi 2.1:
+
+    Title * : full-chat fmvi 2.1
+    Placement : Không check
+    Javascript Code * : http://www.fmvi.vn/t870-2013-chatbox-fmvi-21#7695
+
+
+Tìm trong code trên số 192 và thay nó bằng số thứ tự trang HTML Emoticons mà bạn đã tạo ở bước 2.
+Tìm trong code trên số 193 và thay nó bằng số thứ tự trang HTML mini-chat fmvi 2.1 mà bạn đã tạo ở bước 4.
+
+Bước 6: Tạo trang HTML full-chat fmvi 2.1:
+Tạo trang HTML mới theo mẫu sau:
+
+    Title * : HTML full-chat fmvi 2.1
+    Do you wish to use your forum header and footer ? No
+    Use this page as homepage ? No
+    HTML source * : http://www.fmvi.vn/t870-2013-chatbox-fmvi-21#7696
+
+
+Tìm http://baivong.forumclan.com/20032.js trong code trên và thay nó bằng link file javascript đã tạo ở bước 5.
+
+Bước 7: Thay toàn bộ Template mod_chatbox:
+
+<code>
+    <style type="text/css">
+    #chatbox_portal.fullscreen{bottom:0;height:100%!important;left:0;position:fixed;top:0;width:100%;z-index:1001}
+    #fulls,#full-cancel{cursor:pointer;z-index:1002;background:url(http://i15.servimg.com/u/f15/16/58/89/73/full10.png) no-repeat;width:32px;height:32px}
+    #fulls{background-position:0 0;margin-left:2px;margin-top:-64px;position:absolute;}
+    #full-cancel{background-position:0 -32px;bottom:30px;display:none;left:2px;position:fixed;}
+    </style>
+    <div class="module main">
+       <div class="main-content">
+          <div id="chatbox_portal" style="border: 1px solid #DDD;overflow:none;height:300px;"></div>
+                 <div id="fulls"></div><div id="full-cancel"></div>
+          <script type="text/javascript">
+             insertChatBoxNew('chatbox_portal', '/h191-chatbox-fmvi-20');
+             $("#fulls").click(function () {
+                $("#chatbox_portal").addClass("fullscreen");
+                            $(this).hide().next().show()
+             });
+             $("#full-cancel").click(function () {
+                $("#chatbox_portal").removeClass("fullscreen");
+                            $(this).hide().prev().show()
+             });
+          </script>
+          <img src="http://illiweb.com/fa/resize.gif" onmousedown="javascript:resizeElement(event, 'chatbox_portal');" alt="" style="cursor:se-resize; float: right;" />
+       </div>
+    </div>
+
+</code>
+Thay số 191 bằng số thứ tự trang HTML tạo ở bước 6
+Thêm vào CSS của diễn đàn:
+
+<code>
+#chatbox_header,#chatbox_footer,#chatbox,#chatbox_members{display:none}
+</code>
+
+
+Ghi chú:
+
+    Nên upload lại CSS và file âm thanh dùng trong chatbox http://www.fmvi.vn/t870-2013-chatbox-fmvi-21#7697
+    Chức năng nhắn tin riêng sử dụng popup nên bạn phải tắt chức năng chặn popup của trình duyệt.
+    Khi popup không tự động bật, bạn click vào nick thành viên trong danh sách Chat để chat riêng (một số add-on có thể chặn được click mở popup).
+    Chat riêng chỉ áp dụng cho thành viên đang có mặt trong chatbox.
+    Khi bạn vừa vào chatbox nếu có yêu cầu chat riêng, popup sẽ tự bật. Chỉ số trên nick lúc này là số tin nhắn trong chatbox riêng, khi bạn bắt đầu chat, nó sẽ là số tin nhắn mới.
+    Lệnh /me sẽ gửi tin nhắn lên cả chatbox chung và riêng.
+    Lệnh /ban, /unban chỉ có admin chính mới sử dụng được. Mod có thể ban nick bằng cách click phải chuột vào nick thành viên.
+    Không ẩn bài viết khi sao chép lại hướng dẫn này.
+    Không thay đổi bất cứ thành phần nào trong code khi chưa có sự đồng ý từ baivong.
