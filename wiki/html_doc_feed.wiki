@@ -1,0 +1,40 @@
+Demo : http://www.c3zone.net/h13-c3zone-new-feeds
+Tạo một trang HTML với nội dung :
+
+<code>
+
+        <!DOCTYPE html>
+        <html>
+           <head>
+              <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+              <title>C3 NEW FEEDs</title>
+              <link rel="stylesheet" type="text/css" href="http://www.coo.vn/out/users/c3vietk/css/c3_FeedReader.css" media="all" />
+              <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+              <script type="text/javascript" src="//c3zone.forumj.net/35033.js"></script>
+           </head>
+           <body>
+           <p id="learn">
+                 <img src="http://illiweb.com/fa/empty.gif" height="40" />
+           </p>
+           <h1 id="feedTitle"></h1>
+           <br />
+           <div id="heading">
+              Bài gửi mới nhất :
+              <span style="float:right">Cập nhật lúc : <span id="update"></span></span>
+           </div>
+           <div id="items">
+              <ul id="itemsUl">
+              
+              </ul>
+           </div>
+           <!-- FM Feed Reader - Written by Việt K (vui lòng không xóa dòng này) -->
+           <div id="footer">
+              Layout : Opera -  Copyright © 2012 <a href="http://www.c3zone.net">C3ZONE</a>.
+           </div>
+           </body>
+        </html>
+<code>
+
+Chấp nhận và Hết Smile
+
+<code>$(function(){var feed,f=GetParam("f");if(isNaN(f)||f==null)f='';else f=("?f="+f);feed="/feed"+f;$.ajax({type:"GET",url:feed,dataType:"xml",success:function(xml){var c3=$(xml).find('image:first');$("#learn img").attr("src",c3.find('url').text());$("#update").text($(xml).find('lastBuildDate:first').text());$("#feedTitle").text(c3.find('title').text());$(xml).find('item').each(function(){var title=$(this).find('title').text();var link=$(this).find('link ').text();var creator=$(this).find('dc\\:creator,creator').text();var pubDate=$(this).find('pubDate').text();var category=$(this).find('category').text();var comments=$(this).find('comments').text();var description=$(this).find('description').text();if(description=="")description="(empty)";$("#itemsUl").append("<li><h2><a href='"+link+"'><b>"+title+"</b></a></h2><p>Khởi tạo lúc : <b>"+pubDate+"</b></p><p class='creator'>Người khởi tạo : <b>"+creator+"</b></p><div>"+description+"</div><p class='cat'>Category : <b>"+category+"</b></p><p><a class='newpost' href='"+comments+"'>Xem bài cuối</a></p></li>")})}})});function GetParam(name){var match=new RegExp(name+"=([^&]+)","i").exec(location.search);if(match==null){match=new RegExp(name+"=(.+)","i").exec(location.search)}if(match==null){return null}match=match+"";result=match.split(",");return result[1]}</code>
