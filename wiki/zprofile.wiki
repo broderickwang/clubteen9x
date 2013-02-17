@@ -1,0 +1,99 @@
+Giới thiệu: Upgrade từ mod WallCSS viết cho Chinhphuc. Ai nói ăn cắp = ban .
+Tác giả: Zero
+Quyền lợi: Bạn được quyền sử dụng miễn phí mod nếu bạn tôn trọng công sức của tác giả
+
+Chức năng:
+- Tuỳ chỉnh giao diện của profile bằng css và html
+- Giao diện đẹp, thân thiện, và dễ sử dụng
+- Cập nhật css và html không chuyển trang (live editing)
+- Khoá javascript cho html vì lý do bảo mật và an toàn
+- Xoá quảng cáo cho member
+
+Chức năng sắp tới:
+- Không chuyển trang khi xem trang khác của profile
+- Hỗ trợ Invision, phpBB3 và skin FMVI
+- Rút gọn js
+
+Demo:
+
+
+
+Hướng dẫn: (Chỉ hỗ trợ cho punbb mặc định profile chưa chỉnh sửa, mấy phiên bản khác chưa có thời gian)
+- ACP -> General -> Forum -> Configuration -> Site description: <span id=unl>{USERLINK}</span>
+- ACP -> Users & Groups -> Profiles -> Tạo 2 fields mới -> Tên gì cũng được, Type: Text zone, Necessarily filled ?: No, Display: Profile, Who can modify the profile field value ?: Member himself, Default content:
+Cho CSS
+
+<code>
+    body{background-color:#F1F1F1;font-family:'lucida grande',tahoma,verdana,arial,sans-serif}
+    #tabs li a,.main-head,#pun-intro{background-color:#312A1E!important;font:15px/20px'Open Sans Condensed',sans-serif;color:#F0F0F0;text-align:center;font-weight:bold!important;border:0!important}#pun-intro a,#pun-head a{color:#F0F0F0!important;text-decoration:none}#tabs li a{padding:10px!important;margin-left:-4px;background:url("http://2.bp.blogspot.com/-IfiIwt0iR5c/UL4zzUjtGyI/AAAAAAAABho/rlYYH1q2iCY/s1600/sec-sep.gif")no-repeat scroll left top transparent}#tabs{top:-32px}.pun{background-color:#FAFAFA;width:auto;padding:30px}#pun-intro{padding:5px;display:inline;border-bottom-right-radius:4px;left:0px;position:absolute;top:0px}#pun-head{background-color:#227264;margin-top:45px;margin-bottom:15px;padding:10px}#profile-advanced-details{margin-top:80px}#profile-advanced-right{margin-top:100px}#profile-advanced-details a:link,#profile-advanced-right a:link{color:#626262!important;text-decoration:none;transition:color 0.2s ease-in-out 0s}#profile-advanced-details a:hover,#profile-advanced-right a:hover{color:#8F8F8F!important}.field_uneditable{border:1px solid#DDDDDD;max-height:60px;overflow:auto;padding:5px}#profile-advanced-details textarea{resize:none}#copyright a{color:#000;text-decoration:none}
+
+</code>
+Cho HTML
+
+<code>
+    <font color="white"><center><b>Thank you for using <a href="www.fmvi.vn/t880-">zProfile</a>
+    <br>© 2013 <a href="mailto:mark.polo.nguyen@gmail.com">Mark Nguyen</a><a href="http://www.fmvi.vn/u27"> (Zero)</a>. All rights reserved</b></center></font>
+
+</code>
+- Bước này quan trọng -> Rê chuột vào -> Trình duyệt sẽ hiện lên url của cái đó nằm trong tooltip -> Nhớ số nằm sau &id= cho 2 cái fields vừa tạo
+- ACP -> Modules -> Create a new javascript -> Tên gì cũng được, Placement: In all the pages
+
+<code>
+    var htmlID = '3';
+    var cssID = '2';
+    var guest = 'yes'; // yes or no
+    var cssDefault = 'body{background-color:#F1F1F1;font-family:\'lucida grande\',tahoma,verdana,arial,sans-serif}#tabs li a,.main-head,#pun-intro{background-color:#312A1E!important;font:15px/20px\'Open Sans Condensed\',sans-serif;color:#F0F0F0;text-align:center;font-weight:bold!important;border:0!important}#pun-intro a,#pun-head a{color:#F0F0F0!important;text-decoration:none}#tabs li a{padding:10px!important;margin-left:-4px;background:url("http://2.bp.blogspot.com/-IfiIwt0iR5c/UL4zzUjtGyI/AAAAAAAABho/rlYYH1q2iCY/s1600/sec-sep.gif")no-repeat scroll left top transparent}#tabs{top:-32px}.pun{background-color:#FAFAFA;width:auto;padding:30px}#pun-intro{padding:5px;display:inline;border-bottom-right-radius:4px;left:0px;position:absolute;top:0px}#pun-head{background-color:#227264;margin-top:45px;margin-bottom:15px;padding:10px}#profile-advanced-details{margin-top:80px}#profile-advanced-right{margin-top:100px}#profile-advanced-details a:link,#profile-advanced-right a:link{color:#626262!important;text-decoration:none;transition:color 0.2s ease-in-out 0s}#profile-advanced-details a:hover,#profile-advanced-right a:hover{color:#8F8F8F!important}.field_uneditable{border:1px solid#DDDDDD;max-height:60px;overflow:auto;padding:5px}#profile-advanced-details textarea{resize:none}';
+    ////////////////////////////////////////////////////////////
+    $(document).ready(function () {
+        var x = document.getElementById('unl');
+        uid = x.childNodes[0].href.substring(x.childNodes[0].href.indexOf('&u=') + 3);
+        uname = x.childNodes[0].innerHTML;
+        if (document.getElementsByTagName('title')[0].childNodes[0].nodeValue == 'Profile - ' + uname) {
+            if (guest == 'yes' && uid == '-1') {
+                alert('Please login to use this feature');
+                location.href = 'http://' + location.host
+            }
+            $('body').append('<span id="copyright"><b><a href="www.fmvi.vn/t880-">zProfile</a> © 2013 <a href="mailto:mark.polo.nguyen@gmail.com">Mark Nguyen</a><a href="http://www.fmvi.vn/u27"> (Zero)</a>. All rights reserved</b></span>');
+            $('#pun-head > *, #pun-intro > *, #pun-foot, #pun-visit').remove();
+            $('#pun-intro').html('<a href="http://' + location.host + '/forum">Back to forum</a>');
+            if (uid != '-1') {
+              $('#profile-advanced-right .module.main:nth-child(2)').remove();
+            }
+            $('#profile-advanced-details .main-head').first().remove();
+            $('#profile-advanced-details textarea').attr({
+                'cols': '95',
+                'rows': '4'
+            });
+        }
+        setInterval("$(function () {$('#field_id'+cssID+' img.ajax-profil_valid').attr('onclick','zprofile.css()');$('#field_id'+htmlID+' img.ajax-profil_valid').attr('onclick','zprofile.html()')});", 1000);
+        $('head').append('<style>' + $("#field_id" + cssID + " .field_uneditable").text() + '</style>');
+        $('#profile_field_2_' + cssID).after('<a style="cursor:pointer" onclick="zprofile.default()">Default</a>');
+        $('#pun-head').append($('#field_id' + htmlID + ' .field_uneditable').text());
+        if (uname != $('#profile-advanced-right .h3 span').first().text()) {
+            $('#field_id' + htmlID + ', #field_id' + cssID).next().remove();
+            $('#field_id' + htmlID + ', #field_id' + cssID).remove();
+        }
+    });
+    $(window).keyup(function () {
+        var y = document.getElementById('profile_field_2_' + htmlID).value;
+        if (y.indexOf('<script>') >= 0 || y.indexOf('</script>') >= 0) {
+            alert('No script allowed');
+            $('#profile_field_2_' + htmlID).val(y.replace('<script>', '').replace('</script>', ''));
+        }
+    });
+    var zprofile = {
+        css: function () {
+            $('head style').html($('#profile_field_2_' + cssID).val())
+        },
+        html: function () {
+            $('#pun-head').html($('#profile_field_2_' + htmlID).val())
+        },
+        default: function () {
+            $('#profile_field_2_' + cssID).val(cssDefault);
+        }
+    }
+</code>
+
+- Thay giá trị của var htmlID và var cssID trong javascript bằng 2 số mà mình kêu nhớ ở bước trên.
+Giá trị var guest là dùng để cho khách viếng thăm xem profile hay không
+Giá trị var cssDefault là css mặc định của profile. Button này sẽ hiện lên khi chỉnh sửa css. Dành cho mấy bạn mà thích 'phá' mà quên backup 
