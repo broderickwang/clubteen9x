@@ -1,3 +1,4 @@
+
 Giới thiệu: Upgrade từ mod WallCSS viết cho Chinhphuc. Ai nói ăn cắp = ban .
 Tác giả: Zero
 Quyền lợi: Bạn được quyền sử dụng miễn phí mod nếu bạn tôn trọng công sức của tác giả
@@ -15,7 +16,7 @@ Chức năng sắp tới:
 - Rút gọn js
 
 Demo:
-
+http://i75.servimg.com/u/f75/16/28/30/49/firesh10.png
 
 
 Hướng dẫn: (Chỉ hỗ trợ cho punbb mặc định profile chưa chỉnh sửa, mấy phiên bản khác chưa có thời gian)
