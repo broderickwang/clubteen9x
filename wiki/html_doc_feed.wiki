@@ -33,7 +33,7 @@ Tạo một trang HTML với nội dung :
            </div>
            </body>
         </html>
-<code>
+</code>
 
 Chấp nhận và Hết Smile
 
