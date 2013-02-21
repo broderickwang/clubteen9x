@@ -1,6 +1,6 @@
 1. Add nhạc nền vào profile
 
-B1: Vào QLND-QLN QLND PROFILE nhấn đấu add thêm cái mới
+B1: Vào QLND-QLN http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png QLND http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png PROFILE nhấn đấu http://r26.imgfast.net/users/2615/25/32/47/smiles/32962.png thêm cái mới
 B2: làm như sau
 
 Type : Text zone
@@ -24,7 +24,7 @@ B1. chèn Java Cripe này đã để In all the page
 </code>
 
 
-B2. Vào Quản lý người dùng Profiles Comment Đổi thành Wall css Làm theo cái này
+B2. Vào Quản lý người dùng http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png Profiles http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png Comment http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png Đổi thành Wall css http://r26.imgfast.net/users/2615/25/32/47/smiles/93149.png Làm theo cái này
 
 Display : Lý lịch
 Display type : Text
