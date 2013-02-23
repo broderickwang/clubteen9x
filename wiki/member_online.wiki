@@ -1,0 +1,36 @@
+Cho punBB
+Hì thấy các trang mạng lớn , yahoo ... vừa đăng nhập vào cái thấy đã có tên ngay trong danh sách online mà không cần chuyển trang thấy hay, lấy ý tưởng
+Xin giới thiệu một tut tự động cập nhật thành viên online và thoát ra thường xuyên khoảng từ 1-3 giây mà không phải F5 lại trang,
+Hướng dẫn 1 bước rất đơn giản
+Đây là tut khó diễn tả bằng demo ảnh nên dùng demo online các bạn có thể thử nghiệm bằng 2 trình duyệt
+Demo online: http://codefm1.forumvi.com/
+
+Cho code sau vào Javascript:
+Tittle : t-online
+Place : In all the pages
+Code :
+
+<code>
+eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('$(2(){3.f()});(2(){j 3={h:2(){$.i(\'/k\',2(9){a(6.5(\'l\')||6.5(\'4\')){a(c.g=="e"){a(6.5(\'4\').8.1.1.7!=$(9).d(\'#4\')[0].8.1.1.7)6.5(\'4\').8.1.1.7=$(9).d(\'#4\')[0].8.1.1.7}}})},f:2(){m(2(){3.h()},n)}};b.3=3})();(2(){b.c={g:\'e\'}})();',24,24,'|nextSibling|function|thailogin|onlinelist|getElementById|document|innerHTML|firstChild|tlogin|if|window|thailogin_config|find|hotrofm|init|codeprotect|check|get|var|forum|i_whosonline|setInterval|1000'.split('|'),0,{}))
+</code>
+
+*Chú ý; cái này mình viết ở hotrofm nên khi share các bạn nhớ gốc nhé
+
+
+<code>    function thailogin() {
+       $.get('/', function (tlogin) {
+          if (document.getElementById('i_whosonline') || document.getElementById('onlinelist') && $('#pun-info').html() != $(tlogin).find('#pun-info')) {
+             $('#pun-info').html($(tlogin).find('#pun-info'))
+          }
+       })
+    };
+    setInterval(thailogin, 5000);</code>
+
+<code>
+    function thailogin() {
+      $.get("/", function(a) {
+        $("#pun-info").html($(a).find("#pun-info"));
+        setTimeout("thailogin()", 3E3)
+      })
+    }
+    thailogin();</code>
