@@ -1,0 +1,416 @@
+
+http://i46.servimg.com/u/f46/16/16/16/68/memlis10.jpg
+Chèn vào Memberlist_body:
+
+<code>
+    <table align="center" border="0" cellpadding="6" cellspacing="0" width="930">
+    <tr><td class="" width="100%" align="left">
+    <form action="{S_MODE_ACTION}" method="get">
+    <table cellspacing="0" cellpadding="5" border="0" align="center" class="forumline" width="100%">
+      <tr>
+          <th class="thTop" nowrap="nowrap"><div class="main-head Sname"><h1 style="float: left;" class="page-title">Danh sách thành viên</h1><a href="?username=A">A</a><a href="?username=B">B</a><a href="?username=C">C</a><a href="?username=D">D</a><a href="?username=E">E</a><a href="?username=F">F</a><a href="?username=G">G</a><a href="?username=H">H</a><a href="?username=I">I</a><a href="?username=J">J</a><a href="?username=K">K</a><a href="?username=L">L</a><a href="?username=M">M</a><a href="?username=N">N</a><a href="?username=O">O</a><a href="?username=P">P</a><a href="?username=Q">Q</a><a href="?username=R">R</a><a href="?username=S">S</a><a href="?username=T">T</a><a href="?username=U">U</a><a href="?username=V">V</a><a href="?username=W">W</a><a href="?username=X">X</a><a href="?username=Y">Y</a><a href="?username=Z">Z</a></div></th>
+      </tr>
+      <tr>
+          <td class="row1">
+          <table cellspacing="2" cellpadding="0" border="0" align="center" class="genmed">
+            <tr>
+                <td width="100%">{L_USER_SELECT} <input type="text" class="post" name="username" maxlength="25" size="20" value="{L_USER_SELECT_VALUE}" />     
+                {L_SELECT_SORT_METHOD} {S_MODE_SELECT}     
+                {L_ORDER} {S_ORDER_SELECT}      {S_HIDDEN_SID} <input class="liteoption" type="submit" name="submit" value="{L_SUBMIT}" /></td>
+            </tr>
+          </table>
+          </td>
+      </tr>
+    </table>
+    </form>
+
+
+
+    <a name="fmvimem"></a>
+    <div class="main frm">
+
+
+
+
+      <div class="main-head Sname">
+          <h1 style="float: left;" class="page-title">Xem nhanh thông tin</h1>
+      </div>
+
+
+      <div class="main-content">
+          <fieldset id="chitietML" class="frm-set clearfix" style="margin: 0 0 -1em 0">
+            <div class="frm-form" style="display: none">
+
+
+                           
+    <table class="forumline" width="100%" border="0" cellspacing="1" cellpadding="0">
+                  <thead>
+                      <tr>
+          <th class="thTop" nowrap="nowrap">{L_AVATAR}</th>
+          <th class="thTop" nowrap="nowrap">{L_USERNAME}</th>
+                        <!-- BEGIN switch_th_group -->
+          <th class="thTop" nowrap="nowrap">{L_GROUPS}</th>
+                        <!-- END switch_th_group -->
+          <th class="thTop" nowrap="nowrap">{L_INTERESTS}</th>
+          <th class="thTop" nowrap="nowrap">{L_POSTS}</th>
+          <th class="thTop" nowrap="nowrap">{L_VISITED}</th>
+          <th class="thTop" nowrap="nowrap">{L_JOINED}</th>
+          <th class="thTop" nowrap="nowrap">{L_PM}</th>
+          <th class="thCornerR" nowrap="nowrap">{L_WEBSITE}</th>
+                      </tr>
+                  </thead>
+
+                  <tbody>
+                      <!-- BEGIN memberrow -->
+                      <tr>
+        <td class="{memberrow.ROW_CLASS}" align="center"><div class="topava"><div class="avatar mini"><span class="avatarxt">
+
+    <a onmouseover="show_tooltip(this,this.getElementsByTagName('span')[0].innerHTML,'Thông tin Thành viên');" href="{memberrow.U_VIEWPROFILE}">
+     
+     {memberrow.AVATAR_IMG}
+
+    <span style="display: none;">
+
+                                    <table border="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="avatarthum" align="left">{memberrow.AVATAR_IMG}</td>
+                                                <td align="left"><a href="{memberrow.U_VIEWPROFILE}">{memberrow.USERNAME}</a>
+                                                    <hr />
+                                                    <span class="thamtop">Tham gia</span>:
+                                                    <font color="violet">{memberrow.JOINED}</font>
+                                                    <br />
+                                                    <span class="truytop">Truy cập cuối</span>:
+                                                    <font color="orange">{memberrow.LASTVISIT}</font>
+                                                    <br />
+                                                    <span class="baiBtop">Bài viết</span>:
+                                                    <font color="cyan">{memberrow.POSTS}</font>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+    </span></a>
+
+
+    </span></div></div></td>
+
+
+
+
+          <td class="{memberrow.ROW_CLASS}" align="center">
+
+    <span class="gen"><div class="toper" style="height: 40px;"><div class="mama" style="height: 20px;width: 115px;"><font style="font-family: Tahoma; font-size: 11px"><div class="tompro"><div class="tomxinh"><font style="font-family: Tahoma; font-size: 11px">
+
+
+
+
+
+    <a class="recentlink" onmouseover="showtip('Ngày tham gia: </b><font color=yellow>{memberrow.JOINED}</font> <br>Số bài viết: <font color=#FF00FF>{memberrow.POSTS}</font> <br>Truy cập cuối: <font color=#99FFFF>{memberrow.LASTVISIT}</font> <br> Châm ngôn sống: <font color=#FF0000>{memberrow.INTERESTS}</font>');" onmouseout="hidetip();" href="{memberrow.U_VIEWPROFILE}">
+     {memberrow.USERNAME}
+    </a>
+
+
+    </font></div></div></font></div></div></span>
+
+
+
+
+
+    </td>
+
+
+
+          <!-- BEGIN switch_td_group -->
+          <td class="{memberrow.ROW_CLASS}" align="center"><span class="gen">{memberrow.GROUPS}</span></td>
+          <!-- END switch_td_group -->
+          <td class="{memberrow.ROW_CLASS}" align="center" valign="middle"><span class="gen">{memberrow.INTERESTS}</span></td>
+
+
+          <td class="{memberrow.ROW_CLASS}" align="center" valign="middle"><span class="gensmall"><div class="baitop" style="height: 40px;" align="right"><div class="tomkute"><div class="baivong" style="height: 20px;width: 85px;" align="right"><font style="font-family: Tahoma; font-size: 11px">{memberrow.POSTS} bài viết {memberrow.REPUTATION}</font></div></div></div></span></td>
+
+
+          <td class="{memberrow.ROW_CLASS}" align="center" valign="middle"><span class="gensmall">{memberrow.LASTVISIT}</span></td>
+          <td class="{memberrow.ROW_CLASS}" align="center" valign="middle"><span class="gen"><div class="9xstudio" style="height: 20px;width: 56px;" align="right"><font style="font-family: Tahoma; font-size: 11px">{memberrow.JOINED}</font></div></span></td>
+          <td class="{memberrow.ROW_CLASS}" align="center"> {memberrow.PM_IMG} </td>
+          <td class="{memberrow.ROW_CLASS}" align="center"> {memberrow.WWW_IMG} </td>
+                      </tr>
+                      <!-- END memberrow -->
+                      <!-- BEGIN switch_no_user -->
+                      <tr>
+                        <td colspan="{switch_no_user.COLSPAN_NUMBER}" class="tcr">{switch_no_user.L_NO_USER}</td>
+                      </tr>
+                      <!-- END switch_no_user -->
+                  </tbody>
+                </table>
+
+
+
+
+            </div>
+          </fieldset>
+
+
+
+
+
+
+
+
+    <div class="borderwrap member-list" style="border: 1px #cccccc solid; padding: 1px;"><div class="tcat" style="padding: 1px; font: bold 12px Tahoma;"><h3>Thành viên</h3></div>
+
+    <div class="box-content member-list clearfix">
+    <!-- BEGIN memberrow -->
+
+    <div class="member"><div class="member-header clearfix"><div style="position:relative;margin-bottom:10px;" class="popmenubutton-new-out popmenubutton">
+
+            <div class="rutgonML">
+                            <a onclick="$('#chitietML tbody>tr').hide();$('#chitietML tbody>tr:eq('  $(this).attr('alt')  ')').show()" class="gen" href="#fmvimem"><span class="membername"><span style="color:#000099"><strong>{memberrow.USERNAME}</strong></span></span></a>
+            </div>
+
+
+    <div style="position:absolute;right:0px;top:0px;" class="mini-avatar">{memberrow.AVATAR_IMG}</div></div>
+
+
+
+    <div id="pm{memberrow.ROW_NUMBER}" class="popupmenu clearfix" style="display:none;"><div class="avatar">{memberrow.AVATAR_IMG}</div><ul><li class="popupmenu-item">{memberrow.PM_IMG} Send a PM </li><li class="popupmenu-item"><a href="{memberrow.U_VIEWPROFILE}" title="Xem lý lịch thành viên"><img src="http://i1036.photobucket.com/albums/a449/a1tinhgia3/image/my-profile.png" class="i_icon_profile" alt="Xem lý lịch thành viên" /></a> View the profile </li><li class="popupmenu-item last"><img src="http://i1036.photobucket.com/albums/a449/a1tinhgia3/image/status.png" class="i_icon_profile" title="Nói j hum nay??" /> {memberrow.INTERESTS}</li></ul></div></div>
+
+    <p>
+
+    <span class="gensmall"><font color="#24ff00">{L_VISITED}</font></span>: {memberrow.LASTVISIT}<br />
+    <span class="gensmall"><font color="#ff0000">{L_JOINED}</font></span>: {memberrow.JOINED}<br />
+    <span class="gensmall"><font color="#0005de">{L_POSTS}</font></span>: {memberrow.POSTS}<br />
+    <a href="#" onclick="return togglePopUpMenu('pm{memberrow.ROW_NUMBER}');">Xổ dọc thông tin...</a>
+    </p></div><!-- END memberrow --></div>
+    </div>
+    <!-- BEGIN switch_no_user -->
+      <tr>
+          <td class="catBottom" colspan="{switch_no_user.COLSPAN_NUMBER}" height="28" align="center"><span class="gensmall">{switch_no_user.L_NO_USER}</span></td>
+      </tr>
+      <!-- END switch_no_user -->
+    </table>
+    <!-- BEGIN switch_pagination -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+          <td><span class="nav">{PAGE_NUMBER}</span></td>
+          <td align="right"><span class="nav">{PAGINATION}</span></td>
+      </tr>
+    </table>
+    <br />
+    <!-- END switch_pagination -->
+    <script src="http://illiweb.com/fa/js_20/invision.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    if (my_getcookie("fmvimemlist") == "yes") {
+      chitietml();
+        $("#rutmlX, #chimlX").toggle()
+    } else {
+      rutgonml()
+    }
+
+    var rutML;
+    for (rutML = 0; rutML < $('.rutgonML').length; rutML  ) {
+      $('.rutgonML a:eq('  rutML  ')').attr('alt', rutML)
+    }
+
+    $("#rutmlX").click(function () {
+      my_setcookie("fmvimemlist", "no", false);
+      rutgonml();
+      $("#rutmlX, #chimlX").toggle()
+    });
+    $("#chimlX").click(function () {
+      my_setcookie("fmvimemlist", "yes", false);
+      chitietml();
+      $("#rutmlX, #chimlX").toggle()
+    });
+
+    function rutgonml() {
+      $("#chitietML tbody>tr:not(':first')").hide();
+      $("#chitietML .frm-form, #rutgonML").show();
+    }
+
+    function chitietml() {
+      $("#chitietML tbody>tr, #chitietML .frm-form").show();
+      $("#rutgonML").hide();
+    }
+    </script>
+</code>
+
+
+Cho vào cSS:
+
+<code>
+    .popmenubutton a {
+     
+    /*display: block;
+      */
+    padding: 2px 16px 2px 8px;
+      background-image: url('http://illiweb.com/fa/invision/menu_action_down.gif');
+      background-position: 98% 50%;
+      background-repeat: no-repeat;
+      font-size: 11px;
+      font-weight: bold;
+      text-align: center;
+      white-space: nowrap;
+      text-decoration: none;
+      }
+
+    .popupmenu {
+      list-style: none;
+      min-width: 200px;
+      width:220px;
+      font-size: 11px;
+      }
+    .member .popupmenu {
+      position: absolute;
+      z-index: 999;
+      }
+    .popupmenu .avatar {
+      float: right;
+      margin: 5px;
+      width: 50px;
+      height: 50px;
+      background: url('http://illiweb.com/fa/invision/pp-blank-thumb-50px.png') no-repeat;
+      }
+    .popupmenu .avatar img {
+      display: block;
+      width: 50px;
+      height: 50px;
+      }
+    .popupmenu ul {
+      padding: 0.3em;
+      list-style: none;
+      }
+
+    .popupmenu li {
+      display: block;
+    padding: 0.1em 0.1em;
+      background-image: url('http://illiweb.com/fa/invision/menu_item.gif');
+      background-repeat: no-repeat;
+      background-position: 2px 50%;
+      text-decoration: none;
+      white-space: nowrap;
+     font-size:11px;
+      }
+    .popupmenu li a {
+      text-decoration: none;
+      }
+
+    .popup {
+      margin: 0.5em;
+      }
+    .popup .popup-msg {
+      margin: 0.5em;
+      }
+    /*Memberlist*/
+    .memberlist fieldset {
+      padding: 1em;
+      }
+    .borderwrap.member-list {
+      margin-bottom: 4em;
+      }
+
+    .member {
+      float: left;
+      width: 22%;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 5px;
+      }
+    .member-list .popmenubutton {
+      width: 100%;
+      height: auto;
+      }
+    * html .member span.membername {
+      float: left;
+      word-wrap: break-word !important;
+      }
+    *  html .member span.membername {
+      float:left;
+      word-wrap: break-word !important;
+      white-space: normal;
+      }
+    .member-list .popmenubutton .mini-avatar {
+      display: block;
+      float: right;
+      margin: 5px;
+      background: url('http://illiweb.com/fa/invision/pp-blank-thumb-38px.png') no-repeat;
+      width: 38px;
+      height: 38px;
+      }
+    .member .popupmenu li {
+      background-image: none;
+      }
+    .member-list .popmenubutton .mini-avatar img {
+      width: 38px;
+      height: 38px;
+      }
+    .member p {
+      font-size: 10px;
+      height: 7em;
+      overflow: auto;
+      }
+    div.borderwrap .member-list {
+      padding: 5px;
+      border: none;
+      }
+
+    .popupmenu {
+      background-color: #fff;
+      border: 1px solid #d0d0d0;
+      }
+    .popupmenu .avatar {
+      border: 1px solid #666666;
+      background-color: #ffffff;
+      }
+    .popupmenu li {
+      background-color: #fff;
+      border-bottom: 1px solid #d0d0d0;
+      }
+    ul.popupmenu li.popupmenu-category {
+      background-color: #c4c4c4;
+      color: #464c55;
+      }
+    /*Memberlist*/
+    .member {
+      background-color: #fff;
+      border: 1px solid #979ba0;
+            height: 90px;
+      }
+    .member-list .popmenubutton .mini-avatar {
+      border: 1px solid #222222;
+      background-color: #fff;
+      }
+    .member p {
+      color: #808080;
+      }
+    div.borderwrap .member-list {
+      background-color: #c4c4c4;
+      }
+    .popmenubutton-new-out {
+      margin: 0 auto;
+      float: none;
+      padding: 0.3em 0;
+      }
+    .popmenubutton-new-out {
+      float: none;
+      width: 15em;
+      }
+    .popmenubutton-new-out a {
+      text-align: left;
+      }
+    .popmenubutton-new-out a {
+      background-color: #e4e6e9;
+      }
+    .member .popmenubutton-new-out a {
+      border: 1px solid #c6ccd4;
+      }
+    .popmenubutton {
+      margin: -1px auto;
+      }
+
+    .frm-info{background:#ffffe1;border:1px solid #E6E6E6;margin:1.7em;padding:1em}.main ul.frm-info{list-style-type:none}.main .frm-info li{background:url(blue.png) no-repeat top left;padding:0 0 1em 2em}
+    .Sname a{background-color:#FFF;border:1px solid #DDD;margin:2px;padding:1px 5px}.Sname a:active,.Sname a:hover{background-color:#2F98D9;color:#FFF}.Sname{text-align:right}
+
+</code>
+
+an 
