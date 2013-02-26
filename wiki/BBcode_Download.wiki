@@ -1,0 +1,30 @@
+JS
+<code>
+    $(function () {
+    $('.entry-content').html($('.entry-content').html().replace(/\[fshare\](.*?)\[\/fshare\]/gi, '<div class="download_button"><div class="download_title"><img alt="download" src="http://begood.vn/images/bbcode/fshare.png" title="download"></div><div class="download_content">$1</div></div>'));
+    });
+</code>
+
+CSS
+<code>
+    .download_button {
+        margin: 5px auto;
+        width: 500px;
+    }
+    .download_title {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+    .download_content {
+        border: 1px solid #CCCCCC;
+        border-radius: 10px 10px 10px 10px;
+        margin-top: -57px;
+        padding: 35px 10px 10px;
+        position: relative;
+        text-align: left !important;
+    }
+
+</code>
+Demo
+http://jsfiddle.net/creepyzero/ftGDr/5/
