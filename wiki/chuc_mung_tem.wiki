@@ -1,0 +1,75 @@
+http://img27.imageshack.us/img27/3605/democx.png
+Tự làm Mouse. Không biết có ai làm chưa nửa. Cái này dễ ko có khó khăn gì nên đừng ném gach em nha
+
+
+Vào Viewtopic chèn code
+
+<code>
+    <br><div class="boctem"></div><div class="nguoiboctem">{postrow.displayed.POSTER_NAME}</div><br>
+
+</code>
+vào sau 
+<code>
+<div class="post"{postrow.displayed.THANK_BGCOLOR}>
+</code>
+Thay
+
+<code>
+    <div class="main-content topic">
+</code>
+bằng
+<code>
+     <div class="main-content topic"><div class="trang">
+
+</code>
+
+Thêm </div> trên
+
+<code>
+    <hr id="first-post-br" />
+
+
+</code>
+Thay
+
+<code>
+    <div class="main-content topic">
+                      <!-- END first_post_br -->
+             <!-- END displayed -->
+             <!-- BEGIN hidden -->
+                <p class="p-hidden">{postrow.hidden.MESSAGE}</p>
+             <!-- END hidden -->
+                      <!-- END postrow -->
+       </div>
+
+
+</code>
+Bằng
+
+<code>
+     <div class="main-content topic"><div class="trangan">
+                      <!-- END first_post_br -->
+             <!-- END displayed -->
+             <!-- BEGIN hidden -->
+                <p class="p-hidden">{postrow.hidden.MESSAGE}</p>
+             <!-- END hidden -->
+                      <!-- END postrow --></div>
+       </div>
+
+
+</code>
+
+CSS:
+
+<code>
+    .trang :nth-child(2) .boctem{
+     background:#FFF8DC url(https://lh5.googleusercontent.com/-lz1jdeGnzTE/UQSY5o_2Q7I/AAAAAAAABVc/BnTq6uuBkw8/s875/boctem.png) no-repeat;
+      height:200px;
+    }
+    .trang .nguoiboctem, .trangan .nguoiboctem{ display:none;height:0px;}
+    .trang :nth-child(2) .nguoiboctem { display:block;
+    margin-left:470px;margin-top:-130px;height:120px;font-size:20px;}
+
+
+
+</code>
