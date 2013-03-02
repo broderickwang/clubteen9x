@@ -1,4 +1,4 @@
-#[TUT] Xoay avatar chóng mặt
+# [TUT] Xoay avatar chóng mặt
 
 <code>        .postprofile dt a img{
             transition-duration:0.5s;
@@ -24,7 +24,7 @@
             max-height: 220px;
         }</code>
 
-#[TUT] Khung Avatar đẹp
+# [TUT] Khung Avatar đẹp
 
 <code>        .postprofile-details.postdetails a[href*="/u"] img, .blog_comment-avatar img  {
         border-width: 15px 15px 15px;
