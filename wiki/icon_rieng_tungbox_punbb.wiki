@@ -1,0 +1,56 @@
+http://i24.servimg.com/u/f24/15/64/85/86/firesh10.png
+
+Vào index box tìm:
+
+<code>
+    <img title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}"/>
+
+</code>
+
+sửa lại thành:
+
+<code>
+     <img title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" value="{catrow.forumrow.FORUM_NAME}"  />
+
+</code>
+
+Tìm tiếp:
+
+<code>
+     <!-- BEGIN catrow -->
+
+</code>
+
+thêm bên dưới nó:
+
+<code>
+
+    <script type="text/javascript">
+    $("[value='Tên box cần thay icon']").replaceWith('<img src="link ảnh thay thế">');
+    </script>
+
+</code>
+
+Với mỗi box cần thay thì thêm đoạn này:
+
+<code>
+    $("[value='Tên box cần thay icon']").replaceWith('<img src="link ảnh thay thế">');
+
+
+</code>
+cho css vào làm nhỏ ảnh
+
+<code>
+    .pun tbody.statused span.status img {
+    width: 35px;
+    height: 35px;
+    }
+
+</code>
+
+tùy chỉnh kick cỡ tùy forum
+
+
+
+
+an
