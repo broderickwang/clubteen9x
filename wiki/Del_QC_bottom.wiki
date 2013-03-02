@@ -1,0 +1,20 @@
+punbb :
+
+<code>
+    #pun-about ul li {
+        display: none;
+    }
+</code>
+
+punbb2 punbb3
+
+<code>
+    #page-footer, div.navbar, div.navbar ul.linklist, div.navbar ul.linklist li.rightside {
+    display: none !important;
+    visibility: none !important;
+    }
+
+</code>
+
+
+Cho Vào CSS
