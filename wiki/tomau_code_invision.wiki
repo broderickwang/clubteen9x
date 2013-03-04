@@ -1,0 +1,56 @@
+Tô màu cho code với Javascript Printer.
+By: baivong.
+Convert: miamor.
+
+
+Chèn vào CSS:
+
+<code>
+
+        .prettyprint .pln{font-family:Courier New;color:#000}
+        .prettyprint .str{color:#080}
+        .prettyprint .kwd{font-family:Courier New;color:#008}
+        .prettyprint .com{font-family:Courier New;color:#800}
+        .prettyprint .typ{font-family:Courier New;color:#606}
+        .prettyprint .lit{font-family:Courier New;color:#066}
+        .prettyprint .fmvip{font-family:Courier New;color:#660}
+        .prettyprint .tag{font-family:Courier New;color:#008}
+        .prettyprint .atn{font-family:Courier New;color:#606}
+        .prettyprint .atv{font-family:Courier New;color:#080}
+        .prettyprint .dec{font-family:Courier New;color:#606}
+        .prettyprint .linenums li{font-family:Courier New;border-left:3px solid #EBEFF9;padding-left:5px}
+        .prettyprint{font-family:Courier New!important;font-size:12px;padding:2px}
+        .prettyprint ol.linenums{font-family:Courier New;margin-bottom:0;margin-top:0;padding-left:25px}
+
+
+</code>
+Javascript:
+Í... Ẩn mất rồi hihi Trả lời để coi nào hihi
+
+
+<code>
+
+            $(function () {
+              if ($(".codebox.contcode dd").filter(function () {
+                  var a = $(this).text().indexOf("["),
+                    b = $(this).text().indexOf("]"),
+                    c = $(this).text().indexOf("[/"),
+                    d = $(this).text().indexOf("<"),
+                    e = $(this).text().indexOf('"'),
+                    f = $(this).text().indexOf("'"),
+                    g = $(this).text().indexOf("/");
+                  return a == -1 || b == -1 || c == -1 || a > b || b > c || d != -1 && d < a || e != -1 && e < a || f != -1 && f < a || g != -1 && g < a
+              }).each(function () {
+                  $(this).wrapInner('<pre class="prettyprint' + ($(this).text().indexOf("<") == -1 && /[\s\S]+{[\s\S]+:[\s\S]+}/.test($(this).text()) ? " lang-css" : "") + ' linenums" />')
+              }).length) {
+                  var s = document.createElement("script");
+                  s.type = "text/javascript";
+                  s.async = !0;
+                  s.src = "http://invision.forum.st/33093.js";
+                  document.getElementsByTagName("head")[0].appendChild(s)
+              };
+            });
+
+
+</code>
+Nhớ code này baivog làm cho cả 4 phiên bản luôn ma ta @-) 
