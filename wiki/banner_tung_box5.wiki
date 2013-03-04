@@ -1,0 +1,35 @@
+
+Vào viewforum_body đặt code này ở chỗ bạn muốn banner hiện
+
+<code>
+    <div class="banner{FORUM_ID}"></div>
+
+</code>
+
+Tạo 1 trang js cho hiện ở subforum
+
+<code>
+    $(function(){$(".banner1").replaceWith('<center><img src="link ảnh"/></center>');});
+
+</code>
+
+Tìm
+
+<code>
+    banner1
+</code>
+
+Sửa số 1 thành id của box bạn muốn cho banner đó hiện.
+
+Làm với box khác thì thêm vào trước
+
+<code>
+    });
+
+</code>
+Đoạn
+<code>
+    $(".banner[id box]").replaceWith('<center><img src="link ảnh"/></center>');
+</code>
+
+Có thể ứng dụng làm nhiều cái khác, như mình cho kết quả Euro vào box Bóng đá.
