@@ -1,8 +1,9 @@
 wiget
 http://i72.servimg.com/u/f72/17/98/73/13/untitl10.jpg
 
-mod_most_active_starters
+wiget
 
+mod_most_active_starters
 <code>
       <td class="alt1" valign="top" id="changstats_topbox_2" style="padding: 6px;background: white;border: 1px solid #DFDFDF;">
           
@@ -46,7 +47,9 @@ mod_recent_topics
     /* Tooltip */
     #tooltip .tiplFMvi{border-bottom:1px dashed;margin-bottom:5px;padding-bottom:5px}
     #tooltip{background-color:#FFF;border:1px solid #DDD;border-radius:3px 3px 3px 3px;box-shadow:2px 2px 3px #746E6E;color:#131313;max-width:550px;padding:15px 20px;position:absolute;z-index:999}
-
+    #active_starters,#most_active,#pun-visit,#users_month,#users_week,#tooltip .header {
+    display:none;
+    }
     </style>
 
      
@@ -116,8 +119,8 @@ mod_recent_topics
             if ($(this).text().length > 50) {$(this).text($(this).text().substr(0, 50));$(this).append('...');
             }
         });</script>  
-</code>
 
+</code>
 
 mod_top_post_users_month
 
@@ -140,8 +143,8 @@ mod_top_post_users_month
            </td>
           
        
-
 </code>
+
 
 mod_top_post_users_week
 
@@ -184,11 +187,10 @@ mod_top_post_users_week
           
            </td>
 
+
 </code>
 
-
 mod_top_posters
-
 <code>
        <td class="alt1" valign="top" id="changstats_topbox_2" style="height: 130px;padding: 6px;background: white;border: 1px solid #DFDFDF;">
           
@@ -223,8 +225,8 @@ mod_top_posters
     position: relative;
     }
     </style>
-</code>
 
+</code>
 
 cho vào đầu index body
 
@@ -414,5 +416,4 @@ cho vào đầu index body
 
 
 </code>
-
 
