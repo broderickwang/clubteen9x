@@ -1,5 +1,5 @@
     http://i44.servimg.com/u/f44/15/64/85/86/612.jpg
 
-</code>
+<code>
 
 a[href*="/tt241p30-"]{font-weight:bold;animation:blink .2s infinite;-moz-animation:blink .2s infinite;-webkit-animation:blink .2s infinite}</code>
