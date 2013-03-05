@@ -1,0 +1,370 @@
+    Thông tin :
+    Last này code từ nhà 4all ^^
+    mình đem về Edit và thêm 1 số thứ
+    Thống kê : Top post tuần , Top post tháng , Top mở chủ đề , Top Post , Top Truy cập
+
+    Bài viết mới , Topic trả lời nhiều , Topic xem nhiều , Thành viên mới .....
+    Bài viết được share tại http://www.cntt-k3.org/t7385-topic
+
+
+
+
+
+Demo :
+
+http://i77.servimg.com/u/f77/16/58/45/96/113.jpg
+
+
+
+Sau đây là cách làm : Nội dung đã bị ẩn - Vui lòng trả lời để thấy
+
+Bước 1 : QUẢN LÝ TỔNG THỂ >> Messages and e-mails >> Cấu hình diễn đàn
+
+Chủ đề trong 1 trang : 10
+
+
+Bước 2 : Dowload file này về và Add vào Templates > Portal
+
+http://mr-dark.googlecode.com/files/Lasttopic%20Cntt-k3.org.rar
+
+Pass :
+
+<code>
+     cntt-k3.org
+
+</code>
+
+Bước 3 : Sau khi add các Temp vào . Các bạn vào memberlist_body Thay toàn bộ code = code sau
+
+<code>
+    <!-- BEGIN switch_user_logged_in -->
+    <div id="pun-visit" class="clearfix">
+      <ul>
+          <li><a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a></li>
+          <li><a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a></li>
+      </ul>
+      <p>{LOGGED_AS}. {LAST_VISIT_DATE}</p>
+    </div>
+    <!-- END switch_user_logged_in -->
+
+    <!-- BEGIN switch_user_logged_out -->
+    <div id="pun-visit">
+      <p>{L_NOT_CONNECTED} {L_LOGIN_REGISTER}</p>
+    </div>
+    <!-- END switch_user_logged_out -->
+
+    <div class="pun-crumbs">
+      <p class="crumbs">
+          <a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC} » <strong>{PAGE_TITLE}</strong>
+      </p>
+    </div>
+
+    <div class="main frm">
+
+      <!-- BEGIN switch_pagination -->
+      <div class="paged-head clearfix">
+          <p class="paging">{PAGINATION}</p>
+      </div>
+      <!-- END switch_pagination -->
+
+      <div class="main-head">
+          <h1 class="page-title">{L_ORDER_OR_SELECT}</h1>
+      </div>
+
+      <div class="main-content">
+          <form action="{S_MODE_ACTION}" method="get" class="form-frm">
+          <fieldset class="frm-set multi">
+            <dl>
+                <dt>{L_USER_SELECT}</dt>
+                <dd><input type="text" class="inputbox" name="username" maxlength="25" size="20" value="{L_USER_SELECT_VALUE}" /></dd>
+            </dl>
+            <dl>
+                <dt>{L_SELECT_SORT_METHOD}</dt>
+                <dd>{S_MODE_SELECT}</dd>
+            </dl>
+            <dl>
+                <dt>{L_ORDER}</dt>
+                <dd>{S_ORDER_SELECT}</dd>
+            </dl>
+
+            <div class="frm-buttons">
+                {S_HIDDEN_SID}
+                <input type="submit" name="submit" value="{L_SUBMIT}" />
+            </div>
+          </fieldset>
+          </form>
+
+          <fieldset class="frm-set clearfix">
+            <div class="frm-form">
+                <table class="table" cellspacing="0">
+                  <thead>
+                      <tr>
+                        <th class="tclmemberlist">{L_AVATAR} - {L_USERNAME}</th>
+                        <!-- BEGIN switch_th_group -->
+                        <th class="tc2">{L_GROUPS}</th>
+                        <!-- END switch_th_group -->
+                        <th class="tc3">{L_INTERESTS}</th>
+                        <th class="tc2">{L_JOINED}</th>
+                        <th class="tc2">{L_VISITED}</th>
+                        <th class="tc3">{L_POSTS}</th>
+                        <th class="tc3">{L_PM}</th>
+                        <th class="tc3">{L_WEBSITE}</th>
+                      </tr>
+                  </thead>
+
+                  <tbody>
+                      <!-- BEGIN memberrow -->
+                      <tr>
+                        <td class="tcl avatar-mini">
+                          <div class="thanhvienmoi" style="height: 20px;width: 116px;">
+                            <font style="font-family: Tahoma; font-size: 11px"><a class="gen" href="{memberrow.U_VIEWPROFILE}"><span class="avatartv1">{memberrow.AVATAR_IMG}</span> {memberrow.USERNAME}
+                                          
+                             
+                              </a></font>
+                          <span class="thamtopp" style="height: 20px;float: right;margin-right: -220px;" align="right">
+                                                                                  {memberrow.JOINED}</span>
+                          </div></td>
+         
+                             
+                              <!-- BEGIN switch_td_group -->
+                        <td class="tc2">{memberrow.GROUPS}</td>
+                        <!-- END switch_td_group -->
+                        <td class="tc3"> {memberrow.INTERESTS}</td>
+                        <td class="tc2">{memberrow.JOINED}</td>
+                        <td class="tc2">
+                            <div class="truycapmoi" style="height: 20px;width: 156px;">
+                            <font style="font-family: Tahoma; font-size: 11px">
+                          <a class="gen" href="{memberrow.U_VIEWPROFILE}">
+                              <span class="avatartv1">{memberrow.AVATAR_IMG}</span>
+                           {memberrow.USERNAME}
+                           
+                           
+                              </a>
+                            </font>
+
+                           
+                          </div>
+
+                         
+                         
+                         
+                              </td>
+                        <td class="tc3">
+                          <div class="K3sobai" style="height: 20px;width: 95px;margin-right: -220px;" align="right"><font style="font-family: Tahoma; font-size: 11px">{memberrow.POSTS} bàiviết</font></div>
+                       
+                       
+                        </td>
+                        <td class="tc3">{memberrow.PM_IMG}</td>
+                        <td class="tc4">{memberrow.WWW_IMG}</td>
+                      </tr>
+                      <!-- END memberrow -->
+                      <!-- BEGIN switch_no_user -->
+                      <tr>
+                        <td colspan="{switch_no_user.COLSPAN_NUMBER}" class="tcr">{switch_no_user.L_NO_USER}</td>
+                      </tr>
+                      <!-- END switch_no_user -->
+                  </tbody>
+                </table>
+            </div>
+          </fieldset>
+      </div>
+
+      <div class="main-foot">
+      </div>
+
+      <!-- BEGIN switch_pagination -->
+      <div class="paged-foot clearfix">
+          <p class="paging">{PAGINATION}</p>
+      </div>
+      <!-- END switch_pagination -->
+
+    </div>
+</code>
+
+
+Bước 4 : Vào Index_Body Thêm code sau lên đầu
+
+<code>
+    <div id="page-body">
+          <div id="{ID_CONTENT_CONTAINER}"{CLASS_CONTENT_CONTAINER}>
+                              <table  class="thongke" cellpadding="0" cellspacing="0" border="0" width="100%" align="center" >
+        <tbody>
+                                    <tr>
+                                      <td valign="top" width="100%">
+                                          <div class="test">
+        <table class="thongke" cellpadding="4" cellspacing="0" style="border: 1px #c0c0c0 solid;" border="0" width="100%" align="center">
+     
+        <tr>
+        <td width="100%">
+        <table class="thongke" cellpadding="0" cellspacing="4" border="0" width="100%" align="center">
+        <thead>
+              <tr valign="top">
+        <td width="23%"></td><td width="100%" colspan="2"></td>
+        </tr>
+        <tr>
+        <td><table  class="thongke" cellpadding="0" cellspacing="0" border="0" width="110%" align="center" >
+     
+        <tr><td valign="top" style="border: 1px solid #9DB3C5;">
+        <!-- BEGIN giefmod_index1 -->
+        {giefmod_index1.MODVAR} <!-- END giefmod_index1 --></tr></thead></table>
+
+        </td></tr></table>
+
+        </div>
+                                      </td>
+            </tr><tr>
+                                    <td valign="top" width="100%">
+        <!-- BEGIN html_validation -->
+                                  </td>
+                                </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                    </div>
+                </td>
+              </tr>
+          </table>
+        </body>
+        </html>
+        <!-- END html_validation -->
+
+
+
+Bước 5 : Vào overall_header tìm xem có đoạn này ko
+
+Code: Chọn Code
+    <div id="{ID_LEFT}">
+                                        <!-- BEGIN giefmod_index1 -->
+                                        {giefmod_index1.MODVAR}
+                                        <!-- BEGIN saut -->
+                                        <div style="height:{SPACE_ROW}px"></div>
+                                        <!-- END saut -->
+                                        <!-- END giefmod_index1 -->
+                                     </div>
+</code>
+
+( ở cuối )
+
+Nếu có thì xoá luôn đi
+
+Bước 6 : Cài đặt Widgets như hình sau
+http://i77.servimg.com/u/f77/16/58/45/96/1210.jpg
+
+Tiếp theo kick vào http://r20.imgfast.net/users/2015/12/67/35/smiles/3803843067.png của Recent topics
+Number of recent topics : 40
+Activate the topics scrolling : Không
+
+Thế là xong ^^
+
+
+
+À quên : ai muốn cho Top post hiển thị lên đầu thì làm như sau
+
+Spoiler:
+
+
+
+    Vào : mod_top_posters
+    thay toàn bộ nó = code sau
+
+<code>
+         <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <td style="padding: 0px; background: #f7f7f7 none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="100%"><div style="margin-bottom: 1px;"><ul class="tabs"><li class="current"><span style="padding: 0px 7px;">
+                <script type="text/javascript">
+        function showstuff(value){
+            document.getElementById("poster").style.display = (value == "poster") ? "block" : "none";
+            document.getElementById("poster1").style.display = (value == "poster1") ? "block" : "none";
+        document.getElementById("poster2").style.display = (value == "poster2") ? "block" : "none";
+        document.getElementById("poster3").style.display = (value == "poster3") ? "block" : "none";
+                  document.getElementById("poster4").style.display = (value == "poster4") ? "block" : "none";
+        }
+        </script>
+
+        <select id="changer" name="type" onchange="showstuff(this.value);">
+                  <option value="poster">Top poster</option>
+                  <option value="poster1">Top mở chủ đề</option>
+          <option value="poster2">Top poster tuần</option>
+          <option value="poster3">Top poster tháng</option>
+            <option value="poster4">Top truy cập</option>
+         
+         
+        </select>
+
+        </span></li></ul>
+
+        <div id="poster" style="display:block;"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr valign="top"><td style="border-top: 0px none; padding: 0px; background: transparent url(http://i1036.photobucket.com/albums/a449/a1tinhgia3/image/list.gif) no-repeat scroll center top; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="24" height="200"><img src="http://illiweb.com/fa/empty.gif" width="24" border="0"></td><td style="border-top: 0px none; padding: 0px; line-height: 20px; background-repeat: repeat;" align="left" background="http://i1036.photobucket.com/albums/a449/a1tinhgia3/image/listbg.gif">
+          <div id="top_posters">
+         
+          <!-- BEGIN POSTER --><font style="font-family: Tahoma; font-size: 11px"> {POSTER.NAME}</font><span style="float: right">{POSTER.NB_POSTS}</span><br/><!-- END POSTER -->
+         
+         
+          </td></tr></table></div>
+              </div>
+         
+
+         
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <td style="padding: 0px; background: #f7f7f7 none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="100%">
+         
+        <div id="poster4" style="display:none;">
+
+        <table border="0" cellpadding="0" cellspacing="0" width="100%"><tr valign="top">
+        <td style="border-top: 0px none; padding: 0px; background: transparent url(http://i1036.photobucket.com/albums/a449/a1tinhgia3/image/list.gif) no-repeat scroll center top; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="24" height="200"><img src="http://illiweb.com/fa/empty.gif" width="24" border="0"></td><td style="border-top: 0px none; padding: 0px; line-height: 20px; background-repeat: repeat;" align="left" background="http://i1036.photobucket.com/albums/a449/a1tinhgia3/image/listbg.gif">
+
+         
+         
+                  <div class="truycapmoi1 style="height: 20px;width: 300px;"></div></span></div></td>
+         
+
+        </tr>
+        </tbody></table></div><div class="Page">
+        <table style="border-bottom-width: 0px;" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+               
+               
+                <script>
+        $(document).ready(function(){
+        $(function() {
+        $('<span class="truycap" />').load('/memberlist?mode=lastvisit&order=DESC&submit=Ok&username .truycapmoi', {limit: 10}, function() {
+        jQuery(this).hide()
+        .appendTo('.truycapmoi1')
+        .fadeIn(1);
+        });
+        return false;
+        });
+        $(function() {
+        $('<span class="truycap" />').load('/memberlist?mode=lastvisit&order=DESC&submit=Ok&username .K3sobai2', {limit: 10}, function() {
+        jQuery(this).hide()
+        .appendTo('.sobai2')
+        .fadeIn(1);
+        });
+        return false;
+        });
+        });
+        </script>
+             
+         
+         
+          </td></tr></table></div>
+            </td></table>
+</code>
+
+    Tiếp theo mod_top_post_users_week
+    Thay nó = code sau
+<code>
+         <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <td style="padding: 0px; background: #f7f7f7 none repeat scroll 0% 0%; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="100%">
+         
+        <div id="poster2" style="display:none;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%"><tr valign="top">
+        <td style="border-top: 0px none; padding: 0px; background: transparent url(http://i1036.photobucket.com/albums/a449/a1tinhgia3/image/list.gif) no-repeat scroll center top; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" width="24" height="200"><img src="http://illiweb.com/fa/empty.gif" width="24" border="0"></td><td style="border-top: 0px none; padding: 0px; line-height: 20px; background-repeat: repeat;" align="left" background="http://i1036.photobucket.com/albums/a449/a1tinhgia3/image/listbg.gif"><!-- BEGIN POSTER --><font style="font-family: Tahoma; font-size: 11px"> {POSTER.NAME}</font><span style="float: right">{POSTER.NB_POSTS}</span><br><!-- END POSTER --></td></tr></table></div>
+            </td></table>
+
+</code>
+
+
+
+
+
+Vui lòng ghi rõ nguồn khi sao chép bài viết này từ Cntt-k3.org !
