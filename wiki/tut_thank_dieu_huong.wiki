@@ -775,7 +775,7 @@ http://i77.servimg.com/u/f77/16/58/45/96/114.jpg
 
 Tiếp theo bạn muốn đặt thanh điều hướng ở chỗ nào thì thêm code này vào chỗ bạn muốn đặt cười nhăn răng
 
- </code>
+ <code>
      <div id="CNTToverlay1" onclick="CNTTlogin1()" style="display: none;"></div>
       <a onclick="CNTTlogin1();" class="dieuhuong" id="sign_in" title="Open Quick Navigation"><img src="http://www.ipbforumskins.com/skindemo/public/style_images/overlayr34x/icon_quicknav.png" alt=""></a>
         </code>
