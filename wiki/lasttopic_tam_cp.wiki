@@ -9,8 +9,8 @@ http://i76.servimg.com/u/f76/15/64/85/86/demola10.png
 Ưu điểm: dễ cài đặt , hình thức cũng khá gọn , bố cục cân đối Good good , Nhẹ , nhanh vì chả có gì nhiều lắm ... Dễ dàng tháo bỏ , phù hợp cho các bạn nào đang dùng skin FMVI ver 3 và đợi last mới ...
 Mà mình chỉ hướng dẫn thay cho skin FMVI3 thôi nhé , các skin khác xài last của mình làm gì cho nó phí cười lớn
 Đối với skin FMVI v3 . Các bạn hãy thêm vào index_body
-dưới </code>
-{JAVASCRIPT}<code>
+dưới <code>
+{JAVASCRIPT}</code>
  :
 
 <code>
