@@ -1,0 +1,19 @@
+phpbb2:
+
+<code>
+    jQuery(document).ready(function(){ jQuery(".spoiler td:eq(0)").click(function(){ jQuery(this).parent().parent().parent().find(".spoiler_content").toggle(500);  jQuery(".spoiler_closed").toggle(0); return false; }); });
+
+</code>
+punBB
+
+<code>
+    jQuery(document).ready(function(){ jQuery(".spoiler").click(function(){ jQuery(this).find(".spoiler_content").toggle(500); return false; }); });
+
+</code>
+phpBB3 / Invision
+
+<code>
+    jQuery(document).ready(function(){ jQuery(".spoiler dt").click(function(){ jQuery(this).parent().find(".spoiler_content").toggle(500); return false; }); });
+
+
+</code>
