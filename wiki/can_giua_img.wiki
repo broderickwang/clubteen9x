@@ -1,0 +1,27 @@
+
+http://i49.servimg.com/u/f49/17/59/85/75/canhgi10.png
+B1 :Cho vào css
+
+<code>
+    .ing img{
+    display: block;   
+    margin-left: auto;   
+    margin-right: auto;
+    }
+
+</code>
+Bước 2:
+Vào viewtopic_body tìm
+
+<code>
+    {postrow.displayed.MESSAGE}
+</code>
+
+Thay thành:
+
+<code>
+    <span class="ing">{postrow.displayed.MESSAGE}</span>
+</code>
+
+:ẩn:
+Nguồn : ST
