@@ -1,0 +1,9 @@
+ tạo 1 javascript mới, nhét cái nài vào
+
+
+<code>
+
+        $(function(){$(".nav:contains('')").each(function(){$(".module").remove();});});
+
+</code>
+đặt In all the pages =))
