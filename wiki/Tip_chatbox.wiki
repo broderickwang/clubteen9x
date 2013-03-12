@@ -1,0 +1,69 @@
+    Tổng hợp những mẹo để trang trí Chatbox ngầu
+
+    Sử dụng bằng cách thêm vào cuối CSS
+
+
+    Thay đổi Tiêu đề mặc định của Chatbox.
+    Mặc định là chữ "Chatbox", bạn có thể thay bằng từ khác.
+
+<code>
+            #chatbox_header .cattitle strong {
+               display: none;
+            }
+            #chatbox_header .cattitle:before{
+               content: "Ngộ nhể ...";
+            }
+
+</code>
+    Thay đổi màu tiêu đề Chatbox
+    thay bằng mã màu thích hợp
+
+<code>
+
+            #chatbox_header .catBottom .cattitle {
+               color: mã màu;
+            }
+
+</code>
+    Đổi màu các liên kết chức năng trên thanh tiêu đề
+<code>
+
+            #chatbox_header .chatbox-options .genmed,
+            #chatbox_header .chatbox-options,
+            #chatbox_header .chatbox-options a {
+               color: mã màu;
+            }
+
+</code>
+    Đổi màu danh sách thành viên
+
+<code>
+
+            #chatbox_members ul li,
+            #chatbox_members ul li a {
+               color: mã màu;
+            }
+</code>
+
+    Thêm ảnh nền Chatbox
+
+<code>
+
+            body.chatbox {
+               background: url(link ảnh);
+            }
+
+</code>
+    Thay đổi chiều cao mặc định của Chatbox
+
+<code>
+            #chatbox_top {
+               height: 200px !important;
+            }
+</code>
+
+    thay 200px bằng chiều cao thích hợp
+
+
+
+... tạm thời chỉ thế .. nếu có khả năng bạn hãy tiếp tục bài viết này !
