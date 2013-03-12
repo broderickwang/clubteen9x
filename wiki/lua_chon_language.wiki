@@ -1,0 +1,284 @@
+         
+         <code>
+        <script>
+        if ((document.getelementbyid) &&
+        window.addeventlistener || window.attachevent){
+         
+        (function(){
+         
+        var colours = new array("#ff0000","#00ff00","#9900ff"); //add as many colours as you like!
+        var numberofdots = 14;
+        var settimeoutspeed = 40; //timeout speed!
+        var followmousespeed = 0.03; //must be less than 1 & greater than 0!
+        var twistandspinspeed = 0.04;
+        var colourchangespeed = 2;
+         
+        //end config.
+        var idx = document.getelementsbytagname('div').length;
+        for (i = 0; i < numberofdots; i++){
+        document.write('<div id="dvs'+(idx+i)+'" style="position:absolute;top:0px;left:0px;'
+        +'width:2px;height:2px;background-color:'+colours[0]+';font-size:1px"><\/div>');
+        }
+        var h,y,ref;
+        var d = document;
+        var domww = (typeof window.innerwidth == "number");
+        var domsy = (typeof window.pageyoffset == "number");
+        var pi = 3.1415/180;
+        var buff = 74;
+        var the_dots = [];
+        var ev = 360/numberofdots;
+        var step2 = 1;
+        var pix = "px";
+        var y = 0;
+        var x = 0;
+        var ry = 0;
+        var rx = 0;
+        var dy = 0;
+        var dx = 0;
+        var sy = 0;
+        var sx = 0;
+        var scy = 0;
+        var scx = 0;
+        var counter1 = idx;
+        var counter2 = 0;
+        var counter3 = 0;
+        var step1 = 0;
+         
+        if (followmousespeed <= 0 || followmousespeed >= 1){
+        followmousespeed = 0.1;
+        }
+         
+        if (domww) ref = window;
+        else{
+        if (d.documentelement &&
+        typeof d.documentelement.clientwidth == "number" &&
+        d.documentelement.clientwidth != 0)
+        ref = d.documentelement;
+        else{
+        if (d.body &&
+        typeof d.body.clientwidth == "number")
+        ref = d.body;
+        }
+        }
+         
+        function winsize(){
+        var mozbar = ((domww) && ref.innerwidth != d.documentelement.offsetwidth)?20:0;
+        h = (domww)?ref.innerheight:ref.clientheight;
+        w = (domww)?ref.innerwidth - mozbar:ref.clientwidth;
+        }
+         
+        function scrolled(){
+        if (domww){
+        scy = ref.pageyoffset;
+        scx = ref.pagexoffset;
+        }
+        else{
+        scy = ref.scrolltop;
+        scx = ref.scrollleft;
+        }
+        }
+         
+        function mouse(e){
+        var msy = (domsy)?window.pageyoffset:0;
+        if (!e) e = window.event;
+        if (typeof e.pagey == "number"){
+        y = e.pagey - msy;
+        x = e.pagex;
+        }
+        else{
+        y = e.clienty - msy;
+        x = e.clientx;
+        }
+        }
+         
+        function colourstep(){
+        counter1 += step2;
+        if (counter1 >= numberofdots+idx){
+        counter1 = idx;
+        counter2 += step2;
+        }
+        if (counter2 == colours.length){
+        counter2 = 0;
+        }
+        scrolled();
+        document.getelementbyid("dvs"+counter1).style.backgroundcolor = colours[counter2];
+        }
+         
+        function doitall(){
+        counter3++;
+        step1 -= twistandspinspeed;
+         
+        dy = ry+=(y-ry)*followmousespeed;
+        dx = rx+=(x-rx)*followmousespeed;
+        if (ry >= h-buff){
+        ry = h-buff;
+        }
+        if (ry <= buff){
+        ry = buff;
+        }
+        if (rx >= w-buff){
+        rx = w-buff;
+        }
+        if (rx <= buff){
+        rx = buff;
+        }
+        if (counter3 > colourchangespeed){
+        colourstep();
+        counter3 = 0;
+        }
+         
+        for (i = 0; i < numberofdots; i++){
+        the_dots[i].top = ry + 70 * math.cos(step1 + i * ev * pi) * math.sin(step1/2) + scy + pix;
+        the_dots[i].left = rx + 70 * math.sin(step1 + i * ev * pi) * math.cos(1+step1/2) + scx + pix;
+        }
+         
+        settimeout(doitall,settimeoutspeed);
+        }
+         
+        function init(){
+        for (i = 0; i < numberofdots; i++){
+        the_dots[i] = document.getelementbyid("dvs"+(idx+i)).style;
+        }
+        winsize();
+        doitall();
+        }
+         
+        if (window.addeventlistener){
+        window.addeventlistener("resize",winsize,false);
+        window.addeventlistener("load",init,false);
+        document.addeventlistener("mousemove",mouse,false);
+        }
+        else if (window.attachevent){
+        window.attachevent("onresize",winsize);
+        window.attachevent("onload",init);
+        document.attachevent("onmousemove",mouse);
+        }
+         
+        })();
+        }//end.
+        </script>
+        <div class="widget-content">
+        <form action="http://translate.googleusercontent.com/translate_c?">
+        <table id="webtb">
+        <tbody>
+        <tr>
+        <td>
+        <select style="width: 12em;" name="tl">
+         
+        <option value="ar" />
+        Arabic
+         
+        <option value="bg" />
+        Bulgarian
+         
+        <option value="ca" />
+        Catalan
+         
+        <option value="zh-cn" />
+        Chinese (simplified)
+         
+        <option value="zh-tw" />
+        Chinese (traditional)
+         
+        <option value="hr" />
+        Croatian
+         
+        <option value="cs" />
+        Czech
+         
+        <option value="da" />
+        Danish
+         
+        <option value="nl" />
+        Dutch
+         
+        <option value="en" />
+        English
+         
+        <option value="tl" />
+        Filipino
+         
+        <option value="th" />
+        Thailand
+         
+        <option value="fi" />
+        Finnish
+         
+        <option value="fr" />
+        French
+         
+        <option value="de" />
+        German
+         
+        <option value="el" />
+        Greek
+         
+        <option value="iw" />
+        Hebrew
+         
+        <option value="hi" />
+        Hindi
+         
+        <option value="id" />
+        Indonesian
+         
+        <option value="it" />
+        Italian
+         
+        <option value="ja" />
+        Japanese
+         
+        <option value="ko" />
+        Korean
+         
+        <option value="lv" />
+        Latvian
+         
+        <option value="lt" />
+        Lithuanian
+         
+        <option value="no" />
+        Norwegian
+         
+        <option value="pl" />
+        Polish
+         
+        <option value="pt" />
+        Portuguese
+         
+        <option value="ro" />
+        Romanian
+         
+        <option value="ru" />
+        Russian
+         
+        <option value="sr" />
+        Serbian
+         
+        <option value="sk" />
+        Slovak
+         
+        <option value="sl" />
+        Slovenian
+         
+        <option value="es" />
+        Spanish
+         
+        <option value="sv" />
+        Swedish
+         
+        <option value="uk" />
+        Ukrainian
+         
+        <option selected value="vi" />
+        Select Language
+         
+        </select>
+        <input id="url" value="http://baivong.us.to{TOPIC_URL}" name="u" type="hidden" />
+        <input value="vi" name="sl" type="hidden" />
+        <input value="vi" name="hl" type="hidden" />
+        <input value="utf-8" name="ie" type="hidden" />
+        <input style="width: auto;" value="Translate" type="submit" />
+         
+
+</code>
