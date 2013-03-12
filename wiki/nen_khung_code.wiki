@@ -13,7 +13,7 @@
 
 </code>
 
-</code>
+<code>
 .code{
 font-family: Arial, Verdana; <~ tùy chỉnh font chữ
 font-size: 12px; <~ size chữ trong khung code
@@ -34,4 +34,4 @@ border-right-width: 1px;
 border-bottom-width: 1px
 // ngoài ra còn nhiều thuộc tính khác như margin, overflow, padding ... có thể áp dụng để trang trí thêm
 
-<code>
+</code>
