@@ -1,0 +1,23 @@
+
+    http://www.vandonstar.com/t19089-topic
+
+
+
+CSS
+
+<code>
+    .postbody img{max-width:50%;cursor:-moz-zoom-in;}
+    .imgmax{max-width:100%!important;cursor:-moz-zoom-out}
+
+
+</code>
+Chèn vào cuối viewtopic_body
+
+<code>
+    <script type="text/javascript">
+    //<![CDATA[
+    $('.postbody img').click(function(){$(this).toggleClass('imgmax');});
+    //]]>
+    </script>
+
+</code>
