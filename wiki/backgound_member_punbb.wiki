@@ -1,0 +1,48 @@
+    THÔNG TIN
+    *Demo: Gần giống như vầy http://i44.servimg.com/u/f44/15/64/85/86/cp12311.png
+    *Phiên bản xây dựng: PunBB
+    *Viết bởi handsomevip007
+    *Ứng dụng: tạo nền bài viết riêng cho các thành viên đặc biệt
+
+
+    *Vui lòng không sao chép bài viết này đi nơi khác*
+
+
+CÀI ĐẶT
+-B1:Vào viewtopic_body tìm
+
+
+<code>
+    <a name="{postrow.displayed.U_POST_ID}"></a>
+
+
+</code>
+thay bằng
+
+
+<code>
+    <a name="{postrow.displayed.U_POST_ID}"></a>{postrow.displayed.POSTER_NAME}
+
+</code>
+
+-B2: Chèn code sau vào CSS
+
+
+<code>
+    .postmain [id*="p"]{background:transparent!important}
+    .post a+a[href^="/u"]{display:none}
+
+
+</code>
+
+-B3: Chèn nền cho thành viên, dùng code sau chèn vào CSS
+
+
+<code>
+    a[href="/u1"]+.postmain{background:url(link ảnh)}
+
+</code>
+Thay /u1 bằng link của thành viên, thêm bấy nhiêu code trên cho bấy nhiêu thành viên
+
+    Code chưa test, nếu có vấn đề vui lòng góp ý ngay dưới topic này Cười nhe răng
+
