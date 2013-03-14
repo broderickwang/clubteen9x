@@ -1,0 +1,73 @@
+Display - Templates - Quản lý tổng thể - Viewtopic_body
+Tìm code này
+http://i24.servimg.com/u/f24/15/64/85/86/jumbox10.jpg
+
+<code>
+    <form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+    ...
+    </form>
+
+</code>
+
+... và bao quanh nó bằng
+
+
+<code>
+    <div id="bvjump">
+    ...
+    </div>
+
+
+</code>
+Tìm đoạn code này:
+
+
+<code>
+          <td align="left" valign="middle" nowrap="nowrap" {WIDTH_GALLERY}>
+             <span class="nav">
+                <!-- BEGIN switch_user_authpost -->
+                <a href="{U_POST_NEW_TOPIC}" rel="nofollow"><img src="{POST_IMG}" id="{POST_IMG_ID}Newtopic" alt="{L_POST_NEW_TOPIC}" align="middle" border="0" /></a>   
+                <!-- END switch_user_authpost -->
+                <!-- BEGIN switch_user_authreply -->
+                <a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}" alt="{L_POST_REPLY_TOPIC}" align="middle" border="0" /></a>
+                <!-- END switch_user_authreply -->
+             </span>
+          </td>
+
+          <!-- BEGIN viewtopic_bottom -->
+          <td align="right" nowrap="nowrap"><span class="gensmall">{L_JUMP_TO}: {S_JUMPBOX_SELECT} <input class="liteoption" type="submit" value="{L_GO}" /></span></td>
+          <!-- END viewtopic_bottom -->
+
+</code>
+
+...và thay bằng:
+
+
+<code>
+          <td id="j1" align="left" valign="middle" nowrap="nowrap" {WIDTH_GALLERY}>
+             <span class="nav">
+                <!-- BEGIN switch_user_authpost -->
+                <a href="{U_POST_NEW_TOPIC}" rel="nofollow"><img src="{POST_IMG}" id="{POST_IMG_ID}Newtopic" alt="{L_POST_NEW_TOPIC}" align="middle" border="0" /></a> 
+                <!-- END switch_user_authpost -->
+                <!-- BEGIN switch_user_authreply -->
+                <a href="{U_POST_REPLY_TOPIC}"><img src="{REPLY_IMG}" alt="{L_POST_REPLY_TOPIC}" align="middle" border="0" /></a>
+                <!-- END switch_user_authreply -->
+             </span>
+          </td>
+
+          <td id="j2" align="right" nowrap="nowrap"><span class="gensmall">{S_JUMPBOX_SELECT} <input class="liteoption" type="submit" value="{L_GO}" /></span></td>
+
+</code>
+Bây giờ muốn mang nó đi đâu thì chỉ cần dùng code sau:
+
+<code>
+    <script type="text/javascript">
+     jQuery.get('/t1-baivong', function(data) {
+     html = jQuery('#bvjump', data).html();
+     jQuery('#jumbox').html(html);
+     jQuery('#jumbox #j1').remove();
+     });
+    </script><div id="jumbox">Loading...</div>
+
+</code>
+Viết bởi baivong - Độtkích.tk
