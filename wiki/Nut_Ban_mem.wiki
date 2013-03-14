@@ -6,8 +6,8 @@ Title: Quick Ban
 Use as table type: No
 Name: Có thể để trống
 Widget source:
+<code>
 
-Code: Chọn nội dung CODE
     <script type="text/javascript">$(function() {
     var x = document.getElementsByClassName('postprofile');
     for (i=0;i<x.length;i++) {
@@ -19,7 +19,7 @@ Code: Chọn nội dung CODE
     x[i].appendChild(ban);
     }
     });</script>
-
+</code>
 
 
 phpBB2
