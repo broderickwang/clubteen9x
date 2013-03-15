@@ -1,0 +1,43 @@
+Rất đơn giản là vào index_body và chèn đoạn script này phía dưới 
+
+
+<code>{CHATBOX_TOP}
+
+</code>
+
+<code>
+    <!-- BEGIN switch_user_logged_in -->
+    <script type="text/javascript">//<![CDATA[$('#frame_chatbox').load(function(){if($(this).contents().find('#chatbox_option_disco').css('display')=='none'){$(this).fadeOut(1000,function(){$(this)[0].contentWindow.CB_disconnect();$(this).fadeIn(1000);});};});//]]></script>
+    <!-- END switch_user_logged_in -->
+
+
+</code>
+
+Còn đây là Archives cho mọi người (Chú ý là trong 2 code chỉ được chọn 1 code thôi nha)
+
+
+<code>
+    <!-- BEGIN switch_user_logged_in -->
+    <script type="text/javascript">//<![CDATA[$('#frame_chatbox').fadeOut(1000,function(){$(this).attr('src','/chatbox/index.forum?archives=1');$(this).fadeIn(3000,function(){if($(this).contents().find('#chatbox_option_disco').css('display')=='none'){$(this)[0].contentWindow.CB_disconnect();};});});//]]></script>
+    <!-- END switch_user_logged_in -->
+
+
+</code>
+Thank thôi nào!
+<code>
+<script type="text/javascript">
+//<![CDATA[
+if (window.XMLHttpRequest) {
+    var http_request = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+    var http_request = new ActiveXObject("Microsoft.XMLHTTP");
+};
+http_request.open('GET', '/chatbox/chatbox_actions.forum?achives&mode=connect' + $("#logout").attr("href").substr($("#logout").attr("href").indexOf("&tid="), 37), true);
+http_request.send(null);
+//]]>
+</script>
+<!-- END switch_user_logged_in -->
+</code>
+
+VD: <iframe id="chatbox" src="..." />
+Sau đó thay ID #chatbox vào #frame_chatbox trong script là được 
