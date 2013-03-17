@@ -1,0 +1,12 @@
+   <code> /* Icon đầu forum-------------------------------------------------------------------------------*/
+    #navstrip li.begin {
+       padding-left: 20px;
+       background: url('link ảnh cần thay') no-repeat left 50%;
+            height: 24px;
+       }
+    #navstrip li {
+       float: left;
+       margin: 0 5px;
+       padding-left: 18px;
+       background: url('link ảnh liệt kê bên trong') no-repeat left 50%;
+       }</code>
