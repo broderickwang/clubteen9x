@@ -1,0 +1,119 @@
+Demo:
+http://img706.imageshack.us/img706/6584/18796083.jpg
+
+Temp > Post & Tin nhắn > posting_body:
+Tìm
+
+<code>
+
+        <!-- BEGIN switch_attachment_list -->
+        .....................
+        ..........đến .....
+        <!-- END switch_attachment -->
+</code>
+
+Thay bằng đoạn :
+
+<code>
+
+        <!-- BEGIN switch_attachment_list -->
+        <div id="attachments">
+        <table class="forumline" width="100%" border="0" cellspacing="1" cellpadding="0">
+        <tr><th class="thHead" colspan="2">
+        <table width="100%"><tr>
+        <td width="10"></td><td align="center"><span class="gen"><b>File đính kèm</b></span></td><td width="10"></td>
+        </tr></table>
+        </th></tr>
+        <!-- BEGIN attachments -->
+        <tr>
+        <td width="22%" class="row1">
+        <span class="gen"><b>Tên file :</b></span><br />
+        </td>
+        <td width="78%" class="row2">
+        <!-- BEGIN switch_is_orphan -->
+        <span class="gen">{switch_attachment_list.attachments.switch_is_orphan.FILENAME}</span>
+        <!-- END switch_is_orphan -->
+        <!-- BEGIN switch_is_not_orphan -->
+        <a href="{switch_attachment_list.attachments.switch_is_not_orphan.U_ATTACH_URL}" class="gen">{switch_attachment_list.attachments.switch_is_not_orphan.FILENAME}</a>
+        <!-- END switch_is_not_orphan -->
+        <!-- BEGIN switch_can_delete -->
+        <input type="submit" value="{L_ATTACHMENT_DELETE}" name="delete_file[{switch_attachment_list.attachments.ATTACH_POS}]" /><br />
+        <!-- END switch_can_delete -->
+        </td>
+        </tr>
+        <tr>
+        <td width="22%" class="row1">
+        <span class="gen"><b>Ghi chú :</b></span>
+        </td>
+        <td width="78%" class="row2">
+        <!--textarea name="comment_list[{switch_attachment_list.attachments.ATTACH_POS}]" cols="35" rows="3" style="width:100%">{switch_attachment_list.attachments.ATTACH_COMMENT}</textarea><br />
+        <a href="{switch_attachment_list.attachments.U_ATTACH_URL}" class="gen">{switch_attachment_list.attachments.FILENAME}</a>&amp;nbsp;&amp;nbsp;<input class="liteoption" type="submit" value="{L_ATTACHMENT_DELETE}" name="delete_file[{switch_attachment_list.attachments.ATTACH_POS}]" /-->
+        <input class="post" type="text" id="filecomment{switch_attachment_list.attachments.ATTACH_POS}" name="comment_list[{switch_attachment_list.attachments.ATTACH_POS}]" value="{switch_attachment_list.attachments.ATTACH_COMMENT}" maxlength="255" style="width: 450px" />
+        <input type="hidden" value="{switch_attachment_list.attachments.ATTACH_ID}" name="attachment_data[{switch_attachment_list.attachments.ATTACH_POS}][attach_id]" />
+        <input type="hidden" value="{switch_attachment_list.attachments.IS_ORPHAN}" name="attachment_data[{switch_attachment_list.attachments.ATTACH_POS}][is_orphan]" />
+        <input type="hidden" value="{switch_attachment_list.attachments.REAL_FILENAME}" name="attachment_data[{switch_attachment_list.attachments.ATTACH_POS}][real_filename]" />
+        <input type="hidden" value="{switch_attachment_list.attachments.ATTACH_COMMENT}" name="attachment_data[{switch_attachment_list.attachments.ATTACH_POS}][attach_comment]" />
+        </tr>
+         
+        <!-- END attachments -->
+        </table>
+        </div>
+        <!-- END switch_attachment_list -->
+         
+        <!-- BEGIN switch_attachment -->
+        <div id="attachment" style="display:{ATTACHMENT_CLOSE}">
+        <table class="forumline" width="100%" border="0" cellspacing="1" cellpadding="0">
+        <tr><th class="thHead">
+        <table width="100%"><tr>
+        <td width="10"></td><td align="center"><span class="gen"><b>Đính kèm file</b></span></td><td width="10"><a href="javascript:ShowHideLayernew('attachment')"><img src="{TABS_MORE_IMG}" alt="+" align="middle" border="0"></a></td>
+        </tr></table>
+        </th></tr>
+        </table>
+        </div>
+         
+        <div id="attachment_show" style="display:{ATTACHMENT_OPEN}">
+        <table class="forumline" width="100%" border="0" cellspacing="1" cellpadding="0">
+        <tr><th class="thHead" colspan="2">
+        <table width="100%"><tr>
+        <td width="10"></td><td align="center"><span class="gen"><b>Đính kèm file</b></span></td>
+        <td width="10"><a href="javascript:ShowHideLayernew('attachment')">
+        <img src="{TABS_LESS_IMG}" alt="-" align="middle" border="0"></a></td>
+        </tr></table>
+        </th></tr>
+        <tr>
+        <td class="row1">
+         
+        <table class="forumline" width="100%" cellspacing="1" cellpadding="0" border="0">
+        <tr>
+        <td class="row1" colspan="2"><span class="gen">Bạn có thể đính kèm một hay nhiều file với các định dạng sau:</span><br /><span class="info">{EXT_LIST}</span><br /></td>
+        </tr>
+         
+        <tr>
+        <td class="row1" width="22%"><span class="gen"><b>Tên file :</b></span></td>
+        <td class="row2" width="78%"><span class="genmed"><input class="post" type="file" id="fileupload" name="fileupload" value="" /><input value="Gửi file" type="submit" name="add_file" /> (Dung lượng mỗi file không quá 1MB)</span></td>
+        </tr>
+         
+        <tr>
+        <td class="row1" width="22%"><span class="gen"><b>Ghi chú :</b></span></td>
+        <td class="row2" width="78%"><span class="genmed"><input class="post" type="text" style="width:450px" id="filecomment" name="filecomment" value="" maxlength="255" /></span></td>
+        </tr>
+         
+        <!-- BEGIN modif_dav_08032010 -->
+        <tr>
+        <td valign="top" width="15%"><label class="gen" for="fileupload">Tên file :</label><br /><br />
+        <label class="gen" for="filecomment">Ghi chú :</label></td>
+        <td width="80%"><input type="file" id="fileupload" name="fileupload" /><input type="submit" name="add_file" /> (Dung lượng mỗi file không quá 1MB)<br />
+        <textarea id="filecomment" name="filecomment" cols="35" rows="3" style="width:100%"></textarea></td>
+        </tr>
+        <!-- END modif_dav_08032010 -->
+         
+        </table>
+        </td>
+        </tr>
+        </table>
+        </div>
+         
+        <!-- END switch_attachment -->
+</code>
+
+Thay 1MB bằng giới hạn của 4rum bạn.
