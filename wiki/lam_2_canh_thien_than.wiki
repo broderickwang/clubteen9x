@@ -1,0 +1,13 @@
+
+http://i25.servimg.com/u/f25/16/25/04/88/canh110.gifAn Nguyễnhttp://i25.servimg.com/u/f25/16/25/04/88/canh210.gif
+Code :
+
+<code>
+    span[style="color:#FA2408"]:before{content: url(http://i25.servimg.com/u/f25/16/25/04/88/canh110.gif);padding-right:2px;}
+    span[style="color:#FA2408"]:after{content: url(http://i25.servimg.com/u/f25/16/25/04/88/canh210.gif);padding-right:2px;}
+
+
+</code>
+Bỏ vào Css nhá!<code> [style="color:#FA2408"]</code> thay bằng màu của nhóm nhá!
+
+Hì ! Cái này độ lại của Phongcach.us đó
