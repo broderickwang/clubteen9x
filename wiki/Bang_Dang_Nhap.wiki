@@ -1,0 +1,32 @@
+
+    1.
+http://i84.servimg.com/u/f84/12/84/54/56/quickl10.png
+<code>
+
+            <form action="/login.forum" method="post"><table cellspacing="1" cellpadding="3" border="0"><tr><td width="45%" align="right">Kí danh:<input type="text" name="username" size="25" maxlength="40" />Mật khẩu:<input type="password" name="password" size="25" maxlength="32" /><td colspan="2">Tự động đăng nhập: <input type="checkbox" name="autologin" checked="true" /></td></tr><tr align="center"><td colspan="2"><input type="submit" class="mainoption" name="login" value="Đăng nhập" /></table></form>
+
+</code>
+
+    2.
+http://i84.servimg.com/u/f84/12/84/54/56/quickl11.png
+   
+<code>
+            <form action="/login.forum" method="post"><table cellspacing="1" cellpadding="3" border="0"><tr><td width="45%" align="right">Kí danh</td><td><input type="text" name="username" size="25" maxlength="40" /></td></tr><tr><td align="right">Mật khẩu:</td><td><input type="password" name="password" size="25" maxlength="32" /></td></tr><tr align="center"><td colspan="2">Tự động đăng nhập: <input type="checkbox" name="autologin" checked="true" /></td></tr><tr align="center"><td colspan="2"><input type="submit" class="mainoption" name="login" value="Đăng nhập" /></td></tr></table></form>
+
+</code>
+    3.
+http://i84.servimg.com/u/f84/12/84/54/56/quickl12.png
+<code>
+
+            <form action="/login.forum" method="post"> Kí danh:</td><td><input type="text" name="username" size="25" maxlength="40" /><td align="right">Mật khẩu:</td><td><input type="password" name="password" size="25" maxlength="32" /></td></tr> <tr align="center"><td colspan="2"><br><center>Tự động đăng nhập: <input type="checkbox" name="autologin" checked="true" /></td></tr><tr align="center"><td colspan="2"><input type="submit" class="mainoption" name="login" value="Đăng nhập" /></td></tr></table></center></form>
+
+
+</code>
+    Để bảng đăng nhập chỉ hiện với khách, bạn phải chèn vào template và chèn code bảng đăng nhập trên vào giữa <!-- BEGIN switch_user_logged_out --> và <!-- END switch_user_logged_out --> như sau:
+
+<code>
+             <!-- BEGIN switch_user_logged_out -->
+             
+            code khung đăng nhập
+             
+            <!-- END switch_user_logged_out --></code>
