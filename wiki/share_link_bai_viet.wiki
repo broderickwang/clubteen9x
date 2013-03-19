@@ -1,0 +1,26 @@
+Tìm :
+<code>
+    <!-- END postrow -->
+    <!-- BEGIN no_post -->
+
+</code>
+Chèn code sau vào giữa 2 dòng đó nhé :
+
+<code>
+         
+        <div align="center">
+        <center>
+        <table>
+        <TR>
+        <TD>
+        <div class="smallfont" align="center" style="width: 515; height: 19">
+        <font color="#FF00FF"><p>{L_MESSAGE}:</p></font>
+        <font color="DarkOrchid">
+        ****************</font><font color="#FF00FF"><b>Hãy cùng chia sẻ với bạn bè bằng cách </b></font><font color="DarkOrchid">****************</font>
+        </div>
+        <p align="center"><font color="red"><b>Copy đường link dưới đây gửi đến nick yahoo bạn bè!</p></font>
+        <textarea style="width: 500; height: 35" rows="2" name="embedhtml" cols="100" readonly="readonly" onclick="this.select()" id="embedhtml">{TOPIC_TITLE} - http://c3zone.forumj.net{TOPIC_URL} Xin lỗi đã Spam , gửi cho bạn bè tin này dùm mình nha ( an tâm là không có virus đâu )</textarea>
+        </TD></TR>
+        </table>
+        </center>
+        </div></code>
