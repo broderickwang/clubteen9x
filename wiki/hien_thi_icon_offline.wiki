@@ -1,0 +1,15 @@
+Mặc định phpbb2 không cho hiển thị ảnh khi offline
+Chúng ta có thể can thiệp vào temp = code sau :
+Tìm trong template\quản lí tổng thể \viewtopic_body:
+
+<code>
+
+        {postrow.displayed.ONLINE_IMG}
+
+</code>
+
+Thay bằng code
+
+<code>
+
+        <div style="background: url(link ảnh offline); height: 23px; width: 23px; border: 0px;">{postrow.displayed.ONLINE_IMG}</div></code>
