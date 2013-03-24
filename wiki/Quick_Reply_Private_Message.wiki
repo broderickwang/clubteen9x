@@ -1,0 +1,93 @@
+• Hiệu ứng slide trả lời nhanh tin nhắn
+
+• Tham khảo từ http://help.forumotion.com/t114654-form-to-send-pm-s
+
+• Tự động chèn tên người gửi và tiêu đề tin nhắn
+
+
+http://img824.imageshack.us/img824/1685/pmse.png
+
+Hướng dẫn :
+
+Bước 1 : ACP --> Display --> Post & Tin nhắn --> privmsgs_read_body : Tìm đoạn code sau
+
+<code>
+
+    <!-- BEGIN switch_post_reply -->
+             <p class="posting">{REPLY_PM_IMG}</p>
+             <!-- END switch_post_reply -->
+          </div>
+       </div>
+    </form>
+
+</code>
+Thêm sau đoạn code đó :
+
+<code>
+    <div id="qpri_reply" style="display: none;">
+        <form action="/privmsg" class="frm-form" method="post" name="post" onsubmit="return vB_Editor['text_editor'].prepare_submit(0,0)" enctype="multipart/form-data">
+            <div class="main-head clearfix scihead" style=""><span class="qtitle" style="">Trả lời nhanh tin nhắn</span>
+            </div>
+            <div class="main-content frm">
+                <fieldset class="frm-set multi">
+                    <dl><dt><label>Username:</label></dt>
+                        <dd>
+                            <input style="margin-top:2px" type="text" id="username" name="username[]" value="{MESSAGE_FROM}" tabindex="1">
+                        </dd><dt><label>Tittle:</label></dt>
+                        <dd>
+                            <input required="required" type="text" id="subject" name="subject" value="Re: {POST_SUBJECT}" tabindex ""="">
+                        </dd>
+                   
+                        <div class="clear"></div>
+                        <div id="textarea_content" class="posting-block">
+                            <dl>
+                                <dd class="frm-textarea" style="width:88%;">
+                                    <textarea id="text_editor_textarea" onclick="storeCaret(this)" rows="15" cols="9" onkeyup="storeCaret(this)" name="message" tabindex="3" onselect="storeCaret(this)" wrap="virtual" style="margin-top: 0px; margin-bottom: 0px; height: 210px;"></textarea>
+                                    <br>
+                                </dd>
+                            </dl>
+                        </div>
+                    </dl>
+                </fieldset>
+                <input type="submit" name="post" value="Send" tabindex="6" accesskey="s" style="margin-left: 50%;">
+            </div>
+        </form>
+        <div id="scifoot" style="margin-top: -21px;"></div>
+    </div>
+
+</code>
+
+Bước 2 : ACP --> Templates --> Quản Lý Tổng Thể --> overall_footer_begin
+Thêm đoạn Javascript sau
+
+<code>
+    <script language="javascript">
+      $(function () {
+        $('.paged-foot .paging')
+      .after('<div id="priv_msg_tog" class="button">Quick reply</div>');
+        $('.pun-privmsg')
+            .appendTo('.main .main-head');
+        $('.pun-privmsg')
+            .parent()
+            .css('height', 'auto');
+        $('#priv_msg_tog')
+            .click(function () {
+            var priv = $('#qpri_reply')
+                .css('display');
+            if (priv == 'none') {
+                $('#qpri_reply')
+                    .slideDown(500);
+                $('#priv_msg_tog')
+                    .html('Close Reply');
+            }
+            else if (priv == 'block') {
+                $('#qpri_reply')
+                    .slideUp(500);
+                $('#priv_msg_tog')
+                    .html('Toggle Reply');
+            }
+        });
+    });</script>
+
+
+</code>
