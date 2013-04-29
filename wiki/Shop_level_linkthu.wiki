@@ -1,3 +1,5 @@
+Demo online: http://invision.chinhphuc.info/h72-Shop-Level
+
 Hướng dẫn cho 2 phiên bản: Invision và PunBb
 
 General >> Forum >> Categories and forums >> Tạo chuyên mục mới: Tên : Linh Thú
@@ -369,6 +371,7 @@ Sau khi tạo được topic mới, topic của bạn sẽ cón link dạng này
 thì các bạn lấy số 920 thay vào số 927 trong đoạn HTML
 
 <code>
+
                     $.post("/post?t=927&mode=reply", {
                         subject: b,
                         message: e,
@@ -390,7 +393,6 @@ Spoiler:
 
 
     Tạo javascript mới, đặt In the topics, nội dung như sau:
-
 <code>
 
             function miarank(a, b, x, y) {
@@ -441,12 +443,11 @@ Spoiler:
                         var f = '[' + $(".thudo1").html() + ']';
 </code>
     thay bằng
-
 <code>
 
                         var f = $(".thudo1").html();
-</code>
 
+</code>
     Chèn đoạn này vào Viewtopic_body, tại vị trí bạn muốn hiển thị:
 
 <code>
@@ -455,7 +456,6 @@ Spoiler:
 
 </code>
     Tạo javascript mới, đặt In the topics, nội dung như sau:
-
 <code>
 
             function miarank(Posts, Hcoins, Reputation, Avatar) {
@@ -470,8 +470,8 @@ Spoiler:
                   }
                   document.write('<fieldset class="level" style="border: 1px solid #D4D4D4"><legend><font color="red"><b>Cấp độ : ' + g + '</b></font> </legend><span class="pet" align="center" style="width:140px;margin-top:-4px;padding-left:5px"><img width="130px" height="130px" src="http://i69.servimg.com/u/f69/17/70/31/89/' + Avatar + '0' + hs + '10.gif"></span></fieldset>')
             }
-
 </code>
+
     Cách này mình cho tăng cấp hơi chậm Smile
     Các bạn có thể sửa tốc đố bằng cách chỉnh cấp số nhân nhé Smile
 
@@ -487,7 +487,6 @@ Spoiler:
 
 
     Tạo javascript mới, đặt In the topics, nội dung như sau:
-
 <code>
 
             function miarank(a, b, x, y) {
@@ -524,8 +523,8 @@ Bị bí quá thì quăng cái link 4r lên đây mình xem cho Smile
     Demo & Source Code: http://invision.chinhphuc.info
     Copyright © 2012 IFC
     Updating...
-
-H4:<code>function treatvar(nom) {
+h4-
+<code>function treatvar(nom) {
     var trouve = xhr.responseText.replace(RegExp("^.+<li style=\"margin-bottom:5px;direction:ltr;text-align:left;\"><strong>&#123;" + nom + "&#125;<\/strong>&nbsp;:&nbsp;(.*?)&nbsp;<span style='direction:ltr'>\(.*?\)<\/span><br \/><\/li>.+$"), '$1');
     if (xhr.responseText == trouve) return;
     var children = document.getElementsByTagName('*') || document.all;
