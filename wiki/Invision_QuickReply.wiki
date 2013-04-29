@@ -1,0 +1,65 @@
+
+   <code> $(function () {
+     
+        var notme = {
+
+            timlink: function (a) {
+                a = a.substring(a.indexOf("<a href=") + 9);
+                b = a.indexOf('"');
+                return a.substring(0, b)
+            },
+            upbai: function (a) {
+                var b = a.split('#')[1];
+                $('.post:last').after("<div id='p" + b + "'><div align=center><img src='http://i10.servimg.com/u/f10/16/03/04/56/loadba10.gif'/></div></div>");
+                $.get(a, function (c) {
+                    $('#p'+b).attr("class", "post");
+
+                    $('#p'+b).html($(c).find(".post--" + b).html());
+                    $('input[name=post]').show().prev().show().next().next().remove();
+    location.href = a;
+                });
+                $("#text_editor_textarea").val('');
+                $('input[name=lt]').val(b);
+
+
+            }
+        };
+        $('input[name=post]').click(function () {
+            if ($("#text_editor_textarea").val().replace('<br>', '').replace(/ /gi, '').length < 2) {
+                alert('Nội dung quá ngắn vui lòng nhập lại')
+            } else {
+                $(this).after('<span>Đang gửi đợi chút nha :D</span>');
+
+                $(this).hide().prev().hide();
+                var a = $("form").serialize() + "&post=1";
+                $.post('/post', a, function (c) {
+                    if (c.indexOf("Flood control") > 0) {
+                        alert('Bạn chưa gửi được do bạn vừa gửi một bài cách đây không lâu.');
+                        $('input[name=post]').show().prev().show().next().next().remove();
+                    } else if (c.indexOf('A new message') > 0) {
+                        alert('Vừa có người gửi trước đó. Vui lòng nhấn OK.');
+                        window.location.reload();
+                    } else {
+                        if ($("html").attr("xml:lang") == "en") {
+
+                            var a = c.indexOf("has been sent"),
+                                e = c.indexOf("entered successfully");
+
+                            0 < a || 0 < e ? (c = c.substring(0 < a ? a : e), c = notme.timlink(c), notme.upbai(c)) : (alert('Error! please press F5 of turn off A/a for send reply.'))
+                        } else if ($("html").attr("xml:lang") == "vi") {
+                            var a = c.indexOf("Bấm chuột");
+
+
+                            0 < a ? (c = c.substring(a), c = notme.timlink(c), notme.upbai(c)) : (alert('Có lỗi vui lòng ấn F5 hoặc tắt nút A/A để gửi bài.'))
+                        }
+
+
+                    }
+                });
+            }
+            return false
+        });
+
+    });
+
+</code>
