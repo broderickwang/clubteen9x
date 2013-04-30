@@ -2,6 +2,24 @@ Demo online: http://invision.chinhphuc.info/h72-Shop-Level
 
 Hướng dẫn cho 2 phiên bản: Invision và PunBb
 
+General >> Messages and e-mails >> Announcements:
+General announcements options
+
+    Activate announcements : Yes
+    Announcements display : All pages
+    Scrolling : No
+
+Tạo mới ( http://illiweb.com/fa/admin/icones/ajouter.png )
+
+    Name : drop down
+    Content * :
+
+<code>
+            <span class="name" id="userID" style="display:none">{USERLINK}</span>
+            <span style="display:none" id="numID"></span>
+</code>
+Nhớ là phải luôn luôn đặt drop down lên trên cùng.
+
 General >> Forum >> Categories and forums >> Tạo chuyên mục mới: Tên : Linh Thú
 Phân quyền:
 http://i81.servimg.com/u/f81/17/70/31/89/per10.png
@@ -363,15 +381,14 @@ Tạo trang HTML mới (lưu 2 lần)
             });
         });
         </script>
-
 </code>
+
 
 Ra ngoài 4r, vào chuyên mục vừa tạo >> Gửi bài mới, nội dung gì tùy bạn.
 Sau khi tạo được topic mới, topic của bạn sẽ cón link dạng này: http://invision.chinhphuc.info/t920-topic#4941
 thì các bạn lấy số 920 thay vào số 927 trong đoạn HTML
 
 <code>
-
                     $.post("/post?t=927&mode=reply", {
                         subject: b,
                         message: e,
@@ -393,6 +410,7 @@ Spoiler:
 
 
     Tạo javascript mới, đặt In the topics, nội dung như sau:
+
 <code>
 
             function miarank(a, b, x, y) {
@@ -443,19 +461,20 @@ Spoiler:
                         var f = '[' + $(".thudo1").html() + ']';
 </code>
     thay bằng
+
 <code>
 
                         var f = $(".thudo1").html();
-
 </code>
+
     Chèn đoạn này vào Viewtopic_body, tại vị trí bạn muốn hiển thị:
 
 <code>
-
                                                               <script>miarank(<!-- BEGIN profile_field -->'{postrow.displayed.profile_field.CONTENT}',<!-- END profile_field -->1);</script>
-
 </code>
+
     Tạo javascript mới, đặt In the topics, nội dung như sau:
+
 <code>
 
             function miarank(Posts, Hcoins, Reputation, Avatar) {
@@ -487,8 +506,8 @@ Spoiler:
 
 
     Tạo javascript mới, đặt In the topics, nội dung như sau:
-<code>
 
+<code>
             function miarank(a, b, x, y) {
                 up = 60;
                 cong = 0;
@@ -514,16 +533,7 @@ Spoiler:
 
 </code>
 
-Đó là xong phần hiển thị.
-Còn phần style nó thì các bạn tự nghịch nhé
-Bị bí quá thì quăng cái link 4r lên đây mình xem cho Smile
-
-
-    Update VER 2 Shop Level - Written by miamor
-    Demo & Source Code: http://invision.chinhphuc.info
-    Copyright © 2012 IFC
-    Updating...
-h4-
+h4-:
 <code>function treatvar(nom) {
     var trouve = xhr.responseText.replace(RegExp("^.+<li style=\"margin-bottom:5px;direction:ltr;text-align:left;\"><strong>&#123;" + nom + "&#125;<\/strong>&nbsp;:&nbsp;(.*?)&nbsp;<span style='direction:ltr'>\(.*?\)<\/span><br \/><\/li>.+$"), '$1');
     if (xhr.responseText == trouve) return;
@@ -579,3 +589,13 @@ if (xhr != null) {
     xhr.open("GET", "/popup_help.forum?l=miscvars", true);
     xhr.send(null);
 }</code>
+
+Đó là xong phần hiển thị.
+Còn phần style nó thì các bạn tự nghịch nhé
+Bị bí quá thì quăng cái link 4r lên đây mình xem cho Smile
+
+
+    Update VER 2 Shop Level - Written by miamor
+    Demo & Source Code: http://invision.chinhphuc.info
+    Copyright © 2012 IFC
+    Updating...
