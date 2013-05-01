@@ -2,6 +2,21 @@ Demo online: http://invision.chinhphuc.info/h72-Shop-Level
 
 Hướng dẫn cho 2 phiên bản: Invision và PunBb
 
+    Trích dẫn một ảnh:
+http://i69.servimg.com/u/f69/17/70/31/89/cho0710.gif
+
+
+Chú ý 1: (Cho newbies)
+Để cài đặt được MOD này, các bạn phải kích hoạt Points trước, bằng cách: Modules >> Points and reputation >> Points system >> General options Chỉnh như sau: (In đậm tô đỏ là bắt buộc)
+
+    Activate points system : Yes
+    Display average points per message : Yes
+    "Points" field name : (Điền gì tùy bạn)
+    Display this field in : Profile & Messages (Check cả 2)
+    Display this field for users that are at least : Guests
+
+Tham khảo hình sau: http://i81.servimg.com/u/f81/17/70/31/89/per13.png
+
 General >> Messages and e-mails >> Announcements:
 General announcements options
 
@@ -14,8 +29,7 @@ Tạo mới ( http://illiweb.com/fa/admin/icones/ajouter.png )
     Name : drop down
     Content * :
 
-<code>
-            <span class="name" id="userID" style="display:none">{USERLINK}</span>
+<code>          <span class="name" id="userID" style="display:none">{USERLINK}</span>
             <span style="display:none" id="numID"></span>
 </code>
 Nhớ là phải luôn luôn đặt drop down lên trên cùng.
@@ -29,9 +43,10 @@ http://i81.servimg.com/u/f81/17/70/31/89/per11.png
 
 Users & Groups >> Users >> Profiles >> Tạo mới
 http://i81.servimg.com/u/f81/17/70/31/89/per12.png
-View id mục này rồi thay vào profile_field_2_4 trong đoạn HTML ở bước dưới.
+View id mục này rồi thay vào *profile_field_2_4* trong đoạn HTML ở bước dưới.
 
-Tạo trang HTML mới (lưu 2 lần)
+Tạo trang HTML mới (lưu 2 lần) [Đã fix lỗi Mắc cỡ ]
+Nội dung đã được ẩn bạn phải bỏ phiếu đánh giá trước khi xem nội dung.
 
 <code>
 
@@ -48,6 +63,16 @@ Tạo trang HTML mới (lưu 2 lần)
         .table0 td{border:1px solid #ddd}
         .table{padding-top:0px!important}
         .thuty img{width:75px;border:2px solid white;cursor:pointer}
+            /* alert------------------------- */
+        .alert .close{color:#000;filter:alpha(opacity=20);float:right;font-size:13px;font-weight:700;line-height:18px;opacity:.2;position:relative;right:-21px;text-shadow:0 1px 0 #fff;top:-2px}
+        .alert .close:hover{color:#000;cursor:pointer;filter:alpha(opacity=40);opacity:.4;text-decoration:none}
+        .alert,.alerts{border:1px solid transparent;border-radius:4px;margin-bottom:18px;text-shadow:0 1px 0 rgba(255,255,255,0.5);padding:8px 35px 8px 14px}
+        .alerts{display:block!important}
+        .alert{position:fixed;z-index:999;bottom:15px;left:5px}
+        .alert-info{background-color:#d9edf7;color:#3a87ad;border-color:#bce8f1}
+        .alert-block{background-color:#FCF8E3;color:#C09853;border-color:#FBEED5}
+        .alert-success{background-color:#dff0d8;color:#468847;border-color:#d6e9c6}
+        .alert-error{background-color:#f2dede;color:#b94a48;border-color:#eed3d7}
         </style>
         <table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td><img src="http://i43.servimg.com/u/f43/16/03/04/56/iaza1410.gif" width="18" height="2"></td><td background="http://i43.servimg.com/u/f43/16/03/04/56/iaza1411.gif" style="background-repeat:repeat-x"><img src="http://i43.servimg.com/u/f43/16/03/04/56/iaza1412.gif" width="205" height="2"></td><td><img src="http://i43.servimg.com/u/f43/16/03/04/56/iaza1413.gif" width="4" height="2"></td></tr><tr><td background="http://i43.servimg.com/u/f43/16/03/04/56/iaza1414.gif" style="background-position:right; background-repeat:repeat-y" valign="bottom" align="right"><img src="http://i43.servimg.com/u/f43/16/03/04/56/iaza1415.gif"></td><td background="http://i43.servimg.com/u/f43/16/03/04/56/box10.gif" style="padding: 10px 10px 10px 10px" width="100%"> <div class="l9x"><dl>
          
@@ -380,15 +405,31 @@ Tạo trang HTML mới (lưu 2 lần)
                 }
             });
         });
+        function fmvitip(a, b, d) {
+            $(".alert").length && $(".alert").remove();
+            $("body").append('<div class="alert alert-' + a + '"><a class="close" onclick="htip()" data-dismiss="alert">\u00d7</a><strong>' + b + " </strong>" + d + "</div>  ")
+        }
+        function htip() {
+            $(".alert").animate({
+                left: "-=500"
+            }, 1E3, function () {
+                $(".alert").remove()
+            })
+        }
+        function stip() {
+            $(".alert").fadeIn(1E3);
+            setTimeout("htip()", 5E3)
+        }
         </script>
+
+
 </code>
-
-
 Ra ngoài 4r, vào chuyên mục vừa tạo >> Gửi bài mới, nội dung gì tùy bạn.
 Sau khi tạo được topic mới, topic của bạn sẽ cón link dạng này: http://invision.chinhphuc.info/t920-topic#4941
 thì các bạn lấy số 920 thay vào số 927 trong đoạn HTML
 
 <code>
+
                     $.post("/post?t=927&mode=reply", {
                         subject: b,
                         message: e,
@@ -435,8 +476,8 @@ Spoiler:
                     $(this).find('.postprofile-details.postdetails').children('dd:last').after(miarank(b, a, y, x))
                 });
             });
-
 </code>
+
 
 PunBb
 Cách 1: (tăng cấp theo Posts, Points, Reputation/Thanked)
@@ -506,8 +547,8 @@ Spoiler:
 
 
     Tạo javascript mới, đặt In the topics, nội dung như sau:
-
 <code>
+
             function miarank(a, b, x, y) {
                 up = 60;
                 cong = 0;
@@ -589,7 +630,6 @@ if (xhr != null) {
     xhr.open("GET", "/popup_help.forum?l=miscvars", true);
     xhr.send(null);
 }</code>
-
 Đó là xong phần hiển thị.
 Còn phần style nó thì các bạn tự nghịch nhé
 Bị bí quá thì quăng cái link 4r lên đây mình xem cho Smile
