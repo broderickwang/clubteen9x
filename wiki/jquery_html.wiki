@@ -22,7 +22,8 @@ http://javascriptobfuscator.com/default.aspx
 Tối ưu cấu trúc và rút gọn javascript
 http://closure-compiler.appspot.com/home
 
-
+http://www.saovan.com/ma-hoa-code-1-dong.html
+http://wiki.nukeviet.vn/programming:optimize_javascript
 - Sau đây là 1 vài wedsite mà Simon đã học các cơ bản CSS và HTML có video clip hướng dẫn tiếng việt rất dễ hiểu Smile
 + http://www.izwebz.com
 + http://ntuts.com/ ( Có hướng dẫn code vừa có vài MOD có thể áp dụng cho FM )
